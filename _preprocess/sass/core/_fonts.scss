@@ -1,0 +1,39 @@
+// ==========================================================================
+//  @Font-face styles
+// ==========================================================================
+
+@charset "UTF-8";
+
+
+// Icon fonts
+// --------------------------------------------------------------------------
+
+// usage: 
+// <span aria-hidden="true" data-icon="&#xf008;"></span>
+// <span class="screen-reader-text">Menu</span>
+%icon-font {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  // font-family: YOUR_ICON_FONT_NAME;
+}
+
+// for icons placed before some text (such as in a button)
+[data-icon]:before {
+  @extend %icon-font;
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
+
+.screen-reader-text, %screen-reader-text { /* For text that explains what the icon is (ie "RSS" or "Menu") */
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+
+// for standalone icons
+%icon-alone {
+  display: inline-block; /* Fix for clickability issue in WebKit */
+}

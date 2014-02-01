@@ -1,0 +1,77 @@
+// ==============================================================================
+// 	Global type
+// ==============================================================================
+
+hgroup {
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a {
+		color: inherit;
+
+		&:hover, &:active {
+			color: inherit;
+			border-bottom: none;
+		}
+	}
+}
+
+h1, %h1 {
+	@include rem(font-size, 32px);
+}
+
+h2, %h2 {
+	@include rem(font-size, 27px);
+}
+
+h3, %h3 {
+	@include rem(font-size, 18px);
+}
+
+h4, %h4 {
+	@include rem(font-size, 18px);
+}
+
+h5, %h5 {
+	@include rem(font-size, 14px);
+}
+
+h6, %h6 {
+	@include rem(font-size, 12px);
+}
+
+// bigger first paragraph
+.intro {
+	@include rem(font-size, 21px);
+}
+
+p, table, li {
+	@include rem(font-size, 16px);
+}
+
+ol, ul {
+	margin-left: 1.5em; // bump to the right a little @ mobile sizes so the numbers/bullets don't run off
+
+	@media #{$small} {
+		margin-left: 0;
+	}
+}
+
+a {
+	@include animation(all $base-duration);
+}
+
+.amp {
+	font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 1.1em; // relative to whatever type surrounds it -- it renders slightly bigger
+}
+
+
+// ==============================================================================
+// 	Themes
+// ==============================================================================
+
+

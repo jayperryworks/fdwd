@@ -1,0 +1,129 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+// ==========================================================================
+// Base styles: opinionated defaults
+// ==========================================================================
+
+html,
+button,
+input,
+select,
+textarea {
+  color: $color-text--primary;
+  -webkit-appearance: none;
+}
+
+html {
+  // set up the base font size at each breakpoint
+  // this will scale the whole layout proportionately as the screen size changes
+  // and we only have to change one thing
+  font-size: percent($type-size--default);
+
+  // @include breakpoint($small) {
+  //     font-size: percent($base-font-size--small);
+  // }
+
+  // @include breakpoint($medium) {
+  //     font-size: percent($base-font-size--medium);
+  // }
+
+  // @include breakpoint($large) {
+  //     font-size: percent($base-font-size--large);
+  // }
+
+  line-height: $type-line_height;
+
+  // set everything to roll with border-box sizing
+  // -> much easier than reg box model
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;  
+}
+
+main {
+  display: block;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: $color-selection;
+  text-shadow: none;
+}
+
+::selection {
+  background: $color-selection;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+
+ol, ul, dl {
+  margin-bottom: 0;
+}
+
+/*
+ * Reset lists that appear in nav elements
+ */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  text-align: left;
+}

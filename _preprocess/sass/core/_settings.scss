@@ -1,0 +1,53 @@
+// ==========================================================================
+//  Global settings
+// ==========================================================================
+
+$path-images: "../images/";
+
+$base-duration: 0.5; // in seconds
+
+// Colors
+// --------------------------------------------------------------------------
+
+
+// text
+$color-text--primary: #333;
+$color-text--secondary: #999;
+
+$color-selection: red;
+
+
+// Typography
+// --------------------------------------------------------------------------
+
+$type-size--default: 16px;
+$type-line_height: 1.5;
+
+
+// Containers/layout
+// --------------------------------------------------------------------------
+
+// --- breakpoints ----------------------------------------------------------
+$xsmall: 480px;
+$small: 768px;
+$medium: 1240px;
+$large: 1440px;
+
+$breakpoint-to-ems: true;
+
+
+// --- grid variables -------------------------------------------------------
+$grid-gutter: 24px; // convert to rem/em/percent
+
+// Singularity.gs setup
+// -> https://github.com/Team-Sass/Singularity
+$grids: add-grid(6);
+$grids: add-grid(9 at $small);
+$grids: add-grid(12 at $medium);
+$gutters: add-gutter($grid-gutter);
+
+
+// --- default z-indexes ----------------------------------------------------
+$z--low: 0;
+$z--med: 1;
+$z--high: 2;
