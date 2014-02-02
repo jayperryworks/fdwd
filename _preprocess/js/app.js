@@ -1,10 +1,10 @@
 (function($) {
   
   // ================================================================
-  // SITE_NAME behaviors
+  // FDWD behaviors
   // ================================================================
 
-  var SITE_NAME = { // namespace setup
+  var fdwd = { // namespace setup
 
     config : {
 
@@ -17,7 +17,7 @@
     // Setup
     // ---------------------------------------------------------------
     init : function(config) {
-      $.extend(SITE_NAME.config, config);
+      $.extend(fdwd.config, config);
 
 
     },
@@ -30,6 +30,6 @@
 
   
   $(window).load(function() {
-    SITE_NAME.init();
+    fdwd.init();
   });
 })(jQuery);

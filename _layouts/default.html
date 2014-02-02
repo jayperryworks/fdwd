@@ -3,31 +3,63 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+{% capture title %}{{ page.title | capitalize }}{% endcapture %}
+
   <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>{{ page.title }}</title>
+      <title>Franklin, Denney, Ward &amp; Dryer P.L.C.{% if page.title != "home" %} &rsaquo; {{ title }}{% endif %}</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
       
+      {% comment %} Use this to calculate a relative path {% endcomment %}
       {% capture level %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
       {% capture relativepath %}{% for i in (3..level) %}../{% endfor %}{% endcapture %}
+      
+      {% comment %} convenience variable - account for subdirectory if any {% endcomment %}
+      {% capture path %}{{ relativepath }}{{ baseurl }}{% endcapture %}
 
       <link rel="stylesheet" href="{{ site.baseurl }}{{ relativepath }}assets/css/app.css">
       <script src="{{ site.baseurl }}{{ relativepath }}assets/js/vendor/modernizr.custom.11128.js"></script>
   </head>
   <body id="{% if page.slug %}{{ page.slug | downcase }}{% else %}{{ page.title | downcase }}{% endif %}">
+    
     <header role="banner">
+      <a href="/" class="logo"><img src="http://placehold.it/100x100" alt="Franklin, Denney, Ward and Dryer, Attorneys at Law" /></a>
+      <h4>A full service law firm<br /> since 1931</h4>
       <nav role="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{{ path }}/attorneys.html">Attorneys</a></li>
+          <li><a href="{{ path }}/practice-areas.html">Practice Areas</a></li>
+          <li><a href="{{ path }}/news.html">Firm News</a></li>
+          <li><a href="{{ path }}/news.html">Foreclosures</a></li>
+          <li><a href="{{ path }}/contact.html">Contact Us</a></li>
+        </ul>
       </nav>
     </header>
 
-    {{ content }}
+    <div class="content">
 
-    <footer role="contentinfo">
-    </footer>
+      {{ content }}
+
+        <footer role="contentinfo">
+          {% if page.title == "home" %}
+          <h2>Contact Us</h2>
+          {% include form-contact.html %}
+          {% endif %}
+          <h3>Franklin, Denney, Ward &amp; Dryer PLC</h3>
+          <h6>129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</h6>
+          <h6>540.946.4400</h6>
+          <a href="https://plus.google.com/102851444280928950259?prsrc=3" class="social google">Follow us on Google+</a>
+          <small class="copyright">
+            Copyright &copy; 2014 Franklin, Denney, Ward &amp; Dryer P.L.C., all rights reserved.
+          </small> 
+        </footer>
+
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ site.baseurl }}{{ relativepath }}assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

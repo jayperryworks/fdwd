@@ -1,13 +1,59 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: home
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
+<section class="hero">
+  <p class="intro">Starting as a local general practice, Franklin, Denney, Ward and Dryer Attorneys at Law, PLC now serves the Cities of Waynesboro, Staunton, Lexington, Harrisonburg and Charlottesville and the Counties of Augusta, Rockbridge, Rockingham, Nelson and Albermarle.</p>
+
+  <p>The Firm remains a vital and constant fixture in the City of Waynesboro. The integrity and work performance of the attorneys and staff is reflected by the large client base that continues to expand. We are committed in providing thorough, concise legal services to our clients at a fair cost.</p>
+
+  <aside>
+    <figure>
+      <a href="#">
+        <img src="http://placehold.it/250x200" alt="FDWD office in Waynesboro">
+        Read about the history &amp; renovation of our office building
+      </a>
+    </figure>
+  </aside>
+</section>
+
+<section>
+  <h2>Attorneys</h2>
+
+  <nav role="navigation" class="local grid">
+    <ul>
+      <li><a href="">
+          <img src="http://placehold.it/250x200" alt="">
+          <h4>Ronald W. Denney</h4>
+        </a></li>
+      <li><a href="">
+          <img src="http://placehold.it/250x200" alt="">
+          <h4>Jeffrey A. Ward</h4>
+        </a></li>
+      <li><a href="">
+          <img src="http://placehold.it/250x200" alt="">
+          <h4>Paul A. Dryer</h4>
+        </a></li>
+      <li><a href="">
+          <img src="http://placehold.it/250x200" alt="">
+          <h4>Stephen K. Strosnider</h4>
+        </a></li>
+    </ul>
+  </nav>
+</section>
+
+<section>
+  <h2>Practice Areas</h2>
+  <ul>
+    <li><a href="">Bankruptcy</a></li>
+    <li><a href="">Business Organization &amp; Operation</a></li>
+    <li><a href="">Creditor’s &amp; Debtor’s Rights</a></li>
+    <li><a href="">Criminal Defense &amp; Traffic</a></li>
+    <li><a href="">Estate Planning</a></li>
+    <li><a href="">Family Law</a></li>
+    <li><a href="">Personal Injury &amp; Wrongful Death
+</a></li>
+    <li><a href="">Real Estate</a></li>
   </ul>
-</div>
+</section>
