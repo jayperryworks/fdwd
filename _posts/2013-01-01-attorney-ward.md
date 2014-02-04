@@ -1,22 +1,22 @@
 ---
 layout: post
 title:  "Jeffrey A. Ward"
-date:   2013-12-15 19:22:05
+date:   2014-01-02 19:22:05
 categories: attorneys
 
 portrait: http://placehold.it/250x200
 
-direct-line: (540) 946-4417
-facsimile: (540) 946-4417
+phone: (540) 946-4417
+fax: (540) 946-4417
 email: info4413@fdwdlaw.com
 
-practice-areas:
-  - bankruptcy
-  - estate-planning
-  - business-law
-  - real-estate
-  - civil-practice
-  - criminal-law
+practice_areas:
+  - Bankruptcy
+  - Estate Planning
+  - Business Law
+  - Real Estate
+  - Civil Practice
+  - Criminal Law
 
 ---
 

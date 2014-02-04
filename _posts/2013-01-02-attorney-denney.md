@@ -1,22 +1,22 @@
 ---
 layout: post
 title:  "Ronald W. Denney"
-date:   2013-12-15 19:22:05
+date:   2014-01-01 19:22:05
 categories: attorneys
 
 portrait: http://placehold.it/250x200
 
-phone: (540) 946-4413
-facsimile: (540) 946-4417
-email: info4413@fdwdlaw.com
+phone: "(540) 946-4413"
+fax: "(540) 946-4417"
+email: "info4413@fdwdlaw.com"
 
-practice-areas:
-  - civil-litigation
-  - lien-cases
-  - real-estate
-  - criminal-law
-  - wills-trusts
-  - small-business
+practice_areas:
+  - Civil Litigation
+  - Lien Cases
+  - Real Estate
+  - Criminal Law
+  - Wills Trusts
+  - Small Business
 
 ---
 
@@ -36,19 +36,40 @@ Madison, Tennessee
 
 ### Admitted to Bar
 
-1976, [Virginia State Bar](http://www.vsb.org), [United States District Court for the Western District of Virginia](http://www.vawd.uscourts.gov), [United States Court of Appeals, Fourth Circuit](http://www.ca4.uscourts.gov)
+19XX, [Virginia State Bar](http://www.vsb.org), [United States District Court for the Western District of Virginia](http://www.vawd.uscourts.gov), [United States Court of Appeals, Fourth Circuit](http://www.ca4.uscourts.gov)
+
+### Representative Cases
+- Successfully represented landowners in a partition suit concerning real estate valued at over $1.3 million, negotiating a settlement for the division of the property.
+- Successfully represented taxpayers against a county Board of Equalization, prevailing at trial on a claim under the Virginia Freedom of Information Act.
+- Successfully represented a commercial lender in a trial regarding loan guarantees, obtaining a judgment of over $240,000.00 for the plaintiff.
+- Successfully represented defendant in litigation involving claims of unjust enrichment and undue influence, prevailing at trial and obtaining a judgment for possession of real estate.
+
+<small>Case results depend upon a variety of factors unique to each case.  The representative cases and reported decisions described on this page do not guarantee or predict a similar result in any future case.</small>
+
+### Reported Decisions
+- _Driscoll v. Hunter_, [Record No. 0084-11-3](http://www.courts.state.va.us/opinions/opncavwp/0084113.pdf), Court of Appeals of Virginia (Oct. 25, 2011).
+- _Stevens v. Stevens_, [Record No. 0498-11-3](http://www.courts.state.va.us/opinions/opncavwp/0498113.pdf), Court of Appeals of Virginia (Dec. 13, 2011).
+- _Wooddell v. Lagerquist_, [Record No. 2121-11-3](http://www.courts.state.va.us/opinions/opncavwp/2121113.pdf), Court of Appeals of Virginia (Nov. 20, 2012) (unpublished).
 
 
-### Affiliations
+### Affiliations and Certifications:
 
-- [Waynesboro-Staunton-Augusta County Bar Association](http://www.augustabarassociation.org) (President, 1996-1997)
-- [Virginia State Bar](http://www.vsb.org)  (Member, 6th District Ethics Committee)
-- [Virginia Trial Lawyer’s Association](http://www.vtla.com)
-- Member, [Waynesboro Church of Christ](http://www.waybcoc.org)
-- Board of Directors, Greenstone Residence Inc. and Harvard Home Inc. (housing for developmentally disabled adults)
-- Past President of [Waynesboro YMCA](http://www.waynesboroymca.com)
-- Past director of Waynesboro Association of Retarded Citizens
+- Virginia State Bar
+- VSB Certified Guardian Ad Litem for Children
+- VSB Certified CRESPA Real Estate Settlement Agent
+- [Virginia Creditors Bar Association](http://www.vcba.net/)
+- Augusta County Bar Association; Executive Committee, Judicial Endorsements Committee
+- [Waynesboro Heritage Foundation](http://www.waynesboroheritagefoundation.com/); Member of the Board of Directors
 
-### Other Interests
 
-Biking, whitewater kayaking, rock climbing and travel
+### Previous Experience
+
+- Prior to joining the firm, Mr. Strosnider clerked for the Hon. Humes J. Franklin, Jr., and the Hon. Thomas. H. Wood of the Twenty-Fifth Judicial Circuit of Virginia
+- During law school, Mr. Strosnider worked in the County Attorney’s Office for Albemarle County and as a research assistant for Professor M. Elizabeth Magill of the Virginia School of Law (now Dean of Stanford Law School)
+
+### Personal
+
+- Married to Jennifer Strosnider; three sons, David, Westly and Luke
+- Member and deacon, [Waynesboro Church of Christ](http://www.waybcoc.org/)
+- Founding member of Lex United soccer team of the SOCA Adult Premier Division
+- Founding member of Nomads soccer team of the Staunton Adult Recreational League

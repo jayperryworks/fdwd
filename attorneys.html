@@ -1,73 +1,30 @@
 ---
-layout: default
-title: attorney profiles
+layout: interior
+title: "Attorney Profiles"
+
+next: "Practice Areas"
+next_url: practice-areas.html"
 ---
 
-<h1>Attorney Profiles</h1>
-
-
-
+{% for post in site.categories.attorneys %}
 <section>
-  <img src="http://placehold.it/250x200" alt="Ronald W. Denney" />
-  <h2>Ronald W. Denney</h2>
+  <img src="{{ post.portrait }}" alt="{{ post.title }}" />
+  <h2>{{ post.title }}</h2>
   <dl class="info contact">
     <dt>Direct Line:</dt>
-    <dd>(540) 946-4413</dd>
+    <dd>{{ post.phone }}</dd>
     <dt>Facsimile:</dt>
-    <dd>(540) 946-4417</dd>
+    <dd>{{ post.fax }}</dd>
     <dt>Email:</dt>
-    <dd>info4413@fdwdlaw.com</dd>
+    <dd>{{ post.email }}</dd>
   </dl>
-  <p class="intro">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eam tum adesse, cum dolor omnis absit; Nunc vides, quid faciat. Duae sunt enim res quoque, ne tu verba solum putes. Duo Reges: constructio interrete. Suo enim quisque studio maxime ducitur...
-  </p>
+  {% comment %}<ul>
+    {% for area in post.practice-areas %}
+    <li>{{ area }}</li>
+    {% endfor %}
+  </ul>{% endcomment %}
+
+  {{ post.content }}
   <a href="#" class="accordion-btn-expand">More</a>
 </section>
-
-<section>
-  <img src="http://placehold.it/250x200" alt="Ronald W. Denney" />
-  <h2>Jeffrey A. Ward</h2>
-  <dl class="info contact">
-    <dt>Direct Line:</dt>
-    <dd>(540) 946-4408</dd>
-    <dt>Facsimile:</dt>
-    <dd>(540) 946-4417</dd>
-    <dt>Email:</dt>
-    <dd>info4408@fdwdlaw.com</dd>
-  </dl>
-  <p class="intro">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eam tum adesse, cum dolor omnis absit; Nunc vides, quid faciat. Duae sunt enim res quoque, ne tu verba solum putes. Duo Reges: constructio interrete. Suo enim quisque studio maxime ducitur...
-  </p>
-  <p>
-    Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Prodest, inquit, mihi eo esse animo. Sed ego in hoc resisto; Nulla erit controversia. Quid enim ab antiquis ex eo genere, quod ad disserendum valet, praetermissum est? Sed ad haec, nisi molestum est, habeo quae velim. Duo Reges: constructio interrete. Age sane, inquam.
-  </p>
-  <section>
-    <h3>Practice Areas</h3>
-    <ul>
-      <li>Bankruptcy</li>
-      <li>Estate Planning</li>
-      <li>Business Law</li>
-      <li>Real Estate</li>
-      <li>Civil Practice</li>
-      <li>Criminal Law</li>
-    </ul>
-  </section>
-  <a href="#" class="accordion-btn-collapse">Hide</a>
-</section>
-
-<section>
-  <img src="http://placehold.it/250x200" alt="Ronald W. Denney" />
-  <h2>Paul A. Dyer</h2>
-  <dl class="info contact">
-    <dt>Direct Line:</dt>
-    <dd>(540) 946-4413</dd>
-    <dt>Facsimile:</dt>
-    <dd>(540) 946-4417</dd>
-    <dt>Email:</dt>
-    <dd>info4413@fdwdlaw.com</dd>
-  </dl>
-  <p class="intro">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eam tum adesse, cum dolor omnis absit; Nunc vides, quid faciat. Duae sunt enim res quoque, ne tu verba solum putes. Duo Reges: constructio interrete. Suo enim quisque studio maxime ducitur...
-  </p>
-  <a href="#" class="accordion-btn-expand">More</a>
-</section>
+{% endfor %}
