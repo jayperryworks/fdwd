@@ -1087,7 +1087,7 @@ p {
 
 /* Literal.Number.Integer.Long */
 /* line 5, ../../_preprocess/sass/core/_layout.scss */
-[role="main"] > h1, [role="main"] > h2, [role="main"] > h3, [role="main"] > h4, [role="main"] > h5, [role="main"] > h6, [role="main"] > hgroup, [role="main"] > p, [role="main"] > ul, .main > h1, footer.global > h1, .footer.global > h1, .main > h2, footer.global > h2, .footer.global > h2, .main > h3, footer.global > h3, .footer.global > h3, .main > h4, footer.global > h4, .footer.global > h4, .main > h5, footer.global > h5, .footer.global > h5, .main > h6, footer.global > h6, .footer.global > h6, .main > hgroup, footer.global > hgroup, .footer.global > hgroup, .main > p, footer.global > p, .footer.global > p, .main > ul, footer.global > ul, .footer.global > ul, .wrapper > h1, .strip > h1, .wrapper > h2, .strip > h2, .wrapper > h3, .strip > h3, .wrapper > h4, .strip > h4, .wrapper > h5, .strip > h5, .wrapper > h6, .strip > h6, .wrapper > hgroup, .strip > hgroup, .wrapper > p, .strip > p, .wrapper > ul, .strip > ul, .wrapper > section, .strip > section, footer.global .copyright, .footer.global .copyright {
+.wrapper > h1, .strip > h1, .wrapper > h2, .strip > h2, .wrapper > h3, .strip > h3, .wrapper > h4, .strip > h4, .wrapper > h5, .strip > h5, .wrapper > h6, .strip > h6, .wrapper > hgroup, .strip > hgroup, .wrapper > p, .strip > p, .wrapper > ul, .strip > ul, footer.global .copyright, .footer.global .copyright {
   padding: 0 12px;
 }
 

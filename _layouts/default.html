@@ -50,21 +50,23 @@
     </main>
 
     <footer role="contentinfo" class="global">
-      {% if page.title == "home" %}
-      <h2>Contact Us</h2>
-      {% include form-contact.html %}
-      {% endif %}
-      <div class="info">
-        <h3>{{ site.name | xml_escape }}</h3>
-        <ul>
-          <li class="inline">129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</li>
-          <li class="inline">540.946.4400</li>
-          <li class="social"><a href="https://plus.google.com/102851444280928950259?prsrc=3">Follow us on Google+</a></li>
-        </ul>
+      <div class="wrapper">
+        {% if page.title == "home" %}
+        <h2>Contact Us</h2>
+        {% include form-contact.html %}
+        {% endif %}
+        <div class="info">
+          <h3>{{ site.name | xml_escape }}</h3>
+          <ul>
+            <li class="inline">129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</li>
+            <li class="inline">540.946.4400</li>
+            <li class="social"><a href="https://plus.google.com/102851444280928950259?prsrc=3">Follow us on Google+</a></li>
+          </ul>
+        </div>
+        <small class="copyright">
+          Copyright &copy; 2014 {{ site.name | xml_escape }}, all rights reserved.
+        </small> 
       </div>
-      <small class="copyright">
-        Copyright &copy; 2014 {{ site.name | xml_escape }}, all rights reserved.
-      </small> 
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
