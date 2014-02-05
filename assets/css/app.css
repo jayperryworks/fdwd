@@ -1518,7 +1518,7 @@ footer.global .copyright, .footer.global .copyright {
 }
 
 /* line 33, ../../_preprocess/sass/modules/_footer.scss */
-#home footer.global .contact, #home .footer.global .contact {
+#home footer.global .contact-form, #home .footer.global .contact-form {
   width: 50%;
   float: left;
   margin-right: -100%;

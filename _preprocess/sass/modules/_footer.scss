@@ -30,7 +30,7 @@ footer.global, .footer.global {
 }
 
 #home footer.global, #home .footer.global {
-  .contact {
+  .contact-form {
     @include grid-span(2, 1);
   }
   .info {
