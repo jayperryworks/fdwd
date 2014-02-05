@@ -1,6 +1,6 @@
 name: Franklin, Denney, Ward & Dryer P.L.C.
 url: http://fdwd.jayperryworks.com
-baseurl: /fdwd
+baseurl: 
 
 markdown: redcarpet
 pygments: true
