@@ -19,6 +19,10 @@ textarea {
   -webkit-appearance: none;
 }
 
+* {
+  @include box-sizing('border-box');
+}
+
 html {
   // set up the base font size at each breakpoint
   // this will scale the whole layout proportionately as the screen size changes

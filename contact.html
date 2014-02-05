@@ -3,12 +3,12 @@ layout: interior
 title: "Contact Us"
 ---
 
-<section>
-  <section>
-    <h3>Franklin, Denney, Ward &amp; Dryer P.L.C.</h3>
+<section class="strip first">
+  <section class="sub">
+    <h3>{{ site.name | xml_escape }}</h3>
     <h6>129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</h6>
 
-    <dl class="meta contact">
+    <dl class="info contact">
       <dt>Office</dt>
       <dd>540.946.4400</dd>
       <dt>Facsimile</dt>
@@ -18,32 +18,30 @@ title: "Contact Us"
     </dl>
   </section>
 
-  <section>
+  <section class="sub">
     <h3>Payments, Bookkeeping &amp; Billing</h3>
     <h6>billing@fdwdlaw.com</h6>
-
-    <p>
-      <h5>Anita R. Davis</h5><br />
+    
+    <small class="sub-info">
+      <h5>Anita R. Davis</h5>
       Real Estate Paralegal<br />
       (540) 946-4412<br />
       info4412@fdwdlaw.com
-    </p>
-
-    <p>
-      <h5>Kathleen B. Smith</h5><br />
+    </small>
+    <small class="sub-info">
+      <h5>Kathleen B. Smith</h5>
       Bankruptcy Paralegal<br />
       (540) 946-4401<br />
       info4401@fdwdlaw.com
-    </p>
+    </small>
   </section>
 
   <div class="map">
-    <!-- <img src="http://placehold.it/800x400" alt="map" /> -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3141.0440599008607!2d-78.889479!3d38.069355!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b363a4210ad24d%3A0x15509b6120e9980b!2s129+N+Wayne+Ave%2C+Waynesboro%2C+VA+22980!5e0!3m2!1sen!2sus!4v1391476282576" width="100%" height="600" frameborder="0" style="border:0"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3141.0440599008607!2d-78.889479!3d38.069355!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b363a4210ad24d%3A0x15509b6120e9980b!2s129+N+Wayne+Ave%2C+Waynesboro%2C+VA+22980!5e0!3m2!1sen!2sus!4v1391476282576" width="100%" height="400" frameborder="0" style="border:0"></iframe>
   </div>
 </section>
 
-<section>
+<section class="strip">
   <h2>Directions</h2>
 
   <section>
@@ -62,6 +60,6 @@ title: "Contact Us"
   </section>
 </section>
 
-<section>
+<section class="strip">
   {% include form-contact.html %}
 </section>

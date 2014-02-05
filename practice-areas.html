@@ -3,15 +3,16 @@ layout: interior
 title: "Practice Areas"
 
 next: "Firm News"
-next_url: "firm-news.html"
+next_url: "news.html"
 ---
 
 <p class="intro">Intro paragraph on FDWD's range of expertise. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc loco discipulos quaerere videtur, ut, qui asoti esse velint, philosophi ante fiant. Quod si ita sit, cur opera philosophiae sit danda nescio. Quem Tiberina descensio festo illo die tanto gaudio affecit, quanto L. Sine ea igitur iucunde negat posse se vivere? Intrandum est igitur in rerum naturam et penitus quid ea postulet pervidendum; Quid est, quod ab ea absolvi et perfici debeat.</p>
 
 {% for post in site.categories.practice-areas %}
-<section>
+<section class="strip">
+  <a id="{{ post.slug }}"></a>
   <h2>{{ post.title }}</h2>
   {{ post.content }}
-  <a href="#" class="accordion-btn-expand">More</a>
+  <!-- <a href="#" class="accordion-btn-expand">More</a> -->
 </section>
 {% endfor %}

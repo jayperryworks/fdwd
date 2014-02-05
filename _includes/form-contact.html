@@ -1,10 +1,20 @@
-<form>
+<form class="contact-form">
   <h3>Request an Appointment</h3>
-  <label>Your name</label>
-  <input type="text" id="first" placeholder="First" />
-  <input type="text" id="last" placeholder="Last" />
-  <label>Email</label>
-  <input type="text" id="email" placeholder="yourname@email.com" />
-  <label>Phone number</label>
-  <input type="text" id="phone" placeholder="(---)--- ----" />
+  <fieldset>
+    <legend>Your name</legend>
+    <div class="input left">
+      <input type="text" id="your-name" placeholder="First" />
+    </div>
+    <div class="input right">
+      <input type="text" id="your-name" placeholder="Last" />
+    </div>
+  </fieldset>
+  <div class="input left">
+    <label for="email">Email</label>
+    <input type="text" id="email" placeholder="yourname@email.com" />
+  </div>
+  <div class="input right">
+    <label for="phone">Phone number</label>
+    <input type="text" id="phone" placeholder="(---)--- ----" />
+  </div>
 </form>

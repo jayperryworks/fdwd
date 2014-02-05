@@ -263,6 +263,24 @@
 //   }
 // }
 
+@mixin unstyled-list {
+  list-style: none;
+  list-style-type: none;
+
+  li {
+    list-style: none;
+    list-style-type: none;
+  }
+}
+
+@mixin inline-list {
+  @include unstyled-list;
+
+  li {
+    @include inline-block;
+  }
+}
+
 // make an inline (horizontal) list and vertically center child elements
 // use this on the li elements or just inside them (ie anchors)
 @mixin inline-list--centered($height: 100%) {
@@ -278,17 +296,24 @@
   padding: 0;
 }
 
-@mixin inline-dl {
-  & > dt, & > dd {
-    display: inline;
-  }
+@mixin inline-dl($break: false) {
   & > dt {
+    display: inline;
     margin-right: em(6);
   }
   & > dd {
+    display: inline;
     margin-left: 0;
     margin-right: em(12);
   }
+
+  @if ($break == true) {
+    & > dd:after {
+      content: '\A';
+      white-space: pre;
+    }
+  }
+  
 }
 
 // vertically center the children of an inline block element

@@ -8,7 +8,7 @@
   <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Franklin, Denney, Ward &amp; Dryer P.L.C.{% if page.title != "home" %} &rsaquo; {{ title }}{% endif %}</title>
+      <title>{{ site.name | xml_escape }}{% if page.title != "home" %} &rsaquo; {{ title }}{% endif %}</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,40 +28,44 @@
     
     <header role="banner" class="global">
       <a href="{{ path }}/" class="logo"><img src="http://placehold.it/100x100" alt="Franklin, Denney, Ward and Dryer, Attorneys at Law" /></a>
-      <h4>A full service law firm<br /> since 1931</h4>
-      <nav role="navigation">
+      <h6>A full service law firm<br /> since 1931</h6>
+      <nav role="navigation" class="global">
         <ul>
-          <li><a href="{{ path }}/">Home</a></li>
-          <li><a href="{{ path }}/attorneys.html">Attorneys</a></li>
-          <li><a href="{{ path }}/practice-areas.html">Practice Areas</a></li>
-          <li><a href="{{ path }}/contact.html">Contact Us</a></li>
+          <li><a href="{{ path }}/"{% if page.title == 'home' %} class="active"{% endif %}>Home</a></li>
+          <li><a href="{{ path }}/attorneys.html"{% if page.title == 'Attorney Profiles' %}class="active"{% endif %}>Attorneys</a></li>
+          <li><a href="{{ path }}/practice-areas.html"{% if page.title == 'Practice Areas' %} class="active"{% endif %}>Practice Areas</a></li>
+          <li><a href="{{ path }}/contact.html"{% if page.title == 'Contact Us' %} class="active"{% endif %}>Contact Us</a></li>
         </ul>
         <ul class="secondary">
-          <li><a href="{{ path }}/news.html">Firm News</a></li>
-          <li><a href="{{ path }}/foreclosures.html">Foreclosures</a></li>
+          <li><a href="{{ path }}/news.html"{% if page.title == 'Firm News' %} class="active"{% endif %}>Firm News</a></li>
+          <li><a href="{{ path }}/foreclosures.html"{% if page.title == 'Foreclosure Listings' %} class="active"{% endif %}>Foreclosures</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="content">
+    <main role="main" class="content">
 
       {{ content }}
 
-        <footer role="contentinfo" class="global">
-          {% if page.title == "home" %}
-          <h2>Contact Us</h2>
-          {% include form-contact.html %}
-          {% endif %}
-          <h3>Franklin, Denney, Ward &amp; Dryer PLC</h3>
-          <h6>129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</h6>
-          <h6>540.946.4400</h6>
-          <a href="https://plus.google.com/102851444280928950259?prsrc=3" class="social google">Follow us on Google+</a>
-          <small class="copyright">
-            Copyright &copy; 2014 Franklin, Denney, Ward &amp; Dryer P.L.C., all rights reserved.
-          </small> 
-        </footer>
+    </main>
 
-    </div>
+    <footer role="contentinfo" class="global">
+      {% if page.title == "home" %}
+      <h2>Contact Us</h2>
+      {% include form-contact.html %}
+      {% endif %}
+      <div class="info">
+        <h3>{{ site.name | xml_escape }}</h3>
+        <ul>
+          <li class="inline">129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</li>
+          <li class="inline">540.946.4400</li>
+          <li class="social"><a href="https://plus.google.com/102851444280928950259?prsrc=3">Follow us on Google+</a></li>
+        </ul>
+      </div>
+      <small class="copyright">
+        Copyright &copy; 2014 {{ site.name | xml_escape }}, all rights reserved.
+      </small> 
+    </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ site.baseurl }}{{ relativepath }}assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

@@ -3,6 +3,7 @@ layout: post
 title:  "Estate Planning"
 date:   2014-01-03 19:22:05
 categories: practice-areas
+slug: estate-planning
 
 picture: http://placehold.it/250x200
 

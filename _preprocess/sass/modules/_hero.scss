@@ -1,28 +1,19 @@
 // ==========================================================================
-//  Header modules
+//  Hero modules
 // ==========================================================================
 
 // BASE
 // -----------------------------------------------------------------------------
 
-.header {
-	
+.hero {
+  @extend %full-bleed;
+  @include rem(height, 260px);
+  // margin-right: -$grid-gutter;
+
+  background: url("http://placehold.it/1200x260") center center no-repeat;
+  background-size: cover;
 }
 
 // SUBMODULES
 // -----------------------------------------------------------------------------
 
-[role="banner"].global {
-	width: 180px;
-  height: 100%;
-  float: left;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 36px;
-  border-right: $hairline;
-  text-align: center;
-  overflow: auto;
-  overflow-y: auto;
-  overflow-x: auto;
-}

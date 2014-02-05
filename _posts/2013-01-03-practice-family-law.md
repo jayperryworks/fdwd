@@ -3,6 +3,7 @@ layout: post
 title:  "Family Law"
 date:   2014-01-03 19:22:05
 categories: practice-areas
+slug: family-law
 
 picture: http://placehold.it/250x200
 

@@ -3,6 +3,7 @@ layout: post
 title:  "Personal Injury & Wrongful Death"
 date:   2014-01-02 19:22:05
 categories: practice-areas
+slug: personal-injury
 
 picture: http://placehold.it/250x200
 

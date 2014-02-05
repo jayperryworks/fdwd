@@ -3,6 +3,7 @@ layout: post
 title:  "Criminal Defense & Traffic"
 date:   2014-01-04 19:22:05
 categories: practice-areas
+slug: criminal-defense
 
 picture: http://placehold.it/250x200
 

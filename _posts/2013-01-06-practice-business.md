@@ -3,6 +3,7 @@ layout: post
 title:  "Business Organization & Operation"
 date:   2014-01-06 19:22:05
 categories: practice-areas
+slug: business-organization
 
 picture: http://placehold.it/250x200
 
