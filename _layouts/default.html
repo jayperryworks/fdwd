@@ -19,26 +19,26 @@
       {% capture relativepath %}{% for i in (3..level) %}../{% endfor %}{% endcapture %}
       
       {% comment %} convenience variable - account for subdirectory if any {% endcomment %}
-      {% capture path %}{{ relativepath }}{{ baseurl }}{% endcapture %}
+      {% capture path %}{{ relativepath }}{{ site.baseurl }}{% endcapture %}
 
-      <link rel="stylesheet" href="{{ relativepath }}{{ baseurl }}/assets/css/app.css">
-      <script src="{{ relativepath }}{{ baseurl }}/assets/js/vendor/modernizr.custom.11128.js"></script>
+      <link rel="stylesheet" href="{{ path }}/assets/css/app.css">
+      <script src="{{ path }}/assets/js/vendor/modernizr.custom.11128.js"></script>
   </head>
   <body id="{{ page.title | replace: " ", "-" | downcase }}">
     
     <header role="banner" class="global">
-      <a href="{{ relativepath }}{{ baseurl }}/" class="logo"><img src="http://placehold.it/100x100" alt="Franklin, Denney, Ward and Dryer, Attorneys at Law" /></a>
+      <a href="{{ path }}/" class="logo"><img src="http://placehold.it/100x100" alt="Franklin, Denney, Ward and Dryer, Attorneys at Law" /></a>
       <h6>A full service law firm<br /> since 1931</h6>
       <nav role="navigation" class="global">
         <ul>
-          <li><a href="{{ relativepath }}{{ baseurl }}/"{% if page.title == 'home' %} class="active"{% endif %}>Home</a></li>
-          <li><a href="{{ relativepath }}{{ baseurl }}/attorneys.html"{% if page.title == 'Attorney Profiles' %}class="active"{% endif %}>Attorneys</a></li>
-          <li><a href="{{ relativepath }}{{ baseurl }}/practice-areas.html"{% if page.title == 'Practice Areas' %} class="active"{% endif %}>Practice Areas</a></li>
-          <li><a href="{{ relativepath }}{{ baseurl }}/contact.html"{% if page.title == 'Contact Us' %} class="active"{% endif %}>Contact Us</a></li>
+          <li><a href="{{ path }}/"{% if page.title == 'home' %} class="active"{% endif %}>Home</a></li>
+          <li><a href="{{ path }}/attorneys.html"{% if page.title == 'Attorney Profiles' %}class="active"{% endif %}>Attorneys</a></li>
+          <li><a href="{{ path }}/practice-areas.html"{% if page.title == 'Practice Areas' %} class="active"{% endif %}>Practice Areas</a></li>
+          <li><a href="{{ path }}/contact.html"{% if page.title == 'Contact Us' %} class="active"{% endif %}>Contact Us</a></li>
         </ul>
         <ul class="secondary">
-          <li><a href="{{ relativepath }}{{ baseurl }}/news.html"{% if page.title == 'Firm News' %} class="active"{% endif %}>Firm News</a></li>
-          <li><a href="{{ relativepath }}{{ baseurl }}/foreclosures.html"{% if page.title == 'Foreclosure Listings' %} class="active"{% endif %}>Foreclosures</a></li>
+          <li><a href="{{ path }}/news.html"{% if page.title == 'Firm News' %} class="active"{% endif %}>Firm News</a></li>
+          <li><a href="{{ path }}/foreclosures.html"{% if page.title == 'Foreclosure Listings' %} class="active"{% endif %}>Foreclosures</a></li>
         </ul>
       </nav>
     </header>
@@ -68,8 +68,8 @@
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ relativepath }}{{ baseurl }}/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="{{ relativepath }}{{ baseurl }}/assets/js/app.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ path }}/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="{{ path }}/assets/js/app.js"></script>
 
   </body>
 </html>
