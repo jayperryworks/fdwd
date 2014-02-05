@@ -30,7 +30,7 @@ title: home
       <ul>
         {% for post in site.categories.attorneys %}
         <li>
-          <a href="{{ path }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}" class="tile">
+          <a href="{{ relativepath }}{{ baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}" class="tile">
             <img src="{{ post.portrait }}" alt="{{ post.title | xml_escape }}">
             <h4>{{ post.title | xml_escape }}</h4>
           </a>
@@ -48,7 +48,7 @@ title: home
       {% for post in site.categories.practice-areas %}
       {% capture colnum %}{{ forloop.index }}{% endcapture %}
       <li class="col {% if colnum < '5' %}first{% else %}second{% endif %}">
-        <a href="{{ path }}/practice-areas.html#{{ post.slug }}">{{ post.title | xml_escape }}</a>
+        <a href="{{ relativepath }}{{ baseurl }}/practice-areas.html#{{ post.slug }}">{{ post.title | xml_escape }}</a>
       </li>
       {% endfor %}
     </ul>
