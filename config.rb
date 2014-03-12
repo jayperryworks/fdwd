@@ -6,7 +6,7 @@ require 'bourbon'
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "assets/css"
-sass_dir = "_preprocess/sass"
+sass_dir = "_includes/sass"
 images_dir = "assets/images"
 javascripts_dir = "assets/js"
 

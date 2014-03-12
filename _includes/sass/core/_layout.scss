@@ -1,0 +1,44 @@
+// ==============================================================================
+// Global layout styles
+// ==============================================================================
+
+%add-gutters {
+  padding: 0 ($grid-gutter/2);
+}
+
+%full-bleed {
+  margin-left: -$main-margin;
+  margin-right: -$main-margin;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+[role="main"], .main {
+  @include clearfix;
+  margin-left: $header-w;
+  width: calc(100% - $header-w);
+  padding: 0 $main-margin;
+
+  // & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > hgroup, & > p, & > ul {
+  //   @extend .wrapper;
+  // }
+
+  & > h1 {
+    @include rem(margin-top, 24px);
+  }
+}
+
+.wrapper {
+  @include clearfix;
+  margin: 0 auto;
+  max-width: ($main-max_w + $main-margin + $grid-gutter);
+  overflow: hidden;
+  clear: both;
+  
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > hgroup, & > p, & > ul {
+    @extend %add-gutters;
+  }
+  
+}

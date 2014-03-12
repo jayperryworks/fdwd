@@ -1,0 +1,59 @@
+// ==========================================================================
+//  Footer modules
+// ==========================================================================
+
+// BASE
+// -----------------------------------------------------------------------------
+
+footer, .footer {
+	
+}
+
+
+// SUBMODULES
+// -----------------------------------------------------------------------------
+
+// global/main footer @ bottom of each page
+footer.global, .footer.global {
+	@extend .main;
+  @include rem(padding-top, 24px);
+  @include rem(padding-bottom, 24px);
+  background: #ddd;
+
+  .copyright {
+    @extend %add-gutters;
+    @include grid-span(4, 1, $options: both);
+    @include rem(margin-top, 24px);
+    @include rem(padding-top, 24px);
+    border-top: $hairline;
+  }
+}
+
+#home footer.global, #home .footer.global {
+  .contact-form {
+    @include grid-span(2, 1);
+  }
+  .info {
+    @include grid-span(2, 3, $options: right);
+  }
+
+  .inline {
+    display: list-item;
+    margin-left: 0;
+    
+    &:before {
+      content: none;
+    }
+  }
+}
+
+footer.local, .footer.local {
+  @extend %full-bleed;
+  @include rem(margin-top, 24px);
+  @include rem(padding, 24px 0);
+  padding-left: $main-margin;
+  padding-right: $main-margin;
+  background: #eee;
+  text-align: center;
+  clear: both;
+}

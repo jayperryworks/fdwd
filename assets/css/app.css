@@ -1,32 +1,16 @@
-/* line 14, ../../_preprocess/sass/core/_fonts.scss */
-[data-icon]:before {
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-  width: 1em;
-  text-align: center;
-}
-
-/* line 24, ../../_preprocess/sass/core/_fonts.scss */
-[data-icon]:before {
-  content: attr(data-icon);
-  speak: none;
-  /* Not to be trusted, but hey. */
-}
-
-/* line 30, ../../_preprocess/sass/core/_fonts.scss */
-.screen-reader-text {
-  /* For text that explains what the icon is (ie "RSS" or "Menu") */
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
+/* line 10, ../../_includes/sass/core/_settings.scss */
+a {
+  -webkit-transition: all 0.5 false;
+  -moz-transition: all 0.5 false false;
+  -o-transition: all 0.5 false false;
+  transition: all 0.5;
 }
 
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-/* line 22, ../../_preprocess/sass/core/_normalize.scss */
+/* line 22, ../../_includes/sass/core/_normalize.scss */
 article,
 aside,
 details,
@@ -45,7 +29,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-/* line 32, ../../_preprocess/sass/core/_normalize.scss */
+/* line 32, ../../_includes/sass/core/_normalize.scss */
 audio,
 canvas,
 video {
@@ -56,7 +40,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 41, ../../_preprocess/sass/core/_normalize.scss */
+/* line 41, ../../_includes/sass/core/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -66,13 +50,13 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-/* line 52, ../../_preprocess/sass/core/_normalize.scss */
+/* line 52, ../../_includes/sass/core/_normalize.scss */
 [hidden],
 template {
   display: none;
 }
 
-/* line 56, ../../_preprocess/sass/core/_normalize.scss */
+/* line 56, ../../_includes/sass/core/_normalize.scss */
 script {
   display: none !important;
 }
@@ -82,7 +66,7 @@ script {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 70, ../../_preprocess/sass/core/_normalize.scss */
+/* line 70, ../../_includes/sass/core/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -95,7 +79,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 80, ../../_preprocess/sass/core/_normalize.scss */
+/* line 80, ../../_includes/sass/core/_normalize.scss */
 body {
   margin: 0;
 }
@@ -103,7 +87,7 @@ body {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 92, ../../_preprocess/sass/core/_normalize.scss */
+/* line 92, ../../_includes/sass/core/_normalize.scss */
 a {
   background: transparent;
 }
@@ -111,7 +95,7 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 100, ../../_preprocess/sass/core/_normalize.scss */
+/* line 100, ../../_includes/sass/core/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -119,7 +103,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 109, ../../_preprocess/sass/core/_normalize.scss */
+/* line 109, ../../_includes/sass/core/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -129,7 +113,7 @@ a:hover {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 122, ../../_preprocess/sass/core/_normalize.scss */
+/* line 122, ../../_includes/sass/core/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -138,7 +122,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-/* line 131, ../../_preprocess/sass/core/_normalize.scss */
+/* line 131, ../../_includes/sass/core/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -146,7 +130,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 140, ../../_preprocess/sass/core/_normalize.scss */
+/* line 140, ../../_includes/sass/core/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -155,7 +139,7 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 148, ../../_preprocess/sass/core/_normalize.scss */
+/* line 148, ../../_includes/sass/core/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -163,7 +147,7 @@ dfn {
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 156, ../../_preprocess/sass/core/_normalize.scss */
+/* line 156, ../../_includes/sass/core/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -173,7 +157,7 @@ hr {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 166, ../../_preprocess/sass/core/_normalize.scss */
+/* line 166, ../../_includes/sass/core/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -182,7 +166,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-/* line 178, ../../_preprocess/sass/core/_normalize.scss */
+/* line 178, ../../_includes/sass/core/_normalize.scss */
 code,
 kbd,
 pre,
@@ -194,7 +178,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 187, ../../_preprocess/sass/core/_normalize.scss */
+/* line 187, ../../_includes/sass/core/_normalize.scss */
 pre {
   white-space: pre-wrap;
 }
@@ -202,7 +186,7 @@ pre {
 /**
  * Set consistent quote types.
  */
-/* line 195, ../../_preprocess/sass/core/_normalize.scss */
+/* line 195, ../../_includes/sass/core/_normalize.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -210,7 +194,7 @@ q {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 203, ../../_preprocess/sass/core/_normalize.scss */
+/* line 203, ../../_includes/sass/core/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -218,7 +202,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 212, ../../_preprocess/sass/core/_normalize.scss */
+/* line 212, ../../_includes/sass/core/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -227,12 +211,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 219, ../../_preprocess/sass/core/_normalize.scss */
+/* line 219, ../../_includes/sass/core/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 223, ../../_preprocess/sass/core/_normalize.scss */
+/* line 223, ../../_includes/sass/core/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -240,7 +224,7 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-/* line 235, ../../_preprocess/sass/core/_normalize.scss */
+/* line 235, ../../_includes/sass/core/_normalize.scss */
 img {
   border: 0;
 }
@@ -248,7 +232,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 243, ../../_preprocess/sass/core/_normalize.scss */
+/* line 243, ../../_includes/sass/core/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -256,7 +240,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-/* line 255, ../../_preprocess/sass/core/_normalize.scss */
+/* line 255, ../../_includes/sass/core/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -264,7 +248,7 @@ figure {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 267, ../../_preprocess/sass/core/_normalize.scss */
+/* line 267, ../../_includes/sass/core/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -275,7 +259,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 278, ../../_preprocess/sass/core/_normalize.scss */
+/* line 278, ../../_includes/sass/core/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -288,7 +272,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 292, ../../_preprocess/sass/core/_normalize.scss */
+/* line 292, ../../_includes/sass/core/_normalize.scss */
 button,
 input,
 select,
@@ -305,7 +289,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 304, ../../_preprocess/sass/core/_normalize.scss */
+/* line 304, ../../_includes/sass/core/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -317,7 +301,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 316, ../../_preprocess/sass/core/_normalize.scss */
+/* line 316, ../../_includes/sass/core/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -330,7 +314,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 331, ../../_preprocess/sass/core/_normalize.scss */
+/* line 331, ../../_includes/sass/core/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -344,7 +328,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 341, ../../_preprocess/sass/core/_normalize.scss */
+/* line 341, ../../_includes/sass/core/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -354,7 +338,7 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
-/* line 351, ../../_preprocess/sass/core/_normalize.scss */
+/* line 351, ../../_includes/sass/core/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -368,7 +352,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 362, ../../_preprocess/sass/core/_normalize.scss */
+/* line 362, ../../_includes/sass/core/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -382,7 +366,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 375, ../../_preprocess/sass/core/_normalize.scss */
+/* line 375, ../../_includes/sass/core/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -391,7 +375,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 384, ../../_preprocess/sass/core/_normalize.scss */
+/* line 384, ../../_includes/sass/core/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -402,7 +386,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 394, ../../_preprocess/sass/core/_normalize.scss */
+/* line 394, ../../_includes/sass/core/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -413,14 +397,152 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 407, ../../_preprocess/sass/core/_normalize.scss */
+/* line 407, ../../_includes/sass/core/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2013 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      exljbris Font Foundry
+ * License URL: http://www.fontspring.com/fflicense/exljbris
+ *
+ *
+ */
+@font-face {
+  font-family: 'CallunaRegular';
+  src: url("../fonts/Calluna-Regular-webfont.eot");
+  src: url("../fonts/Calluna-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Calluna-Regular-webfont.woff") format("woff"), url("../fonts/Calluna-Regular-webfont.ttf") format("truetype"), url("../fonts/Calluna-Regular-webfont.svg#CallunaRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 44, ../../_includes/sass/core/_fonts.scss */
+h1, h2 {
+  font-family: "CallunaRegular", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on April 4, 2012 */
+@font-face {
+  font-family: 'MuseoSans300Italic';
+  src: url("../fonts/museosans_300_italic-webfont.eot");
+  src: url("../fonts/museosans_300_italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museosans_300_italic-webfont.woff") format("woff"), url("../fonts/museosans_300_italic-webfont.ttf") format("truetype"), url("../fonts/museosans_300_italic-webfont.svg#MuseoSans300Italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans300';
+  src: url("../fonts/museosans_300-webfont.eot");
+  src: url("../fonts/museosans_300-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museosans_300-webfont.woff") format("woff"), url("../fonts/museosans_300-webfont.ttf") format("truetype"), url("../fonts/museosans_300-webfont.svg#MuseoSans300") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans700';
+  src: url("../fonts/museosans_700-webfont.eot");
+  src: url("../fonts/museosans_700-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museosans_700-webfont.woff") format("woff"), url("../fonts/museosans_700-webfont.ttf") format("truetype"), url("../fonts/museosans_700-webfont.svg#MuseoSans700") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans900';
+  src: url("../fonts/museosans_900-webfont.eot");
+  src: url("../fonts/museosans_900-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museosans_900-webfont.ttf") format("truetype"), url("../fonts/museosans_900-webfont.woff") format("woff"), url("../fonts/museosans_900-webfont.svg#MuseoSans900") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 98, ../../_includes/sass/core/_fonts.scss */
+h5, h6, h3, h4, p, table, li {
+  font-family: "MuseoSans300", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 114, ../../_includes/sass/core/_fonts.scss */
+h5, h6 {
+  font-family: "MuseoSans900", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+}
+
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 12, 2014 */
+@font-face {
+  font-family: 'playfair_displayitalic';
+  src: url("../fonts/playfairdisplay-italic-webfont.eot");
+  src: url("../fonts/playfairdisplay-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/playfairdisplay-italic-webfont.woff") format("woff"), url("../fonts/playfairdisplay-italic-webfont.ttf") format("truetype"), url("../fonts/playfairdisplay-italic-webfont.svg#playfair_displayitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'playfair_displayregular';
+  src: url("../fonts/playfairdisplay-regular-webfont.eot");
+  src: url("../fonts/playfairdisplay-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/playfairdisplay-regular-webfont.woff") format("woff"), url("../fonts/playfairdisplay-regular-webfont.ttf") format("truetype"), url("../fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 149, ../../_includes/sass/core/_fonts.scss */
+.fontface .amp {
+  font-family: "playfair_displayregular", "MuseoSans300", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 155, ../../_includes/sass/core/_fonts.scss */
+.fontface em .amp {
+  font-family: "playfair_displayitalic", "MuseoSans300Italic", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 168, ../../_includes/sass/core/_fonts.scss */
+[data-icon]:before {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+}
+
+/* line 178, ../../_includes/sass/core/_fonts.scss */
+[data-icon]:before {
+  content: attr(data-icon);
+  speak: none;
+  /* Not to be trusted, but hey. */
+}
+
+/* line 184, ../../_includes/sass/core/_fonts.scss */
+.screen-reader-text {
+  /* For text that explains what the icon is (ie "RSS" or "Menu") */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
 @-moz-keyframes spin {
-  /* line 150, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 150, ../../_includes/sass/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -428,7 +550,7 @@ table {
     transform: rotate(0deg);
   }
 
-  /* line 157, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 157, ../../_includes/sass/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -438,7 +560,7 @@ table {
 }
 
 @-webkit-keyframes spin {
-  /* line 165, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 165, ../../_includes/sass/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -446,7 +568,7 @@ table {
     transform: rotate(0deg);
   }
 
-  /* line 172, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 172, ../../_includes/sass/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -456,7 +578,7 @@ table {
 }
 
 @-o-keyframes spin {
-  /* line 180, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 180, ../../_includes/sass/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -464,7 +586,7 @@ table {
     transform: rotate(0deg);
   }
 
-  /* line 187, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 187, ../../_includes/sass/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -474,7 +596,7 @@ table {
 }
 
 @-ms-keyframes spin {
-  /* line 195, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 195, ../../_includes/sass/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -482,7 +604,7 @@ table {
     transform: rotate(0deg);
   }
 
-  /* line 202, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 202, ../../_includes/sass/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -492,7 +614,7 @@ table {
 }
 
 @keyframes spin {
-  /* line 210, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 210, ../../_includes/sass/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -500,7 +622,7 @@ table {
     transform: rotate(0deg);
   }
 
-  /* line 217, ../../_preprocess/sass/core/_helpers.scss */
+  /* line 217, ../../_includes/sass/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -524,24 +646,23 @@ table {
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-/* line 17, ../../_preprocess/sass/core/_base.scss */
+/* line 17, ../../_includes/sass/core/_base.scss */
 html,
 button,
 input,
 select,
 textarea {
-  color: #333333;
   -webkit-appearance: none;
 }
 
-/* line 22, ../../_preprocess/sass/core/_base.scss */
+/* line 21, ../../_includes/sass/core/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 26, ../../_preprocess/sass/core/_base.scss */
+/* line 25, ../../_includes/sass/core/_base.scss */
 html {
   font-size: 100%;
   line-height: 1.5;
@@ -552,7 +673,7 @@ html {
   box-sizing: border-box;
 }
 
-/* line 53, ../../_preprocess/sass/core/_base.scss */
+/* line 52, ../../_includes/sass/core/_base.scss */
 main {
   display: block;
 }
@@ -562,22 +683,22 @@ main {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-/* line 63, ../../_preprocess/sass/core/_base.scss */
+/* line 62, ../../_includes/sass/core/_base.scss */
 ::-moz-selection {
-  background: red;
+  background: #849296;
   text-shadow: none;
 }
 
-/* line 68, ../../_preprocess/sass/core/_base.scss */
+/* line 67, ../../_includes/sass/core/_base.scss */
 ::selection {
-  background: red;
+  background: #849296;
   text-shadow: none;
 }
 
 /*
  * A better looking default horizontal rule
  */
-/* line 77, ../../_preprocess/sass/core/_base.scss */
+/* line 76, ../../_includes/sass/core/_base.scss */
 hr {
   display: block;
   height: 1px;
@@ -591,7 +712,7 @@ hr {
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
-/* line 94, ../../_preprocess/sass/core/_base.scss */
+/* line 93, ../../_includes/sass/core/_base.scss */
 audio,
 canvas,
 img,
@@ -603,7 +724,7 @@ video {
 /*
  * Remove default fieldset styles.
  */
-/* line 103, ../../_preprocess/sass/core/_base.scss */
+/* line 102, ../../_includes/sass/core/_base.scss */
 fieldset {
   border: 0;
   margin: 0;
@@ -613,12 +734,12 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 113, ../../_preprocess/sass/core/_base.scss */
+/* line 112, ../../_includes/sass/core/_base.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 118, ../../_preprocess/sass/core/_base.scss */
+/* line 117, ../../_includes/sass/core/_base.scss */
 ol, ul, dl {
   margin-bottom: 0;
 }
@@ -626,20 +747,20 @@ ol, ul, dl {
 /*
  * Reset lists that appear in nav elements
  */
-/* line 125, ../../_preprocess/sass/core/_base.scss */
+/* line 124, ../../_includes/sass/core/_base.scss */
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 131, ../../_preprocess/sass/core/_base.scss */
+/* line 130, ../../_includes/sass/core/_base.scss */
 p {
   text-align: left;
 }
 
 @media print {
-  /* line 7, ../../_preprocess/sass/core/_print.scss */
+  /* line 7, ../../_includes/sass/core/_print.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -648,48 +769,48 @@ p {
     text-shadow: none !important;
   }
 
-  /* line 15, ../../_preprocess/sass/core/_print.scss */
+  /* line 15, ../../_includes/sass/core/_print.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 19, ../../_preprocess/sass/core/_print.scss */
+  /* line 19, ../../_includes/sass/core/_print.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 23, ../../_preprocess/sass/core/_print.scss */
+  /* line 23, ../../_includes/sass/core/_print.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 32, ../../_preprocess/sass/core/_print.scss */
+  /* line 32, ../../_includes/sass/core/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 37, ../../_preprocess/sass/core/_print.scss */
+  /* line 37, ../../_includes/sass/core/_print.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 42, ../../_preprocess/sass/core/_print.scss */
+  /* line 42, ../../_includes/sass/core/_print.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 47, ../../_preprocess/sass/core/_print.scss */
+  /* line 47, ../../_includes/sass/core/_print.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 51, ../../_preprocess/sass/core/_print.scss */
+  /* line 51, ../../_includes/sass/core/_print.scss */
   img {
     max-width: 100% !important;
   }
@@ -698,7 +819,7 @@ p {
     margin: 0.5cm;
 }
 
-  /* line 61, ../../_preprocess/sass/core/_print.scss */
+  /* line 61, ../../_includes/sass/core/_print.scss */
   p,
   h2,
   h3 {
@@ -706,65 +827,65 @@ p {
     widows: 3;
   }
 
-  /* line 67, ../../_preprocess/sass/core/_print.scss */
+  /* line 67, ../../_includes/sass/core/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 }
-/* line 5, ../../_preprocess/sass/core/_syntax.scss */
+/* line 5, ../../_includes/sass/core/_syntax.scss */
 .highlight {
   background: #ffffff;
 }
 
-/* line 6, ../../_preprocess/sass/core/_syntax.scss */
+/* line 6, ../../_includes/sass/core/_syntax.scss */
 .highlight .c {
   color: #999988;
   font-style: italic;
 }
 
 /* Comment */
-/* line 7, ../../_preprocess/sass/core/_syntax.scss */
+/* line 7, ../../_includes/sass/core/_syntax.scss */
 .highlight .err {
   color: #a61717;
   background-color: #e3d2d2;
 }
 
 /* Error */
-/* line 8, ../../_preprocess/sass/core/_syntax.scss */
+/* line 8, ../../_includes/sass/core/_syntax.scss */
 .highlight .k {
   font-weight: bold;
 }
 
 /* Keyword */
-/* line 9, ../../_preprocess/sass/core/_syntax.scss */
+/* line 9, ../../_includes/sass/core/_syntax.scss */
 .highlight .o {
   font-weight: bold;
 }
 
 /* Operator */
-/* line 10, ../../_preprocess/sass/core/_syntax.scss */
+/* line 10, ../../_includes/sass/core/_syntax.scss */
 .highlight .cm {
   color: #999988;
   font-style: italic;
 }
 
 /* Comment.Multiline */
-/* line 11, ../../_preprocess/sass/core/_syntax.scss */
+/* line 11, ../../_includes/sass/core/_syntax.scss */
 .highlight .cp {
   color: #999999;
   font-weight: bold;
 }
 
 /* Comment.Preproc */
-/* line 12, ../../_preprocess/sass/core/_syntax.scss */
+/* line 12, ../../_includes/sass/core/_syntax.scss */
 .highlight .c1 {
   color: #999988;
   font-style: italic;
 }
 
 /* Comment.Single */
-/* line 13, ../../_preprocess/sass/core/_syntax.scss */
+/* line 13, ../../_includes/sass/core/_syntax.scss */
 .highlight .cs {
   color: #999999;
   font-weight: bold;
@@ -772,337 +893,337 @@ p {
 }
 
 /* Comment.Special */
-/* line 14, ../../_preprocess/sass/core/_syntax.scss */
+/* line 14, ../../_includes/sass/core/_syntax.scss */
 .highlight .gd {
   color: #000000;
   background-color: #ffdddd;
 }
 
 /* Generic.Deleted */
-/* line 15, ../../_preprocess/sass/core/_syntax.scss */
+/* line 15, ../../_includes/sass/core/_syntax.scss */
 .highlight .gd .x {
   color: #000000;
   background-color: #ffaaaa;
 }
 
 /* Generic.Deleted.Specific */
-/* line 16, ../../_preprocess/sass/core/_syntax.scss */
+/* line 16, ../../_includes/sass/core/_syntax.scss */
 .highlight .ge {
   font-style: italic;
 }
 
 /* Generic.Emph */
-/* line 17, ../../_preprocess/sass/core/_syntax.scss */
+/* line 17, ../../_includes/sass/core/_syntax.scss */
 .highlight .gr {
   color: #aa0000;
 }
 
 /* Generic.Error */
-/* line 18, ../../_preprocess/sass/core/_syntax.scss */
+/* line 18, ../../_includes/sass/core/_syntax.scss */
 .highlight .gh {
   color: #999999;
 }
 
 /* Generic.Heading */
-/* line 19, ../../_preprocess/sass/core/_syntax.scss */
+/* line 19, ../../_includes/sass/core/_syntax.scss */
 .highlight .gi {
   color: #000000;
   background-color: #ddffdd;
 }
 
 /* Generic.Inserted */
-/* line 20, ../../_preprocess/sass/core/_syntax.scss */
+/* line 20, ../../_includes/sass/core/_syntax.scss */
 .highlight .gi .x {
   color: #000000;
   background-color: #aaffaa;
 }
 
 /* Generic.Inserted.Specific */
-/* line 21, ../../_preprocess/sass/core/_syntax.scss */
+/* line 21, ../../_includes/sass/core/_syntax.scss */
 .highlight .go {
   color: #888888;
 }
 
 /* Generic.Output */
-/* line 22, ../../_preprocess/sass/core/_syntax.scss */
+/* line 22, ../../_includes/sass/core/_syntax.scss */
 .highlight .gp {
   color: #555555;
 }
 
 /* Generic.Prompt */
-/* line 23, ../../_preprocess/sass/core/_syntax.scss */
+/* line 23, ../../_includes/sass/core/_syntax.scss */
 .highlight .gs {
   font-weight: bold;
 }
 
 /* Generic.Strong */
-/* line 24, ../../_preprocess/sass/core/_syntax.scss */
+/* line 24, ../../_includes/sass/core/_syntax.scss */
 .highlight .gu {
   color: #aaaaaa;
 }
 
 /* Generic.Subheading */
-/* line 25, ../../_preprocess/sass/core/_syntax.scss */
+/* line 25, ../../_includes/sass/core/_syntax.scss */
 .highlight .gt {
   color: #aa0000;
 }
 
 /* Generic.Traceback */
-/* line 26, ../../_preprocess/sass/core/_syntax.scss */
+/* line 26, ../../_includes/sass/core/_syntax.scss */
 .highlight .kc {
   font-weight: bold;
 }
 
 /* Keyword.Constant */
-/* line 27, ../../_preprocess/sass/core/_syntax.scss */
+/* line 27, ../../_includes/sass/core/_syntax.scss */
 .highlight .kd {
   font-weight: bold;
 }
 
 /* Keyword.Declaration */
-/* line 28, ../../_preprocess/sass/core/_syntax.scss */
+/* line 28, ../../_includes/sass/core/_syntax.scss */
 .highlight .kp {
   font-weight: bold;
 }
 
 /* Keyword.Pseudo */
-/* line 29, ../../_preprocess/sass/core/_syntax.scss */
+/* line 29, ../../_includes/sass/core/_syntax.scss */
 .highlight .kr {
   font-weight: bold;
 }
 
 /* Keyword.Reserved */
-/* line 30, ../../_preprocess/sass/core/_syntax.scss */
+/* line 30, ../../_includes/sass/core/_syntax.scss */
 .highlight .kt {
   color: #445588;
   font-weight: bold;
 }
 
 /* Keyword.Type */
-/* line 31, ../../_preprocess/sass/core/_syntax.scss */
+/* line 31, ../../_includes/sass/core/_syntax.scss */
 .highlight .m {
   color: #009999;
 }
 
 /* Literal.Number */
-/* line 32, ../../_preprocess/sass/core/_syntax.scss */
+/* line 32, ../../_includes/sass/core/_syntax.scss */
 .highlight .s {
   color: #dd1144;
 }
 
 /* Literal.String */
-/* line 33, ../../_preprocess/sass/core/_syntax.scss */
+/* line 33, ../../_includes/sass/core/_syntax.scss */
 .highlight .na {
   color: teal;
 }
 
 /* Name.Attribute */
-/* line 34, ../../_preprocess/sass/core/_syntax.scss */
+/* line 34, ../../_includes/sass/core/_syntax.scss */
 .highlight .nb {
   color: #0086b3;
 }
 
 /* Name.Builtin */
-/* line 35, ../../_preprocess/sass/core/_syntax.scss */
+/* line 35, ../../_includes/sass/core/_syntax.scss */
 .highlight .nc {
   color: #445588;
   font-weight: bold;
 }
 
 /* Name.Class */
-/* line 36, ../../_preprocess/sass/core/_syntax.scss */
+/* line 36, ../../_includes/sass/core/_syntax.scss */
 .highlight .no {
   color: teal;
 }
 
 /* Name.Constant */
-/* line 37, ../../_preprocess/sass/core/_syntax.scss */
+/* line 37, ../../_includes/sass/core/_syntax.scss */
 .highlight .ni {
   color: purple;
 }
 
 /* Name.Entity */
-/* line 38, ../../_preprocess/sass/core/_syntax.scss */
+/* line 38, ../../_includes/sass/core/_syntax.scss */
 .highlight .ne {
   color: #990000;
   font-weight: bold;
 }
 
 /* Name.Exception */
-/* line 39, ../../_preprocess/sass/core/_syntax.scss */
+/* line 39, ../../_includes/sass/core/_syntax.scss */
 .highlight .nf {
   color: #990000;
   font-weight: bold;
 }
 
 /* Name.Function */
-/* line 40, ../../_preprocess/sass/core/_syntax.scss */
+/* line 40, ../../_includes/sass/core/_syntax.scss */
 .highlight .nn {
   color: #555555;
 }
 
 /* Name.Namespace */
-/* line 41, ../../_preprocess/sass/core/_syntax.scss */
+/* line 41, ../../_includes/sass/core/_syntax.scss */
 .highlight .nt {
   color: navy;
 }
 
 /* Name.Tag */
-/* line 42, ../../_preprocess/sass/core/_syntax.scss */
+/* line 42, ../../_includes/sass/core/_syntax.scss */
 .highlight .nv {
   color: teal;
 }
 
 /* Name.Variable */
-/* line 43, ../../_preprocess/sass/core/_syntax.scss */
+/* line 43, ../../_includes/sass/core/_syntax.scss */
 .highlight .ow {
   font-weight: bold;
 }
 
 /* Operator.Word */
-/* line 44, ../../_preprocess/sass/core/_syntax.scss */
+/* line 44, ../../_includes/sass/core/_syntax.scss */
 .highlight .w {
   color: #bbbbbb;
 }
 
 /* Text.Whitespace */
-/* line 45, ../../_preprocess/sass/core/_syntax.scss */
+/* line 45, ../../_includes/sass/core/_syntax.scss */
 .highlight .mf {
   color: #009999;
 }
 
 /* Literal.Number.Float */
-/* line 46, ../../_preprocess/sass/core/_syntax.scss */
+/* line 46, ../../_includes/sass/core/_syntax.scss */
 .highlight .mh {
   color: #009999;
 }
 
 /* Literal.Number.Hex */
-/* line 47, ../../_preprocess/sass/core/_syntax.scss */
+/* line 47, ../../_includes/sass/core/_syntax.scss */
 .highlight .mi {
   color: #009999;
 }
 
 /* Literal.Number.Integer */
-/* line 48, ../../_preprocess/sass/core/_syntax.scss */
+/* line 48, ../../_includes/sass/core/_syntax.scss */
 .highlight .mo {
   color: #009999;
 }
 
 /* Literal.Number.Oct */
-/* line 49, ../../_preprocess/sass/core/_syntax.scss */
+/* line 49, ../../_includes/sass/core/_syntax.scss */
 .highlight .sb {
   color: #dd1144;
 }
 
 /* Literal.String.Backtick */
-/* line 50, ../../_preprocess/sass/core/_syntax.scss */
+/* line 50, ../../_includes/sass/core/_syntax.scss */
 .highlight .sc {
   color: #dd1144;
 }
 
 /* Literal.String.Char */
-/* line 51, ../../_preprocess/sass/core/_syntax.scss */
+/* line 51, ../../_includes/sass/core/_syntax.scss */
 .highlight .sd {
   color: #dd1144;
 }
 
 /* Literal.String.Doc */
-/* line 52, ../../_preprocess/sass/core/_syntax.scss */
+/* line 52, ../../_includes/sass/core/_syntax.scss */
 .highlight .s2 {
   color: #dd1144;
 }
 
 /* Literal.String.Double */
-/* line 53, ../../_preprocess/sass/core/_syntax.scss */
+/* line 53, ../../_includes/sass/core/_syntax.scss */
 .highlight .se {
   color: #dd1144;
 }
 
 /* Literal.String.Escape */
-/* line 54, ../../_preprocess/sass/core/_syntax.scss */
+/* line 54, ../../_includes/sass/core/_syntax.scss */
 .highlight .sh {
   color: #dd1144;
 }
 
 /* Literal.String.Heredoc */
-/* line 55, ../../_preprocess/sass/core/_syntax.scss */
+/* line 55, ../../_includes/sass/core/_syntax.scss */
 .highlight .si {
   color: #dd1144;
 }
 
 /* Literal.String.Interpol */
-/* line 56, ../../_preprocess/sass/core/_syntax.scss */
+/* line 56, ../../_includes/sass/core/_syntax.scss */
 .highlight .sx {
   color: #dd1144;
 }
 
 /* Literal.String.Other */
-/* line 57, ../../_preprocess/sass/core/_syntax.scss */
+/* line 57, ../../_includes/sass/core/_syntax.scss */
 .highlight .sr {
   color: #009926;
 }
 
 /* Literal.String.Regex */
-/* line 58, ../../_preprocess/sass/core/_syntax.scss */
+/* line 58, ../../_includes/sass/core/_syntax.scss */
 .highlight .s1 {
   color: #dd1144;
 }
 
 /* Literal.String.Single */
-/* line 59, ../../_preprocess/sass/core/_syntax.scss */
+/* line 59, ../../_includes/sass/core/_syntax.scss */
 .highlight .ss {
   color: #990073;
 }
 
 /* Literal.String.Symbol */
-/* line 60, ../../_preprocess/sass/core/_syntax.scss */
+/* line 60, ../../_includes/sass/core/_syntax.scss */
 .highlight .bp {
   color: #999999;
 }
 
 /* Name.Builtin.Pseudo */
-/* line 61, ../../_preprocess/sass/core/_syntax.scss */
+/* line 61, ../../_includes/sass/core/_syntax.scss */
 .highlight .vc {
   color: teal;
 }
 
 /* Name.Variable.Class */
-/* line 62, ../../_preprocess/sass/core/_syntax.scss */
+/* line 62, ../../_includes/sass/core/_syntax.scss */
 .highlight .vg {
   color: teal;
 }
 
 /* Name.Variable.Global */
-/* line 63, ../../_preprocess/sass/core/_syntax.scss */
+/* line 63, ../../_includes/sass/core/_syntax.scss */
 .highlight .vi {
   color: teal;
 }
 
 /* Name.Variable.Instance */
-/* line 64, ../../_preprocess/sass/core/_syntax.scss */
+/* line 64, ../../_includes/sass/core/_syntax.scss */
 .highlight .il {
   color: #009999;
 }
 
 /* Literal.Number.Integer.Long */
-/* line 5, ../../_preprocess/sass/core/_layout.scss */
+/* line 5, ../../_includes/sass/core/_layout.scss */
 .wrapper > h1, .strip > h1, .wrapper > h2, .strip > h2, .wrapper > h3, .strip > h3, .wrapper > h4, .strip > h4, .wrapper > h5, .strip > h5, .wrapper > h6, .strip > h6, .wrapper > hgroup, .strip > hgroup, .wrapper > p, .strip > p, .wrapper > ul, .strip > ul, footer.global .copyright, .footer.global .copyright {
   padding: 0 12px;
 }
 
-/* line 9, ../../_preprocess/sass/core/_layout.scss */
+/* line 9, ../../_includes/sass/core/_layout.scss */
 .hero, footer.local, .footer.local, .map {
   margin-left: -48px;
   margin-right: -48px;
 }
 
-/* line 14, ../../_preprocess/sass/core/_layout.scss */
+/* line 14, ../../_includes/sass/core/_layout.scss */
 html, body {
   min-height: 100%;
 }
 
-/* line 18, ../../_preprocess/sass/core/_layout.scss */
+/* line 18, ../../_includes/sass/core/_layout.scss */
 [role="main"], .main, footer.global, .footer.global {
   margin-left: 180px;
   width: calc(100% - $header-w);
@@ -1114,13 +1235,13 @@ html, body {
   display: table;
   clear: both;
 }
-/* line 28, ../../_preprocess/sass/core/_layout.scss */
+/* line 28, ../../_includes/sass/core/_layout.scss */
 [role="main"] > h1, .main > h1, footer.global > h1, .footer.global > h1 {
   margin-top: 24px;
   margin-top: 1.5rem;
 }
 
-/* line 33, ../../_preprocess/sass/core/_layout.scss */
+/* line 33, ../../_includes/sass/core/_layout.scss */
 .wrapper, .strip {
   margin: 0 auto;
   max-width: 1072px;
@@ -1134,89 +1255,96 @@ html, body {
   clear: both;
 }
 
-/* line 9, ../../_preprocess/sass/core/_content.scss */
+/* line 9, ../../_includes/sass/core/_content.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
-/* line 12, ../../_preprocess/sass/core/_content.scss */
+/* line 12, ../../_includes/sass/core/_content.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: inherit;
   text-decoration: none;
 }
-/* line 16, ../../_preprocess/sass/core/_content.scss */
+/* line 16, ../../_includes/sass/core/_content.scss */
 h1 a:hover, h1 a:active, h2 a:hover, h2 a:active, h3 a:hover, h3 a:active, h4 a:hover, h4 a:active, h5 a:hover, h5 a:active, h6 a:hover, h6 a:active {
   color: inherit;
   border-bottom: none;
 }
 
-/* line 23, ../../_preprocess/sass/core/_content.scss */
+/* line 23, ../../_includes/sass/core/_content.scss */
 h1 {
   font-size: 32px;
   font-size: 2rem;
 }
 
-/* line 27, ../../_preprocess/sass/core/_content.scss */
+/* line 28, ../../_includes/sass/core/_content.scss */
 h2 {
   font-size: 27px;
   font-size: 1.6875rem;
 }
 
-/* line 31, ../../_preprocess/sass/core/_content.scss */
+/* line 33, ../../_includes/sass/core/_content.scss */
 h3 {
   font-size: 18px;
   font-size: 1.125rem;
 }
 
-/* line 35, ../../_preprocess/sass/core/_content.scss */
+/* line 38, ../../_includes/sass/core/_content.scss */
 h4 {
   font-size: 18px;
   font-size: 1.125rem;
 }
 
-/* line 39, ../../_preprocess/sass/core/_content.scss */
+/* line 43, ../../_includes/sass/core/_content.scss */
 h5 {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
-/* line 43, ../../_preprocess/sass/core/_content.scss */
+/* line 48, ../../_includes/sass/core/_content.scss */
 h6 {
   font-size: 12px;
   font-size: 0.75rem;
 }
 
-/* line 48, ../../_preprocess/sass/core/_content.scss */
+/* line 54, ../../_includes/sass/core/_content.scss */
 .intro {
   font-size: 21px;
   font-size: 1.3125rem;
 }
 
-/* line 52, ../../_preprocess/sass/core/_content.scss */
+/* line 58, ../../_includes/sass/core/_content.scss */
 p, table, li {
   font-size: 16px;
   font-size: 1rem;
 }
 
-/* line 56, ../../_preprocess/sass/core/_content.scss */
+/* line 63, ../../_includes/sass/core/_content.scss */
 ol, ul {
   margin-left: 0;
   padding-left: 1em;
 }
 @media (min-width: 48em) {
-  /* line 56, ../../_preprocess/sass/core/_content.scss */
+  /* line 63, ../../_includes/sass/core/_content.scss */
   ol, ul {
     padding-left: 0;
   }
 }
 
-/* line 65, ../../_preprocess/sass/core/_content.scss */
+/* line 72, ../../_includes/sass/core/_content.scss */
 a {
-  -webkit-animation: all 0.5;
-  -moz-animation: all 0.5;
-  animation: all 0.5;
+  text-decoration: none;
 }
 
-/* line 69, ../../_preprocess/sass/core/_content.scss */
+/* line 79, ../../_includes/sass/core/_content.scss */
+.fontface .amp {
+  font-size: 1.1em;
+}
+/* line 84, ../../_includes/sass/core/_content.scss */
+.fontface em .amp {
+  font-size: 1.1em;
+}
+
+/* line 91, ../../_includes/sass/core/_content.scss */
 .amp {
   font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
   font-style: italic;
@@ -1224,7 +1352,12 @@ a {
   font-size: 1.1em;
 }
 
-/* line 15, ../../_preprocess/sass/modules/_header.scss */
+/* line 3, ../../_includes/sass/core/_themes.scss */
+html {
+  color: #616a6d;
+}
+
+/* line 15, ../../_includes/sass/modules/_header.scss */
 [role="banner"].global {
   width: 180px;
   height: 100%;
@@ -1240,42 +1373,42 @@ a {
   overflow-x: auto;
 }
 
-/* line 18, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 18, ../../_includes/sass/modules/_navigation.scss */
 [role="navigation"].global {
   padding: 0 24px;
 }
-/* line 21, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 21, ../../_includes/sass/modules/_navigation.scss */
 [role="navigation"].global ul {
   margin: 18px 0;
   margin: 1.125rem 0;
 }
-/* line 25, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 25, ../../_includes/sass/modules/_navigation.scss */
 [role="navigation"].global .secondary {
   padding-top: 18px;
   padding-top: 1.125rem;
   border-top: 1px solid #cccccc;
 }
-/* line 30, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 30, ../../_includes/sass/modules/_navigation.scss */
 [role="navigation"].global .active {
   color: #999;
 }
 
-/* line 38, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 38, ../../_includes/sass/modules/_navigation.scss */
 .local {
   position: relative;
 }
-/* line 41, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 41, ../../_includes/sass/modules/_navigation.scss */
 .local.grid {
   list-style: none;
   list-style-type: none;
   vertical-align: top;
 }
-/* line 270, ../../_preprocess/sass/core/_helpers.scss */
+/* line 270, ../../_includes/sass/core/_helpers.scss */
 .local.grid li {
   list-style: none;
   list-style-type: none;
 }
-/* line 279, ../../_preprocess/sass/core/_helpers.scss */
+/* line 279, ../../_includes/sass/core/_helpers.scss */
 .local.grid li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1284,34 +1417,34 @@ a {
   zoom: 1;
   *display: inline;
 }
-/* line 46, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 46, ../../_includes/sass/modules/_navigation.scss */
 .local.grid li {
   width: 25%;
   padding: 0 12px;
   padding-bottom: 12px;
   margin-right: -4px;
 }
-/* line 53, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 53, ../../_includes/sass/modules/_navigation.scss */
 .local.grid .tile {
   display: block;
 }
-/* line 58, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 58, ../../_includes/sass/modules/_navigation.scss */
 .local.grid-2 {
   margin-bottom: -5em;
 }
-/* line 62, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 62, ../../_includes/sass/modules/_navigation.scss */
 .local.grid-2 .col {
   width: 50%;
   line-height: 1.4;
   margin: 0;
   padding: 0 12px;
 }
-/* line 69, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 69, ../../_includes/sass/modules/_navigation.scss */
 .local.grid-2 .col.first {
   position: relative;
   left: 0;
 }
-/* line 75, ../../_preprocess/sass/modules/_navigation.scss */
+/* line 75, ../../_includes/sass/modules/_navigation.scss */
 .local.grid-2 .col.second {
   position: relative;
   left: 50%;
@@ -1319,15 +1452,15 @@ a {
   margin-left: -4px;
 }
 
-/* line 8, ../../_preprocess/sass/modules/_hero.scss */
+/* line 8, ../../_includes/sass/modules/_hero.scss */
 .hero {
-  height: 260px;
-  height: 16.25rem;
-  background: url("http://placehold.it/1200x260") center center no-repeat;
+  height: 320px;
+  height: 20rem;
+  background: url("http://placehold.it/1200x320") center center no-repeat;
   background-size: cover;
 }
 
-/* line 8, ../../_preprocess/sass/modules/strip.scss */
+/* line 8, ../../_includes/sass/modules/strip.scss */
 .strip {
   padding-top: 24px;
   padding-top: 1.5rem;
@@ -1343,11 +1476,11 @@ a {
   display: table;
   clear: both;
 }
-/* line 17, ../../_preprocess/sass/modules/strip.scss */
+/* line 17, ../../_includes/sass/modules/strip.scss */
 .strip:first-child, .strip.first {
   border-top: none;
 }
-/* line 21, ../../_preprocess/sass/modules/strip.scss */
+/* line 21, ../../_includes/sass/modules/strip.scss */
 .strip .copy {
   width: 75%;
   float: left;
@@ -1357,7 +1490,7 @@ a {
   padding-left: 12px;
   padding-right: 12px;
 }
-/* line 25, ../../_preprocess/sass/modules/strip.scss */
+/* line 25, ../../_includes/sass/modules/strip.scss */
 .strip > aside {
   width: 25%;
   float: right;
@@ -1369,7 +1502,7 @@ a {
   margin-top: 24px;
   margin-top: 1.5rem;
 }
-/* line 30, ../../_preprocess/sass/modules/strip.scss */
+/* line 30, ../../_includes/sass/modules/strip.scss */
 .strip .sub {
   width: 50%;
   clear: right;
@@ -1377,7 +1510,7 @@ a {
   padding-left: 12px;
   padding-right: 12px;
 }
-/* line 33, ../../_preprocess/sass/modules/strip.scss */
+/* line 33, ../../_includes/sass/modules/strip.scss */
 .strip .sub:last-child {
   width: 50%;
   clear: right;
@@ -1385,7 +1518,7 @@ a {
   padding-left: 12px;
   padding-right: 12px;
 }
-/* line 39, ../../_preprocess/sass/modules/strip.scss */
+/* line 39, ../../_includes/sass/modules/strip.scss */
 .strip .contact-form {
   width: 50%;
   float: left;
@@ -1396,7 +1529,7 @@ a {
   padding-right: 12px;
 }
 
-/* line 44, ../../_preprocess/sass/modules/strip.scss */
+/* line 44, ../../_includes/sass/modules/strip.scss */
 .sub-info {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1408,11 +1541,11 @@ a {
   margin-right: -4px;
   padding: 0 12px;
 }
-/* line 50, ../../_preprocess/sass/modules/strip.scss */
+/* line 50, ../../_includes/sass/modules/strip.scss */
 .sub-info:first-child {
   padding-left: 0;
 }
-/* line 53, ../../_preprocess/sass/modules/strip.scss */
+/* line 53, ../../_includes/sass/modules/strip.scss */
 .sub-info:last-child {
   padding-right: 0;
   clear: right;
@@ -1424,7 +1557,7 @@ a {
   clear: both;
 }
 
-/* line 74, ../../_preprocess/sass/modules/strip.scss */
+/* line 74, ../../_includes/sass/modules/strip.scss */
 .strip.profile .profile-portrait {
   width: 25%;
   float: left;
@@ -1434,7 +1567,7 @@ a {
   padding-left: 12px;
   padding-right: 12px;
 }
-/* line 77, ../../_preprocess/sass/modules/strip.scss */
+/* line 77, ../../_includes/sass/modules/strip.scss */
 .strip.profile .profile-copy {
   width: 75%;
   float: right;
@@ -1445,18 +1578,18 @@ a {
   padding-right: 12px;
 }
 
-/* line 25, ../../_preprocess/sass/modules/_post.scss */
+/* line 25, ../../_includes/sass/modules/_post.scss */
 .post.excerpt {
   padding: 24px 0;
   padding: 1.5rem 0;
   border-bottom: 1px solid #cccccc;
 }
-/* line 29, ../../_preprocess/sass/modules/_post.scss */
+/* line 29, ../../_includes/sass/modules/_post.scss */
 .post.excerpt:last-child {
   border-bottom: none;
 }
 
-/* line 34, ../../_preprocess/sass/modules/_post.scss */
+/* line 34, ../../_includes/sass/modules/_post.scss */
 .posts {
   width: 75%;
   float: left;
@@ -1475,7 +1608,7 @@ a {
   clear: both;
 }
 
-/* line 43, ../../_preprocess/sass/modules/_post.scss */
+/* line 43, ../../_includes/sass/modules/_post.scss */
 .meta {
   width: 25%;
   float: right;
@@ -1487,13 +1620,13 @@ a {
   list-style: none;
   list-style-type: none;
 }
-/* line 270, ../../_preprocess/sass/core/_helpers.scss */
+/* line 270, ../../_includes/sass/core/_helpers.scss */
 .meta li {
   list-style: none;
   list-style-type: none;
 }
 
-/* line 17, ../../_preprocess/sass/modules/_footer.scss */
+/* line 17, ../../_includes/sass/modules/_footer.scss */
 footer.global, .footer.global {
   padding-top: 24px;
   padding-top: 1.5rem;
@@ -1501,7 +1634,7 @@ footer.global, .footer.global {
   padding-bottom: 1.5rem;
   background: #ddd;
 }
-/* line 23, ../../_preprocess/sass/modules/_footer.scss */
+/* line 23, ../../_includes/sass/modules/_footer.scss */
 footer.global .copyright, .footer.global .copyright {
   width: 100%;
   float: right;
@@ -1517,7 +1650,7 @@ footer.global .copyright, .footer.global .copyright {
   border-top: 1px solid #cccccc;
 }
 
-/* line 33, ../../_preprocess/sass/modules/_footer.scss */
+/* line 33, ../../_includes/sass/modules/_footer.scss */
 #home footer.global .contact-form, #home .footer.global .contact-form {
   width: 50%;
   float: left;
@@ -1527,7 +1660,7 @@ footer.global .copyright, .footer.global .copyright {
   padding-left: 12px;
   padding-right: 12px;
 }
-/* line 36, ../../_preprocess/sass/modules/_footer.scss */
+/* line 36, ../../_includes/sass/modules/_footer.scss */
 #home footer.global .info, #home .footer.global .info {
   width: 50%;
   float: right;
@@ -1537,17 +1670,17 @@ footer.global .copyright, .footer.global .copyright {
   padding-left: 12px;
   padding-right: 12px;
 }
-/* line 40, ../../_preprocess/sass/modules/_footer.scss */
+/* line 40, ../../_includes/sass/modules/_footer.scss */
 #home footer.global .inline, #home .footer.global .inline {
   display: list-item;
   margin-left: 0;
 }
-/* line 44, ../../_preprocess/sass/modules/_footer.scss */
+/* line 44, ../../_includes/sass/modules/_footer.scss */
 #home footer.global .inline:before, #home .footer.global .inline:before {
   content: none;
 }
 
-/* line 50, ../../_preprocess/sass/modules/_footer.scss */
+/* line 50, ../../_includes/sass/modules/_footer.scss */
 footer.local, .footer.local {
   margin-top: 24px;
   margin-top: 1.5rem;
@@ -1560,11 +1693,11 @@ footer.local, .footer.local {
   clear: both;
 }
 
-/* line 51, ../../_preprocess/sass/app.scss */
+/* line 51, ../../_includes/sass/app.scss */
 .contact-form label {
   display: block;
 }
-/* line 55, ../../_preprocess/sass/app.scss */
+/* line 55, ../../_includes/sass/app.scss */
 .contact-form .input {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1575,21 +1708,21 @@ footer.local, .footer.local {
   width: 50%;
   padding: 6px;
 }
-/* line 60, ../../_preprocess/sass/app.scss */
+/* line 60, ../../_includes/sass/app.scss */
 .contact-form .input.left {
   margin-left: -6px;
   margin-right: -3px;
 }
-/* line 64, ../../_preprocess/sass/app.scss */
+/* line 64, ../../_includes/sass/app.scss */
 .contact-form .input.right {
   margin-right: -6px;
 }
-/* line 68, ../../_preprocess/sass/app.scss */
+/* line 68, ../../_includes/sass/app.scss */
 .contact-form input {
   width: 100%;
 }
 
-/* line 73, ../../_preprocess/sass/app.scss */
+/* line 73, ../../_includes/sass/app.scss */
 .map {
   width: 100%;
   float: right;
@@ -1603,37 +1736,37 @@ footer.local, .footer.local {
   clear: both;
 }
 
-/* line 80, ../../_preprocess/sass/app.scss */
+/* line 80, ../../_includes/sass/app.scss */
 .info {
   list-style: none;
   list-style-type: none;
 }
-/* line 270, ../../_preprocess/sass/core/_helpers.scss */
+/* line 270, ../../_includes/sass/core/_helpers.scss */
 .info li {
   list-style: none;
   list-style-type: none;
 }
-/* line 300, ../../_preprocess/sass/core/_helpers.scss */
+/* line 300, ../../_includes/sass/core/_helpers.scss */
 .info.contact > dt {
   display: inline;
   margin-right: 0.375em;
 }
-/* line 304, ../../_preprocess/sass/core/_helpers.scss */
+/* line 304, ../../_includes/sass/core/_helpers.scss */
 .info.contact > dd {
   display: inline;
   margin-left: 0;
   margin-right: 0.75em;
 }
-/* line 311, ../../_preprocess/sass/core/_helpers.scss */
+/* line 311, ../../_includes/sass/core/_helpers.scss */
 .info.contact > dd:after {
   content: '\A';
   white-space: pre;
 }
-/* line 87, ../../_preprocess/sass/app.scss */
+/* line 87, ../../_includes/sass/app.scss */
 .info.contact dt {
   font-weight: bold;
 }
-/* line 92, ../../_preprocess/sass/app.scss */
+/* line 92, ../../_includes/sass/app.scss */
 .info .inline {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1643,15 +1776,15 @@ footer.local, .footer.local {
   *display: inline;
   margin-left: 0.6em;
 }
-/* line 96, ../../_preprocess/sass/app.scss */
+/* line 96, ../../_includes/sass/app.scss */
 .info .inline:first-child {
   margin-left: 0;
 }
-/* line 99, ../../_preprocess/sass/app.scss */
+/* line 99, ../../_includes/sass/app.scss */
 .info .inline:first-child:before {
   content: none;
 }
-/* line 104, ../../_preprocess/sass/app.scss */
+/* line 104, ../../_includes/sass/app.scss */
 .info .inline:before {
   content: '\2022';
   position: relative;

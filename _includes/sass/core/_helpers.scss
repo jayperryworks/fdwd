@@ -1,0 +1,391 @@
+// ==========================================================================
+// Helpers for converting units (rems, percent, etc.)
+// ==========================================================================
+
+// Eric Meyer's awesome strip unit helper
+// http://stackoverflow.com/questions/12328259/how-do-you-strip-the-unit-from-any-number-in-sass/12335841#12335841
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// convert to rem
+// @param $base (optional): base font size
+// based on http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+@function rem($px-size, $base: $type-size--default) {
+  @return #{strip-units($px-size/$base)}rem;
+}
+
+@function percent($px-size, $base: $type-size--default) {
+  @return (strip-units($px-size/$base))*100%;
+}
+
+// based on https://github.com/bitmanic/rem
+// @param $px-values: number or list of numbers (0 3px 3px 0)
+// -> NONZERO VALUES MUST HAVE UNITS
+@mixin rem($property, $px-values, $base: $type-size--default) {
+  // Print the first line in pixel values
+  #{$property}: $px-values;
+  // If there is only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values) == "number" {
+    #{$property}: rem($px-values, $base);
+  } @else {
+    // Create an empty list that we can dump values into
+    $rem-values: ();
+    @each $value in $px-values {
+      // If the value is zero or not a number, return it
+      @if $value == 0 or type-of( $value ) != "number" {
+        $rem-values: append($rem-values, $value); 
+      } @else {
+        $rem-values: append($rem-values, rem($value, $base)); 
+      }
+    }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values; 
+  } 
+}
+
+// ==================================================================================
+// Special effects & CSS graphical stuff
+// ==================================================================================
+
+@mixin cursor($type) {
+  @if ($type == "pointer") {
+    cursor: pointer;
+  } @else if ($type == "text") {
+    cursor: text;
+  } @else if ($type == "not-allowed") {
+    cursor: not-allowed;
+  } @else {
+    cursor: auto;
+  }
+}
+
+// change opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin text-inset($color: $dark-gray) {
+	text-shadow: 0px -1px 0px $color;
+}
+
+// image replacement
+@mixin ir($src, $w, $h) {
+  @include hide-text;
+  @include size($w $h);
+  // @include rem(width, $w);
+  // @include rem(height, $h);
+  display: block;
+  background: url(#{$base-path-img}#{$src}) center center no-repeat;
+}
+
+// use webkit/ie filters to make an image grayscale
+// http://www.cheesetoast.co.uk/add-grayscale-images-hover-css-black-white/
+// http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css
+%img-grayscale {
+	@include single-transition;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);  /* For Webkit browsers */
+  filter: gray;  /* For IE 6 - 9 */
+
+  &:hover {
+    @extend %img-grayscale-kill;
+  }
+}
+
+%img-grayscale-kill {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  filter: none;
+}
+
+// the parent element must have positioning set for this to work
+@mixin triangle--centered($dir: down, $side: top, $loc: 0, $width: 10px, $color: white, $selector: after) {
+	&:#{$selector} {
+		@include triangle($width, $color, $dir);
+		content: " ";
+		position: absolute;
+		#{$side}: $loc;
+		z-index: $base-z--med;
+
+		@if ($side == top){
+			left: 50%;
+			margin-left: -($width/2);
+		} @else if ($side == bottom) {
+			left: 50%;
+			margin-left: -($width/2);
+		} @else if ($side == left) {
+			top: 50%;
+			margin-top: -($width/2);
+		} @else if ($side == right) {
+			top: 50%;
+			margin-top: -($width/2);
+		}
+	}
+}
+
+// add a counter to a list
+@mixin counter($style: default, $append: ". ", $color: $color-text--primary, $item: li) {
+	list-style: none;
+	counter-reset: $item;
+
+	#{$item}:before {
+		content: counter(#{$item}) "#{$append}";
+		counter-increment: $item;
+		color: $color;
+	}
+}
+
+// Animation for spinning icons
+@mixin spin-icon {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+
+
+// ==================================================================================
+// General layout helpers
+// ==================================================================================
+
+// Add default layout margins at various breakpoints
+// -> Requires _settings.scss (and set up for Bourbon NEAT)
+// -------------------------------------------------------------------------------
+
+// @mixin base-grid-margins($property: margin, $full: false, $add-gutter: false) {
+//   $gutter: 0;
+//   @if ($add-gutter == true) {
+//     $gutter: $base-gutter/2; // foundation global var - already in ems
+//   }
+  
+//   @include rem($property, 0 ($base-margin--xsmall + $gutter), $type-size--default);
+//   // #{$property}: 0 (em-calc($base-margin--xsmall) + $gutter);
+
+//   @media #{$small} {
+//     @include rem($property, 0 ($base-margin--small + $gutter), $type-size--default);
+//     // #{$property}: 0 (em-calc($base-margin--small) + $gutter);
+//   }
+
+//   @media #{$medium} {
+//     @include rem($property, 0 ($base-margin--medium + $gutter), $type-size--default);
+//     // #{$property}: 0 (em-calc($base-margin--medium) + $gutter);
+//   }
+  
+//   @media #{$large} {
+//     @if ($full == true) {
+//       @include rem($property, 0 ($base-margin--large + $gutter), $type-size--default);
+//       // #{$property}: 0 (em-calc($base-margin--large) + $gutter);
+//     } @else {
+//       margin: 0 auto;
+//       // max-width: $row-width - (em-calc($base-margin--large) + $gutter);
+//       @include rem(max-width, $row-width - $base-margin--large, $type-size--default);
+//     }
+//   }
+// }
+
+@mixin unstyled-list {
+  list-style: none;
+  list-style-type: none;
+
+  li {
+    list-style: none;
+    list-style-type: none;
+  }
+}
+
+@mixin inline-list {
+  @include unstyled-list;
+
+  li {
+    @include inline-block;
+  }
+}
+
+// make an inline (horizontal) list and vertically center child elements
+// use this on the li elements or just inside them (ie anchors)
+@mixin inline-list--centered($height: 100%) {
+	@include rem(height, $height);
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+// kill default margins/padding on lists used as a nav. can use with inline-list and inline-block
+@mixin nav-list {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin inline-dl($break: false) {
+  & > dt {
+    display: inline;
+    margin-right: em(6);
+  }
+  & > dd {
+    display: inline;
+    margin-left: 0;
+    margin-right: em(12);
+  }
+
+  @if ($break == true) {
+    & > dd:after {
+      content: '\A';
+      white-space: pre;
+    }
+  }
+  
+}
+
+// vertically center the children of an inline block element
+@mixin inline-block--centered($height: auto) {
+	@include inline-block;
+	vertical-align: middle;
+	height: $height;
+
+	&::before, &:before {
+		content: '';
+    display: inline-block;  
+    vertical-align: middle;
+    height: 100%;
+	}
+}
+
+
+
+// ==========================================================================
+// HTML5 BP Helper classes
+// ==========================================================================
+
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+@mixin hidden {
+  display: none;
+  visibility: hidden;
+}
+
+// restore the 'hidden' css
+@mixin restore-visible($display: block) {
+  display: $display;
+  visibility: visible;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+@mixin visuallyhidden($focusable: "false") {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  @if $focusable == "true" {
+
+   // Extends the .visuallyhidden class to allow the element to be focusable
+   // when navigated to via the keyboard: h5bp.com/p
+
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+@mixin invisible {
+  visibility: hidden;
+}

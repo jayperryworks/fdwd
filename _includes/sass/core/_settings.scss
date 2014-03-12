@@ -1,0 +1,83 @@
+// ==========================================================================
+//  Global settings
+// ==========================================================================
+
+$path-images: "../images/";
+$path-fonts: "../fonts/";
+
+$base-duration: 0.5; // in seconds
+
+%base-transition {
+  @include transition (all $base-duration);
+}
+
+// Colors
+// --------------------------------------------------------------------------
+$green: #3DA288;
+$blue: #293F47;
+$brown: #927C7A;
+$gray--light: #E1E3E4;
+$gray: #849296;
+$black: #283030;
+
+$color-primary: $green;
+$color-seconary: $blue;
+
+// text
+$color-text--headline: $brown;
+$color-text--primary: #303035;
+$color-text--secondary: #616A6D;
+$color-text--tertiary: #718084;
+
+$color-selection: $gray;
+
+
+// Typography
+// --------------------------------------------------------------------------
+
+$type-size--default: 16px;
+$type-line_height: 1.5;
+
+$type-size-amp: 1.1em;
+
+
+// Containers/layout
+// --------------------------------------------------------------------------
+
+$main-max_w: 1000px;
+$main-margin: 48px;
+
+$header-w: 180px;
+
+$hairline-w--thin: 1px;
+$hairline-w--thick: 4px;
+$hairline: $hairline-w--thin solid #ccc;
+
+// --- breakpoints ----------------------------------------------------------
+$xsmall: 480px;
+$small: 768px;
+$medium: 1240px;
+$large: 1440px;
+
+$breakpoint-to-ems: true;
+
+
+// --- grid variables -------------------------------------------------------
+$grid-gutter: 24px; // convert to rem/em/percent
+
+// Singularity.gs setup
+// -> https://github.com/Team-Sass/Singularity
+$grids: add-grid(4);
+// $grids: add-grid(9 at $small);
+// $grids: add-grid(12 at $medium);
+
+$gutters: add-gutter($grid-gutter);
+$gutter-styles: 'split' 'fixed';
+
+$output: 'isolation';
+
+
+// --- default z-indexes ----------------------------------------------------
+$z--low: 0;
+$z--med: 1;
+$z--high: 2;
