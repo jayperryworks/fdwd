@@ -7,8 +7,8 @@
 }
 
 %full-bleed {
-  margin-left: -$main-margin;
-  margin-right: -$main-margin;
+  margin-left: -$layout-margin;
+  margin-right: -$layout-margin;
 }
 
 html, body {
@@ -19,13 +19,9 @@ html, body {
   @include clearfix;
   margin-left: $header-w;
   width: calc(100% - $header-w);
-  padding: 0 $main-margin;
+  padding: 0 $layout-margin;
 
-  // & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > hgroup, & > p, & > ul {
-  //   @extend .wrapper;
-  // }
-
-  & > h1 {
+  & > h1 { 
     @include rem(margin-top, 24px);
   }
 }
@@ -33,7 +29,7 @@ html, body {
 .wrapper {
   @include clearfix;
   margin: 0 auto;
-  max-width: ($main-max_w + $main-margin + $grid-gutter);
+  max-width: ($layout-width + $layout-margin + $grid-gutter);
   overflow: hidden;
   clear: both;
   

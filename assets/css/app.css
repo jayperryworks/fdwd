@@ -1,9 +1,9 @@
 /* line 10, ../../_includes/sass/core/_settings.scss */
 a {
-  -webkit-transition: all 0.5 false;
-  -moz-transition: all 0.5 false false;
-  -o-transition: all 0.5 false false;
-  transition: all 0.5;
+  -webkit-transition: all 0.5s false;
+  -moz-transition: all 0.5s false false;
+  -o-transition: all 0.5s false false;
+  transition: all 0.5s;
 }
 
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
@@ -435,7 +435,7 @@ table {
 }
 
 /* line 44, ../../_includes/sass/core/_fonts.scss */
-h1, h2 {
+h1, h2, [role="navigation"].global a {
   font-family: "CallunaRegular", Georgia, Cambria, "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: normal;
@@ -475,14 +475,19 @@ h1, h2 {
 }
 
 /* line 98, ../../_includes/sass/core/_fonts.scss */
-h5, h6, h3, h4, p, table, li {
+p em, table em, li em, p strong, table strong, li strong, h3, h4, h5, h6, p, table, li {
   font-family: "MuseoSans300", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 
+/* line 104, ../../_includes/sass/core/_fonts.scss */
+p em, table em, li em {
+  font-family: "MuseoSans300Italic", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+}
+
 /* line 114, ../../_includes/sass/core/_fonts.scss */
-h5, h6 {
+p strong, table strong, li strong {
   font-family: "MuseoSans900", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
 }
 
@@ -672,6 +677,24 @@ html {
   /* Firefox, other Gecko */
   box-sizing: border-box;
 }
+@media (min-width: 48em) {
+  /* line 25, ../../_includes/sass/core/_base.scss */
+  html {
+    font-size: 100%;
+  }
+}
+@media (min-width: 77.5em) {
+  /* line 25, ../../_includes/sass/core/_base.scss */
+  html {
+    font-size: 112.5%;
+  }
+}
+@media (min-width: 90em) {
+  /* line 25, ../../_includes/sass/core/_base.scss */
+  html {
+    font-size: 131.25%;
+  }
+}
 
 /* line 52, ../../_includes/sass/core/_base.scss */
 main {
@@ -685,13 +708,13 @@ main {
  */
 /* line 62, ../../_includes/sass/core/_base.scss */
 ::-moz-selection {
-  background: #849296;
+  background: #54bea3;
   text-shadow: none;
 }
 
 /* line 67, ../../_includes/sass/core/_base.scss */
 ::selection {
-  background: #849296;
+  background: #54bea3;
   text-shadow: none;
 }
 
@@ -1235,16 +1258,16 @@ html, body {
   display: table;
   clear: both;
 }
-/* line 28, ../../_includes/sass/core/_layout.scss */
+/* line 24, ../../_includes/sass/core/_layout.scss */
 [role="main"] > h1, .main > h1, footer.global > h1, .footer.global > h1 {
   margin-top: 24px;
   margin-top: 1.5rem;
 }
 
-/* line 33, ../../_includes/sass/core/_layout.scss */
+/* line 29, ../../_includes/sass/core/_layout.scss */
 .wrapper, .strip {
   margin: 0 auto;
-  max-width: 1072px;
+  max-width: 1096px;
   overflow: hidden;
   clear: both;
 }
@@ -1318,33 +1341,33 @@ p, table, li {
   font-size: 1rem;
 }
 
-/* line 63, ../../_includes/sass/core/_content.scss */
+/* line 71, ../../_includes/sass/core/_content.scss */
 ol, ul {
   margin-left: 0;
   padding-left: 1em;
 }
 @media (min-width: 48em) {
-  /* line 63, ../../_includes/sass/core/_content.scss */
+  /* line 71, ../../_includes/sass/core/_content.scss */
   ol, ul {
     padding-left: 0;
   }
 }
 
-/* line 72, ../../_includes/sass/core/_content.scss */
+/* line 80, ../../_includes/sass/core/_content.scss */
 a {
   text-decoration: none;
 }
 
-/* line 79, ../../_includes/sass/core/_content.scss */
+/* line 87, ../../_includes/sass/core/_content.scss */
 .fontface .amp {
   font-size: 1.1em;
 }
-/* line 84, ../../_includes/sass/core/_content.scss */
+/* line 92, ../../_includes/sass/core/_content.scss */
 .fontface em .amp {
   font-size: 1.1em;
 }
 
-/* line 91, ../../_includes/sass/core/_content.scss */
+/* line 99, ../../_includes/sass/core/_content.scss */
 .amp {
   font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
   font-style: italic;
@@ -1352,9 +1375,78 @@ a {
   font-size: 1.1em;
 }
 
-/* line 3, ../../_includes/sass/core/_themes.scss */
-html {
+/* line 8, ../../_includes/sass/core/_themes.scss */
+.default, html {
   color: #616a6d;
+  background: white;
+}
+/* line 12, ../../_includes/sass/core/_themes.scss */
+.default h1, .default h2, html h1, html h2 {
+  color: #927c7a;
+}
+/* line 16, ../../_includes/sass/core/_themes.scss */
+.default .intro, html .intro {
+  color: #303035;
+}
+/* line 20, ../../_includes/sass/core/_themes.scss */
+.default a, html a {
+  color: #3da288;
+}
+/* line 23, ../../_includes/sass/core/_themes.scss */
+.default a:hover, .default a:active, html a:hover, html a:active {
+  color: #2f7d69;
+}
+
+/* line 38, ../../_includes/sass/core/_themes.scss */
+footer.local, .footer.local {
+  color: #303035;
+  background: #3da288;
+}
+/* line 42, ../../_includes/sass/core/_themes.scss */
+footer.local h1, .footer.local h1, footer.local h2, .footer.local h2, footer.local h3, .footer.local h3 {
+  color: white;
+}
+/* line 46, ../../_includes/sass/core/_themes.scss */
+footer.local a, .footer.local a {
+  color: white;
+}
+/* line 49, ../../_includes/sass/core/_themes.scss */
+footer.local a:hover, .footer.local a:hover, footer.local a:active, .footer.local a:active {
+  color: #b0e1d5;
+}
+/* line 55, ../../_includes/sass/core/_themes.scss */
+footer.local h1 > a, .footer.local h1 > a, footer.local h2 > a, .footer.local h2 > a, footer.local h3 > a, .footer.local h3 > a, footer.local h4 > a, .footer.local h4 > a, footer.local h5 > a, .footer.local h5 > a, footer.local h6 > a, .footer.local h6 > a {
+  color: inherit;
+}
+/* line 58, ../../_includes/sass/core/_themes.scss */
+footer.local h1 > a:hover, .footer.local h1 > a:hover, footer.local h1 > a:active, .footer.local h1 > a:active, footer.local h2 > a:hover, .footer.local h2 > a:hover, footer.local h2 > a:active, .footer.local h2 > a:active, footer.local h3 > a:hover, .footer.local h3 > a:hover, footer.local h3 > a:active, .footer.local h3 > a:active, footer.local h4 > a:hover, .footer.local h4 > a:hover, footer.local h4 > a:active, .footer.local h4 > a:active, footer.local h5 > a:hover, .footer.local h5 > a:hover, footer.local h5 > a:active, .footer.local h5 > a:active, footer.local h6 > a:hover, .footer.local h6 > a:hover, footer.local h6 > a:active, .footer.local h6 > a:active {
+  color: inherit;
+}
+/* line 64, ../../_includes/sass/core/_themes.scss */
+footer.local .icon, .footer.local .icon {
+  color: #303035;
+}
+
+/* line 70, ../../_includes/sass/core/_themes.scss */
+footer.global, .footer.global {
+  color: white;
+  background: #283030;
+}
+/* line 74, ../../_includes/sass/core/_themes.scss */
+footer.global a, .footer.global a {
+  color: #3da288;
+}
+/* line 77, ../../_includes/sass/core/_themes.scss */
+footer.global a:hover, .footer.global a:hover, footer.global a:active, .footer.global a:active {
+  color: #54bea3;
+}
+/* line 82, ../../_includes/sass/core/_themes.scss */
+footer.global .highlight, .footer.global .highlight {
+  color: #3da288;
+}
+/* line 86, ../../_includes/sass/core/_themes.scss */
+footer.global .copyright, .footer.global .copyright {
+  background: #293f47;
 }
 
 /* line 15, ../../_includes/sass/modules/_header.scss */
@@ -1366,50 +1458,61 @@ html {
   top: 0;
   left: 0;
   padding-top: 36px;
-  border-right: 1px solid #cccccc;
+  border-right: 1px solid #e1e3e4;
   text-align: center;
   overflow: auto;
   overflow-y: auto;
   overflow-x: auto;
+  background: #f6f7f7;
 }
 
 /* line 18, ../../_includes/sass/modules/_navigation.scss */
 [role="navigation"].global {
   padding: 0 24px;
 }
-/* line 21, ../../_includes/sass/modules/_navigation.scss */
+/* line 22, ../../_includes/sass/modules/_navigation.scss */
 [role="navigation"].global ul {
   margin: 18px 0;
   margin: 1.125rem 0;
 }
-/* line 25, ../../_includes/sass/modules/_navigation.scss */
+/* line 26, ../../_includes/sass/modules/_navigation.scss */
 [role="navigation"].global .secondary {
   padding-top: 18px;
   padding-top: 1.125rem;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #e1e3e4;
 }
-/* line 30, ../../_includes/sass/modules/_navigation.scss */
+/* line 31, ../../_includes/sass/modules/_navigation.scss */
+[role="navigation"].global a {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #849296;
+}
+/* line 36, ../../_includes/sass/modules/_navigation.scss */
+[role="navigation"].global a:hover, [role="navigation"].global a:active {
+  color: #6a797d;
+}
+/* line 41, ../../_includes/sass/modules/_navigation.scss */
 [role="navigation"].global .active {
-  color: #999;
+  color: #3da288;
 }
 
-/* line 38, ../../_includes/sass/modules/_navigation.scss */
+/* line 49, ../../_includes/sass/modules/_navigation.scss */
 .local {
   position: relative;
 }
-/* line 41, ../../_includes/sass/modules/_navigation.scss */
-.local.grid {
+/* line 52, ../../_includes/sass/modules/_navigation.scss */
+.local.grid.small {
   list-style: none;
   list-style-type: none;
   vertical-align: top;
 }
 /* line 270, ../../_includes/sass/core/_helpers.scss */
-.local.grid li {
+.local.grid.small li {
   list-style: none;
   list-style-type: none;
 }
 /* line 279, ../../_includes/sass/core/_helpers.scss */
-.local.grid li {
+.local.grid.small li {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -1417,35 +1520,35 @@ html {
   zoom: 1;
   *display: inline;
 }
-/* line 46, ../../_includes/sass/modules/_navigation.scss */
-.local.grid li {
+/* line 57, ../../_includes/sass/modules/_navigation.scss */
+.local.grid.small li {
   width: 25%;
   padding: 0 12px;
   padding-bottom: 12px;
-  margin-right: -4px;
+  margin-right: -5px;
 }
-/* line 53, ../../_includes/sass/modules/_navigation.scss */
-.local.grid .tile {
+/* line 64, ../../_includes/sass/modules/_navigation.scss */
+.local.grid.small .tile {
   display: block;
 }
-/* line 58, ../../_includes/sass/modules/_navigation.scss */
-.local.grid-2 {
+/* line 69, ../../_includes/sass/modules/_navigation.scss */
+.local.grid.large {
   margin-bottom: -5em;
 }
-/* line 62, ../../_includes/sass/modules/_navigation.scss */
-.local.grid-2 .col {
+/* line 73, ../../_includes/sass/modules/_navigation.scss */
+.local.grid.large .col {
   width: 50%;
   line-height: 1.4;
   margin: 0;
   padding: 0 12px;
 }
-/* line 69, ../../_includes/sass/modules/_navigation.scss */
-.local.grid-2 .col.first {
+/* line 80, ../../_includes/sass/modules/_navigation.scss */
+.local.grid.large .col.first {
   position: relative;
   left: 0;
 }
-/* line 75, ../../_includes/sass/modules/_navigation.scss */
-.local.grid-2 .col.second {
+/* line 86, ../../_includes/sass/modules/_navigation.scss */
+.local.grid.large .col.second {
   position: relative;
   left: 50%;
   top: -6em;
@@ -1456,7 +1559,7 @@ html {
 .hero {
   height: 320px;
   height: 20rem;
-  background: url("http://placehold.it/1200x320") center center no-repeat;
+  background: url("../images/hero.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -1467,7 +1570,6 @@ html {
   padding-bottom: 24px;
   padding-bottom: 1.5rem;
   clear: both;
-  border-top: 1px solid #cccccc;
   overflow: hidden;
 }
 /* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
@@ -1582,7 +1684,6 @@ html {
 .post.excerpt {
   padding: 24px 0;
   padding: 1.5rem 0;
-  border-bottom: 1px solid #cccccc;
 }
 /* line 29, ../../_includes/sass/modules/_post.scss */
 .post.excerpt:last-child {
@@ -1626,15 +1727,14 @@ html {
   list-style-type: none;
 }
 
-/* line 17, ../../_includes/sass/modules/_footer.scss */
+/* line 18, ../../_includes/sass/modules/_footer.scss */
 footer.global, .footer.global {
   padding-top: 24px;
   padding-top: 1.5rem;
   padding-bottom: 24px;
   padding-bottom: 1.5rem;
-  background: #ddd;
 }
-/* line 23, ../../_includes/sass/modules/_footer.scss */
+/* line 24, ../../_includes/sass/modules/_footer.scss */
 footer.global .copyright, .footer.global .copyright {
   width: 100%;
   float: right;
@@ -1647,10 +1747,9 @@ footer.global .copyright, .footer.global .copyright {
   margin-top: 1.5rem;
   padding-top: 24px;
   padding-top: 1.5rem;
-  border-top: 1px solid #cccccc;
 }
 
-/* line 33, ../../_includes/sass/modules/_footer.scss */
+/* line 34, ../../_includes/sass/modules/_footer.scss */
 #home footer.global .contact-form, #home .footer.global .contact-form {
   width: 50%;
   float: left;
@@ -1660,7 +1759,7 @@ footer.global .copyright, .footer.global .copyright {
   padding-left: 12px;
   padding-right: 12px;
 }
-/* line 36, ../../_includes/sass/modules/_footer.scss */
+/* line 37, ../../_includes/sass/modules/_footer.scss */
 #home footer.global .info, #home .footer.global .info {
   width: 50%;
   float: right;
@@ -1670,17 +1769,17 @@ footer.global .copyright, .footer.global .copyright {
   padding-left: 12px;
   padding-right: 12px;
 }
-/* line 40, ../../_includes/sass/modules/_footer.scss */
+/* line 41, ../../_includes/sass/modules/_footer.scss */
 #home footer.global .inline, #home .footer.global .inline {
   display: list-item;
   margin-left: 0;
 }
-/* line 44, ../../_includes/sass/modules/_footer.scss */
+/* line 45, ../../_includes/sass/modules/_footer.scss */
 #home footer.global .inline:before, #home .footer.global .inline:before {
   content: none;
 }
 
-/* line 50, ../../_includes/sass/modules/_footer.scss */
+/* line 53, ../../_includes/sass/modules/_footer.scss */
 footer.local, .footer.local {
   margin-top: 24px;
   margin-top: 1.5rem;
@@ -1688,7 +1787,6 @@ footer.local, .footer.local {
   padding: 1.5rem 0;
   padding-left: 48px;
   padding-right: 48px;
-  background: #eee;
   text-align: center;
   clear: both;
 }

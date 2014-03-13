@@ -41,12 +41,12 @@ h4, %h4 {
 }
 
 h5, %h5 {
-	@extend %museo-bold;
+	@extend %museo;
 	@include rem(font-size, 14px);
 }
 
 h6, %h6 {
-	@extend %museo-bold;
+	@extend %museo;
 	@include rem(font-size, 12px);
 }
 
@@ -58,6 +58,14 @@ h6, %h6 {
 p, table, li {
 	@extend %museo;
 	@include rem(font-size, 16px);
+
+	em {
+		@extend %museo-italic;
+	}
+
+	strong {
+		@extend %museo-bold;
+	}
 }
 
 ol, ul {

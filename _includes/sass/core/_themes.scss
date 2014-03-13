@@ -1,5 +1,89 @@
+// ==============================================================================
+//  Color themes
+// ==============================================================================
 
+// Default/base
+// ------------------------------------------------------------------------------
 
-html {
+.default, html {
   color: $color-text--secondary;
+  background: white;
+
+  h1, h2 {
+    color: $color-text--headline;
+  }
+
+  .intro {
+    color: $color-text--primary;
+  }
+
+  a {
+    color: $color-text--highlight;
+    
+    &:hover, &:active {
+      color: darken($color-text--highlight, 10);
+    }
+  }
+}
+
+// Variations
+// ------------------------------------------------------------------------------
+
+// slightly 'inset', with light gray bg
+%theme-well {
+
+}
+
+// bright colored background, meant to stand out or add accent
+%theme-flood {
+  color: $color-text--primary;
+  background: $color-bg--flood;
+
+  h1, h2, h3 {
+    color: white;
+  }
+
+  a {
+    color: white;
+
+    &:hover, &:active {
+      color: lighten($color-bg--flood, 35);
+    }
+  }
+
+  #{headers()} {
+    & > a {
+      color: inherit;
+
+      &:hover, &:active {
+        color: inherit;
+      }
+    }
+  }
+
+  .icon {
+    color: $color-text--primary;
+  }
+}
+
+// light FG over dark BG, contrasts sharply with default (dark FG over light BG)
+%theme-reverse {
+  color: white;
+  background: $color-bg--reverse;
+
+  a {
+    color: $color-text--highlight;
+
+    &:hover, &:active {
+      color: lighten($color-text--highlight, 10);
+    }
+  }
+
+  .highlight {
+    color: $color-text--highlight;
+  }
+
+  %accent {
+    background: $color-bg--accent;
+  }
 }

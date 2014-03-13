@@ -11,7 +11,7 @@
   @include rem(padding-bottom, 24px);
   @include clearfix;
   clear: both;
-  border-top: $hairline;
+  // border-top: $hairline;
   overflow: hidden;
 
   &:first-child, &.first {

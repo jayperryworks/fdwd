@@ -13,19 +13,20 @@ footer, .footer {
 // SUBMODULES
 // -----------------------------------------------------------------------------
 
-// global/main footer @ bottom of each page
+// ------- global footer -------------------------------------------------------
+
 footer.global, .footer.global {
+  @extend %theme-reverse;
 	@extend .main;
   @include rem(padding-top, 24px);
   @include rem(padding-bottom, 24px);
-  background: #ddd;
 
   .copyright {
     @extend %add-gutters;
+    @extend %accent;
     @include grid-span(4, 1, $options: both);
     @include rem(margin-top, 24px);
     @include rem(padding-top, 24px);
-    border-top: $hairline;
   }
 }
 
@@ -47,13 +48,15 @@ footer.global, .footer.global {
   }
 }
 
+// ------- local footer -------------------------------------------------------
+
 footer.local, .footer.local {
   @extend %full-bleed;
+  @extend %theme-flood;
   @include rem(margin-top, 24px);
   @include rem(padding, 24px 0);
-  padding-left: $main-margin;
-  padding-right: $main-margin;
-  background: #eee;
+  padding-left: $layout-margin;
+  padding-right: $layout-margin;
   text-align: center;
   clear: both;
 }
