@@ -21,26 +21,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, %h1 {
+	@extend %calluna;
 	@include rem(font-size, 32px);
 }
 
 h2, %h2 {
+	@extend %calluna;
 	@include rem(font-size, 27px);
 }
 
 h3, %h3 {
+	@extend %museo;
 	@include rem(font-size, 18px);
 }
 
 h4, %h4 {
+	@extend %museo;
 	@include rem(font-size, 18px);
 }
 
 h5, %h5 {
+	@extend %museo;
 	@include rem(font-size, 14px);
 }
 
 h6, %h6 {
+	@extend %museo;
 	@include rem(font-size, 12px);
 }
 
@@ -50,7 +56,16 @@ h6, %h6 {
 }
 
 p, table, li {
+	@extend %museo;
 	@include rem(font-size, 16px);
+
+	em {
+		@extend %museo-italic;
+	}
+
+	strong {
+		@extend %museo-bold;
+	}
 }
 
 ol, ul {
@@ -63,14 +78,29 @@ ol, ul {
 }
 
 a {
-	@include animation(all $base-duration);
+	@extend %base-transition;
+	text-decoration: none;
 }
 
+// if @font-face is supported, use Playfair ampersands...
+.fontface {
+	.amp {
+		@extend %playfair;
+		font-size: $type-size-amp;
+	}
+
+	em .amp {
+		@extend %playfair-italic;
+		font-size: $type-size-amp;
+	}
+}
+
+// otherwise, use the best ampersands from common system fonts
 .amp {
 	font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
 	font-style: italic;
 	font-weight: normal;
-	font-size: 1.1em; // relative to whatever type surrounds it -- it renders slightly bigger
+	font-size: $type-size-amp; // relative to whatever type surrounds it -- it renders slightly bigger
 }
 
 

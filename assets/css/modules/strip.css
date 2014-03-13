@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined mixin 'rem'.
-        on line 10 of /Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_preprocess/sass/modules/strip.scss, in `rem'
-        from line 10 of /Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_preprocess/sass/modules/strip.scss
+        on line 10 of /Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_includes/sass/modules/strip.scss, in `rem'
+        from line 10 of /Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_includes/sass/modules/strip.scss
 
 Backtrace:
-/Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_preprocess/sass/modules/strip.scss:10:in `rem'
-/Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_preprocess/sass/modules/strip.scss:10
+/Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_includes/sass/modules/strip.scss:10:in `rem'
+/Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_includes/sass/modules/strip.scss:10
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
@@ -78,4 +78,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'rem'.\A         on line 10 of /Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_preprocess/sass/modules/strip.scss, in `rem'\A         from line 10 of /Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_preprocess/sass/modules/strip.scss"; }
+  content: "Syntax error: Undefined mixin 'rem'.\A         on line 10 of /Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_includes/sass/modules/strip.scss, in `rem'\A         from line 10 of /Users/jay/Projects/grep Innovation/FDWD law redesign/prototype/_includes/sass/modules/strip.scss"; }

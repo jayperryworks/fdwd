@@ -16,6 +16,7 @@
 // ------- Global/main nav -------------------------------------------
 
 [role="navigation"].global {
+  @extend %theme-well;
   padding: 0 $grid-gutter;
 
   ul {
@@ -24,11 +25,21 @@
 
   .secondary {
     @include rem(padding-top, 18px);
-    border-top: $hairline;
+    border-top: $hairline-w--thin solid $gray--light;
+  }
+
+  a {
+    @extend %calluna;
+    @include rem(font-size, 16px);
+    color: $gray;
+
+    &:hover, &:active {
+      color: darken($gray, 10);
+    }
   }
 
   .active {
-    color: #999;
+    color: $green;
   }
 }
 
@@ -38,7 +49,7 @@
 .local {
   position: relative;
 
-  &.grid {
+  &.grid.small {
     @include inline-list;
     vertical-align: top;
     // margin-right: -#{$grid-gutter};
@@ -47,7 +58,7 @@
       width: 25%;
       padding: 0 ($grid-gutter/2);
       padding-bottom: ($grid-gutter/2);
-      margin-right: -4px;
+      margin-right: -5px;
     }
 
     .tile {
@@ -55,7 +66,7 @@
     }
   }
 
-  &.grid-2 {
+  &.grid.large {
 
     margin-bottom: -5em;
 

@@ -6,3 +6,10 @@ markdown: redcarpet
 pygments: true
 
 exclude: ["README.md", "config.rb", ".sublime-project", ".sublime-workspace", "Guardfile", "Gemfile", "Gemfile.lock", ".sass-cache"]
+
+# asset paths
+assets:
+  img: 'assets/images/'
+  css: 'assets/css/'
+  js: 'assets/js/'
+  fonts: 'assets/fonts/'

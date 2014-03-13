@@ -9,10 +9,9 @@
 // Settings & resets
 // ===============================================================================
 
-@import "core/fonts";
-
 @import "core/settings";
 @import "core/normalize";
+@import "core/fonts";
 
 
 // ===============================================================================
@@ -25,6 +24,7 @@
 @import "core/syntax";
 @import "core/layout";
 @import "core/content";
+@import "core/themes";
 
 // ===============================================================================
 // Modules & components

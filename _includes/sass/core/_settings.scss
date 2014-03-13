@@ -3,38 +3,66 @@
 // ==========================================================================
 
 $path-images: "../images/";
+$path-fonts: "../fonts/";
 
-$base-duration: 0.5; // in seconds
+$base-duration: 0.5s; // in seconds
+
+%base-transition {
+  @include transition (all $base-duration);
+}
 
 // Colors
 // --------------------------------------------------------------------------
 
+$green: #3da288;
+$blue: #293f47;
+$brown: #927c7a;
+$gray--light: #e1e3e4;
+$gray: #849296;
+$black: #283030;
+
+$color-primary: $green;
+$color-seconary: $blue;
+
+$color-bg--well: lighten($gray--light, 8); // slightly 'recessed' element
+$color-bg--flood: $green; // bright highlight/accent
+$color-bg--reverse: $black; // dark bg
+$color-bg--accent: $blue; // accent color
 
 // text
-$color-text--primary: #333;
-$color-text--secondary: #999;
+$color-text--headline: $brown;
+$color-text--primary: #303035;
+$color-text--secondary: #616a6d;
+$color-text--tertiary: #718084;
 
-$color-selection: red;
+$color-text--highlight: $green;
+
+$color-selection: lighten($green, 10);
 
 
 // Typography
 // --------------------------------------------------------------------------
 
 $type-size--default: 16px;
+$type-size--small: 16px;
+$type-size--medium: 18px;
+$type-size--large: 21px;
+
 $type-line_height: 1.5;
+
+$type-size-amp: 1.1em;
 
 
 // Containers/layout
 // --------------------------------------------------------------------------
 
-$main-max_w: 1000px;
-$main-margin: 48px;
+$layout-width: 1024px;
+$layout-margin: 48px;
 
 $header-w: 180px;
 
 $hairline-w--thin: 1px;
 $hairline-w--thick: 4px;
-$hairline: $hairline-w--thin solid #ccc;
 
 // --- breakpoints ----------------------------------------------------------
 $xsmall: 480px;
@@ -46,7 +74,7 @@ $breakpoint-to-ems: true;
 
 
 // --- grid variables -------------------------------------------------------
-$grid-gutter: 24px; // convert to rem/em/percent
+$grid-gutter: 24px;
 
 // Singularity.gs setup
 // -> https://github.com/Team-Sass/Singularity

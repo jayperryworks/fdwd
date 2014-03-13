@@ -24,7 +24,7 @@
 
 .post.excerpt {
   @include rem(padding, 24px 0);
-  border-bottom: $hairline;
+  // border-bottom: $hairline;
 
   &:last-child {
     border-bottom: none;

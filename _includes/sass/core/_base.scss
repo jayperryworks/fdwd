@@ -15,7 +15,6 @@ button,
 input,
 select,
 textarea {
-  color: $color-text--primary;
   -webkit-appearance: none;
 }
 
@@ -29,17 +28,17 @@ html {
   // and we only have to change one thing
   font-size: percent($type-size--default);
 
-  // @include breakpoint($small) {
-  //     font-size: percent($base-font-size--small);
-  // }
+  @include breakpoint($small) {
+      font-size: percent($type-size--small);
+  }
 
-  // @include breakpoint($medium) {
-  //     font-size: percent($base-font-size--medium);
-  // }
+  @include breakpoint($medium) {
+      font-size: percent($type-size--medium);
+  }
 
-  // @include breakpoint($large) {
-  //     font-size: percent($base-font-size--large);
-  // }
+  @include breakpoint($large) {
+      font-size: percent($type-size--large);
+  }
 
   line-height: $type-line_height;
 
