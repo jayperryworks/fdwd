@@ -1,11 +1,32 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
 name: Franklin, Denney, Ward & Dryer P.L.C.
+description: FDWD website redesign prototype
+author:
+  name: Jay Perry Works
+  email: j@jayperryworks.com
+
 url: http://fdwd.jayperryworks.com
-baseurl: 
+baseurl:
 
+# Grunt handles images and assets.
+exclude: ['images', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+include: ['.htaccess']
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
+# Markdown library
 markdown: redcarpet
-pygments: true
+#   extensions: ['fenced_code_blocks', 'smart']
 
-exclude: ["README.md", "config.rb", ".sublime-project", ".sublime-workspace", "Guardfile", "Gemfile", "Gemfile.lock", ".sass-cache"]
+pygments: false
 
 # asset paths
 assets:
