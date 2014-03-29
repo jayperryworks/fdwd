@@ -11,8 +11,6 @@
       <title>{{ site.name | xml_escape }}{% if page.title != "home" %} &rsaquo; {{ title }}{% endif %}</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
-      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
       
       {% comment %} Use this to calculate a relative path {% endcomment %}
       {% capture level %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
@@ -20,9 +18,13 @@
       
       {% comment %} convenience variable - account for subdirectory if any {% endcomment %}
       {% capture path %}{{ relativepath }}{{ site.baseurl }}{% endcapture %}
-
+      
+      <!-- build:css assets/css/app.css -->
+      <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}_bower_components/normalize-css/normalize.css">
       <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}assets/css/app.css">
-      <script src="{{ relativepath }}{{ site.baseurl }}assets/js/vendor/modernizr.custom.11128.js"></script>
+      <!-- endbuild -->
+
+      <script src="{{ relativepath }}{{ site.baseurl }}_bower_components/modernizr/modernizr.js"></script>
   </head>
   <body id="{{ page.title | replace: " ", "-" | downcase }}">
     
@@ -43,7 +45,7 @@
       </nav>
     </header>
 
-    <main role="main" class="content">
+    <main role="main" class="content">  
 
       {{ content }}
 
@@ -68,10 +70,13 @@
         </small> 
       </div>
     </footer>
-
+  
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.js }}vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.js }}app.js"></script>
+    <script>window.jQuery || document.write('<script src="/_bower_components/jquery.min.js"><\/script>')</script>
+
+    <!-- build:js assets/js/app.js -->
+    <script src="{{ site.assets.js }}app.js"></script>
+    <!-- endbuild -->
 
   </body>
 </html>

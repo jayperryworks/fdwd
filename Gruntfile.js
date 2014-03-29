@@ -288,7 +288,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: '../',
+          remote: 'git@github.com:jayperryworks/fdwd.git',
           branch: 'gh-pages',
           commit: true,
           push: true
@@ -361,8 +361,8 @@ module.exports = function (grunt) {
     'clean:server',
     'jekyll:check',
     'compass:server',
-    'jshint:all',
-    'csslint:check'
+    // 'jshint:all',
+    // 'csslint:check'
   ]);
 
   grunt.registerTask('build', [
@@ -370,16 +370,16 @@ module.exports = function (grunt) {
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
     'concurrent:dist',
-    'useminPrepare',
-    'concat',
+    // 'useminPrepare',
+    // 'concat',
     'autoprefixer:dist',
-    'cssmin',
-    'uglify',
+    // 'cssmin',
+    // 'uglify',
     'imagemin',
     'svgmin',
     'filerev',
-    'usemin',
-    'htmlmin'
+    // 'usemin',
+    // 'htmlmin'
     ]);
 
   grunt.registerTask('deploy', [

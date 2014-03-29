@@ -31,7 +31,7 @@
       }
 
       // set up widon't & ampersand replacement
-      typography('h1, h2, h3, h4, h5, h6, p, li, a');
+      fdwd.typography('h1, h2, h3, h4, h5, h6, p, li, a');
     },
 
     // Methods
