@@ -29,6 +29,9 @@
       if (!Modernizr.svg) {
         $(".logo img").attr("src", "assets/images/logo-FDWD.png");
       }
+
+      // set up widon't & ampersand replacement
+      typography('h1, h2, h3, h4, h5, h6, p, li, a');
     },
 
     // Methods
@@ -69,14 +72,13 @@
     tabs : {
 
       // settings
-      // ----------------------------------------------------------------------------------
+
       active : "active", // the class of the active (current) tab
       open: "is-open", // the class of the content currently displayed
       multiple: true, // can multiple tabs be open? (for accordion state)
 
       // methods
-      // ----------------------------------------------------------------------------------
-
+      
       init : function(el) {
 
         $(el).each(function(){
@@ -147,10 +149,30 @@
         $link.addClass(pettingzoo.tabs.active);
         $($link.attr('href')).addClass(pettingzoo.tabs.open);
       }
+    },
+
+    // --- Widon't & Best Ampersand ----------------------------------------------
+    // -> http://justinhileman.info/article/a-jquery-widont-snippet/
+    // -> http://justinhileman.info/article/more-jquery-typography/
+
+    typography : function(el) {
+
+      $(el).each(function() {
+        $(this).html(
+          $(this).html()
+            // for any $amp; element, wrap in a span with class ".amp" 
+            .replace(/&amp;/g,'<span class="amp">&amp;</span>')
+            // add a non-breaking space between the last two words in selected elements
+            // longer words are allowed to be widows
+            .replace(/\s([^\s>]{0,12})\s*$/,'&nbsp;$1')
+        );
+      });
     }
   };
 
-  
+  // Start it up!
+  // ---------------------------------------------------------------
+
   $(window).load(function() {
     fdwd.init();
   });
