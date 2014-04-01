@@ -1,0 +1,8 @@
+{
+  "name": "FDWD",
+  "version": "0.1.0",
+  "description": "Design prototype for FDWD law firm",
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}
