@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+{% capture title %}{{ page.title | capitalize }}{% endcapture %}
+
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>{{ site.name | xml_escape }}{% if page.title != "home" %} &rsaquo; {{ title }}{% endif %}</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      
+      {% comment %} Use this to calculate a relative path {% endcomment %}
+      {% capture level %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+      {% capture relativepath %}{% for i in (3..level) %}../{% endfor %}{% endcapture %}
+      
+      {% comment %} convenience variable - account for subdirectory if any {% endcomment %}
+      {% capture path %}{{ relativepath }}{{ site.baseurl }}{% endcapture %}
+
+      <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}assets/css/app.css">
+      <script src="{{ relativepath }}{{ site.baseurl }}assets/js/vendor/modernizr.custom.11128.js"></script>
+  </head>
+  <body id="{{ page.title | replace: " ", "-" | downcase }}">
+    
+    <header role="banner" class="global">
+      <a href="{{ relativepath }}{{ site.baseurl }}/" class="logo"><img src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.img }}logo-FDWD.svg" alt="Franklin, Denney, Ward and Dryer, Attorneys at Law" /></a>
+      <h6>A full service law firm<br /> since 1931</h6>
+      <nav role="navigation" class="global">
+        <ul>
+          <li><a href="{{ relativepath }}{{ site.baseurl }}/"{% if page.title == 'home' %} class="active"{% endif %}>Home</a></li>
+          <li><a href="{{ relativepath }}{{ site.baseurl }}attorneys.html"{% if page.title == 'Attorney Profiles' %}class="active"{% endif %}>Attorneys</a></li>
+          <li><a href="{{ relativepath }}{{ site.baseurl }}practice-areas.html"{% if page.title == 'Practice Areas' %} class="active"{% endif %}>Practice Areas</a></li>
+          <li><a href="{{ relativepath }}{{ site.baseurl }}contact.html"{% if page.title == 'Contact Us' %} class="active"{% endif %}>Contact Us</a></li>
+        </ul>
+        <ul class="secondary">
+          <li><a href="{{ relativepath }}{{ site.baseurl }}news.html"{% if page.title == 'Firm News' %} class="active"{% endif %}>Firm News</a></li>
+          <li><a href="{{ relativepath }}{{ site.baseurl }}foreclosures.html"{% if page.title == 'Foreclosure Listings' %} class="active"{% endif %}>Foreclosures</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main" class="content">
+
+      {{ content }}
+
+    </main>
+
+    <footer role="contentinfo" class="global">
+      <div class="wrapper">
+        {% if page.title == "home" %}
+        <h2>Contact Us</h2>
+        {% include html/form-contact.html %}
+        {% endif %}
+        <div class="info">
+          <h3>{{ site.name | xml_escape }}</h3>
+          <ul>
+            <li class="inline">129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</li>
+            <li class="inline">540.946.4400</li>
+            <li class="social"><a href="https://plus.google.com/102851444280928950259?prsrc=3">Follow us on Google+</a></li>
+          </ul>
+        </div>
+        <small class="copyright">
+          Copyright &copy; 2014 {{ site.name | xml_escape }}, all rights reserved.
+        </small> 
+      </div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.js }}vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.js }}app.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+
+  <h1>{{ page.title }}</h1>
+
+  {{ content }}
+
+</div>
+
+{% if page.next %}
+<footer class="local">
+  <h5>Next</h5>
+  <h3><a href="{{ relativepath }}{{ site.baseurl }}/{{ page.next_url }}">{{ page.next }} <span class="icon">&rsaquo;</span></a></h3>
+</footer>
+{% endif %}

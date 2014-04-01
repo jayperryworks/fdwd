@@ -1,0 +1,29 @@
+// ==========================================================================
+//  Header modules
+// ==========================================================================
+
+// BASE
+// -----------------------------------------------------------------------------
+
+.header {
+	
+}
+
+// SUBMODULES
+// -----------------------------------------------------------------------------
+
+[role="banner"].global {
+	width: 180px;
+  height: 100%;
+  float: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 36px;
+  border-right: $hairline-w--thin solid $gray--light;
+  text-align: center;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: auto;
+  background: lighten($gray--light, 8);
+}
