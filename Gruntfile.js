@@ -6,31 +6,51 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     watch: {
+      options: {
+        // livereload: true
+      },
       compass: {
-        files: ['<%= yeoman.app %>/assets/_scss/**/*.{scss,sass}'],
-        tasks: ['compass:server', 'autoprefixer:server']
+        files: ['assets/_scss/**/*.{scss,sass}'],
+        tasks: ['compass:dev'] //, 'autoprefixer:server'
       },
-      autoprefixer: {
-        files: ['<%= yeoman.app %>/assets/css/**/*.css'],
-        tasks: ['copy:stageCss', 'autoprefixer:server']
-      },
+      // bower_concat: {
+      //   files: '_bower_components/**/*.{js,css,html}',
+      //   tasks: ['bower_concat']
+      // },
+      // autoprefixer: {
+      //   files: ['assets/css/**/*.css'],
+      //   tasks: ['copy:stageCss', 'autoprefixer:server']
+      // },
       jekyll: {
         files: [
-          '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
-          '!<%= yeoman.app %>/_bower_components/**/*'
+          '*.html',
+          '*.yml',
+          'assets/js/**.js',
+          'assets/css/**.css',
+          '_posts/**',
+          '_includes/**',
+          '_layouts/**',
+          '_data/**'
         ],
-        tasks: ['jekyll:server']
+        tasks: ['jekyll:build']
       },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '.jekyll/**/*.html',
-          '.tmp/assets/css/**/*.css',
-          '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-          '<%= yeoman.app %>/assets/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
+          '_site/*'
         ]
+      }
+    },
+
+    // run jekyll build, etc. in command line
+    exec: {
+      build: {
+        cmd: 'bundle exec jekyll build'
+      },
+      serve: {
+        cmd: 'bundle exec jekyll serve'
       }
     },
 
@@ -45,74 +65,125 @@ module.exports = function(grunt) {
         options: {
           open: false,
           base: [
-            '.tmp',
-            '.jekyll',
-            '<%= yeoman.app %>'
+            '_site'
           ]
         }
       }
     },
 
-    // compass: {
+    // jekyll: {
     //   options: {
-    //     // If you're using global Sass gems, require them here.
-    //     require: ['singularitygs', 'breakpoint', 'toolkit', 'bourbon'],
     //     bundleExec: true,
-    //     sassDir: '<%= yeoman.app %>/assets/_scss',
-    //     cssDir: '.tmp/assets/css',
-    //     imagesDir: '<%= yeoman.app %>/assets/images',
-    //     javascriptsDir: '<%= yeoman.app %>/assets/js',
-    //     relativeAssets: false,
-    //     httpImagesPath: '/assets/images',
-    //     httpGeneratedImagesPath: '/assets/images/generated',
-    //     outputStyle: 'expanded',
-    //     raw: 'extensions_dir = "<%= yeoman.app %>/_bower_components"\n'
+    //     src: '.',
     //   },
-    //   dist: {
+    //   dev: {
     //     options: {
-    //       generatedImagesDir: '<%= yeoman.dist %>/assets/images/generated'
-    //     }
-    //   },
-    //   server: {
-    //     options: {
-    //       debugInfo: true,
-    //       generatedImagesDir: '.tmp/assets/images/generated'
+    //       dest: '_site',
+    //       config: '_config.yml'
     //     }
     //   }
     // },
 
+    jekyll: {
+      options: {
+        bundleExec: true
+      },
+      serve: {
+        options: {
+          serve: true,
+          // Add the --watch flag, i.e. rebuild on file changes
+          watch: true
+        }
+      },
+      build: {
+        options: {
+          serve: false
+        }
+      }
+    },
+
+    compass: {
+      options: {
+        require: ['singularitygs', 'breakpoint', 'bourbon'],
+        bundleExec: true,
+        sassDir: 'assets/_scss',
+        cssDir: 'assets/css',
+        imagesDir: 'assets/images',
+        fontsDir: 'assets/fonts',
+        javascriptsDir: 'assets/js'
+      },
+      dev: {
+        options: {
+          debugInfo: true,
+          outputStyle: 'expanded'
+        }
+      },
+      deploy: {
+        options: {
+          debugInfo: false,
+          // relativeAssets: false,
+          // httpImagesPath: '/assets/images',
+          // httpGeneratedImagesPath: '/assets/images/generated',
+          outputStyle: 'compact',
+          environment: 'production'
+          // raw: 'extensions_dir = "_bower_components"\n'
+        }
+      }
+    },
+
     bower_concat: {
       all: {
-        dest: 'assets/js/bower.js',
+        dest: 'assets/js/libs.js',
         exclude: [
             'jquery',
-            'modernizr'
+            'modernizr',
+            'normalize'
         ]
       }
     },
 
-    concat: {   
-      dist: {
-        src: [
-            'assets/js/bower_libs.js', // All JS in the libs folder
-            'assets/js/main.js'  // This specific file
-        ],
-        dest: 'assets/js/app.js',
+    copy: {
+      dev: {
+        expand: true, 
+        flatten: true,
+        src: ['_bower_components/{jquery/dist/jquery.min.js,modernizr/modernizr.js}'], 
+        dest: 'assets/js/vendor/',
+        filter: 'isFile'
+      },
+      assets: {
+        expand: true,
+        src: ['assets/*'], 
+        dest: '_site/assets/',
+        filter: 'isFile'
       }
+    },
+
+    // concat: {   
+    //   dist: {
+    //     src: [
+    //       '<%= bower_concat.dest %>', // All JS in the libs folder
+    //       'assets/js/main.js'  // This specific file
+    //     ],
+    //     dest: 'assets/js/app.js'
+    //   }
+    // }
+
+    concurrent: {
+      serve: ['watch', 'jekyll:serve']
     }
   });
 
-  // grunt.loadNpmTasks('grunt-contrib-uglify');
-  // grunt.loadNpmTasks('grunt-contrib-jshint');
-  // grunt.loadNpmTasks('grunt-contrib-qunit');
-  // grunt.loadNpmTasks('grunt-contrib-watch');
-  // grunt.loadNpmTasks('grunt-contrib-concat');
-
   grunt.registerTask('default', [
-    'jshint', 
-    'qunit', 
-    'concat', 
-    'uglify'
+    // 'connect',
+    'copy',
+    'bower_concat', 
+    'compass:dev',
+    'jekyll:build',
+    // 'exec:serve',
+    // 'watch'
+    // 'concurrent:serve'
+    'connect:livereload',
+    'watch'
   ]);
 
 };
