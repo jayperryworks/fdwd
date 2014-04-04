@@ -25,23 +25,24 @@ title: home
 </section>
 
 <section class="strip">
-    <h2>Attorneys</h2>
-    <nav class="local grid small">
-      <ul>
-        {% for post in site.categories.attorneys %}
-        <li>
-          <a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}" class="tile">
-            <img src="{{ post.portrait }}" alt="{{ post.title | xml_escape }}">
-            <h4>{{ post.title | xml_escape }}</h4>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <h2 class="accent">Attorneys</h2>
+    <ul class="grid large">
+      {% for post in site.categories.attorneys %}
+      <li class="media_panel">
+        <a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}" class="media_panel-thumb highlight-border">
+          <img src="{{ post.portrait }}" alt="{{ post.title | xml_escape }}">
+        </a>
+        <div class="media_panel-body highlight-border">
+          <h3><a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}">{{ post.title | xml_escape }}</a></h3>
+          <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}" class="read_more">Read more &rsaquo;</a></p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
 </section>
 
 <section class="strip">
-  <h2>Practice Areas</h2>
+  <h2 class="accent">Practice Areas</h2>
   <p>TO BE ADDED HERE: pictures and short descriptions for each practice area</p>
   <nav class="local grid large">
     <ul>

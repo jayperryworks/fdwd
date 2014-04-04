@@ -53,10 +53,9 @@ footer.global, .footer.global {
 footer.local, .footer.local {
   @extend %full-bleed;
   @extend %theme-flood;
+  @include layout-margins;
   @include rem(margin-top, 24px);
   @include rem(padding, 24px 0);
-  padding-left: $layout-margin;
-  padding-right: $layout-margin;
   text-align: center;
   clear: both;
 }

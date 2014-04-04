@@ -56,17 +56,19 @@
         {% include form-contact.html %}
         {% endif %}
         <div class="info">
-          <h3>{{ site.name | xml_escape }}</h3>
+          <h4 class="highlight">{{ site.name | xml_escape }}</h4>
           <ul>
-            <li class="inline">129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</li>
+            <li class="inline"><small>129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</small></li>
             <li class="inline">540.946.4400</li>
             <li class="social"><a href="https://plus.google.com/102851444280928950259?prsrc=3">Follow us on Google+</a></li>
           </ul>
         </div>
+      </div>
+      <section class="strip int">
         <small class="copyright">
           Copyright &copy; 2014 {{ site.name | xml_escape }}, all rights reserved.
-        </small> 
-      </div>
+        </small>
+    </section>
     </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

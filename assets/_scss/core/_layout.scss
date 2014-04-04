@@ -2,13 +2,42 @@
 // Global layout styles
 // ==============================================================================
 
-%add-gutters {
-  padding: 0 ($grid-gutter/2);
+// Quickly set grid-margins on a container across multiple breakpoints
+@mixin layout-margins($property: padding, $negative: false) {
+  $margins: first($layout-margins);
+  @if $negative == true {
+    $margins: -(first($layout-margins));
+  }
+
+  #{$property}-left: $margins;
+  #{$property}-right: $margins;
+
+  @if length($layout-margins) > 1 {
+    @for $i from 1 through length($layout-margins) {
+      @include breakpoint(nth($breakpoints, $i)) {
+        $margins: nth($layout-margins, $i);
+        @if $negative == true {
+          $margins: -(nth($layout-margins, $i));
+        }
+
+        #{$property}-left: $margins;
+        #{$property}-right: $margins;
+      }
+    }
+  }
 }
 
-%full-bleed {
-  margin-left: -$layout-margin;
-  margin-right: -$layout-margin;
+// A helper to quickly create grid-span() includes across multiple breakpoints
+// Saves having to write breakpoint calls over and over again
+@mixin grid-span-break($cols, $start, $opts: false) {
+  @include grid-span(nth($cols, 1), nth($start, 1), $options: $opts);
+
+  @for $i from 1 through (length($cols) - 1) {
+    $num: ($i + 1);
+    @include breakpoint(nth($breakpoints, $num)) {
+      @include grid-span(nth($cols, $num), nth($start, $num), $options: $opts);
+    }
+  }
 }
 
 html, body {
@@ -17,9 +46,11 @@ html, body {
 
 [role="main"], .main {
   @include clearfix;
+  @include layout-margins;
   margin-left: $header-w;
   width: calc(100% - $header-w);
-  padding: 0 $layout-margin;
+  padding-top: 0;
+  padding-bottom: 0;
 
   & > h1 { 
     @include rem(margin-top, 24px);
@@ -29,7 +60,7 @@ html, body {
 .wrapper {
   @include clearfix;
   margin: 0 auto;
-  max-width: ($layout-width + $layout-margin + $grid-gutter);
+  max-width: ($layout-width + last($layout-margins) + $grid-gutter);
   overflow: hidden;
   clear: both;
   
@@ -37,4 +68,24 @@ html, body {
     @extend %add-gutters;
   }
   
+}
+
+
+// GLOBAL MODIFIERS
+// -----------------------------------------------------------------------------
+
+%add-gutters {
+  padding: 0 ($grid-gutter/2);
+}
+
+%full-bleed {
+  @include layout-margins(margin, $negative: true);
+}
+
+.margins {
+  @include layout-margins(margin);
+}
+
+.center {
+  text-align: center;
 }

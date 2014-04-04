@@ -1,0 +1,69 @@
+// ==========================================================================
+//  Inline grid modules
+// -> Horizontally-stacked boxes
+// ==========================================================================
+
+// CONFIG
+// -----------------------------------------------------------------------------
+
+@mixin grid-inline($cols: 1 3) {
+
+  @for $i from 1 through length($cols) {
+    @if (nth($cols, $i) > 1) {
+      @include breakpoint(nth($breakpoints, $i)) {
+        margin-right: -#{gutter-span()};
+      }
+    }
+  }
+
+  & > li {
+    @for $i from 1 through length($cols) {
+      @include breakpoint(nth($breakpoints, $i)) {
+        @if (nth($cols, $i) > 1) {
+          @include inline-block;
+          vertical-align: top;
+          width: (100%/(nth($cols, $i)));
+          padding-right: gutter-span();
+        } @else {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+// BASE
+// -----------------------------------------------------------------------------
+
+.grid {
+  @include unstyled-list;
+  @include rem(padding, 18px 0);
+  font-size: 0; // fix for whitespace bugs
+  margin-left: 0;
+  overflow: hidden;
+
+  li {
+    @include rem(margin-bottom, 16px);
+    display: block;
+    overflow: hidden;
+
+    @include breakpoint($xsmall) {
+      // margin-right: $margin-whitespace;
+    }
+    
+  }
+}
+
+// MODIFIERS
+// -----------------------------------------------------------------------------
+
+// ------- medium grid (4 cols) -------------------------------------------
+.grid.small, %grid-medium {
+  @include grid-inline(2 4);
+}
+
+// ------- large grid (3 cols) -------------------------------------------
+.grid.large, %grid-large {
+  @include grid-inline(1 2);
+}

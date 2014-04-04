@@ -2,6 +2,14 @@
 // 	Global type
 // ==============================================================================
 
+%text-body {
+	@include rem(font-size, 16px);
+}
+
+%text-small {
+	@include rem(font-size, 14px);
+}
+
 hgroup {
 	
 }
@@ -22,17 +30,21 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, %h1 {
 	@extend %calluna;
-	@include rem(font-size, 32px);
+	@include rem(font-size, 54px);
+	letter-spacing: -0.04em;
 }
 
 h2, %h2 {
 	@extend %calluna;
-	@include rem(font-size, 27px);
+	// @extend .accent;
+	@include rem(font-size, 50px);
+	letter-spacing: -0.03em;
 }
 
 h3, %h3 {
 	@extend %museo;
-	@include rem(font-size, 18px);
+	@include rem(font-size, 24px);
+	letter-spacing: -0.01em;
 }
 
 h4, %h4 {
@@ -57,7 +69,7 @@ h6, %h6 {
 
 p, table, li {
 	@extend %museo;
-	@include rem(font-size, 16px);
+	@extend %text-body;
 
 	em {
 		@extend %museo-italic;
@@ -82,6 +94,10 @@ a {
 	text-decoration: none;
 }
 
+small, figcaption {
+	@extend %text-small;
+}
+
 // if @font-face is supported, use Playfair ampersands...
 .fontface {
 	.amp {
@@ -103,9 +119,9 @@ a {
 	font-size: $type-size-amp; // relative to whatever type surrounds it -- it renders slightly bigger
 }
 
-
-// ==============================================================================
-// 	Themes
-// ==============================================================================
-
+.read_more {
+	@extend %museo-medium;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
 

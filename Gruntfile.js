@@ -11,7 +11,10 @@ module.exports = function(grunt) {
       },
       compass: {
         files: ['assets/_scss/**/*.{scss,sass}'],
-        tasks: ['compass:dev', 'copy:assets'] //, 'autoprefixer:server'
+        tasks: ['compass:dev', 'copy:assets'], //'autoprefixer:server'
+        options: {
+          livereload: true
+        }
       },
       assets: {
         files: ['assets/{js,fonts,images}/**'],

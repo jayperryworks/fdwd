@@ -29,46 +29,53 @@ $color--reverse: $black; // dark bg
 $color-text--primary: $blue !default; // "primary" text, more prominent
 $color-text--secondary: darken($gray, 10) !default; // "secondary" body text
 
-// text
-// $color-text--headline: $brown;
-// $color-text--primary: #303035;
-// $color-text--secondary: #616a6d;
-// $color-text--tertiary: #718084;
-
-// $color-text--highlight: $green;
-
+// colors for cursor highlighting/selection
 $color-selection: lighten($green, 10);
+$color-selection-text: white;
 
 
 // Typography
 // --------------------------------------------------------------------------
 
+// font sizes for each breakpoint
 $type-size--default: 16px;
 $type-size--small: 16px;
 $type-size--medium: 18px;
 $type-size--large: 21px;
 
-$type-line_height: 1.5;
+$type-line_height: 1.5; // global line height
 
-$type-size-amp: 1.1em;
+$type-size-amp: 1.1em; // how big the ampersand is (relative to surrounding type)
 
 
 // Containers/layout
 // --------------------------------------------------------------------------
 
 $layout-width: 1024px;
-$layout-margin: 48px;
+$layout-margins: 48px;
 
 $header-w: 180px;
 
 $hairline-w--thin: 1px;
 $hairline-w--thick: 4px;
 
+@mixin border($side, $w: thin) {
+  @if $w == thin {
+    $w: $hairline-w--thin;
+  } @else {
+    $w: $hairline-w--thick;
+  }
+  border-#{$side}-width: $w;
+  border-#{$side}-style: solid;
+}
+
 // --- breakpoints ----------------------------------------------------------
-$xsmall: 480px;
-$small: 768px;
-$medium: 1240px;
-$large: 1440px;
+$breakpoints: 480px 768px 1240px 1440px;
+
+$xsmall: nth($breakpoints, 1);
+$small: nth($breakpoints, 2);
+$medium: nth($breakpoints, 3);
+$large: nth($breakpoints, 4);
 
 $breakpoint-to-ems: true;
 
