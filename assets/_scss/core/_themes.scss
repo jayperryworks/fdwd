@@ -5,7 +5,7 @@
 // Base
 // ------------------------------------------------------------------------------
 
-// generate the theme via mixin
+// theme generator mixin w/ defaults in the parameters
 @mixin theme(
   $text: $color-text--secondary,
   $fg: $color-text--primary,
@@ -18,8 +18,10 @@
   background: $bg;
   border-color: $accent;
   border-style: solid;
+  border-width: 0;
 
-  // text
+  // --- text ----------------------------------------------------------
+
   #{headers()} {
     color: $fg;
   }
@@ -40,15 +42,15 @@
     }
   }
 
-  // forms, buttons
+  // --- forms, buttons ----------------------------------------------------------
 
   input, textarea {
     color: $text;
-    
+
     @if reverse {
       @include form-placeholder-color(lighten($bg, 20));
       background: lighten($bg, 5);
-      border-color: darken($bg, 10);
+      border-color: darken($bg, 15);
     } @else {
       @include form-placeholder-color(darken($bg, 15));
       background: darken($bg, 5);
@@ -71,9 +73,9 @@
 
     &:hover, &:active {
       @if reverse {
-    color: darken($highlight, 5);
+    color: darken($highlight, 10);
     } @else {
-      color: lighten($highlight, 5);
+      color: lighten($highlight, 10);
     }
 
     }
@@ -83,15 +85,19 @@
     color: $highlight;
   }
 
-  // global modifiers
+  // --- global modifiers ----------------------------------------------------------
+
+  // accent that jumps out
   .highlight {
     color: $highlight;
   }
-
+  
+  // subtler accent
   .accent {
     color: $accent;
   }
 
+  // slightly 'sunken' from surrounding bg
   %well, .well {
     @if reverse {
       background: darken($bg, 5);
@@ -99,7 +105,8 @@
       background: lighten($bg, 5);
     }
   }
-
+  
+  // slightly 'raised' from surrounding bg
   %island, .island {
     @if reverse {
       background: lighten($bg, 5);
