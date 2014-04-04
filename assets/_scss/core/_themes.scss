@@ -2,88 +2,143 @@
 //  Color themes
 // ==============================================================================
 
-// Default/base
+// Base
 // ------------------------------------------------------------------------------
 
-.default, html {
-  color: $color-text--secondary;
-  background: white;
+// generate the theme via mixin
+@mixin theme(
+  $text: $color-text--secondary,
+  $fg: $color-text--primary,
+  $bg: white,
+  $highlight: $color--highlight,
+  $accent: $color--accent,
+  $reverse: false
+) {
+  color: $fg;
+  background: $bg;
+  border-color: $accent;
+  border-style: solid;
 
-  h1, h2 {
-    color: $color-text--headline;
+  // text
+  #{headers()} {
+    color: $fg;
+  }
+
+  p, li, td {
+    color: $text;
   }
 
   .intro {
-    color: $color-text--primary;
+    color: darken($text, 10);
   }
 
-  a {
-    color: $color-text--highlight;
-    
-    &:hover, &:active {
-      color: darken($color-text--highlight, 10);
+  .secondary, aside, figcaption, small {
+    @if reverse {
+      color: lighten($bg, 20);
+    } @else {
+      color: darken($text, 10);
     }
   }
+
+  // forms, buttons
+
+  input, textarea {
+    color: $text;
+    
+    @if reverse {
+      @include form-placeholder-color(lighten($bg, 20));
+      background: lighten($bg, 5);
+      border-color: darken($bg, 10);
+    } @else {
+      @include form-placeholder-color(darken($bg, 15));
+      background: darken($bg, 5);
+      border-color: darken($bg, 10);
+    }
+
+    &:focus {
+      border-color: $highlight;
+    }
+  }
+
+  button, .button {
+    color: white;
+    background: $highlight;
+  }
+  
+  // links & icons
+  a {
+    color: $highlight;
+
+    &:hover, &:active {
+      @if reverse {
+    color: darken($highlight, 5);
+    } @else {
+      color: lighten($highlight, 5);
+    }
+
+    }
+  }
+
+  .icon {
+    color: $highlight;
+  }
+
+  // global modifiers
+  .highlight {
+    color: $highlight;
+  }
+
+  .accent {
+    color: $accent;
+  }
+
+  %well, .well {
+    @if reverse {
+      background: darken($bg, 5);
+    } @else {
+      background: lighten($bg, 5);
+    }
+  }
+
+  %island, .island {
+    @if reverse {
+      background: lighten($bg, 5);
+    } @else {
+      background: lighten($bg, 5);
+    }
+  }
+}
+
+// Default
+// ------------------------------------------------------------------------------
+
+%theme-default, .theme-default, body {
+  @include theme();
 }
 
 // Variations
 // ------------------------------------------------------------------------------
 
-// slightly 'inset', with light gray bg
-%theme-well {
-
-}
-
 // bright colored background, meant to stand out or add accent
-%theme-flood {
-  color: $color-text--primary;
-  background: $color-bg--flood;
-
-  h1, h2, h3 {
-    color: white;
-  }
-
-  a {
-    color: white;
-
-    &:hover, &:active {
-      color: lighten($color-bg--flood, 35);
-    }
-  }
-
-  #{headers()} {
-    & > a {
-      color: inherit;
-
-      &:hover, &:active {
-        color: inherit;
-      }
-    }
-  }
-
-  .icon {
-    color: $color-text--primary;
-  }
+%theme-flood, .theme-flood {
+  @include theme(
+    $text: white,
+    $fg: white,
+    $bg: $color--highlight,
+    $highlight: $color-text--primary,
+    $accent: $color-text--primary,
+    $reverse: true
+  );
 }
 
 // light FG over dark BG, contrasts sharply with default (dark FG over light BG)
-%theme-reverse {
-  color: white;
-  background: $color-bg--reverse;
-
-  a {
-    color: $color-text--highlight;
-
-    &:hover, &:active {
-      color: lighten($color-text--highlight, 10);
-    }
-  }
-
-  .highlight {
-    color: $color-text--highlight;
-  }
-
-  %accent {
-    background: $color-bg--accent;
-  }
+%theme-reverse, .theme-reverse {
+  @include theme(
+    $text: white,
+    $fg: white,
+    $bg: $color--reverse,
+    $highlight: $color--highlight,
+    $accent: lighten($color-text--primary, 10),
+    $reverse: true
+  );
 }

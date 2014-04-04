@@ -23,7 +23,7 @@ footer.global, .footer.global {
 
   .copyright {
     @extend %add-gutters;
-    @extend %accent;
+    @extend .accent;
     @include grid-span(4, 1, $options: both);
     @include rem(margin-top, 24px);
     @include rem(padding-top, 24px);

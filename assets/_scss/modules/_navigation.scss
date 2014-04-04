@@ -16,7 +16,7 @@
 // ------- Global/main nav -------------------------------------------
 
 [role="navigation"].global {
-  @extend %theme-well;
+  @extend %well;
   padding: 0 $grid-gutter;
 
   ul {

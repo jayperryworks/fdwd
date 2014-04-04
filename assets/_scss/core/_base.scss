@@ -105,6 +105,68 @@ fieldset {
   padding: 0;
 }
 
+input, textarea, select {
+  @extend %base-transition;
+  @include box-sizing('border-box');
+  padding: 0.5em 1em;
+  border-radius: em(5);
+  box-shadow: none;
+  border-width: $hairline-w--thin;
+  border-style: solid;
+  text-shadow: none;
+
+  &:focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+  }
+}
+
+[type="submit"]{
+  -webkit-appearance: none;
+  box-shadow: none;
+  text-shadow: none;
+  outline: 0;
+  border: none;
+}
+
+input[type="search"] {
+  @include box-sizing('border-box');
+  -webkit-appearance: button;
+  border-radius: 100px;
+  box-shadow: none;
+
+  // &:hover {
+  //   border-color: darken($color-border, 15);
+  // }
+
+  &:focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+  }
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+
+  &:focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+  }
+}
+
+select {
+  padding-right: 2em;
+  -webkit-appearance: none !important;
+  box-shadow: none;
+  background-position: center right 1em;
+  background-repeat: no-repeat;
+}
+
+
 /*
  * Allow only vertical resizing of textareas.
  */

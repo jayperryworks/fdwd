@@ -15,27 +15,27 @@ $base-duration: 0.5s; // in seconds
 // --------------------------------------------------------------------------
 
 $green: #3da288;
-$blue: #293f47;
+$blue: #293F47;
 $brown: #927c7a;
 $gray--light: #e1e3e4;
 $gray: #849296;
 $black: #283030;
 
-$color-primary: $green;
-$color-seconary: $blue;
+$color--highlight: $green !default;
+$color--accent: $brown !default;
+$color--flood: $green; // bright highlight/accent
+$color--reverse: $black; // dark bg
 
-$color-bg--well: lighten($gray--light, 8); // slightly 'recessed' element
-$color-bg--flood: $green; // bright highlight/accent
-$color-bg--reverse: $black; // dark bg
-$color-bg--accent: $blue; // accent color
+$color-text--primary: $blue !default; // "primary" text, more prominent
+$color-text--secondary: darken($gray, 10) !default; // "secondary" body text
 
 // text
-$color-text--headline: $brown;
-$color-text--primary: #303035;
-$color-text--secondary: #616a6d;
-$color-text--tertiary: #718084;
+// $color-text--headline: $brown;
+// $color-text--primary: #303035;
+// $color-text--secondary: #616a6d;
+// $color-text--tertiary: #718084;
 
-$color-text--highlight: $green;
+// $color-text--highlight: $green;
 
 $color-selection: lighten($green, 10);
 

@@ -11,7 +11,11 @@ module.exports = function(grunt) {
       },
       compass: {
         files: ['assets/_scss/**/*.{scss,sass}'],
-        tasks: ['compass:dev'] //, 'autoprefixer:server'
+        tasks: ['compass:dev', 'copy:assets'] //, 'autoprefixer:server'
+      },
+      assets: {
+        files: ['assets/{js,fonts,images}/**'],
+        tasks: ['copy:assets']
       },
       // bower_concat: {
       //   files: '_bower_components/**/*.{js,css,html}',
@@ -25,8 +29,7 @@ module.exports = function(grunt) {
         files: [
           '*.html',
           '*.yml',
-          'assets/js/**.js',
-          'assets/css/**.css',
+          '*.md',
           '_posts/**',
           '_includes/**',
           '_layouts/**',
@@ -45,14 +48,14 @@ module.exports = function(grunt) {
     },
 
     // run jekyll build, etc. in command line
-    exec: {
-      build: {
-        cmd: 'bundle exec jekyll build'
-      },
-      serve: {
-        cmd: 'bundle exec jekyll serve'
-      }
-    },
+    // exec: {
+    //   build: {
+    //     cmd: 'bundle exec jekyll build'
+    //   },
+    //   serve: {
+    //     cmd: 'bundle exec jekyll serve'
+    //   }
+    // },
 
     connect: {
       options: {
@@ -70,19 +73,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-    // jekyll: {
-    //   options: {
-    //     bundleExec: true,
-    //     src: '.',
-    //   },
-    //   dev: {
-    //     options: {
-    //       dest: '_site',
-    //       config: '_config.yml'
-    //     }
-    //   }
-    // },
 
     jekyll: {
       options: {
@@ -114,19 +104,15 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          debugInfo: true,
+          debugInfo: false,
           outputStyle: 'expanded'
         }
       },
       deploy: {
         options: {
           debugInfo: false,
-          // relativeAssets: false,
-          // httpImagesPath: '/assets/images',
-          // httpGeneratedImagesPath: '/assets/images/generated',
           outputStyle: 'compact',
           environment: 'production'
-          // raw: 'extensions_dir = "_bower_components"\n'
         }
       }
     },
@@ -135,15 +121,15 @@ module.exports = function(grunt) {
       all: {
         dest: 'assets/js/libs.js',
         exclude: [
-            'jquery',
-            'modernizr',
-            'normalize'
+          'jquery',
+          'modernizr',
+          'normalize'
         ]
       }
     },
 
     copy: {
-      dev: {
+      bower: {
         expand: true, 
         flatten: true,
         src: ['_bower_components/{jquery/dist/jquery.min.js,modernizr/modernizr.js}'], 
@@ -152,10 +138,18 @@ module.exports = function(grunt) {
       },
       assets: {
         expand: true,
-        src: ['assets/*'], 
-        dest: '_site/assets/',
+        src: [
+          'assets/**/*',
+          // Like Jekyll, exclude files & folders prefixed with an underscore.
+          '!**/_*{,/**}'
+        ],
+        dest: '_site/',
         filter: 'isFile'
       }
+    },
+
+    clean: {
+      assets: ["_site/assets/*"]
     },
 
     // concat: {   
@@ -174,14 +168,11 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', [
-    // 'connect',
-    'copy',
-    'bower_concat', 
+    'bower_concat',
     'compass:dev',
+    'copy:bower',
+    'copy:assets', 
     'jekyll:build',
-    // 'exec:serve',
-    // 'watch'
-    // 'concurrent:serve'
     'connect:livereload',
     'watch'
   ]);
