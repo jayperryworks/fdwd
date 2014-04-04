@@ -1,0 +1,94 @@
+// ==========================================================================
+//  Global settings
+// ==========================================================================
+
+$path-images: "../images/";
+$path-fonts: "../fonts/";
+
+$base-duration: 0.5s; // in seconds
+
+%base-transition {
+  @include transition (all $base-duration);
+}
+
+// Colors
+// --------------------------------------------------------------------------
+
+$green: #3da288;
+$blue: #293F47;
+$brown: #927c7a;
+$gray--light: #e1e3e4;
+$gray: #849296;
+$black: #283030;
+
+$color--highlight: $green !default;
+$color--accent: $brown !default;
+$color--flood: $green; // bright highlight/accent
+$color--reverse: $black; // dark bg
+
+$color-text--primary: $blue !default; // "primary" text, more prominent
+$color-text--secondary: darken($gray, 10) !default; // "secondary" body text
+
+// text
+// $color-text--headline: $brown;
+// $color-text--primary: #303035;
+// $color-text--secondary: #616a6d;
+// $color-text--tertiary: #718084;
+
+// $color-text--highlight: $green;
+
+$color-selection: lighten($green, 10);
+
+
+// Typography
+// --------------------------------------------------------------------------
+
+$type-size--default: 16px;
+$type-size--small: 16px;
+$type-size--medium: 18px;
+$type-size--large: 21px;
+
+$type-line_height: 1.5;
+
+$type-size-amp: 1.1em;
+
+
+// Containers/layout
+// --------------------------------------------------------------------------
+
+$layout-width: 1024px;
+$layout-margin: 48px;
+
+$header-w: 180px;
+
+$hairline-w--thin: 1px;
+$hairline-w--thick: 4px;
+
+// --- breakpoints ----------------------------------------------------------
+$xsmall: 480px;
+$small: 768px;
+$medium: 1240px;
+$large: 1440px;
+
+$breakpoint-to-ems: true;
+
+
+// --- grid variables -------------------------------------------------------
+$grid-gutter: 24px;
+
+// Singularity.gs setup
+// -> https://github.com/Team-Sass/Singularity
+$grids: add-grid(4);
+// $grids: add-grid(9 at $small);
+// $grids: add-grid(12 at $medium);
+
+$gutters: add-gutter($grid-gutter);
+$gutter-styles: 'split' 'fixed';
+
+$output: 'isolation';
+
+
+// --- default z-indexes ----------------------------------------------------
+$z--low: 0;
+$z--med: 1;
+$z--high: 2;

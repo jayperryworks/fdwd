@@ -1,0 +1,62 @@
+// ==========================================================================
+//  Footer modules
+// ==========================================================================
+
+// BASE
+// -----------------------------------------------------------------------------
+
+footer, .footer {
+	
+}
+
+
+// SUBMODULES
+// -----------------------------------------------------------------------------
+
+// ------- global footer -------------------------------------------------------
+
+footer.global, .footer.global {
+  @extend %theme-reverse;
+	@extend .main;
+  @include rem(padding-top, 24px);
+  @include rem(padding-bottom, 24px);
+
+  .copyright {
+    @extend %add-gutters;
+    @extend .accent;
+    @include grid-span(4, 1, $options: both);
+    @include rem(margin-top, 24px);
+    @include rem(padding-top, 24px);
+  }
+}
+
+#home footer.global, #home .footer.global {
+  .contact-form {
+    @include grid-span(2, 1);
+  }
+  .info {
+    @include grid-span(2, 3, $options: right);
+  }
+
+  .inline {
+    display: list-item;
+    margin-left: 0;
+    
+    &:before {
+      content: none;
+    }
+  }
+}
+
+// ------- local footer -------------------------------------------------------
+
+footer.local, .footer.local {
+  @extend %full-bleed;
+  @extend %theme-flood;
+  @include rem(margin-top, 24px);
+  @include rem(padding, 24px 0);
+  padding-left: $layout-margin;
+  padding-right: $layout-margin;
+  text-align: center;
+  clear: both;
+}
