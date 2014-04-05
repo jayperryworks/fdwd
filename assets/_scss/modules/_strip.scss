@@ -18,15 +18,6 @@
     border-top: none;
   }
 
-  .copy {
-    @include grid-span(3, 1);
-  }
-
-  & > aside {
-    @include grid-span(1, 4);
-    @include rem(margin-top, $grid-gutter);
-  }
-
   .sub {
     @include float-span(2);
 

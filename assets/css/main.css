@@ -435,7 +435,7 @@ table {
 }
 
 /* line 44, ../_scss/core/_fonts.scss */
-h1, h2, [role="navigation"].global a {
+h1, h2, figcaption, [role="navigation"].global a {
   font-family: "CallunaRegular", Georgia, Cambria, "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: normal;
@@ -931,14 +931,14 @@ p {
   }
 }
 /* line 49, ../_scss/core/_layout.scss */
-.wrapper > h1, .wrapper > h2, .wrapper > h3, .wrapper > h4, .wrapper > h5, .wrapper > h6, .wrapper > hgroup, .wrapper > p, .wrapper > ul, footer.global .copyright, .footer.global .copyright {
+.feature-copy, footer.global .copyright, .footer.global .copyright {
   padding: 0 12px;
 }
 
 /* line 53, ../_scss/core/_layout.scss */
-.wrapper, .hero-headline {
+.title, .wrapper, .feature, .hero-headline {
   margin: 0 auto;
-  max-width: 1096px;
+  max-width: 1120px;
 }
 
 /* line 58, ../_scss/core/_layout.scss */
@@ -976,33 +976,63 @@ html, body {
   display: table;
   clear: both;
 }
-/* line 85, ../_scss/core/_layout.scss */
-[role="main"] > h1, .main > h1, footer.global > h1, .footer.global > h1 {
-  margin-top: 24px;
-  margin-top: 1.5rem;
-}
 
 /* line 90, ../_scss/core/_layout.scss */
-.wrapper {
+.title, .wrapper {
   padding-left: 48px;
   padding-right: 48px;
   overflow: hidden;
   clear: both;
 }
 /* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
-.wrapper:after {
+.title:after, .wrapper:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 103, ../_scss/core/_layout.scss */
+/* line 98, ../_scss/core/_layout.scss */
 .feature {
   margin-top: -96px;
   margin-top: -6rem;
-  padding-top: 24px;
   position: relative;
   z-index: 2;
+}
+/* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
+.feature:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 105, ../_scss/core/_layout.scss */
+.feature-copy {
+  width: 75%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  padding-right: 24px;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 24px;
+}
+
+/* line 112, ../_scss/core/_layout.scss */
+.feature-sidebar {
+  width: 25%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-right: 24px;
+  padding: 24px;
+  padding-top: 24px;
+}
+
+/* line 122, ../_scss/core/_layout.scss */
+.feature-sidebar-thumb {
+  display: block;
 }
 
 /* line 5, ../_scss/core/_content.scss */
@@ -1076,52 +1106,65 @@ h6 {
   font-size: 0.75rem;
 }
 
-/* line 66, ../_scss/core/_content.scss */
+/* line 65, ../_scss/core/_content.scss */
+.title {
+  margin-top: 36px;
+  margin-top: 2.25rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+/* line 72, ../_scss/core/_content.scss */
 .intro {
   font-size: 21px;
   font-size: 1.3125rem;
 }
 
-/* line 83, ../_scss/core/_content.scss */
+/* line 89, ../_scss/core/_content.scss */
 p {
   margin: 0 0 0.5em 0;
 }
 
-/* line 87, ../_scss/core/_content.scss */
+/* line 93, ../_scss/core/_content.scss */
 ol, ul {
   margin-left: 0;
   padding-left: 1em;
 }
 @media (min-width: 48em) {
-  /* line 87, ../_scss/core/_content.scss */
+  /* line 93, ../_scss/core/_content.scss */
   ol, ul {
     padding-left: 0;
   }
 }
 
-/* line 96, ../_scss/core/_content.scss */
+/* line 102, ../_scss/core/_content.scss */
 a {
   text-decoration: none;
 }
 
-/* line 107, ../_scss/core/_content.scss */
-.fontface .amp {
-  font-size: 1.1em;
-}
-/* line 112, ../_scss/core/_content.scss */
-.fontface em .amp {
-  font-size: 1.1em;
+/* line 111, ../_scss/core/_content.scss */
+figcaption {
+  margin-top: 0.5em;
 }
 
-/* line 119, ../_scss/core/_content.scss */
+/* line 118, ../_scss/core/_content.scss */
+.fontface .amp {
+  font-size: 1em;
+}
+/* line 123, ../_scss/core/_content.scss */
+.fontface em .amp {
+  font-size: 1em;
+}
+
+/* line 130, ../_scss/core/_content.scss */
 .amp {
   font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
-/* line 126, ../_scss/core/_content.scss */
+/* line 137, ../_scss/core/_content.scss */
 .read_more {
   font-size: 0.8em;
   text-transform: uppercase;
@@ -1477,8 +1520,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
   padding-left: 0;
 }
 /* line 22, ../_scss/modules/_media_panel.scss */
@@ -1488,8 +1530,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   margin-left: 0;
   margin-right: 0;
   clear: right;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
   padding-right: 0;
 }
 
@@ -1635,55 +1676,30 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   border-top: none;
 }
 /* line 21, ../_scss/modules/_strip.scss */
-.strip .copy {
-  width: 75%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0%;
-  clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-/* line 25, ../_scss/modules/_strip.scss */
-.strip > aside {
-  width: 25%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
-  margin-top: 24px;
-  margin-top: 1.5rem;
-}
-/* line 30, ../_scss/modules/_strip.scss */
 .strip .sub {
   width: 50%;
   clear: right;
   float: left;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
 }
-/* line 33, ../_scss/modules/_strip.scss */
+/* line 24, ../_scss/modules/_strip.scss */
 .strip .sub:last-child {
   width: 50%;
   clear: right;
   float: right;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
 }
-/* line 39, ../_scss/modules/_strip.scss */
+/* line 30, ../_scss/modules/_strip.scss */
 .strip .contact-form {
   width: 50%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
 }
 
-/* line 44, ../_scss/modules/_strip.scss */
+/* line 35, ../_scss/modules/_strip.scss */
 .sub-info {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1695,11 +1711,11 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   margin-right: -4px;
   padding: 0 12px;
 }
-/* line 50, ../_scss/modules/_strip.scss */
+/* line 41, ../_scss/modules/_strip.scss */
 .sub-info:first-child {
   padding-left: 0;
 }
-/* line 53, ../_scss/modules/_strip.scss */
+/* line 44, ../_scss/modules/_strip.scss */
 .sub-info:last-child {
   padding-right: 0;
   clear: right;
@@ -1711,25 +1727,23 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   clear: both;
 }
 
-/* line 78, ../_scss/modules/_strip.scss */
+/* line 69, ../_scss/modules/_strip.scss */
 .strip.profile .profile-portrait {
   width: 25%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
 }
-/* line 81, ../_scss/modules/_strip.scss */
+/* line 72, ../_scss/modules/_strip.scss */
 .strip.profile .profile-copy {
   width: 75%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
 }
 
 /* line 25, ../_scss/modules/_post.scss */
@@ -1749,8 +1763,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
   clear: both;
   overflow: hidden;
 }
@@ -1768,8 +1781,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
   list-style: none;
   list-style-type: none;
   padding-left: 0;
@@ -1886,8 +1898,7 @@ footer.global .copyright, .footer.global .copyright {
   margin-left: 0;
   margin-right: 0;
   clear: both;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
   margin-top: 24px;
   margin-top: 1.5rem;
   padding-top: 24px;
@@ -1901,8 +1912,7 @@ footer.global .copyright, .footer.global .copyright {
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
 }
 /* line 37, ../_scss/modules/_footer.scss */
 #home footer.global .info, #home .footer.global .info {
@@ -1911,8 +1921,7 @@ footer.global .copyright, .footer.global .copyright {
   margin-left: 0;
   margin-right: 0;
   clear: right;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
 }
 /* line 41, ../_scss/modules/_footer.scss */
 #home footer.global .inline, #home .footer.global .inline {
@@ -1972,8 +1981,7 @@ footer.local, .footer.local {
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 24px;
   margin-top: 24px;
   margin-top: 1.5rem;
   clear: both;

@@ -52,7 +52,7 @@
 
 %max-width {
   margin: 0 auto;
-  max-width: ($layout-width + last($layout-margins) + $grid-gutter);
+  max-width: ($layout-width + (last($layout-margins) * 2));
 }
 
 %full-bleed {
@@ -82,27 +82,43 @@ html, body {
   padding-top: 0;
   padding-bottom: 0;
 
-  & > h1 { 
-    @include rem(margin-top, 24px);
-  }
+  // & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > hgroup {
+  //   @extend %wrapper;
+  // }
 }
 
-.wrapper {
+%wrapper, .wrapper {
   @extend %max-width;
   @include clearfix;
   @include layout-margins;
   overflow: hidden;
   clear: both;
-  
-  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > hgroup, & > p, & > ul {
-    @extend %add-gutters;
-  }
-  
 }
 
 .feature {
+  @extend %max-width;
+  @include clearfix;
   @include rem(margin-top, -96px);
-  padding-top: $grid-gutter;
   position: relative;
   z-index: $z--high;
 }
+  .feature-copy {
+    @extend %add-gutters;
+    @include grid-span(3, 1);
+    @include layout-margins;
+    padding-top: $grid-gutter;
+  }
+
+  .feature-sidebar {
+    // @extend %full-bleed;
+    // @extend %add-gutters;
+    @include grid-span(1, 4);
+    padding: $grid-gutter;
+    // @include layout-margins;
+    padding-top: $grid-gutter;
+    // @include rem(padding-top, $grid-gutter);
+  }
+
+    .feature-sidebar-thumb {
+      display: block;
+    }

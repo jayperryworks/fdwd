@@ -45,7 +45,7 @@ $type-size--large: 21px;
 
 $type-line_height: 1.5; // global line height
 
-$type-size-amp: 1.1em; // how big the ampersand is (relative to surrounding type)
+$type-size-amp: 1em; // how big the ampersand is (relative to surrounding type)
 
 
 // Containers/layout
@@ -90,7 +90,7 @@ $grids: add-grid(4);
 // $grids: add-grid(12 at $medium);
 
 $gutters: add-gutter($grid-gutter);
-$gutter-styles: 'split' 'fixed';
+// $gutter-styles: 'split' 'fixed';
 
 $output: 'isolation';
 
