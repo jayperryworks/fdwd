@@ -2,11 +2,19 @@
 // 	Global type
 // ==============================================================================
 
-hgroup {
-	
+%text-body {
+	@include rem(font-size, 16px);
 }
 
-h1, h2, h3, h4, h5, h6 {
+%text-small {
+	@include rem(font-size, 14px);
+}
+
+hgroup {
+	line-height: 1.2;
+}
+
+#{headers()} {
 	margin: 0;
 	
 	a {
@@ -22,17 +30,21 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, %h1 {
 	@extend %calluna;
-	@include rem(font-size, 32px);
+	@include rem(font-size, 54px);
+	letter-spacing: -0.04em;
 }
 
 h2, %h2 {
 	@extend %calluna;
-	@include rem(font-size, 27px);
+	// @extend .accent;
+	@include rem(font-size, 50px);
+	letter-spacing: -0.03em;
 }
 
 h3, %h3 {
 	@extend %museo;
-	@include rem(font-size, 18px);
+	@include rem(font-size, 24px);
+	letter-spacing: -0.01em;
 }
 
 h4, %h4 {
@@ -50,6 +62,12 @@ h6, %h6 {
 	@include rem(font-size, 12px);
 }
 
+.title {
+	@extend %wrapper;
+  @include rem(margin-top, 36px);
+  @include rem(margin-bottom, 24px);
+}
+
 // bigger first paragraph
 .intro {
 	@include rem(font-size, 21px);
@@ -57,7 +75,7 @@ h6, %h6 {
 
 p, table, li {
 	@extend %museo;
-	@include rem(font-size, 16px);
+	@extend %text-body;
 
 	em {
 		@extend %museo-italic;
@@ -66,6 +84,10 @@ p, table, li {
 	strong {
 		@extend %museo-bold;
 	}
+}
+
+p {
+	margin: 0 0 0.5em 0;
 }
 
 ol, ul {
@@ -80,6 +102,15 @@ ol, ul {
 a {
 	@extend %base-transition;
 	text-decoration: none;
+}
+
+small, figcaption {
+	@extend %text-small;
+}
+
+figcaption {
+	@extend %calluna;
+	margin-top: 0.5em;
 }
 
 // if @font-face is supported, use Playfair ampersands...
@@ -103,9 +134,9 @@ a {
 	font-size: $type-size-amp; // relative to whatever type surrounds it -- it renders slightly bigger
 }
 
-
-// ==============================================================================
-// 	Themes
-// ==============================================================================
-
+.read_more {
+	@extend %museo-medium;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
 

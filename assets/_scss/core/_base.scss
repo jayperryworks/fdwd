@@ -60,11 +60,13 @@ main {
  */
 
 ::-moz-selection {
+  color: $color-selection-text;
   background: $color-selection;
   text-shadow: none;
 }
 
 ::selection {
+  color: $color-selection-text;
   background: $color-selection;
   text-shadow: none;
 }

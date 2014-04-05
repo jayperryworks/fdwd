@@ -11,6 +11,7 @@
 // convert to rem
 // @param $base (optional): base font size
 // based on http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+// https://gist.github.com/bitmanic/1134548
 @function rem($px-size, $base: $type-size--default) {
   @return #{strip-units($px-size/$base)}rem;
 }

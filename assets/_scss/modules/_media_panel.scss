@@ -1,0 +1,45 @@
+// ==========================================================================
+//  Media Box component
+// -> a pic and a blurb, useful for attorney profiles
+// ==========================================================================
+
+
+// BASE
+// -----------------------------------------------------------------------------
+
+.media_panel {
+  @include clearfix;
+  overflow: hidden;
+  // border-top-width: $hairline-w--thick;
+  // border-top-style: solid;
+
+
+  @include layout(4) {
+    .media_panel-thumb {
+      @include grid-span(1, 1);
+      padding-left: 0;
+    }
+    .media_panel-body {
+      @include grid-span(3, 2, $options: right);
+      padding-right: 0;
+    }
+  }
+}
+
+// SUBMODULES
+// -----------------------------------------------------------------------------
+
+.media_panel-thumb {
+  @include rem(padding-top, 16px);
+  @include border(top, thick);
+  display: block;
+}
+
+.media_panel-body {
+  @include rem(padding-top, 16px);
+  @include border(top, thick);
+
+  & > p {
+    @extend %text-small;
+  }
+}

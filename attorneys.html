@@ -7,27 +7,29 @@ next_url: practice-areas.html"
 ---
 
 {% for post in site.categories.attorneys %}
-<section class="strip profile{% if forloop.index == 1 %} first{% endif %}">
-  <img src="{{ post.portrait }}" alt="{{ post.title }}" class="profile-portrait" />
-  <div class="profile-copy">
-    <a id="{{ post.title | replace: " ", "-" | remove: "." | downcase }}"></a>
-    <h2>{{ post.title }}</h2>
-    <dl class="info contact">
-      <dt>Direct Line:</dt>
-      <dd>{{ post.phone }}</dd>
-      <dt>Facsimile:</dt>
-      <dd>{{ post.fax }}</dd>
-      <dt>Email:</dt>
-      <dd>{{ post.email }}</dd>
-    </dl>
-    {% comment %}<ul>
-      {% for area in post.practice-areas %}
-      <li>{{ area }}</li>
-      {% endfor %}
-    </ul>{% endcomment %}
+<!-- <section class="strip"> -->
+  <div class="wrapper media_panel">
+    <img src="{{ post.portrait }}" alt="{{ post.title }}" class="media_panel-thumb" />
+    <div class="media_panel-body">
+      <a id="{{ post.title | replace: " ", "-" | remove: "." | downcase }}"></a>
+      <h2>{{ post.title }}</h2>
+      <dl class="info contact">
+        <dt>Direct Line:</dt>
+        <dd>{{ post.phone }}</dd>
+        <dt>Facsimile:</dt>
+        <dd>{{ post.fax }}</dd>
+        <dt>Email:</dt>
+        <dd>{{ post.email }}</dd>
+      </dl>
+      {% comment %}<ul>
+        {% for area in post.practice-areas %}
+        <li>{{ area }}</li>
+        {% endfor %}
+      </ul>{% endcomment %}
 
-    {{ post.content }}
-    <!-- <a href="#" class="accordion-btn-expand">More</a> -->
+      {{ post.content }}
+      <!-- <a href="#" class="accordion-btn-expand">More</a> -->
+    </div>
   </div>
-</section>
+<!-- </section> -->
 {% endfor %}

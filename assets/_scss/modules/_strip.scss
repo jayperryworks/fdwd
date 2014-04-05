@@ -6,25 +6,16 @@
 // -----------------------------------------------------------------------------
 
 .strip {
-  @extend .wrapper;
+  // @extend .wrapper;
   @include rem(padding-top, 24px);
   @include rem(padding-bottom, 24px);
   @include clearfix;
+  @include border(top);
   clear: both;
-  // border-top: $hairline;
-  overflow: hidden;
+  overflow: visible;
 
   &:first-child, &.first {
     border-top: none;
-  }
-
-  .copy {
-    @include grid-span(3, 1);
-  }
-
-  & > aside {
-    @include grid-span(1, 4);
-    @include rem(margin-top, $grid-gutter);
   }
 
   .sub {
@@ -64,8 +55,12 @@
   // }  
 }
 
-// SUBMODULES
+// MODIFIERS
 // -----------------------------------------------------------------------------
+
+.strip.int {
+  
+}
 
 // ---- Attorney profile -------------------------------------------------------
 

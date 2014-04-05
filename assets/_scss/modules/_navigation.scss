@@ -16,7 +16,7 @@
 // ------- Global/main nav -------------------------------------------
 
 [role="navigation"].global {
-  @extend %well;
+  // @extend %well;
   padding: 0 $grid-gutter;
 
   ul {
@@ -49,47 +49,47 @@
 .local {
   position: relative;
 
-  &.grid.small {
-    @include inline-list;
-    vertical-align: top;
-    // margin-right: -#{$grid-gutter};
+  // &.grid.small {
+  //   @include inline-list;
+  //   vertical-align: top;
+  //   // margin-right: -#{$grid-gutter};
 
-    li {
-      width: 25%;
-      padding: 0 ($grid-gutter/2);
-      padding-bottom: ($grid-gutter/2);
-      margin-right: -5px;
-    }
+  //   li {
+  //     width: 25%;
+  //     padding: 0 ($grid-gutter/2);
+  //     padding-bottom: ($grid-gutter/2);
+  //     margin-right: -5px;
+  //   }
 
-    .tile {
-      display: block;
-    }
-  }
+  //   .tile {
+  //     // display: block;
+  //   }
+  // }
 
-  &.grid.large {
+  // &.grid.large {
 
-    margin-bottom: -5em;
+  //   margin-bottom: -5em;
 
-    .col {
-      width: 50%;
-      line-height: 1.4;
-      margin: 0;
-      padding: 0 ($grid-gutter/2);
-    }
+  //   .col {
+  //     width: 50%;
+  //     line-height: 1.4;
+  //     margin: 0;
+  //     padding: 0 ($grid-gutter/2);
+  //   }
 
-    .col.first {
-      // @include grid-span(2, 1, $options: both);
-      position: relative;
-      left: 0;
-    }
+  //   .col.first {
+  //     // @include grid-span(2, 1, $options: both);
+  //     position: relative;
+  //     left: 0;
+  //   }
 
-    .col.second {
-      // @include grid-span(2, 3, $options: right);
-      position: relative;
-      left: 50%;
-      top: -6em;
-      margin-left: -4px;
+  //   .col.second {
+  //     // @include grid-span(2, 3, $options: right);
+  //     position: relative;
+  //     left: 50%;
+  //     top: -6em;
+  //     margin-left: -4px;
 
-    }
-  }
+  //   }
+  // }
 }

@@ -2,14 +2,73 @@
 // Global layout styles
 // ==============================================================================
 
+// CONFIG/MIXINS
+// -----------------------------------------------------------------------------
+
+// Quickly set grid-margins on a container across multiple breakpoints
+@mixin layout-margins($property: padding, $negative: false) {
+  $margins: first($layout-margins);
+  @if $negative == true {
+    $margins: -(first($layout-margins));
+  }
+
+  #{$property}-left: $margins;
+  #{$property}-right: $margins;
+
+  @if length($layout-margins) > 1 {
+    @for $i from 1 through length($layout-margins) {
+      @include breakpoint(nth($breakpoints, $i)) {
+        $margins: nth($layout-margins, $i);
+        @if $negative == true {
+          $margins: -(nth($layout-margins, $i));
+        }
+
+        #{$property}-left: $margins;
+        #{$property}-right: $margins;
+      }
+    }
+  }
+}
+
+// A helper to quickly create grid-span() includes across multiple breakpoints
+// Saves having to write breakpoint calls over and over again
+@mixin grid-span-break($cols, $start, $opts: false) {
+  @include grid-span(nth($cols, 1), nth($start, 1), $options: $opts);
+
+  @for $i from 1 through (length($cols) - 1) {
+    $num: ($i + 1);
+    @include breakpoint(nth($breakpoints, $num)) {
+      @include grid-span(nth($cols, $num), nth($start, $num), $options: $opts);
+    }
+  }
+}
+
+// GLOBAL MODIFIERS
+// -----------------------------------------------------------------------------
+
 %add-gutters {
   padding: 0 ($grid-gutter/2);
 }
 
-%full-bleed {
-  margin-left: -$layout-margin;
-  margin-right: -$layout-margin;
+%max-width {
+  margin: 0 auto;
+  max-width: ($layout-width + (last($layout-margins) * 2));
 }
+
+%full-bleed {
+  @include layout-margins(margin, $negative: true);
+}
+
+%margins, .margins {
+  @include layout-margins(margin);
+}
+
+%center, .center {
+  text-align: center;
+}
+
+// BASE LAYOUTS
+// -----------------------------------------------------------------------------
 
 html, body {
   min-height: 100%;
@@ -17,24 +76,49 @@ html, body {
 
 [role="main"], .main {
   @include clearfix;
+  // @include layout-margins;
   margin-left: $header-w;
   width: calc(100% - $header-w);
-  padding: 0 $layout-margin;
+  padding-top: 0;
+  padding-bottom: 0;
 
-  & > h1 { 
-    @include rem(margin-top, 24px);
-  }
+  // & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > hgroup {
+  //   @extend %wrapper;
+  // }
 }
 
-.wrapper {
+%wrapper, .wrapper {
+  @extend %max-width;
   @include clearfix;
-  margin: 0 auto;
-  max-width: ($layout-width + $layout-margin + $grid-gutter);
+  @include layout-margins;
   overflow: hidden;
   clear: both;
-  
-  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > hgroup, & > p, & > ul {
-    @extend %add-gutters;
-  }
-  
 }
+
+.feature {
+  @extend %max-width;
+  @include clearfix;
+  @include rem(margin-top, -96px);
+  position: relative;
+  z-index: $z--high;
+}
+  .feature-copy {
+    @extend %add-gutters;
+    @include grid-span(3, 1);
+    @include layout-margins;
+    padding-top: $grid-gutter;
+  }
+
+  .feature-sidebar {
+    // @extend %full-bleed;
+    // @extend %add-gutters;
+    @include grid-span(1, 4);
+    padding: $grid-gutter;
+    // @include layout-margins;
+    padding-top: $grid-gutter;
+    // @include rem(padding-top, $grid-gutter);
+  }
+
+    .feature-sidebar-thumb {
+      display: block;
+    }
