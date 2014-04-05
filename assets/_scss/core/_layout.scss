@@ -2,6 +2,9 @@
 // Global layout styles
 // ==============================================================================
 
+// CONFIG/MIXINS
+// -----------------------------------------------------------------------------
+
 // Quickly set grid-margins on a container across multiple breakpoints
 @mixin layout-margins($property: padding, $negative: false) {
   $margins: first($layout-margins);
@@ -40,13 +43,40 @@
   }
 }
 
+// GLOBAL MODIFIERS
+// -----------------------------------------------------------------------------
+
+%add-gutters {
+  padding: 0 ($grid-gutter/2);
+}
+
+%max-width {
+  margin: 0 auto;
+  max-width: ($layout-width + last($layout-margins) + $grid-gutter);
+}
+
+%full-bleed {
+  @include layout-margins(margin, $negative: true);
+}
+
+%margins, .margins {
+  @include layout-margins(margin);
+}
+
+%center, .center {
+  text-align: center;
+}
+
+// BASE LAYOUTS
+// -----------------------------------------------------------------------------
+
 html, body {
   min-height: 100%;
 }
 
 [role="main"], .main {
   @include clearfix;
-  @include layout-margins;
+  // @include layout-margins;
   margin-left: $header-w;
   width: calc(100% - $header-w);
   padding-top: 0;
@@ -58,9 +88,9 @@ html, body {
 }
 
 .wrapper {
+  @extend %max-width;
   @include clearfix;
-  margin: 0 auto;
-  max-width: ($layout-width + last($layout-margins) + $grid-gutter);
+  @include layout-margins;
   overflow: hidden;
   clear: both;
   
@@ -70,22 +100,9 @@ html, body {
   
 }
 
-
-// GLOBAL MODIFIERS
-// -----------------------------------------------------------------------------
-
-%add-gutters {
-  padding: 0 ($grid-gutter/2);
-}
-
-%full-bleed {
-  @include layout-margins(margin, $negative: true);
-}
-
-.margins {
-  @include layout-margins(margin);
-}
-
-.center {
-  text-align: center;
+.feature {
+  @include rem(margin-top, -96px);
+  padding-top: $grid-gutter;
+  position: relative;
+  z-index: $z--high;
 }

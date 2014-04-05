@@ -51,7 +51,7 @@ footer.global, .footer.global {
 // ------- local footer -------------------------------------------------------
 
 footer.local, .footer.local {
-  @extend %full-bleed;
+  // @extend %full-bleed;
   @extend %theme-flood;
   @include layout-margins;
   @include rem(margin-top, 24px);

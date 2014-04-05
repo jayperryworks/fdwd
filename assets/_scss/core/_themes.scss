@@ -14,11 +14,17 @@
   $accent: $color--accent,
   $reverse: false
 ) {
+  $border-color: darken($bg, 20);
+
   color: $fg;
   background: $bg;
-  border-color: $accent;
+  border-color: $border-color;
   border-style: solid;
   border-width: 0;
+
+  & * {
+    border-color: $border-color;
+  }
 
   // --- text ----------------------------------------------------------
 
@@ -104,17 +110,21 @@
   // --- global modifiers ----------------------------------------------------------
 
   // accent that jumps out
-  .highlight {
+  %highlight, .highlight {
     color: $highlight;
   }
 
-  .highlight-border {
+  %highlight-border, .highlight-border {
     border-color: $highlight !important;
   }
   
   // subtler accent
-  .accent {
+  %accent, .accent {
     color: $accent;
+  }
+
+  %accent-border, .accent-border {
+    border-color: $accent !important;
   }
 
   // slightly 'sunken' from surrounding bg

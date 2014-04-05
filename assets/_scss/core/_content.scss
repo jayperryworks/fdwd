@@ -11,10 +11,10 @@
 }
 
 hgroup {
-	
+	line-height: 1.2;
 }
 
-h1, h2, h3, h4, h5, h6 {
+#{headers()} {
 	margin: 0;
 	
 	a {
@@ -78,6 +78,10 @@ p, table, li {
 	strong {
 		@extend %museo-bold;
 	}
+}
+
+p {
+	margin: 0 0 0.5em 0;
 }
 
 ol, ul {

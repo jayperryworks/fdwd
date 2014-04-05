@@ -6,12 +6,48 @@
 // -----------------------------------------------------------------------------
 
 .hero {
-  @extend %full-bleed;
+  @extend %center;
+  @extend %highlight-border;
   @include rem(height, 320px);
+  @include rem(padding-top, 54px);
+  @include border(bottom, thick);
+  // position: relative;
+  margin: 0;
   background: url("#{$path-images}hero.jpg") center center no-repeat;
   background-size: cover;
+  z-index: $z--low;
 }
 
 // SUBMODULES
 // -----------------------------------------------------------------------------
 
+.hero-headline {
+  @extend %max-width;
+  @include layout-margins;
+  line-height: 1;
+
+  h1 {
+    // @include rem(font-size, 60px);
+  }
+
+  h2 {
+    margin-top: -0.4em;
+    line-height: 1;
+    padding-left: 60%;
+    // text-align: right;
+  }
+
+  .subhead {
+    @include inline-block;
+    vertical-align: middle;
+    font-size: 0.4em;
+    letter-spacing: 0;
+  }
+
+  .numbers {
+    @include inline-block;
+    vertical-align: middle;
+    font-family: $georgia;
+    letter-spacing: -0.03;
+  }
+}

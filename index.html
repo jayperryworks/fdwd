@@ -4,27 +4,34 @@ title: home
 ---
 
 <section class="hero">
-</section>
-
-<section class="strip first">
-  <div class="copy">
-    <p class="intro">
-      Starting as a local general practice, {{ site.name | xml_escape }} now serves the Cities of Waynesboro, Staunton, Lexington, Harrisonburg and Charlottesville and the Counties of Augusta, Rockbridge, Rockingham, Nelson and Albermarle.</p>
-
-    <p>The Firm remains a vital and constant fixture in the City of Waynesboro. The integrity and work performance of the attorneys and staff is reflected by the large client base that continues to expand. We are committed to providing thorough, concise legal services to our clients at a fair cost.</p>
-  </div>
-  
-  <aside>
-    <figure>
-      <a href="about.html">
-        <img src="http://placehold.it/250x180" alt="FDWD office in Waynesboro">
-        Read about the history &amp; renovation of our office building
-      </a>
-    </figure>
-  </aside>
+  <hgroup class="hero-headline">
+    <h1>Serving Waynesboro &amp;&nbsp;the&nbsp;Valley</h1>
+    <h2 class="accent"><span class="subhead">since</span><span class="numbers">1931</span></h2>
+  </hgroup>
 </section>
 
 <section class="strip">
+  <div class="wrapper feature theme-default">
+    <div class="feature-copy">
+      <p class="intro">
+        Starting as a local general practice, {{ site.name | xml_escape }} now serves the Cities of Waynesboro, Staunton, Lexington, Harrisonburg and Charlottesville and the Counties of Augusta, Rockbridge, Rockingham, Nelson and Albermarle.</p>
+
+      <p>The Firm remains a vital and constant fixture in the City of Waynesboro. The integrity and work performance of the attorneys and staff is reflected by the large client base that continues to expand. We are committed to providing thorough, concise legal services to our clients at a fair cost.</p>
+    </div>
+
+    <aside class="feature-sidebar">
+      <figure>
+        <a href="about.html">
+          <img src="http://placehold.it/250x180" alt="FDWD office in Waynesboro">
+          Read about the history &amp; renovation of our office building
+        </a>
+      </figure>
+    </aside>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrapper">
     <h2 class="accent">Attorneys</h2>
     <ul class="grid large">
       {% for post in site.categories.attorneys %}
@@ -39,13 +46,14 @@ title: home
       </li>
       {% endfor %}
     </ul>
+  </div>
 </section>
 
 <section class="strip">
-  <h2 class="accent">Practice Areas</h2>
-  <p>TO BE ADDED HERE: pictures and short descriptions for each practice area</p>
-  <nav class="local grid large">
-    <ul>
+  <div class="wrapper">
+    <h2 class="accent">Practice Areas</h2>
+    <p>TO BE ADDED HERE: pictures and short descriptions for each practice area</p>
+    <ul class"grid large">
       {% for post in site.categories.practice-areas %}
       {% capture colnum %}{{ forloop.index }}{% endcapture %}
       <li class="col {% if colnum < '5' %}first{% else %}second{% endif %}">
@@ -53,5 +61,5 @@ title: home
       </li>
       {% endfor %}
     </ul>
-  </nav>
+  </div>
 </section>
