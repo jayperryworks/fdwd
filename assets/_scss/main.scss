@@ -33,6 +33,7 @@
 // components
 @import "modules/button";
 @import "modules/media_panel";
+@import "modules/bullet";
 
 // modules
 @import "modules/header";
@@ -76,7 +77,7 @@ body {
 }
 
 .map {
-  @extend %full-bleed;
+  // @extend %full-bleed;
   @include grid-span(4, 1);
   @include rem(margin-top, 24px);
   clear: both;

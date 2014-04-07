@@ -1,5 +1,5 @@
 /* line 10, ../_scss/core/_settings.scss */
-input, textarea, select, a {
+input, textarea, select, a, .bullet-icon {
   -webkit-transition: all 0.5s false;
   -moz-transition: all 0.5s false false;
   -o-transition: all 0.5s false false;
@@ -475,7 +475,7 @@ h1, h2, figcaption, [role="navigation"].global a {
 }
 
 /* line 98, ../_scss/core/_fonts.scss */
-p em, table em, li em, .read_more, p strong, table strong, li strong, h3, h4, h5, h6, p, table, li {
+p em, table em, li em, .read_more, p strong, table strong, li strong, h3, h4, .bullet, h5, h6, p, table, li {
   font-family: "MuseoSans300", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -552,7 +552,7 @@ p strong, table strong, li strong {
 }
 
 @-moz-keyframes spin {
-  /* line 194, ../_scss/core/_helpers.scss */
+  /* line 231, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -560,7 +560,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 201, ../_scss/core/_helpers.scss */
+  /* line 238, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -570,7 +570,7 @@ p strong, table strong, li strong {
 }
 
 @-webkit-keyframes spin {
-  /* line 209, ../_scss/core/_helpers.scss */
+  /* line 246, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -578,7 +578,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 216, ../_scss/core/_helpers.scss */
+  /* line 253, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -588,7 +588,7 @@ p strong, table strong, li strong {
 }
 
 @-o-keyframes spin {
-  /* line 224, ../_scss/core/_helpers.scss */
+  /* line 261, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -596,7 +596,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 231, ../_scss/core/_helpers.scss */
+  /* line 268, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -606,7 +606,7 @@ p strong, table strong, li strong {
 }
 
 @-ms-keyframes spin {
-  /* line 239, ../_scss/core/_helpers.scss */
+  /* line 276, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -614,7 +614,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 246, ../_scss/core/_helpers.scss */
+  /* line 283, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -624,7 +624,7 @@ p strong, table strong, li strong {
 }
 
 @keyframes spin {
-  /* line 254, ../_scss/core/_helpers.scss */
+  /* line 291, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -632,7 +632,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 261, ../_scss/core/_helpers.scss */
+  /* line 298, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -941,12 +941,6 @@ p {
   max-width: 1120px;
 }
 
-/* line 58, ../_scss/core/_layout.scss */
-.map {
-  margin-left: -48px;
-  margin-right: -48px;
-}
-
 /* line 62, ../_scss/core/_layout.scss */
 .margins {
   margin-left: 48px;
@@ -1089,7 +1083,7 @@ h3 {
 }
 
 /* line 50, ../_scss/core/_content.scss */
-h4 {
+h4, .bullet {
   font-size: 18px;
   font-size: 1.125rem;
 }
@@ -1225,21 +1219,21 @@ figcaption {
   background: #f2f2f2;
   border-color: #e6e6e6;
 }
-/* line 108, ../_scss/core/_helpers.scss */
+/* line 145, ../_scss/core/_helpers.scss */
 .theme-default input::-webkit-input-placeholder, .theme-default textarea::-webkit-input-placeholder, body input::-webkit-input-placeholder, body textarea::-webkit-input-placeholder {
   color: #d9d9d9;
 }
-/* line 112, ../_scss/core/_helpers.scss */
+/* line 149, ../_scss/core/_helpers.scss */
 .theme-default input:-moz-placeholder, .theme-default textarea:-moz-placeholder, body input:-moz-placeholder, body textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #d9d9d9;
 }
-/* line 116, ../_scss/core/_helpers.scss */
+/* line 153, ../_scss/core/_helpers.scss */
 .theme-default input::-moz-placeholder, .theme-default textarea::-moz-placeholder, body input::-moz-placeholder, body textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #d9d9d9;
 }
-/* line 120, ../_scss/core/_helpers.scss */
+/* line 157, ../_scss/core/_helpers.scss */
 .theme-default input:-ms-input-placeholder, .theme-default textarea:-ms-input-placeholder, body input:-ms-input-placeholder, body textarea:-ms-input-placeholder {
   color: #d9d9d9;
 }
@@ -1274,7 +1268,7 @@ figcaption {
 }
 /* line 131, ../_scss/core/_themes.scss */
 .theme-default .well, body .well {
-  background: white;
+  background: #f2f2f2;
 }
 /* line 140, ../_scss/core/_themes.scss */
 .theme-default .island, body .island {
@@ -1336,21 +1330,21 @@ footer.local input, .footer.local input, footer.local textarea, .footer.local te
   background: #44b598;
   border-color: #286a59;
 }
-/* line 108, ../_scss/core/_helpers.scss */
+/* line 145, ../_scss/core/_helpers.scss */
 footer.local input::-webkit-input-placeholder, .footer.local input::-webkit-input-placeholder, footer.local textarea::-webkit-input-placeholder, .footer.local textarea::-webkit-input-placeholder, .theme-flood input::-webkit-input-placeholder, .theme-flood textarea::-webkit-input-placeholder {
   color: #79ccb7;
 }
-/* line 112, ../_scss/core/_helpers.scss */
+/* line 149, ../_scss/core/_helpers.scss */
 footer.local input:-moz-placeholder, .footer.local input:-moz-placeholder, footer.local textarea:-moz-placeholder, .footer.local textarea:-moz-placeholder, .theme-flood input:-moz-placeholder, .theme-flood textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #79ccb7;
 }
-/* line 116, ../_scss/core/_helpers.scss */
+/* line 153, ../_scss/core/_helpers.scss */
 footer.local input::-moz-placeholder, .footer.local input::-moz-placeholder, footer.local textarea::-moz-placeholder, .footer.local textarea::-moz-placeholder, .theme-flood input::-moz-placeholder, .theme-flood textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #79ccb7;
 }
-/* line 120, ../_scss/core/_helpers.scss */
+/* line 157, ../_scss/core/_helpers.scss */
 footer.local input:-ms-input-placeholder, .footer.local input:-ms-input-placeholder, footer.local textarea:-ms-input-placeholder, .footer.local textarea:-ms-input-placeholder, .theme-flood input:-ms-input-placeholder, .theme-flood textarea:-ms-input-placeholder {
   color: #79ccb7;
 }
@@ -1447,21 +1441,21 @@ footer.global input, .footer.global input, footer.global textarea, .footer.globa
   background: #343e3e;
   border-color: #050606;
 }
-/* line 108, ../_scss/core/_helpers.scss */
+/* line 145, ../_scss/core/_helpers.scss */
 footer.global input::-webkit-input-placeholder, .footer.global input::-webkit-input-placeholder, footer.global textarea::-webkit-input-placeholder, .footer.global textarea::-webkit-input-placeholder, .theme-reverse input::-webkit-input-placeholder, .theme-reverse textarea::-webkit-input-placeholder {
   color: #566868;
 }
-/* line 112, ../_scss/core/_helpers.scss */
+/* line 149, ../_scss/core/_helpers.scss */
 footer.global input:-moz-placeholder, .footer.global input:-moz-placeholder, footer.global textarea:-moz-placeholder, .footer.global textarea:-moz-placeholder, .theme-reverse input:-moz-placeholder, .theme-reverse textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #566868;
 }
-/* line 116, ../_scss/core/_helpers.scss */
+/* line 153, ../_scss/core/_helpers.scss */
 footer.global input::-moz-placeholder, .footer.global input::-moz-placeholder, footer.global textarea::-moz-placeholder, .footer.global textarea::-moz-placeholder, .theme-reverse input::-moz-placeholder, .theme-reverse textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #566868;
 }
-/* line 120, ../_scss/core/_helpers.scss */
+/* line 157, ../_scss/core/_helpers.scss */
 footer.global input:-ms-input-placeholder, .footer.global input:-ms-input-placeholder, footer.global textarea:-ms-input-placeholder, .footer.global textarea:-ms-input-placeholder, .theme-reverse input:-ms-input-placeholder, .theme-reverse textarea:-ms-input-placeholder {
   color: #566868;
 }
@@ -1549,6 +1543,69 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   padding-top: 1rem;
   border-top-width: 4px;
   border-top-style: solid;
+}
+
+/* line 11, ../_scss/modules/_bullet.scss */
+.bullet {
+  display: block;
+  overflow: visible;
+  padding: 0.25em;
+  margin-bottom: 1em;
+  z-index: 0;
+  color: #293f47;
+}
+/* line 20, ../_scss/modules/_bullet.scss */
+.bullet:hover, .bullet:active {
+  color: #3da288;
+  background: #f2f2f2;
+}
+/* line 24, ../_scss/modules/_bullet.scss */
+.bullet:hover .bullet-icon, .bullet:active .bullet-icon {
+  background: #3da288;
+}
+
+/* line 33, ../_scss/modules/_bullet.scss */
+.bullet-icon {
+  position: absolute;
+  top: -0.5em;
+  bottom: -0.5em;
+  left: -0.25em;
+  height: 3em;
+  width: 3em;
+  border-radius: 3em;
+  -moz-border-radius: 3em;
+  -webkit-border-radius: 3em;
+  display: block;
+  vertical-align: middle;
+  background: #293f47;
+}
+/* line 41, ../_scss/modules/_bullet.scss */
+.bullet-icon:after {
+  content: ' ';
+  position: absolute;
+  top: -0.25em;
+  left: -0.25em;
+  right: -0.25em;
+  bottom: -0.25em;
+  z-index: -1;
+  background: white;
+  border: 1px solid #d4d6d8;
+  border-radius: 3.5em;
+}
+/* line 55, ../_scss/modules/_bullet.scss */
+.bullet-icon:hover, .bullet-icon:active {
+  background: #3da288;
+}
+
+/* line 60, ../_scss/modules/_bullet.scss */
+.bullet-label {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-left: 3.5em;
 }
 
 /* line 15, ../_scss/modules/_header.scss */
@@ -1786,7 +1843,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 284, ../_scss/core/_helpers.scss */
+/* line 321, ../_scss/core/_helpers.scss */
 .meta li {
   list-style: none;
   list-style-type: none;
@@ -1801,9 +1858,8 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   padding: 1.125rem 0;
   font-size: 0;
   margin-left: 0;
-  overflow: hidden;
 }
-/* line 284, ../_scss/core/_helpers.scss */
+/* line 321, ../_scss/core/_helpers.scss */
 .grid li {
   list-style: none;
   list-style-type: none;
@@ -1813,17 +1869,18 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   margin-bottom: 16px;
   margin-bottom: 1rem;
   display: block;
-  overflow: hidden;
+  position: relative;
+  font-size: 0;
 }
 
 @media (min-width: 30em) {
-  /* line 62, ../_scss/modules/_grid-inline.scss */
+  /* line 68, ../_scss/modules/_grid-inline.scss */
   .grid.small {
     margin-right: -24px;
   }
 }
 @media (min-width: 48em) {
-  /* line 62, ../_scss/modules/_grid-inline.scss */
+  /* line 68, ../_scss/modules/_grid-inline.scss */
   .grid.small {
     margin-right: -24px;
   }
@@ -1858,7 +1915,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
 }
 
 @media (min-width: 48em) {
-  /* line 67, ../_scss/modules/_grid-inline.scss */
+  /* line 73, ../_scss/modules/_grid-inline.scss */
   .grid.large {
     margin-right: -24px;
   }
@@ -1945,11 +2002,11 @@ footer.local, .footer.local {
   clear: both;
 }
 
-/* line 56, ../_scss/main.scss */
+/* line 57, ../_scss/main.scss */
 .contact-form label {
   display: block;
 }
-/* line 60, ../_scss/main.scss */
+/* line 61, ../_scss/main.scss */
 .contact-form .input {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1960,21 +2017,21 @@ footer.local, .footer.local {
   width: 50%;
   padding: 6px;
 }
-/* line 65, ../_scss/main.scss */
+/* line 66, ../_scss/main.scss */
 .contact-form .input.left {
   margin-left: -6px;
   margin-right: -3px;
 }
-/* line 69, ../_scss/main.scss */
+/* line 70, ../_scss/main.scss */
 .contact-form .input.right {
   margin-right: -6px;
 }
-/* line 73, ../_scss/main.scss */
+/* line 74, ../_scss/main.scss */
 .contact-form input {
   width: 100%;
 }
 
-/* line 78, ../_scss/main.scss */
+/* line 79, ../_scss/main.scss */
 .map {
   width: 100%;
   float: right;
@@ -1987,39 +2044,39 @@ footer.local, .footer.local {
   clear: both;
 }
 
-/* line 85, ../_scss/main.scss */
+/* line 86, ../_scss/main.scss */
 .info {
   list-style: none;
   list-style-type: none;
   padding-left: 0;
 }
-/* line 284, ../_scss/core/_helpers.scss */
+/* line 321, ../_scss/core/_helpers.scss */
 .info li {
   list-style: none;
   list-style-type: none;
 }
-/* line 326, ../_scss/core/_helpers.scss */
+/* line 363, ../_scss/core/_helpers.scss */
 .info.contact > dt, .info.contact > dd {
   display: inline;
 }
-/* line 329, ../_scss/core/_helpers.scss */
+/* line 366, ../_scss/core/_helpers.scss */
 .info.contact > dt {
   margin-right: 0.1875em;
 }
-/* line 332, ../_scss/core/_helpers.scss */
+/* line 369, ../_scss/core/_helpers.scss */
 .info.contact > dd {
   margin-left: 0;
 }
-/* line 338, ../_scss/core/_helpers.scss */
+/* line 375, ../_scss/core/_helpers.scss */
 .info.contact > dd:after {
   content: '\A';
   white-space: pre;
 }
-/* line 92, ../_scss/main.scss */
+/* line 93, ../_scss/main.scss */
 .info.contact dt {
   font-weight: bold;
 }
-/* line 97, ../_scss/main.scss */
+/* line 98, ../_scss/main.scss */
 .info .inline {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2029,15 +2086,15 @@ footer.local, .footer.local {
   *display: inline;
   margin-left: 0.6em;
 }
-/* line 101, ../_scss/main.scss */
+/* line 102, ../_scss/main.scss */
 .info .inline:first-child {
   margin-left: 0;
 }
-/* line 104, ../_scss/main.scss */
+/* line 105, ../_scss/main.scss */
 .info .inline:first-child:before {
   content: none;
 }
-/* line 109, ../_scss/main.scss */
+/* line 110, ../_scss/main.scss */
 .info .inline:before {
   content: '\2022';
   position: relative;

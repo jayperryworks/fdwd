@@ -41,12 +41,18 @@
   @include rem(padding, 18px 0);
   font-size: 0; // fix for whitespace bugs
   margin-left: 0;
-  overflow: hidden;
+  // overflow: hidden;
 
   li {
     @include rem(margin-bottom, 16px);
     display: block;
-    overflow: hidden;
+    position: relative;
+    font-size: 0;
+    // overflow: hidden;
+
+    // & > * {
+    //   @include rem(font-size, $type-size--default);
+    // }
 
     @include breakpoint($xsmall) {
       // margin-right: $margin-whitespace;
