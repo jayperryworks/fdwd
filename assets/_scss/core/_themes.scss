@@ -132,7 +132,7 @@
     @if $reverse == true {
       background: darken($bg, 5);
     } @else {
-      background: lighten($bg, 5);
+      background: darken($bg, 5);
     }
   }
   

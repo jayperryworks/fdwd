@@ -1,0 +1,63 @@
+// ==========================================================================
+//  Bullet component
+// -> a list of things with big icons for each item
+// -> use with a UL parent or with .grid
+// ==========================================================================
+
+$size-bullet: 3em;
+
+// BASE
+// -----------------------------------------------------------------------------
+.bullet {
+  @extend %h4;
+  display: block;
+  overflow: visible;
+  padding: 0.25em;
+  margin-bottom: 1em;
+  z-index: $z--low;
+  color: $blue;
+
+  &:hover, &:active {
+    color: $green;
+    background: darken(white, 5);
+
+    .bullet-icon {
+      background: $green;
+    }
+  }
+}
+
+// SUBMODULES
+// -----------------------------------------------------------------------------
+
+.bullet-icon {
+  @extend %base-transition;
+  @include position(absolute, -0.5em 0 -0.5em -0.25em);
+  @include circle($size-bullet);
+  display: block;
+  vertical-align: middle;
+  background: $blue;
+
+  &:after {
+    $margin: 0.5em;
+    content: ' ';
+    position: absolute;
+    top: -($margin/2);
+    left: -($margin/2);
+    right: -($margin/2);
+    bottom: -($margin/2);
+    z-index: -1;
+    background: white;
+    border: 1px solid darken($gray--light, 5);
+    border-radius: $size-bullet + $margin;
+  }
+
+  &:hover, &:active {
+    background: $green;
+  }
+}
+
+.bullet-label {
+  @include inline-block;
+  margin-left: ($size-bullet + 0.5em);
+}

@@ -40,7 +40,7 @@ title: home
         </a>
         <div class="media_panel-body highlight-border">
           <h3><a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}">{{ post.title | xml_escape }}</a></h3>
-          <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}" class="read_more">Read more &rsaquo;</a></p>
+          <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}" class="read_more">Read&nbsp;more&nbsp;&rsaquo;</a></p>
         </div>
       </li>
       {% endfor %}
@@ -51,12 +51,15 @@ title: home
 <section class="strip">
   <div class="wrapper">
     <h2 class="accent">Practice Areas</h2>
-    <p>TO BE ADDED HERE: pictures and short descriptions for each practice area</p>
-    <ul class"grid large">
+    <ul class="grid large">
       {% for post in site.categories.practice-areas %}
       {% capture colnum %}{{ forloop.index }}{% endcapture %}
-      <li class="col {% if colnum < '5' %}first{% else %}second{% endif %}">
-        <a href="{{ relativepath }}{{ site.baseurl }}/practice-areas.html#{{ post.slug }}">{{ post.title | xml_escape }}</a>
+      {% comment %}col {% if colnum < '5' %}first{% else %}second{% endif %}{% endcomment %}
+      <li>
+        <a class="bullet" href="{{ relativepath }}{{ site.baseurl }}/practice-areas.html#{{ post.slug }}">
+          <span class="bullet-icon"></span>
+          <h4 class="bullet-label">{{ post.title | xml_escape }}</h4>
+        </a>
       </li>
       {% endfor %}
     </ul>
