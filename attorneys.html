@@ -6,12 +6,13 @@ next: "Practice Areas"
 next_url: practice-areas.html"
 ---
 
+<div class="wrapper accordion">
 {% for post in site.categories.attorneys %}
-<!-- <section class="strip"> -->
-  <div class="wrapper media_panel">
+{% capture anchor %}{{ post.title | replace: " ", "-" | remove: "." | downcase }}{% endcapture %}
+  <div class="media_panel">
     <img src="{{ post.portrait }}" alt="{{ post.title }}" class="media_panel-thumb" />
     <div class="media_panel-body">
-      <a id="{{ post.title | replace: " ", "-" | remove: "." | downcase }}"></a>
+      <a id="{{ anchor }}"></a>
       <h2>{{ post.title }}</h2>
       <dl class="info contact">
         <dt>Direct Line:</dt>
@@ -27,9 +28,15 @@ next_url: practice-areas.html"
         {% endfor %}
       </ul>{% endcomment %}
 
-      {{ post.content }}
-      <!-- <a href="#" class="accordion-btn-expand">More</a> -->
+      <div class="accordion-content" id="{{ anchor }}-content">
+        {{ post.content }}
+      </div>
+
+      <a href="#{{ anchor }}-content" class="accordion-button">
+        <span class="hide">&and; Hide</span>
+        <span class="expand">&or; Show More</span>
+      </a>
     </div>
   </div>
-<!-- </section> -->
 {% endfor %}
+</div>

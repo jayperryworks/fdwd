@@ -34,7 +34,7 @@
       // Settings
       // -> global vars go here
       // --------------------------------------------------------------- 
-
+      accordion: ".accordion-button"
     },
 
     // Setup
@@ -53,6 +53,8 @@
         $(".logo img").attr("src", "assets/images/logo-FDWD.png");
       }
 
+      fdwd.accordion.init(fdwd.config.accordion);
+
       // set up widon't & ampersand replacement
       fdwd.typography('h1, h2, h3, h4, h5, h6, p, li, a, td, figcaption, small, span');
     },
@@ -70,24 +72,49 @@
         deferSetup : true,
 
         setup : function() {
-          // pettingzoo.tabs.init(pettingzoo.config.tabs);
+          // fdwd.tabs.init(fdwd.config.tabs);
         },
 
         match : function() {
           console.log("match");
-          // pettingzoo.tabs.kill(pettingzoo.config.accordion);
-          // pettingzoo.tabs.multiple = false;
-          // pettingzoo.tabs.reset(pettingzoo.config.tabs);
-          // pettingzoo.tabs.init(pettingzoo.config.tabs);
+          // fdwd.tabs.kill(fdwd.config.accordion);
+          // fdwd.tabs.multiple = false;
+          // fdwd.tabs.reset(fdwd.config.tabs);
+          // fdwd.tabs.init(fdwd.config.tabs);
         },
 
         unmatch : function() {
           // console.log("unmatch");
-          // pettingzoo.tabs.kill(pettingzoo.config.tabs);
-          // pettingzoo.tabs.multiple = true;
-          // pettingzoo.tabs.init(pettingzoo.config.accordion);
+          // fdwd.tabs.kill(fdwd.config.tabs);
+          // fdwd.tabs.multiple = true;
+          // fdwd.tabs.init(fdwd.config.accordion);
         }
       });
+    },
+
+    accordion : {
+
+      content : ".accordion-content",
+      active : "active",
+      open : "is-open",
+
+      init : function(el) {
+
+        $(el).each(function() {
+          $(this).on('click', function(e) {
+            $this = $(this);
+            // $content = $($this.attr('href'));
+
+            // console.log("content: " + $content);
+
+            $($this.attr('href')).toggleClass(fdwd.accordion.open);
+            $this.toggleClass(fdwd.accordion.active);
+
+            // Prevent the anchor's default click action
+            e.preventDefault();
+          });
+        });
+      }
     },
 
     // --- Local navigation (tabs & accordion) --------------------------------------
@@ -104,52 +131,52 @@
       
       init : function(el) {
 
-        $(el).each(function(){
+        $(el).each(function() {
           // For each set of tabs, we want to keep track of
           // which tab is active and it's associated content
           var $active, $content, $links = $(this).find('a');
 
           // If the location.hash matches one of the links, use that as the active tab.
           // If no match is found, use the first link as the initial active tab.
-          $active = $links.filter("." + pettingzoo.tabs.active);
+          $active = $links.filter("." + fdwd.tabs.active);
           $content = $($active.attr('href'));
 
           // console.log("active tab: " + $active);
 
           // if multiple active tabs are not allowed...
-          if (pettingzoo.tabs.multiple != true) {
+          if (fdwd.tabs.multiple != true) {
             // Hide the remaining content
             $links.not($active).each(function () {
-              $($(this).attr('href')).removeClass(pettingzoo.tabs.open);
+              $($(this).attr('href')).removeClass(fdwd.tabs.open);
             });
           }
 
           // Bind the click event handler
           $(this).on('click', 'a', function(e){
 
-            console.log("multiple: " + pettingzoo.tabs.multiple);
+            console.log("multiple: " + fdwd.tabs.multiple);
 
             // if multiple active tabs are not allowed...
-            if (pettingzoo.tabs.multiple != true) {
+            if (fdwd.tabs.multiple != true) {
               // Make the old tab inactive.
-              $active.removeClass(pettingzoo.tabs.active);
-              $content.removeClass(pettingzoo.tabs.open);
+              $active.removeClass(fdwd.tabs.active);
+              $content.removeClass(fdwd.tabs.open);
 
               // Update the variables with the new link and content
               $active = $(this);
               $content = $($(this).attr('href'));
 
               // Make the tab active.
-              $active.addClass(pettingzoo.tabs.active);
-              $content.addClass(pettingzoo.tabs.open);
+              $active.addClass(fdwd.tabs.active);
+              $content.addClass(fdwd.tabs.open);
             } else {
               // Update the variables with the new link and content
               $active = $(this);
               $content = $($(this).attr('href'));
 
               // Make the tab active.
-              $active.toggleClass(pettingzoo.tabs.active);
-              $content.toggleClass(pettingzoo.tabs.open);
+              $active.toggleClass(fdwd.tabs.active);
+              $content.toggleClass(fdwd.tabs.open);
             }
 
             // Prevent the anchor's default click action
@@ -161,16 +188,16 @@
       kill : function(el) {
         $(el).each(function() {
           $(this).find('a').each(function() {
-            $(this).removeClass(pettingzoo.tabs.active);
-            $($(this).attr('href')).removeClass(pettingzoo.tabs.open);
+            $(this).removeClass(fdwd.tabs.active);
+            $($(this).attr('href')).removeClass(fdwd.tabs.open);
           });
         });
       },
 
       reset : function(el) {
         var $link = $(el).find('a').first();
-        $link.addClass(pettingzoo.tabs.active);
-        $($link.attr('href')).addClass(pettingzoo.tabs.open);
+        $link.addClass(fdwd.tabs.active);
+        $($link.attr('href')).addClass(fdwd.tabs.open);
       }
     },
 
