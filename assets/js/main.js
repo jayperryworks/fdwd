@@ -94,18 +94,19 @@
 
     accordion : {
 
-      content : ".accordion-content",
       active : "active",
       open : "is-open",
 
       init : function(el) {
+
+        
 
         $(el).each(function() {
           $(this).on('click', function(e) {
             $this = $(this);
             // $content = $($this.attr('href'));
 
-            // console.log("content: " + $content);
+            console.log("hello");
 
             $($this.attr('href')).toggleClass(fdwd.accordion.open);
             $this.toggleClass(fdwd.accordion.active);

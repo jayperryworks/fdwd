@@ -11,11 +11,18 @@ next_url: "news.html"
 <section class="strip">
 {% for post in site.categories.practice-areas %}
   <div class="wrapper">
-    <section class="slat">
+    <section class="bullet accordion">
       <a id="{{ post.slug }}"></a>
-      <h3>{{ post.title }}</h3>
-      {{ post.content }}
-      <!-- <a href="#" class="accordion-btn-expand">More</a> -->
+      <a href="#{{ post.slug }}-content" class="accordion-button">
+        <h3>
+          {{ post.title }}
+          <span class="hide">&and;</span>
+          <span class="expand">&or;</span>
+        </h3>
+      </a>
+      <div class="accordion-content" id="{{ post.slug }}-content">
+        {{ post.content }}
+      </div>
     </section>
   </div>
 {% endfor %}
