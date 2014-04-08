@@ -1655,51 +1655,71 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   color: #3da288;
 }
 
-/* line 56, ../_scss/modules/_navigation.scss */
-.js .accordion-content > * {
+/* line 54, ../_scss/modules/_navigation.scss */
+.js .accordion-content {
   display: none;
   visibility: hidden;
 }
-/* line 60, ../_scss/modules/_navigation.scss */
-.js .accordion-content p:first-child {
+/* line 57, ../_scss/modules/_navigation.scss */
+.js .accordion-content.is-open {
   display: block;
   visibility: visible;
 }
-/* line 66, ../_scss/modules/_navigation.scss */
-.js .accordion-content.is-open > * {
+/* line 64, ../_scss/modules/_navigation.scss */
+.js .accordion-content.excerpt > * {
+  display: none;
+  visibility: hidden;
+}
+/* line 68, ../_scss/modules/_navigation.scss */
+.js .accordion-content.excerpt p:first-child {
   display: block;
   visibility: visible;
 }
-/* line 72, ../_scss/modules/_navigation.scss */
+/* line 74, ../_scss/modules/_navigation.scss */
+.js .accordion-content.excerpt.is-open > * {
+  display: block;
+  visibility: visible;
+}
+/* line 80, ../_scss/modules/_navigation.scss */
 .js .accordion-button {
   display: block;
   visibility: visible;
   display: block;
 }
-/* line 76, ../_scss/modules/_navigation.scss */
+/* line 84, ../_scss/modules/_navigation.scss */
 .js .accordion-button .hide {
   display: none;
   visibility: hidden;
-  display: block;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
-/* line 80, ../_scss/modules/_navigation.scss */
+/* line 88, ../_scss/modules/_navigation.scss */
 .js .accordion-button .expand {
   display: block;
   visibility: visible;
-  display: block;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
-/* line 89, ../_scss/modules/_navigation.scss */
+/* line 97, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .hide {
   display: block;
   visibility: visible;
 }
-/* line 92, ../_scss/modules/_navigation.scss */
+/* line 100, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .expand {
   display: none;
   visibility: hidden;
 }
 
-/* line 101, ../_scss/modules/_navigation.scss */
+/* line 109, ../_scss/modules/_navigation.scss */
 .no-js .accordion-button {
   display: none;
   visibility: hidden;

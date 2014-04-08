@@ -52,6 +52,14 @@
   }
 
   .accordion-content {
+    @include hidden;
+
+    &.is-open {
+      @include restore-visible;
+    }
+  }
+
+  .accordion-content.excerpt {
     // hide everything but the first paragraph
     & > * {
       @include hidden;
@@ -75,11 +83,11 @@
 
     .hide {
       @include hidden;
-      display: block;
+      @include inline-block;
     }
     .expand {
       @include restore-visible;
-      display: block;
+      @include inline-block;
     }
   }
 
