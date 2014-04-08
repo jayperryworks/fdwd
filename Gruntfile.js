@@ -18,7 +18,10 @@ module.exports = function(grunt) {
       },
       assets: {
         files: ['assets/{js,fonts,images}/**'],
-        tasks: ['copy:assets']
+        tasks: ['copy:assets'],
+        options: {
+          livereload: true
+        }
       },
       // bower_concat: {
       //   files: '_bower_components/**/*.{js,css,html}',

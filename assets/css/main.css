@@ -1,5 +1,5 @@
 /* line 10, ../_scss/core/_settings.scss */
-input, textarea, select, a, .bullet-icon {
+input, textarea, select, a, .bullet-icon, .js .accordion {
   -webkit-transition: all 0.5s false;
   -moz-transition: all 0.5s false false;
   -o-transition: all 0.5s false false;
@@ -1655,9 +1655,54 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   color: #3da288;
 }
 
-/* line 49, ../_scss/modules/_navigation.scss */
-.local {
-  position: relative;
+/* line 56, ../_scss/modules/_navigation.scss */
+.js .accordion-content > * {
+  display: none;
+  visibility: hidden;
+}
+/* line 60, ../_scss/modules/_navigation.scss */
+.js .accordion-content p:first-child {
+  display: block;
+  visibility: visible;
+}
+/* line 66, ../_scss/modules/_navigation.scss */
+.js .accordion-content.is-open > * {
+  display: block;
+  visibility: visible;
+}
+/* line 72, ../_scss/modules/_navigation.scss */
+.js .accordion-button {
+  display: block;
+  visibility: visible;
+  display: block;
+}
+/* line 76, ../_scss/modules/_navigation.scss */
+.js .accordion-button .hide {
+  display: none;
+  visibility: hidden;
+  display: block;
+}
+/* line 80, ../_scss/modules/_navigation.scss */
+.js .accordion-button .expand {
+  display: block;
+  visibility: visible;
+  display: block;
+}
+/* line 89, ../_scss/modules/_navigation.scss */
+.js .accordion-button.active .hide {
+  display: block;
+  visibility: visible;
+}
+/* line 92, ../_scss/modules/_navigation.scss */
+.js .accordion-button.active .expand {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 101, ../_scss/modules/_navigation.scss */
+.no-js .accordion-button {
+  display: none;
+  visibility: hidden;
 }
 
 /* line 8, ../_scss/modules/_hero.scss */
