@@ -81,6 +81,10 @@
     @include restore-visible;
     display: block;
 
+    & > #{headers()} {
+      @include inline-block;
+    }
+
     .hide {
       @include hidden;
       @include inline-block;

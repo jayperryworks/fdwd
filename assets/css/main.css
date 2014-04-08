@@ -1687,6 +1687,15 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   display: block;
 }
 /* line 84, ../_scss/modules/_navigation.scss */
+.js .accordion-button > h1, .js .accordion-button h2, .js .accordion-button h3, .js .accordion-button h4, .js .accordion-button h5, .js .accordion-button h6 {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 88, ../_scss/modules/_navigation.scss */
 .js .accordion-button .hide {
   display: none;
   visibility: hidden;
@@ -1697,7 +1706,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   zoom: 1;
   *display: inline;
 }
-/* line 88, ../_scss/modules/_navigation.scss */
+/* line 92, ../_scss/modules/_navigation.scss */
 .js .accordion-button .expand {
   display: block;
   visibility: visible;
@@ -1708,18 +1717,18 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   zoom: 1;
   *display: inline;
 }
-/* line 97, ../_scss/modules/_navigation.scss */
+/* line 101, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .hide {
   display: block;
   visibility: visible;
 }
-/* line 100, ../_scss/modules/_navigation.scss */
+/* line 104, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .expand {
   display: none;
   visibility: hidden;
 }
 
-/* line 109, ../_scss/modules/_navigation.scss */
+/* line 113, ../_scss/modules/_navigation.scss */
 .no-js .accordion-button {
   display: none;
   visibility: hidden;
