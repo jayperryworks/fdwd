@@ -6,25 +6,41 @@
 // -----------------------------------------------------------------------------
 
 // Quickly set grid-margins on a container across multiple breakpoints
-@mixin layout-margins($property: padding, $negative: false) {
+@mixin layout-margins($property: padding, $negative: false, $sides: left right) {
+  // grab the first value for default (mobile) screens
   $margins: first($layout-margins);
+  
+  // make it negative if $negative is set to true
   @if $negative == true {
     $margins: -(first($layout-margins));
   }
-
-  #{$property}-left: $margins;
-  #{$property}-right: $margins;
+  
+  // apply to all sides specified
+  // -> left and right are defaults
+  @each $side in $sides {
+    #{$property}-#{$side}: $margins;
+  }
+  
 
   @if length($layout-margins) > 1 {
     @for $i from 1 through length($layout-margins) {
+
+      // set up breakpoints for additional values
       @include breakpoint(nth($breakpoints, $i)) {
+        
+        // make it negative if $negative is set to true
         $margins: nth($layout-margins, $i);
+        
+        // make it negative if $negative is set to true
         @if $negative == true {
           $margins: -(nth($layout-margins, $i));
         }
-
-        #{$property}-left: $margins;
-        #{$property}-right: $margins;
+        
+        // apply to all sides specified
+        // -> left and right are defaults
+        @each $side in $sides {
+          #{$property}-#{$side}: $margins;
+        }
       }
     }
   }
@@ -76,11 +92,15 @@ html, body {
 
 [role="main"], .main {
   @include clearfix;
-  // @include layout-margins;
-  margin-left: $header-w;
-  width: calc(100% - $header-w);
   padding-top: 0;
   padding-bottom: 0;
+  // @include layout-margins;
+
+  @include breakpoint($breakpoint-header) {
+    margin-left: $header-w;
+    width: calc(100% - $header-w);
+  }
+  
 
   // & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > hgroup {
   //   @extend %wrapper;

@@ -309,6 +309,20 @@
 // General layout helpers
 // ==================================================================================
 
+// align an inline block element vertically
+// using an :after pseudo element
+@mixin inline-block--centered($h) {
+  @include inline-block;
+  vertical-align: middle;
+  
+  &:after {
+    @include inline-block;
+    @include rem(height, $h);
+    content: " ";
+    vertical-align: middle;
+  }
+}
+
 // Lists
 // ------------------------------------------------------------------------------
 

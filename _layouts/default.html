@@ -27,8 +27,9 @@
   <body id="{{ page.title | replace: " ", "-" | downcase }}">
     
     <header role="banner" class="global">
-      <a href="{{ relativepath }}{{ site.baseurl }}/" class="logo"><img src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.img }}logo-FDWD.svg" alt="Franklin, Denney, Ward and Dryer, Attorneys at Law" /></a>
-      <h6>A full service law firm<br /> since 1931</h6>
+      <a href="#" class="header-button-menu">Menu</a>
+      <a href="{{ relativepath }}{{ site.baseurl }}/" class="header-logo"><img src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.img }}logo-FDWD.svg" alt="Franklin, Denney, Ward and Dryer, Attorneys at Law" /></a>
+      <h6 class="header-tagline">A full service law firm<br /> since 1931</h6>
       <nav role="navigation" class="global">
         <ul>
           <li><a href="{{ relativepath }}{{ site.baseurl }}/"{% if page.title == 'home' %} class="active"{% endif %}>Home</a></li>

@@ -16,31 +16,39 @@
 // ------- Global/main nav -------------------------------------------
 
 [role="navigation"].global {
-  // @extend %well;
-  padding: 0 $grid-gutter;
-
-  ul {
-    @include rem(margin, 18px 0);
-  }
-
-  .secondary {
-    @include rem(padding-top, 18px);
-    border-top: $hairline-w--thin solid $gray--light;
-  }
+  @include hidden;
 
   a {
     @extend %calluna;
-    @include rem(font-size, 16px);
-    color: $gray;
+  }
 
-    &:hover, &:active {
-      color: darken($gray, 10);
+  @include breakpoint($breakpoint-header) {
+    @include restore-visible;
+    padding: 0 $grid-gutter;
+
+    ul {
+      @include rem(margin, 18px 0);
+    }
+
+    .secondary {
+      @include rem(padding-top, 18px);
+      border-top: $hairline-w--thin solid $gray--light;
+    }
+
+    a {
+      @include rem(font-size, 16px);
+      color: $gray;
+
+      &:hover, &:active {
+        color: darken($gray, 10);
+      }
+    }
+
+    .active {
+      color: $green;
     }
   }
-
-  .active {
-    color: $green;
-  }
+  
 }
 
 

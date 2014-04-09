@@ -2,28 +2,85 @@
 //  Header modules
 // ==========================================================================
 
-// BASE
+// GLOBAL
 // -----------------------------------------------------------------------------
 
-.header {
-	
-}
-
-// SUBMODULES
-// -----------------------------------------------------------------------------
+$header-h: 100px;
+$header-tagline-w: 135px;
 
 [role="banner"].global {
-	width: 180px;
-  height: 100%;
-  float: left;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 36px;
-  border-right: $hairline-w--thin solid $gray--light;
+  @extend %well;
+  @include rem(height, 100px);
+  @include border(bottom);
+  position: relative;
   text-align: center;
-  overflow: auto;
-  overflow-y: auto;
-  overflow-x: auto;
-  background: lighten($gray--light, 8);
+  vertical-align: middle;
+
+  @include breakpoint($breakpoint-header) {
+    @include rem(padding-top, 36px);
+    @include border(right);
+    @include kill-border(top);
+    width: first($header-w);
+    height: 100%;
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
 }
+  .header-button-menu {
+    $h: 20px;
+    @include rem(height, $h);
+    @include rem(margin, -($h/2) 0 0 (first($layout-margins)/2));
+    display: block;
+    position: absolute;
+    top: 50%;
+
+    @include breakpoint($breakpoint-header) {
+      @include hidden;
+    }
+  }
+
+  .header-logo {
+    @include inline-block--centered($header-h);
+    @include rem(right, -($header-tagline-w/2));
+    position: relative;
+
+    & > img {
+      @include rem(height, 70%);
+    }
+
+    @include breakpoint($breakpoint-header) {
+      display: block;
+      margin: 0 auto;
+      right: 0;
+      height: auto;
+
+      &:after {
+        content: none;
+      }
+
+      & > img {
+        height: auto;
+      }
+    }
+  }
+
+  .header-tagline {
+    // @include inline-block--centered($header-h);
+    @include inline-block;
+    @include rem(right, -($header-tagline-w/2));
+    @include rem(padding-left, 12px);
+    position: relative;
+    text-align: left;
+
+    @include breakpoint($breakpoint-header) {
+      @include rem(margin-top, 16px);
+      display: block;
+      text-align: center;
+      right: 0;
+    }
+  }
