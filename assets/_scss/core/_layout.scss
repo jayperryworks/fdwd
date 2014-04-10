@@ -59,6 +59,12 @@
   }
 }
 
+@mixin scroll-y {
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 // GLOBAL MODIFIERS
 // -----------------------------------------------------------------------------
 
@@ -86,12 +92,30 @@
 // BASE LAYOUTS
 // -----------------------------------------------------------------------------
 
-html, body {
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
   min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include breakpoint($breakpoint-header) {
+    width: auto;
+    overflow: auto;
+  }
 }
 
 [role="main"], .main {
+  // @extend %base-transition;
+  @include transform(translateX(0px));
+  @include transition(0.3s ease);
   @include clearfix;
+  position: relative;
   padding-top: 0;
   padding-bottom: 0;
   // @include layout-margins;
@@ -107,6 +131,26 @@ html, body {
   // }
 }
 
+// set up the "open menu" state for mobile screens
+.menu-open {
+  [role="main"], [role="banner"].global {
+    @include transform(translateX($header-w));
+    @include transition(0.3s ease);
+  }
+
+  [role="navigation"].global {
+    // left: 0;
+    @include transform(translateX(0px));
+    @include transition(0.3s ease);
+  }
+
+  @include breakpoint($breakpoint-header) {
+    [role="main"], [role="banner"] {
+      left: 0;
+    }
+  }
+}
+
 %wrapper, .wrapper {
   @extend %max-width;
   @include clearfix;
@@ -120,7 +164,7 @@ html, body {
   @include clearfix;
   @include rem(margin-top, -96px);
   position: relative;
-  z-index: $z--high;
+  z-index: $z--med;
 }
   .feature-copy {
     @extend %add-gutters;

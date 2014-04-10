@@ -9,8 +9,11 @@ $header-h: 100px;
 $header-tagline-w: 135px;
 
 [role="banner"].global {
+  // @extend %base-transition;
   @extend %well;
   @include rem(height, 100px);
+  @include transform(translateX(0px));
+  @include transition(0.3s ease);
   @include border(bottom);
   position: relative;
   text-align: center;
@@ -20,15 +23,12 @@ $header-tagline-w: 135px;
     @include rem(padding-top, 36px);
     @include border(right);
     @include kill-border(top);
+    @include scroll-y;
     width: first($header-w);
     height: 100%;
-    float: left;
     position: fixed;
     top: 0;
     left: 0;
-    overflow: auto;
-    overflow-y: auto;
-    overflow-x: auto;
   }
 }
   .header-button-menu {

@@ -930,35 +930,62 @@ p {
     page-break-after: avoid;
   }
 }
-/* line 65, ../_scss/core/_layout.scss */
+/* line 71, ../_scss/core/_layout.scss */
 .feature-copy, footer.global .copyright, .footer.global .copyright {
   padding: 0 12px;
 }
 
-/* line 69, ../_scss/core/_layout.scss */
+/* line 75, ../_scss/core/_layout.scss */
 .title, .wrapper, .feature, .hero-headline {
   margin: 0 auto;
   max-width: 1120px;
 }
 
-/* line 78, ../_scss/core/_layout.scss */
+/* line 84, ../_scss/core/_layout.scss */
 .margins {
   margin-left: 48px;
   margin-right: 48px;
 }
 
-/* line 82, ../_scss/core/_layout.scss */
+/* line 88, ../_scss/core/_layout.scss */
 .hero, .center {
   text-align: center;
 }
 
-/* line 89, ../_scss/core/_layout.scss */
-html, body {
-  min-height: 100%;
+/* line 95, ../_scss/core/_layout.scss */
+html {
+  width: 100%;
+  height: 100%;
 }
 
-/* line 93, ../_scss/core/_layout.scss */
+/* line 100, ../_scss/core/_layout.scss */
+body {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media (min-width: 48em) {
+  /* line 100, ../_scss/core/_layout.scss */
+  body {
+    width: auto;
+    overflow: auto;
+  }
+}
+
+/* line 113, ../_scss/core/_layout.scss */
 [role="main"], .main, footer.global, .footer.global {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: 0.3s ease false;
+  -moz-transition: 0.3s ease false false;
+  -o-transition: 0.3s ease false false;
+  transition: 0.3s ease;
+  position: relative;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -969,14 +996,45 @@ html, body {
   clear: both;
 }
 @media (min-width: 48em) {
-  /* line 93, ../_scss/core/_layout.scss */
+  /* line 113, ../_scss/core/_layout.scss */
   [role="main"], .main, footer.global, .footer.global {
     margin-left: 180px;
     width: calc(100% - $header-w);
   }
 }
 
-/* line 110, ../_scss/core/_layout.scss */
+/* line 136, ../_scss/core/_layout.scss */
+.menu-open [role="main"], .menu-open [role="banner"].global {
+  -webkit-transform: translateX(180px);
+  -moz-transform: translateX(180px);
+  -ms-transform: translateX(180px);
+  -o-transform: translateX(180px);
+  transform: translateX(180px);
+  -webkit-transition: 0.3s ease false;
+  -moz-transition: 0.3s ease false false;
+  -o-transition: 0.3s ease false false;
+  transition: 0.3s ease;
+}
+/* line 141, ../_scss/core/_layout.scss */
+.menu-open [role="navigation"].global {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: 0.3s ease false;
+  -moz-transition: 0.3s ease false false;
+  -o-transition: 0.3s ease false false;
+  transition: 0.3s ease;
+}
+@media (min-width: 48em) {
+  /* line 148, ../_scss/core/_layout.scss */
+  .menu-open [role="main"], .menu-open [role="banner"] {
+    left: 0;
+  }
+}
+
+/* line 154, ../_scss/core/_layout.scss */
 .title, .wrapper {
   padding-left: 48px;
   padding-right: 48px;
@@ -990,12 +1048,12 @@ html, body {
   clear: both;
 }
 
-/* line 118, ../_scss/core/_layout.scss */
+/* line 162, ../_scss/core/_layout.scss */
 .feature {
   margin-top: -96px;
   margin-top: -6rem;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 /* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .feature:after {
@@ -1004,7 +1062,7 @@ html, body {
   clear: both;
 }
 
-/* line 125, ../_scss/core/_layout.scss */
+/* line 169, ../_scss/core/_layout.scss */
 .feature-copy {
   width: 75%;
   float: left;
@@ -1017,7 +1075,7 @@ html, body {
   padding-top: 24px;
 }
 
-/* line 132, ../_scss/core/_layout.scss */
+/* line 176, ../_scss/core/_layout.scss */
 .feature-sidebar {
   width: 25%;
   float: right;
@@ -1029,7 +1087,7 @@ html, body {
   padding-top: 24px;
 }
 
-/* line 142, ../_scss/core/_layout.scss */
+/* line 186, ../_scss/core/_layout.scss */
 .feature-sidebar-thumb {
   display: block;
 }
@@ -1280,7 +1338,7 @@ figcaption {
   background: white;
 }
 
-/* line 160, ../_scss/core/_themes.scss */
+/* line 165, ../_scss/core/_themes.scss */
 footer.local, .footer.local, .theme-flood {
   color: white;
   background: #3da288;
@@ -1391,8 +1449,8 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   background: #44b598;
 }
 
-/* line 172, ../_scss/core/_themes.scss */
-footer.global, .footer.global, .theme-reverse {
+/* line 177, ../_scss/core/_themes.scss */
+[role="navigation"].global, footer.global, .footer.global, .theme-reverse {
   color: white;
   background: #283030;
   border-color: black;
@@ -1400,105 +1458,105 @@ footer.global, .footer.global, .theme-reverse {
   border-width: 0;
 }
 /* line 25, ../_scss/core/_themes.scss */
-footer.global *, .footer.global *, .theme-reverse * {
+[role="navigation"].global *, footer.global *, .footer.global *, .theme-reverse * {
   border-color: black;
 }
 /* line 31, ../_scss/core/_themes.scss */
-footer.global h1, .footer.global h1, footer.global h2, .footer.global h2, footer.global h3, .footer.global h3, footer.global h4, .footer.global h4, footer.global h5, .footer.global h5, footer.global h6, .footer.global h6, .theme-reverse h1, .theme-reverse h2, .theme-reverse h3, .theme-reverse h4, .theme-reverse h5, .theme-reverse h6 {
+[role="navigation"].global h1, footer.global h1, .footer.global h1, [role="navigation"].global h2, footer.global h2, .footer.global h2, [role="navigation"].global h3, footer.global h3, .footer.global h3, [role="navigation"].global h4, footer.global h4, .footer.global h4, [role="navigation"].global h5, footer.global h5, .footer.global h5, [role="navigation"].global h6, footer.global h6, .footer.global h6, .theme-reverse h1, .theme-reverse h2, .theme-reverse h3, .theme-reverse h4, .theme-reverse h5, .theme-reverse h6 {
   color: white;
 }
 /* line 34, ../_scss/core/_themes.scss */
-footer.global h1 > a, .footer.global h1 > a, footer.global h2 > a, .footer.global h2 > a, footer.global h3 > a, .footer.global h3 > a, footer.global h4 > a, .footer.global h4 > a, footer.global h5 > a, .footer.global h5 > a, footer.global h6 > a, .footer.global h6 > a, .theme-reverse h1 > a, .theme-reverse h2 > a, .theme-reverse h3 > a, .theme-reverse h4 > a, .theme-reverse h5 > a, .theme-reverse h6 > a {
+[role="navigation"].global h1 > a, footer.global h1 > a, .footer.global h1 > a, [role="navigation"].global h2 > a, footer.global h2 > a, .footer.global h2 > a, [role="navigation"].global h3 > a, footer.global h3 > a, .footer.global h3 > a, [role="navigation"].global h4 > a, footer.global h4 > a, .footer.global h4 > a, [role="navigation"].global h5 > a, footer.global h5 > a, .footer.global h5 > a, [role="navigation"].global h6 > a, footer.global h6 > a, .footer.global h6 > a, .theme-reverse h1 > a, .theme-reverse h2 > a, .theme-reverse h3 > a, .theme-reverse h4 > a, .theme-reverse h5 > a, .theme-reverse h6 > a {
   color: inherit;
   text-decoration: none;
 }
 /* line 38, ../_scss/core/_themes.scss */
-footer.global h1 > a:hover, .footer.global h1 > a:hover, footer.global h1 > a:active, .footer.global h1 > a:active, footer.global h2 > a:hover, .footer.global h2 > a:hover, footer.global h2 > a:active, .footer.global h2 > a:active, footer.global h3 > a:hover, .footer.global h3 > a:hover, footer.global h3 > a:active, .footer.global h3 > a:active, footer.global h4 > a:hover, .footer.global h4 > a:hover, footer.global h4 > a:active, .footer.global h4 > a:active, footer.global h5 > a:hover, .footer.global h5 > a:hover, footer.global h5 > a:active, .footer.global h5 > a:active, footer.global h6 > a:hover, .footer.global h6 > a:hover, footer.global h6 > a:active, .footer.global h6 > a:active, .theme-reverse h1 > a:hover, .theme-reverse h1 > a:active, .theme-reverse h2 > a:hover, .theme-reverse h2 > a:active, .theme-reverse h3 > a:hover, .theme-reverse h3 > a:active, .theme-reverse h4 > a:hover, .theme-reverse h4 > a:active, .theme-reverse h5 > a:hover, .theme-reverse h5 > a:active, .theme-reverse h6 > a:hover, .theme-reverse h6 > a:active {
+[role="navigation"].global h1 > a:hover, footer.global h1 > a:hover, .footer.global h1 > a:hover, [role="navigation"].global h1 > a:active, footer.global h1 > a:active, .footer.global h1 > a:active, [role="navigation"].global h2 > a:hover, footer.global h2 > a:hover, .footer.global h2 > a:hover, [role="navigation"].global h2 > a:active, footer.global h2 > a:active, .footer.global h2 > a:active, [role="navigation"].global h3 > a:hover, footer.global h3 > a:hover, .footer.global h3 > a:hover, [role="navigation"].global h3 > a:active, footer.global h3 > a:active, .footer.global h3 > a:active, [role="navigation"].global h4 > a:hover, footer.global h4 > a:hover, .footer.global h4 > a:hover, [role="navigation"].global h4 > a:active, footer.global h4 > a:active, .footer.global h4 > a:active, [role="navigation"].global h5 > a:hover, footer.global h5 > a:hover, .footer.global h5 > a:hover, [role="navigation"].global h5 > a:active, footer.global h5 > a:active, .footer.global h5 > a:active, [role="navigation"].global h6 > a:hover, footer.global h6 > a:hover, .footer.global h6 > a:hover, [role="navigation"].global h6 > a:active, footer.global h6 > a:active, .footer.global h6 > a:active, .theme-reverse h1 > a:hover, .theme-reverse h1 > a:active, .theme-reverse h2 > a:hover, .theme-reverse h2 > a:active, .theme-reverse h3 > a:hover, .theme-reverse h3 > a:active, .theme-reverse h4 > a:hover, .theme-reverse h4 > a:active, .theme-reverse h5 > a:hover, .theme-reverse h5 > a:active, .theme-reverse h6 > a:hover, .theme-reverse h6 > a:active {
   color: inherit;
 }
 /* line 44, ../_scss/core/_themes.scss */
-footer.global p, .footer.global p, footer.global li, .footer.global li, footer.global td, .footer.global td, .theme-reverse p, .theme-reverse li, .theme-reverse td {
+[role="navigation"].global p, footer.global p, .footer.global p, [role="navigation"].global li, footer.global li, .footer.global li, [role="navigation"].global td, footer.global td, .footer.global td, .theme-reverse p, .theme-reverse li, .theme-reverse td {
   color: white;
 }
 /* line 48, ../_scss/core/_themes.scss */
-footer.global .intro, .footer.global .intro, .theme-reverse .intro {
+[role="navigation"].global .intro, footer.global .intro, .footer.global .intro, .theme-reverse .intro {
   color: #e6e6e6;
 }
 /* line 52, ../_scss/core/_themes.scss */
-footer.global .secondary, .footer.global .secondary, footer.global aside, .footer.global aside, footer.global figcaption, .footer.global figcaption, footer.global small, .footer.global small, .theme-reverse .secondary, .theme-reverse aside, .theme-reverse figcaption, .theme-reverse small {
+[role="navigation"].global .secondary, footer.global .secondary, .footer.global .secondary, [role="navigation"].global aside, footer.global aside, .footer.global aside, [role="navigation"].global figcaption, footer.global figcaption, .footer.global figcaption, [role="navigation"].global small, footer.global small, .footer.global small, .theme-reverse .secondary, .theme-reverse aside, .theme-reverse figcaption, .theme-reverse small {
   color: #566868;
 }
 /* line 61, ../_scss/core/_themes.scss */
-footer.global a, .footer.global a, .theme-reverse a {
+[role="navigation"].global a, footer.global a, .footer.global a, .theme-reverse a {
   color: #3da288;
 }
 /* line 64, ../_scss/core/_themes.scss */
-footer.global a:hover, .footer.global a:hover, footer.global a:active, .footer.global a:active, .theme-reverse a:hover, .theme-reverse a:active {
+[role="navigation"].global a:hover, footer.global a:hover, .footer.global a:hover, [role="navigation"].global a:active, footer.global a:active, .footer.global a:active, .theme-reverse a:hover, .theme-reverse a:active {
   color: #54bea3;
 }
 /* line 72, ../_scss/core/_themes.scss */
-footer.global a.active:hover, .footer.global a.active:hover, footer.global a.acive:active, .footer.global a.acive:active, .theme-reverse a.active:hover, .theme-reverse a.acive:active {
+[role="navigation"].global a.active:hover, footer.global a.active:hover, .footer.global a.active:hover, [role="navigation"].global a.acive:active, footer.global a.acive:active, .footer.global a.acive:active, .theme-reverse a.active:hover, .theme-reverse a.acive:active {
   color: #54bea3;
 }
 /* line 83, ../_scss/core/_themes.scss */
-footer.global input, .footer.global input, footer.global textarea, .footer.global textarea, .theme-reverse input, .theme-reverse textarea {
+[role="navigation"].global input, footer.global input, .footer.global input, [role="navigation"].global textarea, footer.global textarea, .footer.global textarea, .theme-reverse input, .theme-reverse textarea {
   color: white;
   background: #343e3e;
   border-color: #050606;
 }
 /* line 145, ../_scss/core/_helpers.scss */
-footer.global input::-webkit-input-placeholder, .footer.global input::-webkit-input-placeholder, footer.global textarea::-webkit-input-placeholder, .footer.global textarea::-webkit-input-placeholder, .theme-reverse input::-webkit-input-placeholder, .theme-reverse textarea::-webkit-input-placeholder {
+[role="navigation"].global input::-webkit-input-placeholder, footer.global input::-webkit-input-placeholder, .footer.global input::-webkit-input-placeholder, [role="navigation"].global textarea::-webkit-input-placeholder, footer.global textarea::-webkit-input-placeholder, .footer.global textarea::-webkit-input-placeholder, .theme-reverse input::-webkit-input-placeholder, .theme-reverse textarea::-webkit-input-placeholder {
   color: #566868;
 }
 /* line 149, ../_scss/core/_helpers.scss */
-footer.global input:-moz-placeholder, .footer.global input:-moz-placeholder, footer.global textarea:-moz-placeholder, .footer.global textarea:-moz-placeholder, .theme-reverse input:-moz-placeholder, .theme-reverse textarea:-moz-placeholder {
+[role="navigation"].global input:-moz-placeholder, footer.global input:-moz-placeholder, .footer.global input:-moz-placeholder, [role="navigation"].global textarea:-moz-placeholder, footer.global textarea:-moz-placeholder, .footer.global textarea:-moz-placeholder, .theme-reverse input:-moz-placeholder, .theme-reverse textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #566868;
 }
 /* line 153, ../_scss/core/_helpers.scss */
-footer.global input::-moz-placeholder, .footer.global input::-moz-placeholder, footer.global textarea::-moz-placeholder, .footer.global textarea::-moz-placeholder, .theme-reverse input::-moz-placeholder, .theme-reverse textarea::-moz-placeholder {
+[role="navigation"].global input::-moz-placeholder, footer.global input::-moz-placeholder, .footer.global input::-moz-placeholder, [role="navigation"].global textarea::-moz-placeholder, footer.global textarea::-moz-placeholder, .footer.global textarea::-moz-placeholder, .theme-reverse input::-moz-placeholder, .theme-reverse textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #566868;
 }
 /* line 157, ../_scss/core/_helpers.scss */
-footer.global input:-ms-input-placeholder, .footer.global input:-ms-input-placeholder, footer.global textarea:-ms-input-placeholder, .footer.global textarea:-ms-input-placeholder, .theme-reverse input:-ms-input-placeholder, .theme-reverse textarea:-ms-input-placeholder {
+[role="navigation"].global input:-ms-input-placeholder, footer.global input:-ms-input-placeholder, .footer.global input:-ms-input-placeholder, [role="navigation"].global textarea:-ms-input-placeholder, footer.global textarea:-ms-input-placeholder, .footer.global textarea:-ms-input-placeholder, .theme-reverse input:-ms-input-placeholder, .theme-reverse textarea:-ms-input-placeholder {
   color: #566868;
 }
 /* line 96, ../_scss/core/_themes.scss */
-footer.global input:focus, .footer.global input:focus, footer.global textarea:focus, .footer.global textarea:focus, .theme-reverse input:focus, .theme-reverse textarea:focus {
+[role="navigation"].global input:focus, footer.global input:focus, .footer.global input:focus, [role="navigation"].global textarea:focus, footer.global textarea:focus, .footer.global textarea:focus, .theme-reverse input:focus, .theme-reverse textarea:focus {
   border-color: #3da288;
 }
 /* line 101, ../_scss/core/_themes.scss */
-footer.global button, .footer.global button, footer.global .button, .footer.global .button, .theme-reverse button, .theme-reverse .button {
+[role="navigation"].global button, footer.global button, .footer.global button, [role="navigation"].global .button, footer.global .button, .footer.global .button, .theme-reverse button, .theme-reverse .button {
   color: white;
   background: #3da288;
 }
 /* line 106, ../_scss/core/_themes.scss */
-footer.global .icon, .footer.global .icon, .theme-reverse .icon {
+[role="navigation"].global .icon, footer.global .icon, .footer.global .icon, .theme-reverse .icon {
   color: #3da288;
 }
 /* line 113, ../_scss/core/_themes.scss */
-footer.global .highlight, .footer.global .highlight, .theme-reverse .highlight {
+[role="navigation"].global .highlight, footer.global .highlight, .footer.global .highlight, .theme-reverse .highlight {
   color: #3da288;
 }
 /* line 117, ../_scss/core/_themes.scss */
-footer.global .hero, .footer.global .hero, footer.global .highlight-border, .footer.global .highlight-border, .theme-reverse .hero, .theme-reverse .highlight-border {
+[role="navigation"].global .hero, footer.global .hero, .footer.global .hero, [role="navigation"].global .highlight-border, footer.global .highlight-border, .footer.global .highlight-border, .theme-reverse .hero, .theme-reverse .highlight-border {
   border-color: #3da288 !important;
 }
 /* line 122, ../_scss/core/_themes.scss */
-footer.global .accent, .footer.global .accent, footer.global .copyright, .footer.global .copyright, .theme-reverse .accent, .theme-reverse footer.global .copyright, footer.global .theme-reverse .copyright, .theme-reverse .footer.global .copyright, .footer.global .theme-reverse .copyright {
+[role="navigation"].global .accent, footer.global .accent, .footer.global .accent, footer.global .copyright, .footer.global .copyright, .theme-reverse .accent, .theme-reverse footer.global .copyright, footer.global .theme-reverse .copyright, .theme-reverse .footer.global .copyright, .footer.global .theme-reverse .copyright {
   color: #3c5c67;
 }
 /* line 126, ../_scss/core/_themes.scss */
-footer.global .accent-border, .footer.global .accent-border, .theme-reverse .accent-border {
+[role="navigation"].global .accent-border, footer.global .accent-border, .footer.global .accent-border, .theme-reverse .accent-border {
   border-color: #3c5c67 !important;
 }
 /* line 131, ../_scss/core/_themes.scss */
-footer.global [role="banner"].global, .footer.global [role="banner"].global, footer.global .well, .footer.global .well, .theme-reverse [role="banner"].global, .theme-reverse .well {
+[role="navigation"].global [role="banner"].global, footer.global [role="banner"].global, .footer.global [role="banner"].global, [role="navigation"].global .well, footer.global .well, .footer.global .well, .theme-reverse [role="banner"].global, .theme-reverse .well {
   background: #1c2222;
 }
 /* line 140, ../_scss/core/_themes.scss */
-footer.global .island, .footer.global .island, .theme-reverse .island {
+[role="navigation"].global .island, footer.global .island, .footer.global .island, .theme-reverse .island {
   background: #343e3e;
 }
 
@@ -1617,6 +1675,15 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
 [role="banner"].global {
   height: 100px;
   height: 6.25rem;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: 0.3s ease false;
+  -moz-transition: 0.3s ease false false;
+  -o-transition: 0.3s ease false false;
+  transition: 0.3s ease;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   position: relative;
@@ -1631,15 +1698,14 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
     border-right-width: 1px;
     border-right-style: solid;
     border-top: none;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 180px;
     height: 100%;
-    float: left;
     position: fixed;
     top: 0;
     left: 0;
-    overflow: auto;
-    overflow-y: auto;
-    overflow-x: auto;
   }
 }
 
@@ -1733,75 +1799,211 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
 
 /* line 18, ../_scss/modules/_navigation.scss */
 [role="navigation"].global {
-  display: none;
-  visibility: hidden;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: 0.3s ease false;
+  -moz-transition: 0.3s ease false false;
+  -o-transition: 0.3s ease false false;
+  transition: 0.3s ease;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right-width: 1px;
+  border-right-style: solid;
+  display: block;
+  position: fixed !important;
+  left: -180px;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  height: 100%;
+  width: 180px;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 35, ../_scss/modules/_navigation.scss */
+[role="navigation"].global.is-open {
+  left: 0;
 }
 @media (min-width: 48em) {
   /* line 18, ../_scss/modules/_navigation.scss */
   [role="navigation"].global {
-    display: block;
-    visibility: visible;
+    color: #293f47;
+    background: white;
+    border-color: #cccccc;
+    border-style: solid;
+    border-width: 0;
+    background: transparent;
+    border-right: none;
+    position: relative;
+    left: 0;
+    height: auto;
+    width: auto;
     padding: 0 24px;
   }
-  /* line 29, ../_scss/modules/_navigation.scss */
+  /* line 25, ../_scss/core/_themes.scss */
+  [role="navigation"].global * {
+    border-color: #cccccc;
+  }
+  /* line 31, ../_scss/core/_themes.scss */
+  [role="navigation"].global h1, [role="navigation"].global h2, [role="navigation"].global h3, [role="navigation"].global h4, [role="navigation"].global h5, [role="navigation"].global h6 {
+    color: #293f47;
+  }
+  /* line 34, ../_scss/core/_themes.scss */
+  [role="navigation"].global h1 > a, [role="navigation"].global h2 > a, [role="navigation"].global h3 > a, [role="navigation"].global h4 > a, [role="navigation"].global h5 > a, [role="navigation"].global h6 > a {
+    color: inherit;
+    text-decoration: none;
+  }
+  /* line 38, ../_scss/core/_themes.scss */
+  [role="navigation"].global h1 > a:hover, [role="navigation"].global h1 > a:active, [role="navigation"].global h2 > a:hover, [role="navigation"].global h2 > a:active, [role="navigation"].global h3 > a:hover, [role="navigation"].global h3 > a:active, [role="navigation"].global h4 > a:hover, [role="navigation"].global h4 > a:active, [role="navigation"].global h5 > a:hover, [role="navigation"].global h5 > a:active, [role="navigation"].global h6 > a:hover, [role="navigation"].global h6 > a:active {
+    color: inherit;
+  }
+  /* line 44, ../_scss/core/_themes.scss */
+  [role="navigation"].global p, [role="navigation"].global li, [role="navigation"].global td {
+    color: #6a797d;
+  }
+  /* line 48, ../_scss/core/_themes.scss */
+  [role="navigation"].global .intro {
+    color: #535e61;
+  }
+  /* line 52, ../_scss/core/_themes.scss */
+  [role="navigation"].global .secondary, [role="navigation"].global aside, [role="navigation"].global figcaption, [role="navigation"].global small {
+    color: #535e61;
+  }
+  /* line 61, ../_scss/core/_themes.scss */
+  [role="navigation"].global a {
+    color: #3da288;
+  }
+  /* line 64, ../_scss/core/_themes.scss */
+  [role="navigation"].global a:hover, [role="navigation"].global a:active {
+    color: #2f7d69;
+  }
+  /* line 72, ../_scss/core/_themes.scss */
+  [role="navigation"].global a.active:hover, [role="navigation"].global a.acive:active {
+    color: #2f7d69;
+  }
+  /* line 83, ../_scss/core/_themes.scss */
+  [role="navigation"].global input, [role="navigation"].global textarea {
+    color: #6a797d;
+    background: #f2f2f2;
+    border-color: #e6e6e6;
+  }
+  /* line 145, ../_scss/core/_helpers.scss */
+  [role="navigation"].global input::-webkit-input-placeholder, [role="navigation"].global textarea::-webkit-input-placeholder {
+    color: #d9d9d9;
+  }
+  /* line 149, ../_scss/core/_helpers.scss */
+  [role="navigation"].global input:-moz-placeholder, [role="navigation"].global textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #d9d9d9;
+  }
+  /* line 153, ../_scss/core/_helpers.scss */
+  [role="navigation"].global input::-moz-placeholder, [role="navigation"].global textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #d9d9d9;
+  }
+  /* line 157, ../_scss/core/_helpers.scss */
+  [role="navigation"].global input:-ms-input-placeholder, [role="navigation"].global textarea:-ms-input-placeholder {
+    color: #d9d9d9;
+  }
+  /* line 96, ../_scss/core/_themes.scss */
+  [role="navigation"].global input:focus, [role="navigation"].global textarea:focus {
+    border-color: #3da288;
+  }
+  /* line 101, ../_scss/core/_themes.scss */
+  [role="navigation"].global button, [role="navigation"].global .button {
+    color: white;
+    background: #3da288;
+  }
+  /* line 106, ../_scss/core/_themes.scss */
+  [role="navigation"].global .icon {
+    color: #3da288;
+  }
+  /* line 113, ../_scss/core/_themes.scss */
+  [role="navigation"].global .highlight {
+    color: #3da288;
+  }
+  /* line 117, ../_scss/core/_themes.scss */
+  [role="navigation"].global .hero, [role="navigation"].global .highlight-border {
+    border-color: #3da288 !important;
+  }
+  /* line 122, ../_scss/core/_themes.scss */
+  [role="navigation"].global .accent, [role="navigation"].global footer.global .copyright, footer.global [role="navigation"].global .copyright, [role="navigation"].global .footer.global .copyright, .footer.global [role="navigation"].global .copyright {
+    color: #927c7a;
+  }
+  /* line 126, ../_scss/core/_themes.scss */
+  [role="navigation"].global .accent-border {
+    border-color: #927c7a !important;
+  }
+  /* line 131, ../_scss/core/_themes.scss */
+  [role="navigation"].global [role="banner"].global, [role="navigation"].global .well {
+    background: #f2f2f2;
+  }
+  /* line 140, ../_scss/core/_themes.scss */
+  [role="navigation"].global .island {
+    background: white;
+  }
+  /* line 53, ../_scss/modules/_navigation.scss */
   [role="navigation"].global ul {
     margin: 18px 0;
     margin: 1.125rem 0;
   }
-  /* line 33, ../_scss/modules/_navigation.scss */
+  /* line 57, ../_scss/modules/_navigation.scss */
   [role="navigation"].global .secondary {
     padding-top: 18px;
     padding-top: 1.125rem;
     border-top: 1px solid #e1e3e4;
   }
-  /* line 38, ../_scss/modules/_navigation.scss */
+  /* line 62, ../_scss/modules/_navigation.scss */
   [role="navigation"].global a {
     font-size: 16px;
     font-size: 1rem;
     color: #849296;
   }
-  /* line 42, ../_scss/modules/_navigation.scss */
+  /* line 66, ../_scss/modules/_navigation.scss */
   [role="navigation"].global a:hover, [role="navigation"].global a:active {
     color: #6a797d;
   }
-  /* line 47, ../_scss/modules/_navigation.scss */
+  /* line 71, ../_scss/modules/_navigation.scss */
   [role="navigation"].global .active {
     color: #3da288;
   }
 }
 
-/* line 62, ../_scss/modules/_navigation.scss */
+/* line 86, ../_scss/modules/_navigation.scss */
 .js .accordion-content {
   display: none;
   visibility: hidden;
 }
-/* line 65, ../_scss/modules/_navigation.scss */
+/* line 89, ../_scss/modules/_navigation.scss */
 .js .accordion-content.is-open {
   display: block;
   visibility: visible;
 }
-/* line 72, ../_scss/modules/_navigation.scss */
+/* line 96, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt > * {
   display: none;
   visibility: hidden;
 }
-/* line 76, ../_scss/modules/_navigation.scss */
+/* line 100, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt p:first-child {
   display: block;
   visibility: visible;
 }
-/* line 82, ../_scss/modules/_navigation.scss */
+/* line 106, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt.is-open > * {
   display: block;
   visibility: visible;
 }
-/* line 88, ../_scss/modules/_navigation.scss */
+/* line 112, ../_scss/modules/_navigation.scss */
 .js .accordion-button {
   display: block;
   visibility: visible;
   display: block;
 }
-/* line 92, ../_scss/modules/_navigation.scss */
+/* line 116, ../_scss/modules/_navigation.scss */
 .js .accordion-button > h1, .js .accordion-button h2, .js .accordion-button h3, .js .accordion-button h4, .js .accordion-button h5, .js .accordion-button h6 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1810,7 +2012,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   zoom: 1;
   *display: inline;
 }
-/* line 96, ../_scss/modules/_navigation.scss */
+/* line 120, ../_scss/modules/_navigation.scss */
 .js .accordion-button .hide {
   display: none;
   visibility: hidden;
@@ -1821,7 +2023,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   zoom: 1;
   *display: inline;
 }
-/* line 100, ../_scss/modules/_navigation.scss */
+/* line 124, ../_scss/modules/_navigation.scss */
 .js .accordion-button .expand {
   display: block;
   visibility: visible;
@@ -1832,18 +2034,18 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   zoom: 1;
   *display: inline;
 }
-/* line 109, ../_scss/modules/_navigation.scss */
+/* line 133, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .hide {
   display: block;
   visibility: visible;
 }
-/* line 112, ../_scss/modules/_navigation.scss */
+/* line 136, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .expand {
   display: none;
   visibility: hidden;
 }
 
-/* line 121, ../_scss/modules/_navigation.scss */
+/* line 145, ../_scss/modules/_navigation.scss */
 .no-js .accordion-button {
   display: none;
   visibility: hidden;

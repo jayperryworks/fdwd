@@ -6,9 +6,6 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     watch: {
-      options: {
-        // livereload: true
-      },
       compass: {
         files: ['assets/_scss/**/*.{scss,sass}'],
         tasks: ['compass:dev', 'copy:assets'], //'autoprefixer:server'
@@ -23,10 +20,13 @@ module.exports = function(grunt) {
           livereload: true
         }
       },
-      // bower_concat: {
-      //   files: '_bower_components/**/*.{js,css,html}',
-      //   tasks: ['bower_concat']
-      // },
+      bower_concat: {
+        files: '_bower_components/**/*.{js,css,html}',
+        tasks: ['bower_concat'],
+        options: {
+          livereload: true
+        }
+      },
       // autoprefixer: {
       //   files: ['assets/css/**/*.css'],
       //   tasks: ['copy:stageCss', 'autoprefixer:server']

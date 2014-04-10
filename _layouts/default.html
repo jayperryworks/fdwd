@@ -6,31 +6,31 @@
 {% capture title %}{{ page.title | capitalize }}{% endcapture %}
 
   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>{{ site.name | xml_escape }}{% if page.title != "home" %} &rsaquo; {{ title }}{% endif %}</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ site.name | xml_escape }}{% if page.title != "home" %} &rsaquo; {{ title }}{% endif %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-      
-      {% comment %} Use this to calculate a relative path {% endcomment %}
-      {% capture level %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
-      {% capture relativepath %}{% for i in (3..level) %}../{% endfor %}{% endcapture %}
-      
-      {% comment %} convenience variable - account for subdirectory if any {% endcomment %}
-      {% capture path %}{{ relativepath }}{{ site.baseurl }}{% endcapture %}
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    
+    {% comment %} Use this to calculate a relative path {% endcomment %}
+    {% capture level %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+    {% capture relativepath %}{% for i in (3..level) %}../{% endfor %}{% endcapture %}
+    
+    {% comment %} convenience variable - account for subdirectory if any {% endcomment %}
+    {% capture path %}{{ relativepath }}{{ site.baseurl }}{% endcapture %}
 
-      <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}assets/css/main.css">
-      <script src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.js }}vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}assets/css/main.css">
+    <script src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.js }}vendor/modernizr.js"></script>
   </head>
   <body id="{{ page.title | replace: " ", "-" | downcase }}">
     
     <header role="banner" class="global">
-      <a href="#" class="header-button-menu">Menu</a>
+      <a href="#js-menu-global" class="header-button-menu">Menu</a>
       <a href="{{ relativepath }}{{ site.baseurl }}/" class="header-logo"><img src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.img }}logo-FDWD.svg" alt="Franklin, Denney, Ward and Dryer, Attorneys at Law" /></a>
       <h6 class="header-tagline">A full service law firm<br /> since 1931</h6>
-      <nav role="navigation" class="global">
+      <nav role="navigation" class="global" id="js-menu-global">
         <ul>
           <li><a href="{{ relativepath }}{{ site.baseurl }}/"{% if page.title == 'home' %} class="active"{% endif %}>Home</a></li>
           <li><a href="{{ relativepath }}{{ site.baseurl }}attorneys.html"{% if page.title == 'Attorney Profiles' %}class="active"{% endif %}>Attorneys</a></li>
