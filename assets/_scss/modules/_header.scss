@@ -12,10 +12,11 @@ $header-tagline-w: 135px;
   // @extend %base-transition;
   @extend %well;
   @include rem(height, 100px);
-  @include transform(translateX(0px));
-  @include transition(0.3s ease);
+  // @include transform(translateX(0px));
+  @include transition(left 0.3s ease);
   @include border(bottom);
   position: relative;
+  left: 0;
   text-align: center;
   vertical-align: middle;
 

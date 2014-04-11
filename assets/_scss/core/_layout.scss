@@ -112,10 +112,11 @@ body {
 
 [role="main"], .main {
   // @extend %base-transition;
-  @include transform(translateX(0px));
-  @include transition(0.3s ease);
+  // @include transform(translateX(0px));
+  @include transition(left 0.3s ease);
   @include clearfix;
   position: relative;
+  left: 0;
   padding-top: 0;
   padding-bottom: 0;
   // @include layout-margins;
@@ -134,14 +135,15 @@ body {
 // set up the "open menu" state for mobile screens
 .menu-open {
   [role="main"], [role="banner"].global {
-    @include transform(translateX($header-w));
-    @include transition(0.3s ease);
+    // @include transform(translateX($header-w));
+    // @include transition(left 0.3s ease);
+    left: $header-w;
   }
 
   [role="navigation"].global {
-    // left: 0;
-    @include transform(translateX(0px));
-    @include transition(0.3s ease);
+    left: 0;
+    // @include transform(translateX(0px));
+    @include transition(left 0.3s ease);
   }
 
   @include breakpoint($breakpoint-header) {

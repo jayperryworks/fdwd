@@ -976,16 +976,12 @@ body {
 
 /* line 113, ../_scss/core/_layout.scss */
 [role="main"], .main, footer.global, .footer.global {
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
-  transform: translateX(0px);
-  -webkit-transition: 0.3s ease false;
-  -moz-transition: 0.3s ease false false;
-  -o-transition: 0.3s ease false false;
-  transition: 0.3s ease;
+  -webkit-transition: left 0.3s ease;
+  -moz-transition: left 0.3s ease false;
+  -o-transition: left 0.3s ease false;
+  transition: left 0.3s ease;
   position: relative;
+  left: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -1003,38 +999,26 @@ body {
   }
 }
 
-/* line 136, ../_scss/core/_layout.scss */
+/* line 137, ../_scss/core/_layout.scss */
 .menu-open [role="main"], .menu-open [role="banner"].global {
-  -webkit-transform: translateX(180px);
-  -moz-transform: translateX(180px);
-  -ms-transform: translateX(180px);
-  -o-transform: translateX(180px);
-  transform: translateX(180px);
-  -webkit-transition: 0.3s ease false;
-  -moz-transition: 0.3s ease false false;
-  -o-transition: 0.3s ease false false;
-  transition: 0.3s ease;
+  left: 180px;
 }
-/* line 141, ../_scss/core/_layout.scss */
+/* line 143, ../_scss/core/_layout.scss */
 .menu-open [role="navigation"].global {
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
-  transform: translateX(0px);
-  -webkit-transition: 0.3s ease false;
-  -moz-transition: 0.3s ease false false;
-  -o-transition: 0.3s ease false false;
-  transition: 0.3s ease;
+  left: 0;
+  -webkit-transition: left 0.3s ease;
+  -moz-transition: left 0.3s ease false;
+  -o-transition: left 0.3s ease false;
+  transition: left 0.3s ease;
 }
 @media (min-width: 48em) {
-  /* line 148, ../_scss/core/_layout.scss */
+  /* line 150, ../_scss/core/_layout.scss */
   .menu-open [role="main"], .menu-open [role="banner"] {
     left: 0;
   }
 }
 
-/* line 154, ../_scss/core/_layout.scss */
+/* line 156, ../_scss/core/_layout.scss */
 .title, .wrapper {
   padding-left: 48px;
   padding-right: 48px;
@@ -1048,7 +1032,7 @@ body {
   clear: both;
 }
 
-/* line 162, ../_scss/core/_layout.scss */
+/* line 164, ../_scss/core/_layout.scss */
 .feature {
   margin-top: -96px;
   margin-top: -6rem;
@@ -1062,7 +1046,7 @@ body {
   clear: both;
 }
 
-/* line 169, ../_scss/core/_layout.scss */
+/* line 171, ../_scss/core/_layout.scss */
 .feature-copy {
   width: 75%;
   float: left;
@@ -1075,7 +1059,7 @@ body {
   padding-top: 24px;
 }
 
-/* line 176, ../_scss/core/_layout.scss */
+/* line 178, ../_scss/core/_layout.scss */
 .feature-sidebar {
   width: 25%;
   float: right;
@@ -1087,7 +1071,7 @@ body {
   padding-top: 24px;
 }
 
-/* line 186, ../_scss/core/_layout.scss */
+/* line 188, ../_scss/core/_layout.scss */
 .feature-sidebar-thumb {
   display: block;
 }
@@ -1675,18 +1659,14 @@ footer.local .island, .footer.local .island, .theme-flood .island {
 [role="banner"].global {
   height: 100px;
   height: 6.25rem;
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
-  transform: translateX(0px);
-  -webkit-transition: 0.3s ease false;
-  -moz-transition: 0.3s ease false false;
-  -o-transition: 0.3s ease false false;
-  transition: 0.3s ease;
+  -webkit-transition: left 0.3s ease;
+  -moz-transition: left 0.3s ease false;
+  -o-transition: left 0.3s ease false;
+  transition: left 0.3s ease;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   position: relative;
+  left: 0;
   text-align: center;
   vertical-align: middle;
 }
@@ -1709,7 +1689,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   }
 }
 
-/* line 34, ../_scss/modules/_header.scss */
+/* line 35, ../_scss/modules/_header.scss */
 .header-button-menu {
   height: 20px;
   height: 1.25rem;
@@ -1720,14 +1700,14 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   top: 50%;
 }
 @media (min-width: 48em) {
-  /* line 34, ../_scss/modules/_header.scss */
+  /* line 35, ../_scss/modules/_header.scss */
   .header-button-menu {
     display: none;
     visibility: hidden;
   }
 }
 
-/* line 47, ../_scss/modules/_header.scss */
+/* line 48, ../_scss/modules/_header.scss */
 .header-logo {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1748,30 +1728,30 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   vertical-align: middle;
   height: 100%;
 }
-/* line 52, ../_scss/modules/_header.scss */
+/* line 53, ../_scss/modules/_header.scss */
 .header-logo > img {
   height: 70%;
   height: 4.375rem;
 }
 @media (min-width: 48em) {
-  /* line 47, ../_scss/modules/_header.scss */
+  /* line 48, ../_scss/modules/_header.scss */
   .header-logo {
     display: block;
     margin: 0 auto;
     right: 0;
     height: auto;
   }
-  /* line 62, ../_scss/modules/_header.scss */
+  /* line 63, ../_scss/modules/_header.scss */
   .header-logo:after {
     content: none;
   }
-  /* line 66, ../_scss/modules/_header.scss */
+  /* line 67, ../_scss/modules/_header.scss */
   .header-logo > img {
     height: auto;
   }
 }
 
-/* line 72, ../_scss/modules/_header.scss */
+/* line 73, ../_scss/modules/_header.scss */
 .header-tagline {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1787,7 +1767,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   text-align: left;
 }
 @media (min-width: 48em) {
-  /* line 72, ../_scss/modules/_header.scss */
+  /* line 73, ../_scss/modules/_header.scss */
   .header-tagline {
     margin-top: 16px;
     margin-top: 1rem;
@@ -1799,22 +1779,17 @@ footer.local .island, .footer.local .island, .theme-flood .island {
 
 /* line 18, ../_scss/modules/_navigation.scss */
 [role="navigation"].global {
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
-  transform: translateX(0px);
-  -webkit-transition: 0.3s ease false;
-  -moz-transition: 0.3s ease false false;
-  -o-transition: 0.3s ease false false;
-  transition: 0.3s ease;
+  -webkit-transition: left 0.3s ease;
+  -moz-transition: left 0.3s ease false;
+  -o-transition: left 0.3s ease false;
+  transition: left 0.3s ease;
   overflow: auto;
   overflow-y: auto;
   overflow-x: hidden;
   border-right-width: 1px;
   border-right-style: solid;
   display: block;
-  position: fixed !important;
+  position: fixed;
   left: -180px;
   top: 0;
   bottom: 0;
