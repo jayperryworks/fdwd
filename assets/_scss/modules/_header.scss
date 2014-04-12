@@ -48,6 +48,7 @@ $header-tagline-w: 135px;
   .header-logo {
     @include inline-block--centered($header-h);
     @include rem(right, -($header-tagline-w/2));
+    @include transition(none);
     position: relative;
 
     & > img {

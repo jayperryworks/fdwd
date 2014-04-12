@@ -20,7 +20,8 @@
     
     {% comment %} convenience variable - account for subdirectory if any {% endcomment %}
     {% capture path %}{{ relativepath }}{{ site.baseurl }}{% endcapture %}
-
+    
+    <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}assets/css/normalize.css">
     <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}assets/css/main.css">
     <script src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.js }}vendor/modernizr.js"></script>
   </head>

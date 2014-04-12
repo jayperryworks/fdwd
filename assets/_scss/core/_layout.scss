@@ -134,7 +134,7 @@ body {
 
 // set up the "open menu" state for mobile screens
 .menu-open {
-  [role="main"], [role="banner"].global {
+  [role="main"], [role="banner"].global, footer.global {
     // @include transform(translateX($header-w));
     // @include transition(left 0.3s ease);
     left: $header-w;
