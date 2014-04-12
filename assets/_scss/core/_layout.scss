@@ -6,25 +6,41 @@
 // -----------------------------------------------------------------------------
 
 // Quickly set grid-margins on a container across multiple breakpoints
-@mixin layout-margins($property: padding, $negative: false) {
+@mixin layout-margins($property: padding, $negative: false, $sides: left right) {
+  // grab the first value for default (mobile) screens
   $margins: first($layout-margins);
+  
+  // make it negative if $negative is set to true
   @if $negative == true {
     $margins: -(first($layout-margins));
   }
-
-  #{$property}-left: $margins;
-  #{$property}-right: $margins;
+  
+  // apply to all sides specified
+  // -> left and right are defaults
+  @each $side in $sides {
+    #{$property}-#{$side}: $margins;
+  }
+  
 
   @if length($layout-margins) > 1 {
     @for $i from 1 through length($layout-margins) {
+
+      // set up breakpoints for additional values
       @include breakpoint(nth($breakpoints, $i)) {
+        
+        // make it negative if $negative is set to true
         $margins: nth($layout-margins, $i);
+        
+        // make it negative if $negative is set to true
         @if $negative == true {
           $margins: -(nth($layout-margins, $i));
         }
-
-        #{$property}-left: $margins;
-        #{$property}-right: $margins;
+        
+        // apply to all sides specified
+        // -> left and right are defaults
+        @each $side in $sides {
+          #{$property}-#{$side}: $margins;
+        }
       }
     }
   }
@@ -41,6 +57,12 @@
       @include grid-span(nth($cols, $num), nth($start, $num), $options: $opts);
     }
   }
+}
+
+@mixin scroll-y {
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 // GLOBAL MODIFIERS
@@ -70,21 +92,65 @@
 // BASE LAYOUTS
 // -----------------------------------------------------------------------------
 
-html, body {
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
   min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include breakpoint($breakpoint-header) {
+    width: auto;
+    overflow: auto;
+  }
 }
 
 [role="main"], .main {
+  // @extend %base-transition;
+  // @include transform(translateX(0px));
+  @include transition(left 0.3s ease);
   @include clearfix;
-  // @include layout-margins;
-  margin-left: $header-w;
-  width: calc(100% - $header-w);
+  position: relative;
+  left: 0;
   padding-top: 0;
   padding-bottom: 0;
+  // @include layout-margins;
+
+  @include breakpoint($breakpoint-header) {
+    margin-left: $header-w;
+    width: calc(100% - $header-w);
+  }
+  
 
   // & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > hgroup {
   //   @extend %wrapper;
   // }
+}
+
+// set up the "open menu" state for mobile screens
+.menu-open {
+  [role="main"], [role="banner"].global, footer.global {
+    // @include transform(translateX($header-w));
+    // @include transition(left 0.3s ease);
+    left: $header-w;
+  }
+
+  [role="navigation"].global {
+    left: 0;
+    // @include transform(translateX(0px));
+    @include transition(left 0.3s ease);
+  }
+
+  @include breakpoint($breakpoint-header) {
+    [role="main"], [role="banner"] {
+      left: 0;
+    }
+  }
 }
 
 %wrapper, .wrapper {
@@ -100,7 +166,7 @@ html, body {
   @include clearfix;
   @include rem(margin-top, -96px);
   position: relative;
-  z-index: $z--high;
+  z-index: $z--med;
 }
   .feature-copy {
     @extend %add-gutters;

@@ -2,33 +2,50 @@ module.exports = function(grunt) {
   // Load all Grunt tasks
   require('load-grunt-tasks')(grunt);
 
+  grunt.loadNpmTasks('grunt-grunticon');
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    fdwd: {
+      bower: '_bower_components',
+      jekyll: '_site',
+      assets: 'assets',
+      images: '<%= fdwd.assets %>/images',
+      fonts: '<%= fdwd.assets %>/fonts',
+      scss: '<%= fdwd.assets %>/_scss',
+      css: '<%= fdwd.assets %>/css',
+      js: '<%= fdwd.assets %>/js'
+    },
+
     watch: {
-      options: {
-        // livereload: true
+      icons: {
+        files: ['<%= fdwd.assets %>/_icons'],
+        tasks: ['svgmin:dev, grunticon:dev']
       },
       compass: {
-        files: ['assets/_scss/**/*.{scss,sass}'],
+        files: ['<%= fdwd.scss %>/**/*.{scss,sass}'],
         tasks: ['compass:dev', 'copy:assets'], //'autoprefixer:server'
         options: {
           livereload: true
         }
       },
       assets: {
-        files: ['assets/{js,fonts,images}/**'],
+        files: ['assets/{js,fonts,images,css}/**'],
         tasks: ['copy:assets'],
         options: {
           livereload: true
         }
       },
-      // bower_concat: {
-      //   files: '_bower_components/**/*.{js,css,html}',
-      //   tasks: ['bower_concat']
-      // },
+      bower_concat: {
+        files: '<%= fdwd.bower %>/**/*.{js,css,html}',
+        tasks: ['bower_concat'],
+        options: {
+          livereload: true
+        }
+      },
       // autoprefixer: {
-      //   files: ['assets/css/**/*.css'],
+      //   files: ['<%= fdwd.css %>/**/*.css'],
       //   tasks: ['copy:stageCss', 'autoprefixer:server']
       // },
       jekyll: {
@@ -102,11 +119,11 @@ module.exports = function(grunt) {
       options: {
         require: ['singularitygs', 'breakpoint', 'bourbon'],
         bundleExec: true,
-        sassDir: 'assets/_scss',
-        cssDir: 'assets/css',
-        imagesDir: 'assets/images',
-        fontsDir: 'assets/fonts',
-        javascriptsDir: 'assets/js'
+        sassDir: '<%= fdwd.scss %>',
+        cssDir: '<%= fdwd.css %>',
+        imagesDir: '<%= fdwd.images %>',
+        fontsDir: '<%= fdwd.fonts %>',
+        javascriptsDir: '<%= fdwd.js %>'
       },
       dev: {
         options: {
@@ -123,13 +140,60 @@ module.exports = function(grunt) {
       }
     },
 
+    // imagemin: {
+    //   dist: {
+    //     options: {
+    //       progressive: true
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= yeoman.dist %>',
+    //       src: '**/*.{jpg,jpeg,png}',
+    //       dest: '<%= yeoman.dist %>'
+    //     }]
+    //   }
+    // },
+
+    svgmin: {
+      dev: {
+        files: [{
+          expand: true,
+          flatten: true,
+          // cwd: '<%= yeoman.dist %>',
+          src: '<%= fdwd.assets %>/_icons/*.svg',
+          dest: '<%= fdwd.assets %>/.svgmin/'
+        }]
+      }
+    },
+
+    grunticon: {
+      dev: {
+        files: [{
+          expand: true,
+          cwd: 'assets/',
+          src: ['.svgmin/*'],
+          dest: '<%= fdwd.assets %>/css'
+        }],
+        options: {
+          loadersnippet: '../../_includes/grunticon_loader.js',
+          pngfolder: '../images/icons/',
+          previewhtml: '../../grunticon-preview.html'
+          // colors: {
+          //   highlight: '#3da288', // green
+          //   dark: '#293F47', // blue
+          //   reverse: '#fff' // white
+          // }
+        }
+      }
+    },
+
     bower_concat: {
       all: {
-        dest: 'assets/js/libs.js',
+        dest: '<%= fdwd.js %>/libs.js',
         exclude: [
           'jquery',
           'modernizr',
-          'normalize'
+          'normalize-css'
         ]
       }
     },
@@ -138,8 +202,15 @@ module.exports = function(grunt) {
       bower: {
         expand: true, 
         flatten: true,
-        src: ['_bower_components/{jquery/dist/jquery.min.js,modernizr/modernizr.js}'], 
-        dest: 'assets/js/vendor/',
+        src: ['<%= fdwd.bower %>/{jquery/dist/jquery.min.js,modernizr/modernizr.js}'], 
+        dest: '<%= fdwd.js %>/vendor/',
+        filter: 'isFile'
+      },
+      normalize: {
+        expand: true, 
+        flatten: true,
+        src: ['<%= fdwd.bower %>/normalize-css/normalize.css'], 
+        dest: '<%= fdwd.css %>',
         filter: 'isFile'
       },
       assets: {
@@ -154,17 +225,17 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: {
-      assets: ["_site/assets/*"]
-    },
+    // clean: {
+    //   assets: ["_site/assets/*"]
+    // },
 
     // concat: {   
     //   dist: {
     //     src: [
     //       '<%= bower_concat.dest %>', // All JS in the libs folder
-    //       'assets/js/main.js'  // This specific file
+    //       '<%= fdwd.js %>/main.js'  // This specific file
     //     ],
-    //     dest: 'assets/js/app.js'
+    //     dest: '<%= fdwd.js %>/app.js'
     //   }
     // }
 
@@ -174,10 +245,13 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', [
-    'bower_concat',
+    'svgmin:dev',
+    'grunticon:dev',
     'compass:dev',
+    'bower_concat',
     'copy:bower',
-    'copy:assets', 
+    'copy:normalize',
+    'copy:assets',
     'jekyll:build',
     'connect:livereload',
     'watch'

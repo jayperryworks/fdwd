@@ -34,6 +34,7 @@
       // Settings
       // -> global vars go here
       // --------------------------------------------------------------- 
+      menuBtn : ".header-button-menu",
       accordion: ".accordion-button"
     },
 
@@ -53,10 +54,16 @@
         $(".logo img").attr("src", "assets/images/logo-FDWD.png");
       }
 
+      // set up the mobile nav
+      fdwd.offCanvasNav.init(fdwd.config.menuBtn);
+
+      // set up accordion
       fdwd.accordion.init(fdwd.config.accordion);
 
       // set up widon't & ampersand replacement
       fdwd.typography('h1, h2, h3, h4, h5, h6, p, li, a, td, figcaption, small, span');
+
+      fdwd.registerBreakpoints();
     },
 
     // Methods
@@ -77,6 +84,8 @@
 
         match : function() {
           console.log("match");
+
+          fdwd.offCanvasNav.kill();
           // fdwd.tabs.kill(fdwd.config.accordion);
           // fdwd.tabs.multiple = false;
           // fdwd.tabs.reset(fdwd.config.tabs);
@@ -92,14 +101,29 @@
       });
     },
 
+    offCanvasNav : {
+      open : "menu-open",
+      target : "body",
+
+      init : function(el) {
+        $(el).each(function() {
+          $(this).click(function(e) {
+            $(fdwd.offCanvasNav.target).toggleClass(fdwd.offCanvasNav.open);
+          });
+        });
+      },
+
+      kill : function() {
+        $(fdwd.offCanvasNav.target).removeClass(fdwd.offCanvasNav.open);
+      }
+    },
+
     accordion : {
 
       active : "active",
       open : "is-open",
 
       init : function(el) {
-
-        
 
         $(el).each(function() {
           $(this).on('click', function(e) {

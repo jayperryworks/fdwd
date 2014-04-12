@@ -16,31 +16,63 @@
 // ------- Global/main nav -------------------------------------------
 
 [role="navigation"].global {
-  // @extend %well;
-  padding: 0 $grid-gutter;
+  // @extend %base-transition;
+  @extend %theme-reverse;
+  // @include transform(translateX(0px));
+  @include transition(left 0.3s ease);
+  @include scroll-y;
+  @include border(right);
+  display: block;
+  position: fixed;
+  left: -($header-w);
+  top: 0;
+  bottom: 0;
+  z-index: $z--high;
+  height: 100%;
+  width: $header-w;
+  -webkit-overflow-scrolling: touch;
 
-  ul {
-    @include rem(margin, 18px 0);
-  }
-
-  .secondary {
-    @include rem(padding-top, 18px);
-    border-top: $hairline-w--thin solid $gray--light;
+  &.is-open {
+    left: 0;
   }
 
   a {
     @extend %calluna;
-    @include rem(font-size, 16px);
-    color: $gray;
+  }
 
-    &:hover, &:active {
-      color: darken($gray, 10);
+  @include breakpoint($breakpoint-header) {
+    // @include restore-visible;
+    @include restore-default-theme;
+    @include kill-border(right);
+    position: relative;
+    left: 0;
+    height: auto;
+    width: auto;
+    padding: 0 $grid-gutter;
+
+    ul {
+      @include rem(margin, 18px 0);
+    }
+
+    .secondary {
+      @include rem(padding-top, 18px);
+      border-top: $hairline-w--thin solid $gray--light;
+    }
+
+    a {
+      @include rem(font-size, 16px);
+      color: $gray;
+
+      &:hover, &:active {
+        color: darken($gray, 10);
+      }
+    }
+
+    .active {
+      color: $green;
     }
   }
-
-  .active {
-    color: $green;
-  }
+  
 }
 
 

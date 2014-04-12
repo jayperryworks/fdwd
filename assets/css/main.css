@@ -6,403 +6,6 @@ input, textarea, select, a, .bullet-icon, .js .accordion {
   transition: all 0.5s;
 }
 
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-/* line 22, ../_scss/core/_normalize.scss */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
-/* line 32, ../_scss/core/_normalize.scss */
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-/* line 41, ../_scss/core/_normalize.scss */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9.
- * Hide the `template` element in IE, Safari, and Firefox < 22.
- */
-/* line 52, ../_scss/core/_normalize.scss */
-[hidden],
-template {
-  display: none;
-}
-
-/* line 56, ../_scss/core/_normalize.scss */
-script {
-  display: none !important;
-}
-
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-/* line 70, ../_scss/core/_normalize.scss */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-/* line 80, ../_scss/core/_normalize.scss */
-body {
-  margin: 0;
-}
-
-/**
- * Remove the gray background color from active links in IE 10.
- */
-/* line 92, ../_scss/core/_normalize.scss */
-a {
-  background: transparent;
-}
-
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-/* line 100, ../_scss/core/_normalize.scss */
-a:focus {
-  outline: thin dotted;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-/* line 109, ../_scss/core/_normalize.scss */
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 122, ../_scss/core/_normalize.scss */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-/* line 131, ../_scss/core/_normalize.scss */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 140, ../_scss/core/_normalize.scss */
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-/* line 148, ../_scss/core/_normalize.scss */
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-/* line 156, ../_scss/core/_normalize.scss */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-/* line 166, ../_scss/core/_normalize.scss */
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-/* line 178, ../_scss/core/_normalize.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-/* line 187, ../_scss/core/_normalize.scss */
-pre {
-  white-space: pre-wrap;
-}
-
-/**
- * Set consistent quote types.
- */
-/* line 195, ../_scss/core/_normalize.scss */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-/* line 203, ../_scss/core/_normalize.scss */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-/* line 212, ../_scss/core/_normalize.scss */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-/* line 219, ../_scss/core/_normalize.scss */
-sup {
-  top: -0.5em;
-}
-
-/* line 223, ../_scss/core/_normalize.scss */
-sub {
-  bottom: -0.25em;
-}
-
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-/* line 235, ../_scss/core/_normalize.scss */
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-/* line 243, ../_scss/core/_normalize.scss */
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-/* line 255, ../_scss/core/_normalize.scss */
-figure {
-  margin: 0;
-}
-
-/**
- * Define consistent border, margin, and padding.
- */
-/* line 267, ../_scss/core/_normalize.scss */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-/* line 278, ../_scss/core/_normalize.scss */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 292, ../_scss/core/_normalize.scss */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-/* line 304, ../_scss/core/_normalize.scss */
-button,
-input {
-  line-height: normal;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-/* line 316, ../_scss/core/_normalize.scss */
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-/* line 331, ../_scss/core/_normalize.scss */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-/* line 341, ../_scss/core/_normalize.scss */
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- */
-/* line 351, ../_scss/core/_normalize.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-/* line 362, ../_scss/core/_normalize.scss */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-}
-
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-/* line 375, ../_scss/core/_normalize.scss */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-/* line 384, ../_scss/core/_normalize.scss */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-/* line 394, ../_scss/core/_normalize.scss */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */
-}
-
-/**
- * Remove most spacing between table cells.
- */
-/* line 407, ../_scss/core/_normalize.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 /*
  * Web Fonts from fontspring.com
  *
@@ -930,37 +533,58 @@ p {
     page-break-after: avoid;
   }
 }
-/* line 49, ../_scss/core/_layout.scss */
+/* line 71, ../_scss/core/_layout.scss */
 .feature-copy, footer.global .copyright, .footer.global .copyright {
   padding: 0 12px;
 }
 
-/* line 53, ../_scss/core/_layout.scss */
+/* line 75, ../_scss/core/_layout.scss */
 .title, .wrapper, .feature, .hero-headline {
   margin: 0 auto;
   max-width: 1120px;
 }
 
-/* line 62, ../_scss/core/_layout.scss */
+/* line 84, ../_scss/core/_layout.scss */
 .margins {
   margin-left: 48px;
   margin-right: 48px;
 }
 
-/* line 66, ../_scss/core/_layout.scss */
+/* line 88, ../_scss/core/_layout.scss */
 .hero, .center {
   text-align: center;
 }
 
-/* line 73, ../_scss/core/_layout.scss */
-html, body {
-  min-height: 100%;
+/* line 95, ../_scss/core/_layout.scss */
+html {
+  width: 100%;
+  height: 100%;
 }
 
-/* line 77, ../_scss/core/_layout.scss */
+/* line 100, ../_scss/core/_layout.scss */
+body {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media (min-width: 48em) {
+  /* line 100, ../_scss/core/_layout.scss */
+  body {
+    width: auto;
+    overflow: auto;
+  }
+}
+
+/* line 113, ../_scss/core/_layout.scss */
 [role="main"], .main, footer.global, .footer.global {
-  margin-left: 180px;
-  width: calc(100% - $header-w);
+  -webkit-transition: left 0.3s ease;
+  -moz-transition: left 0.3s ease false;
+  -o-transition: left 0.3s ease false;
+  transition: left 0.3s ease;
+  position: relative;
+  left: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -970,8 +594,34 @@ html, body {
   display: table;
   clear: both;
 }
+@media (min-width: 48em) {
+  /* line 113, ../_scss/core/_layout.scss */
+  [role="main"], .main, footer.global, .footer.global {
+    margin-left: 180px;
+    width: calc(100% - $header-w);
+  }
+}
 
-/* line 90, ../_scss/core/_layout.scss */
+/* line 137, ../_scss/core/_layout.scss */
+.menu-open [role="main"], .menu-open [role="banner"].global, .menu-open footer.global {
+  left: 180px;
+}
+/* line 143, ../_scss/core/_layout.scss */
+.menu-open [role="navigation"].global {
+  left: 0;
+  -webkit-transition: left 0.3s ease;
+  -moz-transition: left 0.3s ease false;
+  -o-transition: left 0.3s ease false;
+  transition: left 0.3s ease;
+}
+@media (min-width: 48em) {
+  /* line 150, ../_scss/core/_layout.scss */
+  .menu-open [role="main"], .menu-open [role="banner"] {
+    left: 0;
+  }
+}
+
+/* line 156, ../_scss/core/_layout.scss */
 .title, .wrapper {
   padding-left: 48px;
   padding-right: 48px;
@@ -985,12 +635,12 @@ html, body {
   clear: both;
 }
 
-/* line 98, ../_scss/core/_layout.scss */
+/* line 164, ../_scss/core/_layout.scss */
 .feature {
   margin-top: -96px;
   margin-top: -6rem;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 /* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .feature:after {
@@ -999,7 +649,7 @@ html, body {
   clear: both;
 }
 
-/* line 105, ../_scss/core/_layout.scss */
+/* line 171, ../_scss/core/_layout.scss */
 .feature-copy {
   width: 75%;
   float: left;
@@ -1012,7 +662,7 @@ html, body {
   padding-top: 24px;
 }
 
-/* line 112, ../_scss/core/_layout.scss */
+/* line 178, ../_scss/core/_layout.scss */
 .feature-sidebar {
   width: 25%;
   float: right;
@@ -1024,7 +674,7 @@ html, body {
   padding-top: 24px;
 }
 
-/* line 122, ../_scss/core/_layout.scss */
+/* line 188, ../_scss/core/_layout.scss */
 .feature-sidebar-thumb {
   display: block;
 }
@@ -1267,7 +917,7 @@ figcaption {
   border-color: #927c7a !important;
 }
 /* line 131, ../_scss/core/_themes.scss */
-.theme-default .well, body .well {
+.theme-default [role="banner"].global, .theme-default .well, body [role="banner"].global, body .well {
   background: #f2f2f2;
 }
 /* line 140, ../_scss/core/_themes.scss */
@@ -1275,7 +925,7 @@ figcaption {
   background: white;
 }
 
-/* line 160, ../_scss/core/_themes.scss */
+/* line 165, ../_scss/core/_themes.scss */
 footer.local, .footer.local, .theme-flood {
   color: white;
   background: #3da288;
@@ -1378,7 +1028,7 @@ footer.local .accent-border, .footer.local .accent-border, .theme-flood .accent-
   border-color: #293f47 !important;
 }
 /* line 131, ../_scss/core/_themes.scss */
-footer.local .well, .footer.local .well, .theme-flood .well {
+footer.local [role="banner"].global, .footer.local [role="banner"].global, footer.local .well, .footer.local .well, .theme-flood [role="banner"].global, .theme-flood .well {
   background: #368f78;
 }
 /* line 140, ../_scss/core/_themes.scss */
@@ -1386,8 +1036,8 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   background: #44b598;
 }
 
-/* line 172, ../_scss/core/_themes.scss */
-footer.global, .footer.global, .theme-reverse {
+/* line 177, ../_scss/core/_themes.scss */
+[role="navigation"].global, footer.global, .footer.global, .theme-reverse {
   color: white;
   background: #283030;
   border-color: black;
@@ -1395,105 +1045,105 @@ footer.global, .footer.global, .theme-reverse {
   border-width: 0;
 }
 /* line 25, ../_scss/core/_themes.scss */
-footer.global *, .footer.global *, .theme-reverse * {
+[role="navigation"].global *, footer.global *, .footer.global *, .theme-reverse * {
   border-color: black;
 }
 /* line 31, ../_scss/core/_themes.scss */
-footer.global h1, .footer.global h1, footer.global h2, .footer.global h2, footer.global h3, .footer.global h3, footer.global h4, .footer.global h4, footer.global h5, .footer.global h5, footer.global h6, .footer.global h6, .theme-reverse h1, .theme-reverse h2, .theme-reverse h3, .theme-reverse h4, .theme-reverse h5, .theme-reverse h6 {
+[role="navigation"].global h1, footer.global h1, .footer.global h1, [role="navigation"].global h2, footer.global h2, .footer.global h2, [role="navigation"].global h3, footer.global h3, .footer.global h3, [role="navigation"].global h4, footer.global h4, .footer.global h4, [role="navigation"].global h5, footer.global h5, .footer.global h5, [role="navigation"].global h6, footer.global h6, .footer.global h6, .theme-reverse h1, .theme-reverse h2, .theme-reverse h3, .theme-reverse h4, .theme-reverse h5, .theme-reverse h6 {
   color: white;
 }
 /* line 34, ../_scss/core/_themes.scss */
-footer.global h1 > a, .footer.global h1 > a, footer.global h2 > a, .footer.global h2 > a, footer.global h3 > a, .footer.global h3 > a, footer.global h4 > a, .footer.global h4 > a, footer.global h5 > a, .footer.global h5 > a, footer.global h6 > a, .footer.global h6 > a, .theme-reverse h1 > a, .theme-reverse h2 > a, .theme-reverse h3 > a, .theme-reverse h4 > a, .theme-reverse h5 > a, .theme-reverse h6 > a {
+[role="navigation"].global h1 > a, footer.global h1 > a, .footer.global h1 > a, [role="navigation"].global h2 > a, footer.global h2 > a, .footer.global h2 > a, [role="navigation"].global h3 > a, footer.global h3 > a, .footer.global h3 > a, [role="navigation"].global h4 > a, footer.global h4 > a, .footer.global h4 > a, [role="navigation"].global h5 > a, footer.global h5 > a, .footer.global h5 > a, [role="navigation"].global h6 > a, footer.global h6 > a, .footer.global h6 > a, .theme-reverse h1 > a, .theme-reverse h2 > a, .theme-reverse h3 > a, .theme-reverse h4 > a, .theme-reverse h5 > a, .theme-reverse h6 > a {
   color: inherit;
   text-decoration: none;
 }
 /* line 38, ../_scss/core/_themes.scss */
-footer.global h1 > a:hover, .footer.global h1 > a:hover, footer.global h1 > a:active, .footer.global h1 > a:active, footer.global h2 > a:hover, .footer.global h2 > a:hover, footer.global h2 > a:active, .footer.global h2 > a:active, footer.global h3 > a:hover, .footer.global h3 > a:hover, footer.global h3 > a:active, .footer.global h3 > a:active, footer.global h4 > a:hover, .footer.global h4 > a:hover, footer.global h4 > a:active, .footer.global h4 > a:active, footer.global h5 > a:hover, .footer.global h5 > a:hover, footer.global h5 > a:active, .footer.global h5 > a:active, footer.global h6 > a:hover, .footer.global h6 > a:hover, footer.global h6 > a:active, .footer.global h6 > a:active, .theme-reverse h1 > a:hover, .theme-reverse h1 > a:active, .theme-reverse h2 > a:hover, .theme-reverse h2 > a:active, .theme-reverse h3 > a:hover, .theme-reverse h3 > a:active, .theme-reverse h4 > a:hover, .theme-reverse h4 > a:active, .theme-reverse h5 > a:hover, .theme-reverse h5 > a:active, .theme-reverse h6 > a:hover, .theme-reverse h6 > a:active {
+[role="navigation"].global h1 > a:hover, footer.global h1 > a:hover, .footer.global h1 > a:hover, [role="navigation"].global h1 > a:active, footer.global h1 > a:active, .footer.global h1 > a:active, [role="navigation"].global h2 > a:hover, footer.global h2 > a:hover, .footer.global h2 > a:hover, [role="navigation"].global h2 > a:active, footer.global h2 > a:active, .footer.global h2 > a:active, [role="navigation"].global h3 > a:hover, footer.global h3 > a:hover, .footer.global h3 > a:hover, [role="navigation"].global h3 > a:active, footer.global h3 > a:active, .footer.global h3 > a:active, [role="navigation"].global h4 > a:hover, footer.global h4 > a:hover, .footer.global h4 > a:hover, [role="navigation"].global h4 > a:active, footer.global h4 > a:active, .footer.global h4 > a:active, [role="navigation"].global h5 > a:hover, footer.global h5 > a:hover, .footer.global h5 > a:hover, [role="navigation"].global h5 > a:active, footer.global h5 > a:active, .footer.global h5 > a:active, [role="navigation"].global h6 > a:hover, footer.global h6 > a:hover, .footer.global h6 > a:hover, [role="navigation"].global h6 > a:active, footer.global h6 > a:active, .footer.global h6 > a:active, .theme-reverse h1 > a:hover, .theme-reverse h1 > a:active, .theme-reverse h2 > a:hover, .theme-reverse h2 > a:active, .theme-reverse h3 > a:hover, .theme-reverse h3 > a:active, .theme-reverse h4 > a:hover, .theme-reverse h4 > a:active, .theme-reverse h5 > a:hover, .theme-reverse h5 > a:active, .theme-reverse h6 > a:hover, .theme-reverse h6 > a:active {
   color: inherit;
 }
 /* line 44, ../_scss/core/_themes.scss */
-footer.global p, .footer.global p, footer.global li, .footer.global li, footer.global td, .footer.global td, .theme-reverse p, .theme-reverse li, .theme-reverse td {
+[role="navigation"].global p, footer.global p, .footer.global p, [role="navigation"].global li, footer.global li, .footer.global li, [role="navigation"].global td, footer.global td, .footer.global td, .theme-reverse p, .theme-reverse li, .theme-reverse td {
   color: white;
 }
 /* line 48, ../_scss/core/_themes.scss */
-footer.global .intro, .footer.global .intro, .theme-reverse .intro {
+[role="navigation"].global .intro, footer.global .intro, .footer.global .intro, .theme-reverse .intro {
   color: #e6e6e6;
 }
 /* line 52, ../_scss/core/_themes.scss */
-footer.global .secondary, .footer.global .secondary, footer.global aside, .footer.global aside, footer.global figcaption, .footer.global figcaption, footer.global small, .footer.global small, .theme-reverse .secondary, .theme-reverse aside, .theme-reverse figcaption, .theme-reverse small {
+[role="navigation"].global .secondary, footer.global .secondary, .footer.global .secondary, [role="navigation"].global aside, footer.global aside, .footer.global aside, [role="navigation"].global figcaption, footer.global figcaption, .footer.global figcaption, [role="navigation"].global small, footer.global small, .footer.global small, .theme-reverse .secondary, .theme-reverse aside, .theme-reverse figcaption, .theme-reverse small {
   color: #566868;
 }
 /* line 61, ../_scss/core/_themes.scss */
-footer.global a, .footer.global a, .theme-reverse a {
+[role="navigation"].global a, footer.global a, .footer.global a, .theme-reverse a {
   color: #3da288;
 }
 /* line 64, ../_scss/core/_themes.scss */
-footer.global a:hover, .footer.global a:hover, footer.global a:active, .footer.global a:active, .theme-reverse a:hover, .theme-reverse a:active {
+[role="navigation"].global a:hover, footer.global a:hover, .footer.global a:hover, [role="navigation"].global a:active, footer.global a:active, .footer.global a:active, .theme-reverse a:hover, .theme-reverse a:active {
   color: #54bea3;
 }
 /* line 72, ../_scss/core/_themes.scss */
-footer.global a.active:hover, .footer.global a.active:hover, footer.global a.acive:active, .footer.global a.acive:active, .theme-reverse a.active:hover, .theme-reverse a.acive:active {
+[role="navigation"].global a.active:hover, footer.global a.active:hover, .footer.global a.active:hover, [role="navigation"].global a.acive:active, footer.global a.acive:active, .footer.global a.acive:active, .theme-reverse a.active:hover, .theme-reverse a.acive:active {
   color: #54bea3;
 }
 /* line 83, ../_scss/core/_themes.scss */
-footer.global input, .footer.global input, footer.global textarea, .footer.global textarea, .theme-reverse input, .theme-reverse textarea {
+[role="navigation"].global input, footer.global input, .footer.global input, [role="navigation"].global textarea, footer.global textarea, .footer.global textarea, .theme-reverse input, .theme-reverse textarea {
   color: white;
   background: #343e3e;
   border-color: #050606;
 }
 /* line 145, ../_scss/core/_helpers.scss */
-footer.global input::-webkit-input-placeholder, .footer.global input::-webkit-input-placeholder, footer.global textarea::-webkit-input-placeholder, .footer.global textarea::-webkit-input-placeholder, .theme-reverse input::-webkit-input-placeholder, .theme-reverse textarea::-webkit-input-placeholder {
+[role="navigation"].global input::-webkit-input-placeholder, footer.global input::-webkit-input-placeholder, .footer.global input::-webkit-input-placeholder, [role="navigation"].global textarea::-webkit-input-placeholder, footer.global textarea::-webkit-input-placeholder, .footer.global textarea::-webkit-input-placeholder, .theme-reverse input::-webkit-input-placeholder, .theme-reverse textarea::-webkit-input-placeholder {
   color: #566868;
 }
 /* line 149, ../_scss/core/_helpers.scss */
-footer.global input:-moz-placeholder, .footer.global input:-moz-placeholder, footer.global textarea:-moz-placeholder, .footer.global textarea:-moz-placeholder, .theme-reverse input:-moz-placeholder, .theme-reverse textarea:-moz-placeholder {
+[role="navigation"].global input:-moz-placeholder, footer.global input:-moz-placeholder, .footer.global input:-moz-placeholder, [role="navigation"].global textarea:-moz-placeholder, footer.global textarea:-moz-placeholder, .footer.global textarea:-moz-placeholder, .theme-reverse input:-moz-placeholder, .theme-reverse textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #566868;
 }
 /* line 153, ../_scss/core/_helpers.scss */
-footer.global input::-moz-placeholder, .footer.global input::-moz-placeholder, footer.global textarea::-moz-placeholder, .footer.global textarea::-moz-placeholder, .theme-reverse input::-moz-placeholder, .theme-reverse textarea::-moz-placeholder {
+[role="navigation"].global input::-moz-placeholder, footer.global input::-moz-placeholder, .footer.global input::-moz-placeholder, [role="navigation"].global textarea::-moz-placeholder, footer.global textarea::-moz-placeholder, .footer.global textarea::-moz-placeholder, .theme-reverse input::-moz-placeholder, .theme-reverse textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #566868;
 }
 /* line 157, ../_scss/core/_helpers.scss */
-footer.global input:-ms-input-placeholder, .footer.global input:-ms-input-placeholder, footer.global textarea:-ms-input-placeholder, .footer.global textarea:-ms-input-placeholder, .theme-reverse input:-ms-input-placeholder, .theme-reverse textarea:-ms-input-placeholder {
+[role="navigation"].global input:-ms-input-placeholder, footer.global input:-ms-input-placeholder, .footer.global input:-ms-input-placeholder, [role="navigation"].global textarea:-ms-input-placeholder, footer.global textarea:-ms-input-placeholder, .footer.global textarea:-ms-input-placeholder, .theme-reverse input:-ms-input-placeholder, .theme-reverse textarea:-ms-input-placeholder {
   color: #566868;
 }
 /* line 96, ../_scss/core/_themes.scss */
-footer.global input:focus, .footer.global input:focus, footer.global textarea:focus, .footer.global textarea:focus, .theme-reverse input:focus, .theme-reverse textarea:focus {
+[role="navigation"].global input:focus, footer.global input:focus, .footer.global input:focus, [role="navigation"].global textarea:focus, footer.global textarea:focus, .footer.global textarea:focus, .theme-reverse input:focus, .theme-reverse textarea:focus {
   border-color: #3da288;
 }
 /* line 101, ../_scss/core/_themes.scss */
-footer.global button, .footer.global button, footer.global .button, .footer.global .button, .theme-reverse button, .theme-reverse .button {
+[role="navigation"].global button, footer.global button, .footer.global button, [role="navigation"].global .button, footer.global .button, .footer.global .button, .theme-reverse button, .theme-reverse .button {
   color: white;
   background: #3da288;
 }
 /* line 106, ../_scss/core/_themes.scss */
-footer.global .icon, .footer.global .icon, .theme-reverse .icon {
+[role="navigation"].global .icon, footer.global .icon, .footer.global .icon, .theme-reverse .icon {
   color: #3da288;
 }
 /* line 113, ../_scss/core/_themes.scss */
-footer.global .highlight, .footer.global .highlight, .theme-reverse .highlight {
+[role="navigation"].global .highlight, footer.global .highlight, .footer.global .highlight, .theme-reverse .highlight {
   color: #3da288;
 }
 /* line 117, ../_scss/core/_themes.scss */
-footer.global .hero, .footer.global .hero, footer.global .highlight-border, .footer.global .highlight-border, .theme-reverse .hero, .theme-reverse .highlight-border {
+[role="navigation"].global .hero, footer.global .hero, .footer.global .hero, [role="navigation"].global .highlight-border, footer.global .highlight-border, .footer.global .highlight-border, .theme-reverse .hero, .theme-reverse .highlight-border {
   border-color: #3da288 !important;
 }
 /* line 122, ../_scss/core/_themes.scss */
-footer.global .accent, .footer.global .accent, footer.global .copyright, .footer.global .copyright, .theme-reverse .accent, .theme-reverse footer.global .copyright, footer.global .theme-reverse .copyright, .theme-reverse .footer.global .copyright, .footer.global .theme-reverse .copyright {
+[role="navigation"].global .accent, footer.global .accent, .footer.global .accent, footer.global .copyright, .footer.global .copyright, .theme-reverse .accent, .theme-reverse footer.global .copyright, footer.global .theme-reverse .copyright, .theme-reverse .footer.global .copyright, .footer.global .theme-reverse .copyright {
   color: #3c5c67;
 }
 /* line 126, ../_scss/core/_themes.scss */
-footer.global .accent-border, .footer.global .accent-border, .theme-reverse .accent-border {
+[role="navigation"].global .accent-border, footer.global .accent-border, .footer.global .accent-border, .theme-reverse .accent-border {
   border-color: #3c5c67 !important;
 }
 /* line 131, ../_scss/core/_themes.scss */
-footer.global .well, .footer.global .well, .theme-reverse .well {
+[role="navigation"].global [role="banner"].global, footer.global [role="banner"].global, .footer.global [role="banner"].global, [role="navigation"].global .well, footer.global .well, .footer.global .well, .theme-reverse [role="banner"].global, .theme-reverse .well {
   background: #1c2222;
 }
 /* line 140, ../_scss/core/_themes.scss */
-footer.global .island, .footer.global .island, .theme-reverse .island {
+[role="navigation"].global .island, footer.global .island, .footer.global .island, .theme-reverse .island {
   background: #343e3e;
 }
 
@@ -1608,85 +1258,334 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   margin-left: 3.5em;
 }
 
-/* line 15, ../_scss/modules/_header.scss */
+/* line 11, ../_scss/modules/_header.scss */
 [role="banner"].global {
-  width: 180px;
-  height: 100%;
-  float: left;
-  position: fixed;
-  top: 0;
+  height: 100px;
+  height: 6.25rem;
+  -webkit-transition: left 0.3s ease;
+  -moz-transition: left 0.3s ease false;
+  -o-transition: left 0.3s ease false;
+  transition: left 0.3s ease;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  position: relative;
   left: 0;
-  padding-top: 36px;
-  border-right: 1px solid #e1e3e4;
   text-align: center;
-  overflow: auto;
-  overflow-y: auto;
-  overflow-x: auto;
-  background: #f6f7f7;
+  vertical-align: middle;
+}
+@media (min-width: 48em) {
+  /* line 11, ../_scss/modules/_header.scss */
+  [role="banner"].global {
+    padding-top: 36px;
+    padding-top: 2.25rem;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-top: none;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* line 35, ../_scss/modules/_header.scss */
+.header-button-menu {
+  height: 20px;
+  height: 1.25rem;
+  margin: -10px 0 0 24px;
+  margin: -0.625rem 0 0 1.5rem;
+  display: block;
+  position: absolute;
+  top: 50%;
+}
+@media (min-width: 48em) {
+  /* line 35, ../_scss/modules/_header.scss */
+  .header-button-menu {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* line 48, ../_scss/modules/_header.scss */
+.header-logo {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  height: 100px;
+  right: -67.5px;
+  right: -4.21875rem;
+  -webkit-transition: none false false;
+  -moz-transition: none false false false;
+  -o-transition: none false false false;
+  transition: none;
+  position: relative;
+}
+/* line 406, ../_scss/core/_helpers.scss */
+.header-logo::before, .header-logo:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+/* line 54, ../_scss/modules/_header.scss */
+.header-logo > img {
+  height: 70%;
+  height: 4.375rem;
+}
+@media (min-width: 48em) {
+  /* line 48, ../_scss/modules/_header.scss */
+  .header-logo {
+    display: block;
+    margin: 0 auto;
+    right: 0;
+    height: auto;
+  }
+  /* line 64, ../_scss/modules/_header.scss */
+  .header-logo:after {
+    content: none;
+  }
+  /* line 68, ../_scss/modules/_header.scss */
+  .header-logo > img {
+    height: auto;
+  }
+}
+
+/* line 74, ../_scss/modules/_header.scss */
+.header-tagline {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  right: -67.5px;
+  right: -4.21875rem;
+  padding-left: 12px;
+  padding-left: 0.75rem;
+  position: relative;
+  text-align: left;
+}
+@media (min-width: 48em) {
+  /* line 74, ../_scss/modules/_header.scss */
+  .header-tagline {
+    margin-top: 16px;
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    right: 0;
+  }
 }
 
 /* line 18, ../_scss/modules/_navigation.scss */
 [role="navigation"].global {
-  padding: 0 24px;
+  -webkit-transition: left 0.3s ease;
+  -moz-transition: left 0.3s ease false;
+  -o-transition: left 0.3s ease false;
+  transition: left 0.3s ease;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right-width: 1px;
+  border-right-style: solid;
+  display: block;
+  position: fixed;
+  left: -180px;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  height: 100%;
+  width: 180px;
+  -webkit-overflow-scrolling: touch;
 }
-/* line 22, ../_scss/modules/_navigation.scss */
-[role="navigation"].global ul {
-  margin: 18px 0;
-  margin: 1.125rem 0;
+/* line 35, ../_scss/modules/_navigation.scss */
+[role="navigation"].global.is-open {
+  left: 0;
 }
-/* line 26, ../_scss/modules/_navigation.scss */
-[role="navigation"].global .secondary {
-  padding-top: 18px;
-  padding-top: 1.125rem;
-  border-top: 1px solid #e1e3e4;
-}
-/* line 31, ../_scss/modules/_navigation.scss */
-[role="navigation"].global a {
-  font-size: 16px;
-  font-size: 1rem;
-  color: #849296;
-}
-/* line 36, ../_scss/modules/_navigation.scss */
-[role="navigation"].global a:hover, [role="navigation"].global a:active {
-  color: #6a797d;
-}
-/* line 41, ../_scss/modules/_navigation.scss */
-[role="navigation"].global .active {
-  color: #3da288;
+@media (min-width: 48em) {
+  /* line 18, ../_scss/modules/_navigation.scss */
+  [role="navigation"].global {
+    color: #293f47;
+    background: white;
+    border-color: #cccccc;
+    border-style: solid;
+    border-width: 0;
+    background: transparent;
+    border-right: none;
+    position: relative;
+    left: 0;
+    height: auto;
+    width: auto;
+    padding: 0 24px;
+  }
+  /* line 25, ../_scss/core/_themes.scss */
+  [role="navigation"].global * {
+    border-color: #cccccc;
+  }
+  /* line 31, ../_scss/core/_themes.scss */
+  [role="navigation"].global h1, [role="navigation"].global h2, [role="navigation"].global h3, [role="navigation"].global h4, [role="navigation"].global h5, [role="navigation"].global h6 {
+    color: #293f47;
+  }
+  /* line 34, ../_scss/core/_themes.scss */
+  [role="navigation"].global h1 > a, [role="navigation"].global h2 > a, [role="navigation"].global h3 > a, [role="navigation"].global h4 > a, [role="navigation"].global h5 > a, [role="navigation"].global h6 > a {
+    color: inherit;
+    text-decoration: none;
+  }
+  /* line 38, ../_scss/core/_themes.scss */
+  [role="navigation"].global h1 > a:hover, [role="navigation"].global h1 > a:active, [role="navigation"].global h2 > a:hover, [role="navigation"].global h2 > a:active, [role="navigation"].global h3 > a:hover, [role="navigation"].global h3 > a:active, [role="navigation"].global h4 > a:hover, [role="navigation"].global h4 > a:active, [role="navigation"].global h5 > a:hover, [role="navigation"].global h5 > a:active, [role="navigation"].global h6 > a:hover, [role="navigation"].global h6 > a:active {
+    color: inherit;
+  }
+  /* line 44, ../_scss/core/_themes.scss */
+  [role="navigation"].global p, [role="navigation"].global li, [role="navigation"].global td {
+    color: #6a797d;
+  }
+  /* line 48, ../_scss/core/_themes.scss */
+  [role="navigation"].global .intro {
+    color: #535e61;
+  }
+  /* line 52, ../_scss/core/_themes.scss */
+  [role="navigation"].global .secondary, [role="navigation"].global aside, [role="navigation"].global figcaption, [role="navigation"].global small {
+    color: #535e61;
+  }
+  /* line 61, ../_scss/core/_themes.scss */
+  [role="navigation"].global a {
+    color: #3da288;
+  }
+  /* line 64, ../_scss/core/_themes.scss */
+  [role="navigation"].global a:hover, [role="navigation"].global a:active {
+    color: #2f7d69;
+  }
+  /* line 72, ../_scss/core/_themes.scss */
+  [role="navigation"].global a.active:hover, [role="navigation"].global a.acive:active {
+    color: #2f7d69;
+  }
+  /* line 83, ../_scss/core/_themes.scss */
+  [role="navigation"].global input, [role="navigation"].global textarea {
+    color: #6a797d;
+    background: #f2f2f2;
+    border-color: #e6e6e6;
+  }
+  /* line 145, ../_scss/core/_helpers.scss */
+  [role="navigation"].global input::-webkit-input-placeholder, [role="navigation"].global textarea::-webkit-input-placeholder {
+    color: #d9d9d9;
+  }
+  /* line 149, ../_scss/core/_helpers.scss */
+  [role="navigation"].global input:-moz-placeholder, [role="navigation"].global textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #d9d9d9;
+  }
+  /* line 153, ../_scss/core/_helpers.scss */
+  [role="navigation"].global input::-moz-placeholder, [role="navigation"].global textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #d9d9d9;
+  }
+  /* line 157, ../_scss/core/_helpers.scss */
+  [role="navigation"].global input:-ms-input-placeholder, [role="navigation"].global textarea:-ms-input-placeholder {
+    color: #d9d9d9;
+  }
+  /* line 96, ../_scss/core/_themes.scss */
+  [role="navigation"].global input:focus, [role="navigation"].global textarea:focus {
+    border-color: #3da288;
+  }
+  /* line 101, ../_scss/core/_themes.scss */
+  [role="navigation"].global button, [role="navigation"].global .button {
+    color: white;
+    background: #3da288;
+  }
+  /* line 106, ../_scss/core/_themes.scss */
+  [role="navigation"].global .icon {
+    color: #3da288;
+  }
+  /* line 113, ../_scss/core/_themes.scss */
+  [role="navigation"].global .highlight {
+    color: #3da288;
+  }
+  /* line 117, ../_scss/core/_themes.scss */
+  [role="navigation"].global .hero, [role="navigation"].global .highlight-border {
+    border-color: #3da288 !important;
+  }
+  /* line 122, ../_scss/core/_themes.scss */
+  [role="navigation"].global .accent, [role="navigation"].global footer.global .copyright, footer.global [role="navigation"].global .copyright, [role="navigation"].global .footer.global .copyright, .footer.global [role="navigation"].global .copyright {
+    color: #927c7a;
+  }
+  /* line 126, ../_scss/core/_themes.scss */
+  [role="navigation"].global .accent-border {
+    border-color: #927c7a !important;
+  }
+  /* line 131, ../_scss/core/_themes.scss */
+  [role="navigation"].global [role="banner"].global, [role="navigation"].global .well {
+    background: #f2f2f2;
+  }
+  /* line 140, ../_scss/core/_themes.scss */
+  [role="navigation"].global .island {
+    background: white;
+  }
+  /* line 53, ../_scss/modules/_navigation.scss */
+  [role="navigation"].global ul {
+    margin: 18px 0;
+    margin: 1.125rem 0;
+  }
+  /* line 57, ../_scss/modules/_navigation.scss */
+  [role="navigation"].global .secondary {
+    padding-top: 18px;
+    padding-top: 1.125rem;
+    border-top: 1px solid #e1e3e4;
+  }
+  /* line 62, ../_scss/modules/_navigation.scss */
+  [role="navigation"].global a {
+    font-size: 16px;
+    font-size: 1rem;
+    color: #849296;
+  }
+  /* line 66, ../_scss/modules/_navigation.scss */
+  [role="navigation"].global a:hover, [role="navigation"].global a:active {
+    color: #6a797d;
+  }
+  /* line 71, ../_scss/modules/_navigation.scss */
+  [role="navigation"].global .active {
+    color: #3da288;
+  }
 }
 
-/* line 54, ../_scss/modules/_navigation.scss */
+/* line 86, ../_scss/modules/_navigation.scss */
 .js .accordion-content {
   display: none;
   visibility: hidden;
 }
-/* line 57, ../_scss/modules/_navigation.scss */
+/* line 89, ../_scss/modules/_navigation.scss */
 .js .accordion-content.is-open {
   display: block;
   visibility: visible;
 }
-/* line 64, ../_scss/modules/_navigation.scss */
+/* line 96, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt > * {
   display: none;
   visibility: hidden;
 }
-/* line 68, ../_scss/modules/_navigation.scss */
+/* line 100, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt p:first-child {
   display: block;
   visibility: visible;
 }
-/* line 74, ../_scss/modules/_navigation.scss */
+/* line 106, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt.is-open > * {
   display: block;
   visibility: visible;
 }
-/* line 80, ../_scss/modules/_navigation.scss */
+/* line 112, ../_scss/modules/_navigation.scss */
 .js .accordion-button {
   display: block;
   visibility: visible;
   display: block;
 }
-/* line 84, ../_scss/modules/_navigation.scss */
+/* line 116, ../_scss/modules/_navigation.scss */
 .js .accordion-button > h1, .js .accordion-button h2, .js .accordion-button h3, .js .accordion-button h4, .js .accordion-button h5, .js .accordion-button h6 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1695,7 +1594,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   zoom: 1;
   *display: inline;
 }
-/* line 88, ../_scss/modules/_navigation.scss */
+/* line 120, ../_scss/modules/_navigation.scss */
 .js .accordion-button .hide {
   display: none;
   visibility: hidden;
@@ -1706,7 +1605,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   zoom: 1;
   *display: inline;
 }
-/* line 92, ../_scss/modules/_navigation.scss */
+/* line 124, ../_scss/modules/_navigation.scss */
 .js .accordion-button .expand {
   display: block;
   visibility: visible;
@@ -1717,18 +1616,18 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   zoom: 1;
   *display: inline;
 }
-/* line 101, ../_scss/modules/_navigation.scss */
+/* line 133, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .hide {
   display: block;
   visibility: visible;
 }
-/* line 104, ../_scss/modules/_navigation.scss */
+/* line 136, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .expand {
   display: none;
   visibility: hidden;
 }
 
-/* line 113, ../_scss/modules/_navigation.scss */
+/* line 145, ../_scss/modules/_navigation.scss */
 .no-js .accordion-button {
   display: none;
   visibility: hidden;
@@ -1917,7 +1816,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 321, ../_scss/core/_helpers.scss */
+/* line 335, ../_scss/core/_helpers.scss */
 .meta li {
   list-style: none;
   list-style-type: none;
@@ -1933,7 +1832,7 @@ footer.global .island, .footer.global .island, .theme-reverse .island {
   font-size: 0;
   margin-left: 0;
 }
-/* line 321, ../_scss/core/_helpers.scss */
+/* line 335, ../_scss/core/_helpers.scss */
 .grid li {
   list-style: none;
   list-style-type: none;
@@ -2076,11 +1975,11 @@ footer.local, .footer.local {
   clear: both;
 }
 
-/* line 57, ../_scss/main.scss */
+/* line 53, ../_scss/main.scss */
 .contact-form label {
   display: block;
 }
-/* line 61, ../_scss/main.scss */
+/* line 57, ../_scss/main.scss */
 .contact-form .input {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2091,21 +1990,21 @@ footer.local, .footer.local {
   width: 50%;
   padding: 6px;
 }
-/* line 66, ../_scss/main.scss */
+/* line 62, ../_scss/main.scss */
 .contact-form .input.left {
   margin-left: -6px;
   margin-right: -3px;
 }
-/* line 70, ../_scss/main.scss */
+/* line 66, ../_scss/main.scss */
 .contact-form .input.right {
   margin-right: -6px;
 }
-/* line 74, ../_scss/main.scss */
+/* line 70, ../_scss/main.scss */
 .contact-form input {
   width: 100%;
 }
 
-/* line 79, ../_scss/main.scss */
+/* line 75, ../_scss/main.scss */
 .map {
   width: 100%;
   float: right;
@@ -2118,39 +2017,39 @@ footer.local, .footer.local {
   clear: both;
 }
 
-/* line 86, ../_scss/main.scss */
+/* line 82, ../_scss/main.scss */
 .info {
   list-style: none;
   list-style-type: none;
   padding-left: 0;
 }
-/* line 321, ../_scss/core/_helpers.scss */
+/* line 335, ../_scss/core/_helpers.scss */
 .info li {
   list-style: none;
   list-style-type: none;
 }
-/* line 363, ../_scss/core/_helpers.scss */
+/* line 377, ../_scss/core/_helpers.scss */
 .info.contact > dt, .info.contact > dd {
   display: inline;
 }
-/* line 366, ../_scss/core/_helpers.scss */
+/* line 380, ../_scss/core/_helpers.scss */
 .info.contact > dt {
   margin-right: 0.1875em;
 }
-/* line 369, ../_scss/core/_helpers.scss */
+/* line 383, ../_scss/core/_helpers.scss */
 .info.contact > dd {
   margin-left: 0;
 }
-/* line 375, ../_scss/core/_helpers.scss */
+/* line 389, ../_scss/core/_helpers.scss */
 .info.contact > dd:after {
   content: '\A';
   white-space: pre;
 }
-/* line 93, ../_scss/main.scss */
+/* line 88, ../_scss/main.scss */
 .info.contact dt {
   font-weight: bold;
 }
-/* line 98, ../_scss/main.scss */
+/* line 93, ../_scss/main.scss */
 .info .inline {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2160,15 +2059,15 @@ footer.local, .footer.local {
   *display: inline;
   margin-left: 0.6em;
 }
-/* line 102, ../_scss/main.scss */
+/* line 97, ../_scss/main.scss */
 .info .inline:first-child {
   margin-left: 0;
 }
-/* line 105, ../_scss/main.scss */
+/* line 100, ../_scss/main.scss */
 .info .inline:first-child:before {
   content: none;
 }
-/* line 110, ../_scss/main.scss */
+/* line 105, ../_scss/main.scss */
 .info .inline:before {
   content: '\2022';
   position: relative;

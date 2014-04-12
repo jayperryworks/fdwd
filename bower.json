@@ -22,6 +22,8 @@
   "dependencies": {
     "enquire": "~2.1.0",
     "jquery.transit": "~0.9.9",
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "modernizr": "~2.7.2",
+    "normalize-css": "~3.0.1"
   }
 }

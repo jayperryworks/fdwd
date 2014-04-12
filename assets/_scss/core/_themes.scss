@@ -153,6 +153,11 @@
   @include theme();
 }
 
+@mixin restore-default-theme() {
+  @include theme();
+  background: transparent;
+}
+
 // Variations
 // ------------------------------------------------------------------------------
 
