@@ -5,7 +5,7 @@ date:   2014-01-01 19:22:05
 categories: practice-areas
 slug: real-estate
 
-picture: http://placehold.it/250x200
+icon: real_estate
 
 ---
 

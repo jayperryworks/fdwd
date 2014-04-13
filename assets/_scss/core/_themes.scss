@@ -1,6 +1,6 @@
-// ==============================================================================
+/* ==============================================================================
 //  Color themes
-// ==============================================================================
+// ============================================================================== */
 
 // Base
 // ------------------------------------------------------------------------------
@@ -26,7 +26,7 @@
     border-color: $border-color;
   }
 
-  // --- text ----------------------------------------------------------
+  /* --- text ---------------------------------------------------------- */
 
   #{headers()} {
     color: $fg;
@@ -78,7 +78,7 @@
     }
   }
 
-  // --- forms, buttons, icons ----------------------------------------------------------
+  /* --- forms, buttons, icons ---------------------------------------------------------- */
 
   input, textarea {
     color: $text;
@@ -107,7 +107,7 @@
     color: $highlight;
   }
 
-  // --- global modifiers ----------------------------------------------------------
+  /* --- global modifiers ---------------------------------------------------------- */
 
   // accent that jumps out
   %highlight, .highlight {
@@ -146,8 +146,8 @@
   }
 }
 
-// Default
-// ------------------------------------------------------------------------------
+/* Default
+// ------------------------------------------------------------------------------ */
 
 %theme-default, .theme-default, body {
   @include theme();
@@ -158,10 +158,10 @@
   background: transparent;
 }
 
-// Variations
-// ------------------------------------------------------------------------------
+/* Variations
+// ------------------------------------------------------------------------------ */
 
-// bright colored background, meant to stand out or add accent
+/* bright colored background, meant to stand out or add accent */
 %theme-flood, .theme-flood {
   @include theme(
     $text: white,
@@ -173,7 +173,7 @@
   );
 }
 
-// light FG over dark BG, contrasts sharply with default (dark FG over light BG)
+/* light FG over dark BG, contrasts sharply with default (dark FG over light BG) */
 %theme-reverse, .theme-reverse {
   @include theme(
     $text: white,

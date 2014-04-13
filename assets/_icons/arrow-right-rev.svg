@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>arrow-right-rev</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="arrow-right-rev" sketch:type="MSArtboardGroup" fill="#FFFFFF">
+            <path d="M31.9505284,35.3597876 L14.4445843,13.3065106 C12.9935788,11.4785929 10.4178097,11.2422376 8.69144299,12.7785963 C6.96507626,14.3149551 6.74185185,17.04224 8.19285732,18.8701577 L28.7850254,44.8113342 L31.9108889,48.7491699 L35.0367524,44.8113342 L55.2779176,19.3123368 C56.7289231,17.4844191 56.5056987,14.7571342 54.7793319,13.2207755 C53.0529652,11.6844167 50.4771961,11.920772 49.0261907,13.7486897 L31.9505284,35.3597876 Z" id="Imported-Layers-copy-5" sketch:type="MSShapeGroup" transform="translate(31.735294, 30.500000) rotate(-90.000000) translate(-31.735294, -30.500000) "></path>
+        </g>
+    </g>
+</svg>

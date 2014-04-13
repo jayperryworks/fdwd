@@ -13,11 +13,12 @@ next_url: "news.html"
   <div class="wrapper">
     <section class="bullet accordion">
       <a id="{{ post.slug }}"></a>
-      <a href="#{{ post.slug }}-content" class="accordion-button">
-        <h3>{{ post.title }}</h3>
+      <a href="#{{ post.slug }}-content" class="accordion-button large">
+        <span class="bullet-icon icon-{{ post.icon }}"></span>
+        <h3 class="bullet-label">{{ post.title }}</h3>
         {% include accordion-icon.html %}
       </a>
-      <div class="accordion-content" id="{{ post.slug }}-content">
+      <div class="accordion-content bullet-content" id="{{ post.slug }}-content">
         {{ post.content }}
       </div>
     </section>

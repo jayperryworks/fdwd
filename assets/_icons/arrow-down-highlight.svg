@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>arrow-down-highlight</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="arrow-down-highlight" sketch:type="MSArtboardGroup" fill="#3DA288">
+            <path d="M29.2152343,35.3597876 L11.7092901,13.3065106 C10.2582847,11.4785929 7.6825156,11.2422376 5.95614887,12.7785963 C4.22978215,14.3149551 4.00655774,17.04224 5.4575632,18.8701577 L26.0497313,44.8113342 L29.1755948,48.7491699 L32.3014582,44.8113342 L52.5426235,19.3123368 C53.9936289,17.4844191 53.7704045,14.7571342 52.0440378,13.2207755 C50.3176711,11.6844167 47.741902,11.920772 46.2908965,13.7486897 L29.2152343,35.3597876 Z" id="Imported-Layers-copy-6" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -20,15 +20,27 @@
     
     {% comment %} convenience variable - account for subdirectory if any {% endcomment %}
     {% capture path %}{{ relativepath }}{{ site.baseurl }}{% endcapture %}
+  
+    <script>
+      {% include grunticon_loader.js %}
+      grunticon( [ "{{ relativepath }}{{ site.baseurl }}{{ site.assets.css }}/icons.data.svg.css", "{{ relativepath }}{{ site.baseurl }}{{ site.assets.css }}/icons.data.png.css", "{{ relativepath }}{{ site.baseurl }}{{ site.assets.css }}/icons.fallback.css" ] );
+    </script>
+    <noscript>
+      <link href="{{ relativepath }}{{ site.baseurl }}{{ site.assets.css }}/icons.fallback.css" rel="stylesheet">
+    </noscript>
     
-    <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}assets/css/normalize.css">
-    <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}assets/css/main.css">
+    <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}{{ site.assets.css }}normalize.css">
+    <link rel="stylesheet" href="{{ relativepath }}{{ site.baseurl }}{{ site.assets.css }}main.css">
+
     <script src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.js }}vendor/modernizr.js"></script>
   </head>
   <body id="{{ page.title | replace: " ", "-" | downcase }}">
     
     <header role="banner" class="global">
-      <a href="#js-menu-global" class="header-button-menu">Menu</a>
+      <a href="#js-menu-global" class="header-button-menu">
+        <span class="icon-menu icon-alone">Menu</span>
+        <span class="icon-close icon-alone">Close</span>
+      </a>
       <a href="{{ relativepath }}{{ site.baseurl }}/" class="header-logo"><img src="{{ relativepath }}{{ site.baseurl }}{{ site.assets.img }}logo-FDWD.svg" alt="Franklin, Denney, Ward and Dryer, Attorneys at Law" /></a>
       <h6 class="header-tagline">A full service law firm<br /> since 1931</h6>
       <nav role="navigation" class="global" id="js-menu-global">
