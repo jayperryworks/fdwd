@@ -57,7 +57,7 @@ title: home
       {% comment %}col {% if colnum < '5' %}first{% else %}second{% endif %}{% endcomment %}
       <li>
         <a class="bullet" href="{{ relativepath }}{{ site.baseurl }}/practice-areas.html#{{ post.slug }}">
-          <span class="bullet-icon"></span>
+          <span class="bullet-icon icon-{{ post.icon }}"></span>
           <h4 class="bullet-label">{{ post.title | xml_escape }}</h4>
         </a>
       </li>

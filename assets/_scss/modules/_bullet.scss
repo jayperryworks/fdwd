@@ -1,16 +1,17 @@
-// ==========================================================================
+/* ==========================================================================
 //  Bullet component
 // -> a list of things with big icons for each item
 // -> use with a UL parent or with .grid
-// ==========================================================================
+// ========================================================================== */
 
-$size-bullet: 3em;
+$size-bullet: 2.7em;
 
-// BASE
-// -----------------------------------------------------------------------------
+/* BASE
+// ----------------------------------------------------------------------------- */
 .bullet {
   @extend %h4;
   display: block;
+  position: relative;
   overflow: visible;
   padding: 0.25em;
   margin-bottom: 1em;
@@ -19,27 +20,31 @@ $size-bullet: 3em;
 
   &:hover, &:active {
     color: $green;
-    background: darken(white, 5);
+    background-color: darken(white, 5);
 
     .bullet-icon {
-      background: $green;
+      background-color: $green;
     }
   }
 }
 
-// SUBMODULES
-// -----------------------------------------------------------------------------
+/* SUBMODULES
+// ----------------------------------------------------------------------------- */
 
 .bullet-icon {
+  $center-overhang: -(($size-bullet - 1)/4);
   @extend %base-transition;
-  @include position(absolute, -0.5em 0 -0.5em -0.25em);
+  @include position(absolute, $center-overhang 0 $center-overhang -0.25em);
   @include circle($size-bullet);
   display: block;
   vertical-align: middle;
-  background: $blue;
+  background-color: $blue;
+  background-size: 60%;
+  background-position: center center;
 
   &:after {
     $margin: 0.5em;
+    // @include position(absolute, -($margin/2) -($margin/2) -($margin/2) -($margin/2));
     content: ' ';
     position: absolute;
     top: -($margin/2);
@@ -47,13 +52,18 @@ $size-bullet: 3em;
     right: -($margin/2);
     bottom: -($margin/2);
     z-index: -1;
-    background: white;
+    background-color: white;
     border: 1px solid darken($gray--light, 5);
     border-radius: $size-bullet + $margin;
   }
 
   &:hover, &:active {
-    background: $green;
+    background-color: $green;
+  }
+
+  /* tweaks for bulky icons -- need more breathing room */
+  &.icon-business_org, &.icon-personal_injury, &.icon-estate_planning {
+    background-size: 50%;
   }
 }
 

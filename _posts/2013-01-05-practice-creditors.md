@@ -5,7 +5,7 @@ date:   2014-01-05 19:22:05
 categories: practice-areas
 slug: creditors
 
-picture: http://placehold.it/250x200
+icon: debtors
 
 ---
 

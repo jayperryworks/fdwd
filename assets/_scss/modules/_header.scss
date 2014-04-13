@@ -1,12 +1,14 @@
-// ==========================================================================
+/* ==========================================================================
 //  Header modules
-// ==========================================================================
+// ========================================================================== */
 
-// GLOBAL
-// -----------------------------------------------------------------------------
+/* GLOBAL
+// ----------------------------------------------------------------------------- */
 
 $header-h: 100px;
 $header-tagline-w: 135px;
+
+$breakpoint-tagline: 401px;
 
 [role="banner"].global {
   // @extend %base-transition;
@@ -43,16 +45,37 @@ $header-tagline-w: 135px;
     @include breakpoint($breakpoint-header) {
       @include hidden;
     }
+
+    [class*="icon-"] {
+      @include rem(width, $h);
+    }
+    .icon-menu {
+      @include restore-visible;
+    }
+    .icon-close {
+      @include hidden;
+    }
+  }
+  .menu-open {
+    .icon-menu {
+      @include hidden;
+    }
+    .icon-close {
+      @include restore-visible;
+    }
   }
 
   .header-logo {
     @include inline-block--centered($header-h);
-    @include rem(right, -($header-tagline-w/2));
     @include transition(none);
     position: relative;
 
     & > img {
       @include rem(height, 70%);
+    }
+
+    @include breakpoint($breakpoint-tagline) {
+      @include rem(right, -($header-tagline-w/2));
     }
 
     @include breakpoint($breakpoint-header) {
@@ -72,12 +95,17 @@ $header-tagline-w: 135px;
   }
 
   .header-tagline {
-    // @include inline-block--centered($header-h);
-    @include inline-block;
-    @include rem(right, -($header-tagline-w/2));
-    @include rem(padding-left, 12px);
-    position: relative;
-    text-align: left;
+    @include hidden;
+    
+
+    @include breakpoint($breakpoint-tagline) {
+      @include restore-visible;
+      @include inline-block;
+      @include rem(right, -($header-tagline-w/2));
+      @include rem(padding-left, 12px);
+      position: relative;
+      text-align: left;
+    }
 
     @include breakpoint($breakpoint-header) {
       @include rem(margin-top, 16px);

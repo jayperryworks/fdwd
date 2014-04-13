@@ -1,12 +1,26 @@
+.icon-arrow-down-highlight { background-image: url('../images/icons/arrow-down-highlight.png'); background-repeat: no-repeat; }
+
+.icon-arrow-down-rev { background-image: url('../images/icons/arrow-down-rev.png'); background-repeat: no-repeat; }
+
 .icon-arrow-down { background-image: url('../images/icons/arrow-down.png'); background-repeat: no-repeat; }
 
+.icon-arrow-right-highlight { background-image: url('../images/icons/arrow-right-highlight.png'); background-repeat: no-repeat; }
+
+.icon-arrow-right-rev { background-image: url('../images/icons/arrow-right-rev.png'); background-repeat: no-repeat; }
+
 .icon-arrow-right { background-image: url('../images/icons/arrow-right.png'); background-repeat: no-repeat; }
+
+.icon-arrow-up-highlight { background-image: url('../images/icons/arrow-up-highlight.png'); background-repeat: no-repeat; }
+
+.icon-arrow-up-rev { background-image: url('../images/icons/arrow-up-rev.png'); background-repeat: no-repeat; }
 
 .icon-arrow-up { background-image: url('../images/icons/arrow-up.png'); background-repeat: no-repeat; }
 
 .icon-bankruptcy { background-image: url('../images/icons/bankruptcy.png'); background-repeat: no-repeat; }
 
 .icon-business_org { background-image: url('../images/icons/business_org.png'); background-repeat: no-repeat; }
+
+.icon-close { background-image: url('../images/icons/close.png'); background-repeat: no-repeat; }
 
 .icon-criminal_defense { background-image: url('../images/icons/criminal_defense.png'); background-repeat: no-repeat; }
 
@@ -17,6 +31,8 @@
 .icon-family_law { background-image: url('../images/icons/family_law.png'); background-repeat: no-repeat; }
 
 .icon-google { background-image: url('../images/icons/google.png'); background-repeat: no-repeat; }
+
+.icon-menu { background-image: url('../images/icons/menu.png'); background-repeat: no-repeat; }
 
 .icon-pdf { background-image: url('../images/icons/pdf.png'); background-repeat: no-repeat; }
 

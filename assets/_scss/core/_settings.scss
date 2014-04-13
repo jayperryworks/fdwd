@@ -8,6 +8,7 @@ $path-fonts: "../fonts/";
 $base-duration: 0.5s; // in seconds
 
 %base-transition {
+  /* base transition used globally */
   @include transition (all $base-duration);
 }
 

@@ -1,6 +1,6 @@
-// ==========================================================================
+/* ==========================================================================
 //  Navigation modules
-// ==========================================================================
+// ========================================================================== */
 
 
 // BASE
@@ -13,7 +13,7 @@
 // SUBMODULES
 // -----------------------------------------------------------------------------
 
-// ------- Global/main nav -------------------------------------------
+/* ------- Global/main nav ------------------------------------------- */
 
 [role="navigation"].global {
   // @extend %base-transition;
@@ -76,7 +76,7 @@
 }
 
 
-// ------- Accordion (local) nav -------------------------------------------
+/* ------- Accordion (local) nav ------------------------------------------- */
 
 .js {
   .accordion {
@@ -92,6 +92,8 @@
   }
 
   .accordion-content.excerpt {
+    @include restore-visible;
+
     // hide everything but the first paragraph
     & > * {
       @include hidden;
@@ -110,36 +112,54 @@
 
   // init -- show the "more" button
   .accordion-button {
+    $icon-size: 18px;
     @include restore-visible;
-    display: block;
+    @include inline-block;
+    // display: block;
 
     & > #{headers()} {
       @include inline-block;
     }
 
     .hide {
+      @extend %read_more;
       @include hidden;
-      @include inline-block;
     }
     .expand {
+      @extend %read_more;
       @include restore-visible;
       @include inline-block;
     }
-  }
 
-  .accordion-button.active {
-    // color: red !important;
-
-    .hide {
-      @include restore-visible;
+    [class*="icon-"] {
+      margin-left: 0.3em;
     }
-    .expand {
-      @include hidden;
+
+    &.active {
+
+      .hide {
+        @include restore-visible;
+        @include inline-block;
+      }
+      .expand {
+        @include hidden;
+      }
+    }
+
+    &.large {
+      [class*="icon-"] {
+        @include rem(width, $icon-size);
+        @include rem(height, $icon-size);
+      }
     }
   }
 }
 
 .no-js {
+
+  .accordion-content.excerpt > * {
+    @include restore-visible;
+  }
 
   // if JS is disabled, hide the buttons
   .accordion-button {

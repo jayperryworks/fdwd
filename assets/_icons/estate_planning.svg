@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <title>estate_planning</title>
     <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
     <defs></defs>
     <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="estate_planning" sketch:type="MSArtboardGroup" fill="#849296">
-            <path d="M19.6428544,13.3669272 L19.6428544,20.6286602 L14.4540049,20.6286602 L14.4540049,16.6822039 L10.5459515,16.6822039 L10.5459515,20.6286602 L5.35710194,20.6286602 L5.35710194,13.3669272 L3.5,13.3669272 L12.5,4.37378641 L21.5,13.3669709 L19.6428544,13.3669709 L19.6428544,13.3669272 Z M18.5322718,5.18203883 L16.4388107,5.18203883 L16.4388107,6.85582039 L18.5322718,8.95391262 L18.5322718,5.18203883 L18.5322718,5.18203883 Z" id="home-4-icon" sketch:type="MSShapeGroup"></path>
+        <g id="estate_planning" sketch:type="MSArtboardGroup" fill="#FFFFFF">
+            <path d="M50.8051207,32.727342 L50.8051207,54.0071695 L35.5996839,54.0071695 L35.5996839,42.4424494 L24.1474999,42.4424494 L24.1474999,54.0071695 L8.94206307,54.0071695 L8.94206307,32.727342 L3.5,32.727342 L29.8736559,6.37378641 L56.2473118,32.72747 L50.8051207,32.72747 L50.8051207,32.727342 Z M47.5506628,8.74229434 L41.4159712,8.74229434 L41.4159712,13.6471542 L47.5506628,19.7954167 L47.5506628,8.74229434 L47.5506628,8.74229434 Z" id="home-4-icon" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>

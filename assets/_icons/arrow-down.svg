@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <title>arrow-down</title>
     <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
     <defs></defs>
     <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="arrow-down" sketch:type="MSArtboardGroup" fill="#849296">
-            <path d="M12.5746731,15.1860487 L6.5011823,7.53491183 C5.99777224,6.9007363 5.10413807,6.81873549 4.50519451,7.35175791 C3.90625095,7.88478032 3.82880575,8.83098121 4.3322158,9.46515675 L11.4764374,18.4651567 L12.5609206,19.8313447 L13.6454039,18.4651567 L20.667849,9.61856584 C21.171259,8.9843903 21.0938138,8.03818942 20.4948703,7.505167 C19.8959267,6.97214459 19.0022925,7.05414539 18.4988825,7.68832092 L12.5746731,15.1860487 Z" id="Imported-Layers-copy" sketch:type="MSShapeGroup"></path>
+            <path d="M29.2152343,37.3597876 L11.7092901,15.3065106 C10.2582847,13.4785929 7.6825156,13.2422376 5.95614887,14.7785963 C4.22978215,16.3149551 4.00655774,19.04224 5.4575632,20.8701577 L26.0497313,46.8113342 L29.1755948,50.7491699 L32.3014582,46.8113342 L52.5426235,21.3123368 C53.9936289,19.4844191 53.7704045,16.7571342 52.0440378,15.2207755 C50.3176711,13.6844167 47.741902,13.920772 46.2908965,15.7486897 L29.2152343,37.3597876 Z" id="Imported-Layers-copy-5" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>

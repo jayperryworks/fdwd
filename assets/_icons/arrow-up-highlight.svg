@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>arrow-up-highlight</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="arrow-up-highlight" sketch:type="MSArtboardGroup" fill="#3DA288">
+            <path d="M29.2152343,34.8303758 L11.7092901,12.7770988 C10.2582847,10.9491811 7.6825156,10.7128258 5.95614887,12.2491846 C4.22978215,13.7855433 4.00655774,16.5128282 5.4575632,18.3407459 L26.0497313,44.2819224 L29.1755948,48.2197582 L32.3014582,44.2819224 L52.5426235,18.7829251 C53.9936289,16.9550073 53.7704045,14.2277224 52.0440378,12.6913637 C50.3176711,11.155005 47.741902,11.3913602 46.2908965,13.219278 L29.2152343,34.8303758 Z" id="Imported-Layers-copy-5" sketch:type="MSShapeGroup" transform="translate(29.000000, 29.735294) rotate(-180.000000) translate(-29.000000, -29.735294) "></path>
+        </g>
+    </g>
+</svg>

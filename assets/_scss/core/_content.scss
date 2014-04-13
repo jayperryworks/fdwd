@@ -1,6 +1,6 @@
-// ==============================================================================
+/* ==============================================================================
 // 	Global type
-// ==============================================================================
+// ============================================================================== */
 
 %text-body {
 	@include rem(font-size, 16px);
@@ -68,7 +68,7 @@ h6, %h6 {
   @include rem(margin-bottom, 24px);
 }
 
-// bigger first paragraph
+/* bigger first paragraph */
 .intro {
 	@include rem(font-size, 21px);
 }
@@ -92,7 +92,7 @@ p {
 
 ol, ul {
 	margin-left: 0;
-	padding-left: 1em; // bump to the right a little @ mobile sizes so the numbers/bullets don't run off
+	padding-left: 1em; /* bump to the right a little @ mobile sizes so the numbers/bullets don't run off */
 
 	@include breakpoint($small) {
 		padding-left: 0;
@@ -113,7 +113,7 @@ figcaption {
 	margin-top: 0.5em;
 }
 
-// if @font-face is supported, use Playfair ampersands...
+/* if @font-face is supported, use Playfair ampersands... */
 .fontface {
 	.amp {
 		@extend %playfair;
@@ -126,15 +126,16 @@ figcaption {
 	}
 }
 
-// otherwise, use the best ampersands from common system fonts
+/* otherwise, use the best ampersands from common system fonts */
 .amp {
 	font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
 	font-style: italic;
 	font-weight: normal;
-	font-size: $type-size-amp; // relative to whatever type surrounds it -- it renders slightly bigger
+	font-size: $type-size-amp; /* relative to whatever type surrounds it -- it renders slightly bigger */
 }
 
-.read_more {
+/* "read more" links at the end of excerpts */
+.read_more, %read_more {
 	@extend %museo-medium;
 	font-size: 0.8em;
 	text-transform: uppercase;

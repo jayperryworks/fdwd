@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     watch: {
       icons: {
         files: ['<%= fdwd.assets %>/_icons'],
-        tasks: ['svgmin:dev, grunticon:dev']
+        tasks: ['svgmin:dev, grunticon:dev, copy:assets']
       },
       compass: {
         files: ['<%= fdwd.scss %>/**/*.{scss,sass}'],
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         }
       },
       assets: {
-        files: ['assets/{js,fonts,images,css}/**'],
+        files: ['assets/{js,fonts,images}/**'],
         tasks: ['copy:assets'],
         options: {
           livereload: true
@@ -177,12 +177,12 @@ module.exports = function(grunt) {
         options: {
           loadersnippet: '../../_includes/grunticon_loader.js',
           pngfolder: '../images/icons/',
-          previewhtml: '../../grunticon-preview.html'
-          // colors: {
-          //   highlight: '#3da288', // green
-          //   dark: '#293F47', // blue
-          //   reverse: '#fff' // white
-          // }
+          previewhtml: '../../grunticon-preview.html',
+          colors: {
+            highlight: '#3da288',
+            dark: '#293F47',
+            reverse: 'white'
+          }
         }
       }
     },

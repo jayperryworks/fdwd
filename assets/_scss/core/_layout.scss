@@ -1,6 +1,6 @@
-// ==============================================================================
+/* ==============================================================================
 // Global layout styles
-// ==============================================================================
+// ============================================================================== */
 
 // CONFIG/MIXINS
 // -----------------------------------------------------------------------------
@@ -132,7 +132,7 @@ body {
   // }
 }
 
-// set up the "open menu" state for mobile screens
+/* set up the "open menu" state for mobile screens */
 .menu-open {
   [role="main"], [role="banner"].global, footer.global {
     // @include transform(translateX($header-w));
@@ -161,6 +161,7 @@ body {
   clear: both;
 }
 
+/* "feature" blurb on landing page */
 .feature {
   @extend %max-width;
   @include clearfix;
@@ -183,6 +184,10 @@ body {
     // @include layout-margins;
     padding-top: $grid-gutter;
     // @include rem(padding-top, $grid-gutter);
+
+    & > figure {
+      margin: 0;
+    }
   }
 
     .feature-sidebar-thumb {
