@@ -4,7 +4,7 @@
 // -> use with a UL parent or with .grid
 // ========================================================================== */
 
-$size-bullet: 2.7em;
+$size-bullet: 3em;
 
 /* BASE
 // ----------------------------------------------------------------------------- */
@@ -12,19 +12,24 @@ $size-bullet: 2.7em;
   @extend %h4;
   display: block;
   position: relative;
-  overflow: visible;
+  width: 100%;
   padding: 0.25em;
-  margin-bottom: 1em;
+  // margin-bottom: 1em;
+  overflow: visible;
   z-index: $z--low;
   color: $blue;
 
   &:hover, &:active {
     color: $green;
-    background-color: darken(white, 5);
+    background-color: darken(white, 3);
 
     .bullet-icon {
       background-color: $green;
     }
+  }
+
+  &.alone {
+    margin-bottom: 1em;
   }
 }
 
@@ -34,9 +39,10 @@ $size-bullet: 2.7em;
 .bullet-icon {
   $center-overhang: -(($size-bullet - 1)/4);
   @extend %base-transition;
-  @include position(absolute, $center-overhang 0 $center-overhang -0.25em);
+  @include position(absolute, 50% 0 0 -0.3em);
   @include circle($size-bullet);
   display: block;
+  margin-top: -($size-bullet/2);
   vertical-align: middle;
   background-color: $blue;
   background-size: 60%;
@@ -65,9 +71,25 @@ $size-bullet: 2.7em;
   &.icon-business_org, &.icon-personal_injury, &.icon-estate_planning {
     background-size: 50%;
   }
+
+  // &.small {
+  //   $size-bullet--small: $size-bullet - 1em;
+  //   @include circle($size-bullet--small);
+  //   margin-top: -($size-bullet--small/2);
+  // }
 }
 
 .bullet-label {
   @include inline-block;
-  margin-left: ($size-bullet + 0.5em);
+  $size-px: (em-to-px($size-bullet) + 16px);
+  @include rem(margin-left, $size-px);
+  // margin-left: $size-px;
+  // @include rem(margin-left, )
+  // margin-left: ($size-bullet + 0.5em);
+}
+
+.bullet-content {
+  $size-px: (em-to-px($size-bullet) + 16px);
+  @include rem(margin-left, $size-px);
+  padding: 0.25em;
 }

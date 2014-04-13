@@ -89,6 +89,10 @@
   text-align: center;
 }
 
+%overflow, .overflow {
+  overflow: visible;
+}
+
 // BASE LAYOUTS
 // -----------------------------------------------------------------------------
 
@@ -159,6 +163,10 @@ body {
   @include layout-margins;
   overflow: hidden;
   clear: both;
+
+  &.overflow {
+    overflow: visible;
+  }
 }
 
 /* "feature" blurb on landing page */

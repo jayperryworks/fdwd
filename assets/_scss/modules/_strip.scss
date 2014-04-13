@@ -62,6 +62,10 @@
   
 }
 
+.strip.pointer {
+  @include rem(padding-top, 36px);
+}
+
 // ---- Attorney profile -------------------------------------------------------
 
 .strip.profile {

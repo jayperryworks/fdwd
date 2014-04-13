@@ -173,7 +173,7 @@ p strong, table strong, li strong {
 }
 
 @-moz-keyframes spin {
-  /* line 231, ../_scss/core/_helpers.scss */
+  /* line 235, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -181,7 +181,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 238, ../_scss/core/_helpers.scss */
+  /* line 242, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -191,7 +191,7 @@ p strong, table strong, li strong {
 }
 
 @-webkit-keyframes spin {
-  /* line 246, ../_scss/core/_helpers.scss */
+  /* line 250, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -199,7 +199,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 253, ../_scss/core/_helpers.scss */
+  /* line 257, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -209,7 +209,7 @@ p strong, table strong, li strong {
 }
 
 @-o-keyframes spin {
-  /* line 261, ../_scss/core/_helpers.scss */
+  /* line 265, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -217,7 +217,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 268, ../_scss/core/_helpers.scss */
+  /* line 272, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -227,7 +227,7 @@ p strong, table strong, li strong {
 }
 
 @-ms-keyframes spin {
-  /* line 276, ../_scss/core/_helpers.scss */
+  /* line 280, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -235,7 +235,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 283, ../_scss/core/_helpers.scss */
+  /* line 287, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -245,7 +245,7 @@ p strong, table strong, li strong {
 }
 
 @keyframes spin {
-  /* line 291, ../_scss/core/_helpers.scss */
+  /* line 295, ../_scss/core/_helpers.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -253,7 +253,7 @@ p strong, table strong, li strong {
     transform: rotate(0deg);
   }
 
-  /* line 298, ../_scss/core/_helpers.scss */
+  /* line 302, ../_scss/core/_helpers.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -578,13 +578,18 @@ figure {
   text-align: center;
 }
 
-/* line 95, ../_scss/core/_layout.scss */
+/* line 92, ../_scss/core/_layout.scss */
+.overflow {
+  overflow: visible;
+}
+
+/* line 99, ../_scss/core/_layout.scss */
 html {
   width: 100%;
   height: 100%;
 }
 
-/* line 100, ../_scss/core/_layout.scss */
+/* line 104, ../_scss/core/_layout.scss */
 body {
   min-height: 100%;
   width: 100%;
@@ -593,14 +598,14 @@ body {
   overflow-x: hidden;
 }
 @media (min-width: 48em) {
-  /* line 100, ../_scss/core/_layout.scss */
+  /* line 104, ../_scss/core/_layout.scss */
   body {
     width: auto;
     overflow: auto;
   }
 }
 
-/* line 113, ../_scss/core/_layout.scss */
+/* line 117, ../_scss/core/_layout.scss */
 [role="main"], .main, footer.global, .footer.global {
   -webkit-transition: left 0.3s ease;
   -moz-transition: left 0.3s ease false;
@@ -618,7 +623,7 @@ body {
   clear: both;
 }
 @media (min-width: 48em) {
-  /* line 113, ../_scss/core/_layout.scss */
+  /* line 117, ../_scss/core/_layout.scss */
   [role="main"], .main, footer.global, .footer.global {
     margin-left: 180px;
     width: calc(100% - $header-w);
@@ -626,11 +631,11 @@ body {
 }
 
 /* set up the "open menu" state for mobile screens */
-/* line 137, ../_scss/core/_layout.scss */
+/* line 141, ../_scss/core/_layout.scss */
 .menu-open [role="main"], .menu-open [role="banner"].global, .menu-open footer.global {
   left: 180px;
 }
-/* line 143, ../_scss/core/_layout.scss */
+/* line 147, ../_scss/core/_layout.scss */
 .menu-open [role="navigation"].global {
   left: 0;
   -webkit-transition: left 0.3s ease;
@@ -639,13 +644,13 @@ body {
   transition: left 0.3s ease;
 }
 @media (min-width: 48em) {
-  /* line 150, ../_scss/core/_layout.scss */
+  /* line 154, ../_scss/core/_layout.scss */
   .menu-open [role="main"], .menu-open [role="banner"] {
     left: 0;
   }
 }
 
-/* line 156, ../_scss/core/_layout.scss */
+/* line 160, ../_scss/core/_layout.scss */
 .title, .wrapper {
   padding-left: 48px;
   padding-right: 48px;
@@ -658,9 +663,13 @@ body {
   display: table;
   clear: both;
 }
+/* line 167, ../_scss/core/_layout.scss */
+.overflow.title, .wrapper.overflow {
+  overflow: visible;
+}
 
 /* "feature" blurb on landing page */
-/* line 165, ../_scss/core/_layout.scss */
+/* line 173, ../_scss/core/_layout.scss */
 .feature {
   margin-top: -96px;
   margin-top: -6rem;
@@ -674,7 +683,7 @@ body {
   clear: both;
 }
 
-/* line 172, ../_scss/core/_layout.scss */
+/* line 180, ../_scss/core/_layout.scss */
 .feature-copy {
   width: 75%;
   float: left;
@@ -687,7 +696,7 @@ body {
   padding-top: 24px;
 }
 
-/* line 179, ../_scss/core/_layout.scss */
+/* line 187, ../_scss/core/_layout.scss */
 .feature-sidebar {
   width: 25%;
   float: right;
@@ -698,12 +707,12 @@ body {
   padding: 24px;
   padding-top: 24px;
 }
-/* line 188, ../_scss/core/_layout.scss */
+/* line 196, ../_scss/core/_layout.scss */
 .feature-sidebar > figure {
   margin: 0;
 }
 
-/* line 193, ../_scss/core/_layout.scss */
+/* line 201, ../_scss/core/_layout.scss */
 .feature-sidebar-thumb {
   display: block;
 }
@@ -907,21 +916,21 @@ figcaption {
   background: #f2f2f2;
   border-color: #e6e6e6;
 }
-/* line 145, ../_scss/core/_helpers.scss */
+/* line 149, ../_scss/core/_helpers.scss */
 .theme-default input::-webkit-input-placeholder, .theme-default textarea::-webkit-input-placeholder, body input::-webkit-input-placeholder, body textarea::-webkit-input-placeholder {
   color: #d9d9d9;
 }
-/* line 149, ../_scss/core/_helpers.scss */
+/* line 153, ../_scss/core/_helpers.scss */
 .theme-default input:-moz-placeholder, .theme-default textarea:-moz-placeholder, body input:-moz-placeholder, body textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #d9d9d9;
 }
-/* line 153, ../_scss/core/_helpers.scss */
+/* line 157, ../_scss/core/_helpers.scss */
 .theme-default input::-moz-placeholder, .theme-default textarea::-moz-placeholder, body input::-moz-placeholder, body textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #d9d9d9;
 }
-/* line 157, ../_scss/core/_helpers.scss */
+/* line 161, ../_scss/core/_helpers.scss */
 .theme-default input:-ms-input-placeholder, .theme-default textarea:-ms-input-placeholder, body input:-ms-input-placeholder, body textarea:-ms-input-placeholder {
   color: #d9d9d9;
 }
@@ -1022,21 +1031,21 @@ footer.local input, .footer.local input, footer.local textarea, .footer.local te
   background: #44b598;
   border-color: #286a59;
 }
-/* line 145, ../_scss/core/_helpers.scss */
+/* line 149, ../_scss/core/_helpers.scss */
 footer.local input::-webkit-input-placeholder, .footer.local input::-webkit-input-placeholder, footer.local textarea::-webkit-input-placeholder, .footer.local textarea::-webkit-input-placeholder, .theme-flood input::-webkit-input-placeholder, .theme-flood textarea::-webkit-input-placeholder {
   color: #79ccb7;
 }
-/* line 149, ../_scss/core/_helpers.scss */
+/* line 153, ../_scss/core/_helpers.scss */
 footer.local input:-moz-placeholder, .footer.local input:-moz-placeholder, footer.local textarea:-moz-placeholder, .footer.local textarea:-moz-placeholder, .theme-flood input:-moz-placeholder, .theme-flood textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #79ccb7;
 }
-/* line 153, ../_scss/core/_helpers.scss */
+/* line 157, ../_scss/core/_helpers.scss */
 footer.local input::-moz-placeholder, .footer.local input::-moz-placeholder, footer.local textarea::-moz-placeholder, .footer.local textarea::-moz-placeholder, .theme-flood input::-moz-placeholder, .theme-flood textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #79ccb7;
 }
-/* line 157, ../_scss/core/_helpers.scss */
+/* line 161, ../_scss/core/_helpers.scss */
 footer.local input:-ms-input-placeholder, .footer.local input:-ms-input-placeholder, footer.local textarea:-ms-input-placeholder, .footer.local textarea:-ms-input-placeholder, .theme-flood input:-ms-input-placeholder, .theme-flood textarea:-ms-input-placeholder {
   color: #79ccb7;
 }
@@ -1137,21 +1146,21 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   background: #343e3e;
   border-color: #050606;
 }
-/* line 145, ../_scss/core/_helpers.scss */
+/* line 149, ../_scss/core/_helpers.scss */
 [role="navigation"].global input::-webkit-input-placeholder, footer.global input::-webkit-input-placeholder, .footer.global input::-webkit-input-placeholder, [role="navigation"].global textarea::-webkit-input-placeholder, footer.global textarea::-webkit-input-placeholder, .footer.global textarea::-webkit-input-placeholder, .theme-reverse input::-webkit-input-placeholder, .theme-reverse textarea::-webkit-input-placeholder {
   color: #566868;
 }
-/* line 149, ../_scss/core/_helpers.scss */
+/* line 153, ../_scss/core/_helpers.scss */
 [role="navigation"].global input:-moz-placeholder, footer.global input:-moz-placeholder, .footer.global input:-moz-placeholder, [role="navigation"].global textarea:-moz-placeholder, footer.global textarea:-moz-placeholder, .footer.global textarea:-moz-placeholder, .theme-reverse input:-moz-placeholder, .theme-reverse textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #566868;
 }
-/* line 153, ../_scss/core/_helpers.scss */
+/* line 157, ../_scss/core/_helpers.scss */
 [role="navigation"].global input::-moz-placeholder, footer.global input::-moz-placeholder, .footer.global input::-moz-placeholder, [role="navigation"].global textarea::-moz-placeholder, footer.global textarea::-moz-placeholder, .footer.global textarea::-moz-placeholder, .theme-reverse input::-moz-placeholder, .theme-reverse textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #566868;
 }
-/* line 157, ../_scss/core/_helpers.scss */
+/* line 161, ../_scss/core/_helpers.scss */
 [role="navigation"].global input:-ms-input-placeholder, footer.global input:-ms-input-placeholder, .footer.global input:-ms-input-placeholder, [role="navigation"].global textarea:-ms-input-placeholder, footer.global textarea:-ms-input-placeholder, .footer.global textarea:-ms-input-placeholder, .theme-reverse input:-ms-input-placeholder, .theme-reverse textarea:-ms-input-placeholder {
   color: #566868;
 }
@@ -1245,41 +1254,45 @@ footer.local .island, .footer.local .island, .theme-flood .island {
 .bullet {
   display: block;
   position: relative;
-  overflow: visible;
+  width: 100%;
   padding: 0.25em;
-  margin-bottom: 1em;
+  overflow: visible;
   z-index: 0;
   color: #293f47;
 }
-/* line 21, ../_scss/modules/_bullet.scss */
+/* line 22, ../_scss/modules/_bullet.scss */
 .bullet:hover, .bullet:active {
   color: #3da288;
-  background-color: #f2f2f2;
+  background-color: #f7f7f7;
 }
-/* line 25, ../_scss/modules/_bullet.scss */
+/* line 26, ../_scss/modules/_bullet.scss */
 .bullet:hover .bullet-icon, .bullet:active .bullet-icon {
   background-color: #3da288;
 }
+/* line 31, ../_scss/modules/_bullet.scss */
+.bullet.alone {
+  margin-bottom: 1em;
+}
 
-/* line 34, ../_scss/modules/_bullet.scss */
+/* line 39, ../_scss/modules/_bullet.scss */
 .bullet-icon {
   position: absolute;
-  top: -0.425em;
-  bottom: -0.425em;
-  left: -0.25em;
-  height: 2.7em;
-  width: 2.7em;
-  border-radius: 2.7em;
-  -moz-border-radius: 2.7em;
-  -webkit-border-radius: 2.7em;
+  top: 50%;
+  left: -0.3em;
+  height: 3em;
+  width: 3em;
+  border-radius: 3em;
+  -moz-border-radius: 3em;
+  -webkit-border-radius: 3em;
   display: block;
+  margin-top: -1.5em;
   vertical-align: middle;
   background-color: #293f47;
   background-size: 60%;
   background-position: center center;
   /* tweaks for bulky icons -- need more breathing room */
 }
-/* line 45, ../_scss/modules/_bullet.scss */
+/* line 51, ../_scss/modules/_bullet.scss */
 .bullet-icon:after {
   content: ' ';
   position: absolute;
@@ -1290,18 +1303,18 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   z-index: -1;
   background-color: white;
   border: 1px solid #d4d6d8;
-  border-radius: 3.2em;
+  border-radius: 3.5em;
 }
-/* line 60, ../_scss/modules/_bullet.scss */
+/* line 66, ../_scss/modules/_bullet.scss */
 .bullet-icon:hover, .bullet-icon:active {
   background-color: #3da288;
 }
-/* line 65, ../_scss/modules/_bullet.scss */
+/* line 71, ../_scss/modules/_bullet.scss */
 .bullet-icon.icon-business_org, .bullet-icon.icon-personal_injury, .bullet-icon.icon-estate_planning {
   background-size: 50%;
 }
 
-/* line 70, ../_scss/modules/_bullet.scss */
+/* line 82, ../_scss/modules/_bullet.scss */
 .bullet-label {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1309,7 +1322,15 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  margin-left: 3.2em;
+  margin-left: 64px;
+  margin-left: 4rem;
+}
+
+/* line 91, ../_scss/modules/_bullet.scss */
+.bullet-content {
+  margin-left: 64px;
+  margin-left: 4rem;
+  padding: 0.25em;
 }
 
 /* line 13, ../_scss/modules/_header.scss */
@@ -1406,7 +1427,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   transition: none;
   position: relative;
 }
-/* line 406, ../_scss/core/_helpers.scss */
+/* line 410, ../_scss/core/_helpers.scss */
 .header-logo::before, .header-logo:before {
   content: '';
   display: inline-block;
@@ -1570,21 +1591,21 @@ footer.local .island, .footer.local .island, .theme-flood .island {
     background: #f2f2f2;
     border-color: #e6e6e6;
   }
-  /* line 145, ../_scss/core/_helpers.scss */
+  /* line 149, ../_scss/core/_helpers.scss */
   [role="navigation"].global input::-webkit-input-placeholder, [role="navigation"].global textarea::-webkit-input-placeholder {
     color: #d9d9d9;
   }
-  /* line 149, ../_scss/core/_helpers.scss */
+  /* line 153, ../_scss/core/_helpers.scss */
   [role="navigation"].global input:-moz-placeholder, [role="navigation"].global textarea:-moz-placeholder {
     /* Firefox 18- */
     color: #d9d9d9;
   }
-  /* line 153, ../_scss/core/_helpers.scss */
+  /* line 157, ../_scss/core/_helpers.scss */
   [role="navigation"].global input::-moz-placeholder, [role="navigation"].global textarea::-moz-placeholder {
     /* Firefox 19+ */
     color: #d9d9d9;
   }
-  /* line 157, ../_scss/core/_helpers.scss */
+  /* line 161, ../_scss/core/_helpers.scss */
   [role="navigation"].global input:-ms-input-placeholder, [role="navigation"].global textarea:-ms-input-placeholder {
     color: #d9d9d9;
   }
@@ -1653,37 +1674,47 @@ footer.local .island, .footer.local .island, .theme-flood .island {
 }
 
 /* ------- Accordion (local) nav ------------------------------------------- */
-/* line 86, ../_scss/modules/_navigation.scss */
+/* line 82, ../_scss/modules/_navigation.scss */
+.js .accordion {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: 1.5em;
+}
+/* line 88, ../_scss/modules/_navigation.scss */
+.js .accordion:last-child {
+  margin-bottom: 0;
+}
+/* line 93, ../_scss/modules/_navigation.scss */
 .js .accordion-content {
   display: none;
   visibility: hidden;
 }
-/* line 89, ../_scss/modules/_navigation.scss */
+/* line 96, ../_scss/modules/_navigation.scss */
 .js .accordion-content.is-open {
   display: block;
   visibility: visible;
 }
-/* line 94, ../_scss/modules/_navigation.scss */
+/* line 101, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt {
   display: block;
   visibility: visible;
 }
-/* line 98, ../_scss/modules/_navigation.scss */
+/* line 105, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt > * {
   display: none;
   visibility: hidden;
 }
-/* line 102, ../_scss/modules/_navigation.scss */
+/* line 109, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt p:first-child {
   display: block;
   visibility: visible;
 }
-/* line 108, ../_scss/modules/_navigation.scss */
+/* line 115, ../_scss/modules/_navigation.scss */
 .js .accordion-content.excerpt.is-open > * {
   display: block;
   visibility: visible;
 }
-/* line 114, ../_scss/modules/_navigation.scss */
+/* line 121, ../_scss/modules/_navigation.scss */
 .js .accordion-button {
   display: block;
   visibility: visible;
@@ -1694,7 +1725,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
 }
-/* line 120, ../_scss/modules/_navigation.scss */
+/* line 127, ../_scss/modules/_navigation.scss */
 .js .accordion-button > h1, .js .accordion-button h2, .js .accordion-button h3, .js .accordion-button h4, .js .accordion-button h5, .js .accordion-button h6 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1703,12 +1734,12 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
 }
-/* line 124, ../_scss/modules/_navigation.scss */
+/* line 131, ../_scss/modules/_navigation.scss */
 .js .accordion-button .hide {
   display: none;
   visibility: hidden;
 }
-/* line 128, ../_scss/modules/_navigation.scss */
+/* line 135, ../_scss/modules/_navigation.scss */
 .js .accordion-button .expand {
   display: block;
   visibility: visible;
@@ -1719,11 +1750,11 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
 }
-/* line 134, ../_scss/modules/_navigation.scss */
-.js .accordion-button [class*="icon-"] {
+/* line 141, ../_scss/modules/_navigation.scss */
+.js .accordion-button [class*="icon-arrow-"] {
   margin-left: 0.3em;
 }
-/* line 140, ../_scss/modules/_navigation.scss */
+/* line 147, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .hide {
   display: block;
   visibility: visible;
@@ -1734,25 +1765,25 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
 }
-/* line 144, ../_scss/modules/_navigation.scss */
+/* line 151, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .expand {
   display: none;
   visibility: hidden;
 }
-/* line 150, ../_scss/modules/_navigation.scss */
-.js .accordion-button.large [class*="icon-"] {
+/* line 157, ../_scss/modules/_navigation.scss */
+.js .accordion-button.large [class*="icon-arrow-"] {
   width: 18px;
   width: 1.125rem;
   height: 18px;
   height: 1.125rem;
 }
 
-/* line 160, ../_scss/modules/_navigation.scss */
+/* line 167, ../_scss/modules/_navigation.scss */
 .no-js .accordion-content.excerpt > * {
   display: block;
   visibility: visible;
 }
-/* line 165, ../_scss/modules/_navigation.scss */
+/* line 172, ../_scss/modules/_navigation.scss */
 .no-js .accordion-button {
   display: none;
   visibility: hidden;
@@ -1882,7 +1913,13 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   clear: both;
 }
 
-/* line 69, ../_scss/modules/_strip.scss */
+/* line 65, ../_scss/modules/_strip.scss */
+.strip.pointer {
+  padding-top: 36px;
+  padding-top: 2.25rem;
+}
+
+/* line 73, ../_scss/modules/_strip.scss */
 .strip.profile .profile-portrait {
   width: 25%;
   float: left;
@@ -1891,7 +1928,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   clear: none;
   padding-right: 24px;
 }
-/* line 72, ../_scss/modules/_strip.scss */
+/* line 76, ../_scss/modules/_strip.scss */
 .strip.profile .profile-copy {
   width: 75%;
   float: right;
@@ -1941,7 +1978,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 335, ../_scss/core/_helpers.scss */
+/* line 339, ../_scss/core/_helpers.scss */
 .meta li {
   list-style: none;
   list-style-type: none;
@@ -1957,7 +1994,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   font-size: 0;
   margin-left: 0;
 }
-/* line 335, ../_scss/core/_helpers.scss */
+/* line 339, ../_scss/core/_helpers.scss */
 .grid li {
   list-style: none;
   list-style-type: none;
@@ -2148,24 +2185,24 @@ footer.local, .footer.local {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 335, ../_scss/core/_helpers.scss */
+/* line 339, ../_scss/core/_helpers.scss */
 .info li {
   list-style: none;
   list-style-type: none;
 }
-/* line 377, ../_scss/core/_helpers.scss */
+/* line 381, ../_scss/core/_helpers.scss */
 .info.contact > dt, .info.contact > dd {
   display: inline;
 }
-/* line 380, ../_scss/core/_helpers.scss */
+/* line 384, ../_scss/core/_helpers.scss */
 .info.contact > dt {
   margin-right: 0.1875em;
 }
-/* line 383, ../_scss/core/_helpers.scss */
+/* line 387, ../_scss/core/_helpers.scss */
 .info.contact > dd {
   margin-left: 0;
 }
-/* line 389, ../_scss/core/_helpers.scss */
+/* line 393, ../_scss/core/_helpers.scss */
 .info.contact > dd:after {
   content: '\A';
   white-space: pre;
