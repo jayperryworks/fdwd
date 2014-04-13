@@ -20,6 +20,10 @@
   @return (strip-units($px-size/$base))*100%;
 }
 
+@function em-to-px($em-size, $base: $type-size--default) {
+  @return (strip-units($em-size) * $base);
+}
+
 // based on https://github.com/bitmanic/rem
 // @param $px-values: number or list of numbers (0 3px 3px 0)
 // -> NONZERO VALUES MUST HAVE UNITS

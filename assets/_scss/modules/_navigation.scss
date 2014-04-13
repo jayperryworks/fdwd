@@ -81,6 +81,13 @@
 .js {
   .accordion {
     @extend %base-transition;
+    // @include rem(margin-bottom, 12px);
+    @include border(bottom, thin);
+    margin-bottom: 1.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .accordion-content {
@@ -131,7 +138,7 @@
       @include inline-block;
     }
 
-    [class*="icon-"] {
+    [class*="icon-arrow-"] {
       margin-left: 0.3em;
     }
 
@@ -147,7 +154,7 @@
     }
 
     &.large {
-      [class*="icon-"] {
+      [class*="icon-arrow-"] {
         @include rem(width, $icon-size);
         @include rem(height, $icon-size);
       }

@@ -8,12 +8,12 @@ next_url: "news.html"
 
 <p class="intro wrapper">Intro paragraph on FDWD's range of expertise. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc loco discipulos quaerere videtur, ut, qui asoti esse velint, philosophi ante fiant. Quod si ita sit, cur opera philosophiae sit danda nescio. Quem Tiberina descensio festo illo die tanto gaudio affecit, quanto L. Sine ea igitur iucunde negat posse se vivere? Intrandum est igitur in rerum naturam et penitus quid ea postulet pervidendum; Quid est, quod ab ea absolvi et perfici debeat.</p>
 
-<section class="strip">
-{% for post in site.categories.practice-areas %}
-  <div class="wrapper">
-    <section class="bullet accordion">
+<section class="strip pointer">
+  <div class="wrapper overflow">
+  {% for post in site.categories.practice-areas %}
+    <section class="accordion">
       <a id="{{ post.slug }}"></a>
-      <a href="#{{ post.slug }}-content" class="accordion-button large">
+      <a href="#{{ post.slug }}-content" class="bullet accordion-button large">
         <span class="bullet-icon icon-{{ post.icon }}"></span>
         <h3 class="bullet-label">{{ post.title }}</h3>
         {% include accordion-icon.html %}
@@ -22,6 +22,6 @@ next_url: "news.html"
         {{ post.content }}
       </div>
     </section>
+  {% endfor %}
   </div>
-{% endfor %}
 </section>
