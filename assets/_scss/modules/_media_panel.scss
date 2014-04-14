@@ -4,8 +4,8 @@
 // ==========================================================================
 
 
-// BASE
-// -----------------------------------------------------------------------------
+/* BASE
+// ----------------------------------------------------------------------------- */
 
 .media_panel {
   @include clearfix;
@@ -19,6 +19,7 @@
       @include grid-span(1, 1);
       padding-left: 0;
     }
+
     .media_panel-body {
       @include grid-span(3, 2, $options: right);
       padding-right: 0;
@@ -26,8 +27,8 @@
   }
 }
 
-// SUBMODULES
-// -----------------------------------------------------------------------------
+/* SUBMODULES
+// ----------------------------------------------------------------------------- */
 
 .media_panel-thumb {
   @include rem(padding-top, 16px);
@@ -41,5 +42,21 @@
 
   & > p {
     @extend %text-small;
+  }
+}
+
+/* MODIFIERS
+// ----------------------------------------------------------------------------- */
+
+/* big media panel, stretches across layout */
+.media_panel.full-width {
+  @include rem(margin-bottom, 8px);
+
+  .media_panel-thumb {
+    @include border(top, thin);
+  }
+
+  .media_panel-body {
+    @include border(top, thin);
   }
 }

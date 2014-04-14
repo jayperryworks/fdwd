@@ -26,6 +26,7 @@ $breakpoint-tagline: 401px;
     @include rem(padding-top, 36px);
     @include border(right);
     @include kill-border(top);
+    @include kill-border(bottom);
     @include scroll-y;
     width: first($header-w);
     height: 100%;
@@ -33,7 +34,12 @@ $breakpoint-tagline: 401px;
     top: 0;
     left: 0;
   }
+
+  @include breakpoint($large) {
+    width: nth($header-w, 2);
+  }
 }
+
   .header-button-menu {
     $h: 20px;
     @include rem(height, $h);
@@ -79,12 +85,13 @@ $breakpoint-tagline: 401px;
     }
 
     @include breakpoint($breakpoint-header) {
+      @include rem(padding, 0 30px);
       display: block;
-      margin: 0 auto;
       right: 0;
+      margin: 0 auto;
       height: auto;
 
-      &:after {
+      &:after, &:before {
         content: none;
       }
 
@@ -95,8 +102,11 @@ $breakpoint-tagline: 401px;
   }
 
   .header-tagline {
+    @extend %georgia-italic;
+    @include rem(font-size, 10px);
     @include hidden;
-    
+    position: relative;
+    color: $gray;
 
     @include breakpoint($breakpoint-tagline) {
       @include restore-visible;
@@ -110,7 +120,8 @@ $breakpoint-tagline: 401px;
     @include breakpoint($breakpoint-header) {
       @include rem(margin-top, 16px);
       display: block;
-      text-align: center;
       right: 0;
+      padding-left: 0;
+      text-align: center;
     }
   }

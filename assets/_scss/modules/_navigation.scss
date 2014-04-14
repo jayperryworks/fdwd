@@ -24,24 +24,47 @@
   @include border(right);
   display: block;
   position: fixed;
-  left: -($header-w);
+  left: -(first($header-w));
   top: 0;
   bottom: 0;
   z-index: $z--high;
   height: 100%;
-  width: $header-w;
+  width: first($header-w);
   -webkit-overflow-scrolling: touch;
 
   &.is-open {
     left: 0;
   }
 
+  li {
+    display: block;
+  }
+
   a {
     @extend %calluna;
+    // @extend %theme-reverse;
+    // @extend %theme-color;
+    @include rem(padding, 8px 0);
+    @include border(top, thin);
+    display: block;
+    color: lighten($color--reverse, 30);
+
+    &:hover {
+      color: lighten($color--reverse, 50);
+    }
+
+    &.active {
+      @extend %highlight;
+      // @extend %highlight-border;
+      // @extend %well;
+      background: darken($color--reverse, 3);
+      position: relative;
+    }
   }
 
   @include breakpoint($breakpoint-header) {
     // @include restore-visible;
+    @include rem(margin, 32px 0);
     @include restore-default-theme;
     @include kill-border(right);
     position: relative;
@@ -50,15 +73,6 @@
     width: auto;
     padding: 0 $grid-gutter;
 
-    ul {
-      @include rem(margin, 18px 0);
-    }
-
-    .secondary {
-      @include rem(padding-top, 18px);
-      border-top: $hairline-w--thin solid $gray--light;
-    }
-
     a {
       @include rem(font-size, 16px);
       color: $gray;
@@ -66,10 +80,26 @@
       &:hover, &:active {
         color: darken($gray, 10);
       }
-    }
 
-    .active {
-      color: $green;
+      &.active {
+        // @include border(top, thin);
+        background: transparent;
+        border-color: $color--highlight;
+
+        &:before {
+          $size: 2px;
+          @include circle($size);
+          @include border(all, thick);
+          background: $color--highlight;
+          border-color: darken(white, 5);
+          content: " ";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          margin-top: -(($size/2) + $hairline-w--thick);
+          margin-left: -(($size/2) + $hairline-w--thick);
+        }
+      }
     }
   }
   
@@ -83,38 +113,16 @@
     @extend %base-transition;
     // @include rem(margin-bottom, 12px);
     @include border(bottom, thin);
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 
     &:last-child {
+      // @include kill-border(bottom);
       margin-bottom: 0;
     }
   }
 
-  .accordion-content {
-    @include hidden;
-
-    &.is-open {
-      @include restore-visible;
-    }
-  }
-
-  .accordion-content.excerpt {
-    @include restore-visible;
-
-    // hide everything but the first paragraph
-    & > * {
-      @include hidden;
-    }
-
-    p:first-child {
-      @include restore-visible;
-    }
-    
-    // make all content visible when the "open" class is added
-    // -> triggered by a click on the "more" button (JS)
-    &.is-open > * {
-      @include restore-visible;
-    }
+  .media_panel-body.accordion {
+    @include kill-border(bottom);
   }
 
   // init -- show the "more" button
@@ -122,6 +130,7 @@
     $icon-size: 18px;
     @include restore-visible;
     @include inline-block;
+    @include rem(padding, 6px 0);
     // display: block;
 
     & > #{headers()} {
@@ -139,7 +148,7 @@
     }
 
     [class*="icon-arrow-"] {
-      margin-left: 0.3em;
+      margin-left: 0.5em;
     }
 
     &.active {
@@ -160,6 +169,41 @@
       }
     }
   }
+
+  .accordion-content {
+    @include hidden;
+
+    &.is-open {
+      @include restore-visible;
+    }
+  }
+  
+  .accordion.excerpt {
+
+    .accordion-content {
+      @include restore-visible;
+
+      // hide everything but the first paragraph
+      & > * {
+        @include hidden;
+      }
+
+      p:first-child {
+        @include restore-visible;
+      }
+      
+      // make all content visible when the "open" class is added
+      // -> triggered by a click on the "more" button (JS)
+      &.is-open > * {
+        @include restore-visible;
+      }
+    }
+
+    .accordion-button {
+      @include rem(padding, 0 0 12px 0);
+    }
+  }
+  
 }
 
 .no-js {
