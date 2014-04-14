@@ -90,6 +90,6 @@ $size-bullet: 3em;
 
 .bullet-content {
   $size-px: (em-to-px($size-bullet) + 16px);
-  @include rem(margin-left, $size-px);
+  @include rem(margin, 0 16px 0 $size-px);
   padding: 0.25em;
 }

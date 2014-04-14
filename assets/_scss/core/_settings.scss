@@ -55,19 +55,28 @@ $type-size-amp: 1em; // how big the ampersand is (relative to surrounding type)
 $layout-width: 1024px;
 $layout-margins: 48px;
 
-$header-w: 180px;
+$header-w: 180px 220px;
 
 $hairline-w--thin: 1px;
 $hairline-w--thick: 4px;
+$hairline-style: solid;
 
-@mixin border($side, $w: thin) {
+@mixin border($sides, $w: thin) {
   @if $w == thin {
     $w: $hairline-w--thin;
   } @else {
     $w: $hairline-w--thick;
   }
-  border-#{$side}-width: $w;
-  border-#{$side}-style: solid;
+
+  @if $sides == "all" {
+    border-width: $w;
+    border-style: $hairline-style;
+  } @else {
+    @each $side in $sides {
+      border-#{$side}-width: $w;
+      border-#{$side}-style: $hairline-style;
+    }
+  }
 }
 
 @mixin kill-border($side) {

@@ -41,8 +41,12 @@
     }
   }
 
-  p, li, td {
+  p, li, td, dd {
     color: $text;
+  }
+
+  dt {
+    color: $highlight;
   }
 
   .intro {
@@ -108,6 +112,22 @@
   }
 
   /* --- global modifiers ---------------------------------------------------------- */
+  
+  %theme-text {
+    color: $text;
+  }
+
+  %theme-border {
+    border-color: $border-color;
+  }
+
+  %theme-color {
+    color: $fg;
+  }
+
+  %theme-bg {
+    border-color: $border-color;
+  }
 
   // accent that jumps out
   %highlight, .highlight {
@@ -116,6 +136,10 @@
 
   %highlight-border, .highlight-border {
     border-color: $highlight !important;
+  }
+
+  %highlight-bg {
+    background-color: $highlight;
   }
   
   // subtler accent
@@ -128,21 +152,20 @@
   }
 
   // slightly 'sunken' from surrounding bg
+  $well: darken($bg, 5);
+
   %well, .well {
-    @if $reverse == true {
-      background: darken($bg, 5);
-    } @else {
-      background: darken($bg, 5);
-    }
+    background: $well;
+  }
+  
+  // for 'hidden' border (same color as bg)
+  %well-hidden-border {
+    border-color: $well;
   }
   
   // slightly 'raised' from surrounding bg
   %island, .island {
-    @if $reverse == true {
-      background: lighten($bg, 5);
-    } @else {
-      background: lighten($bg, 5);
-    }
+    background: lighten($bg, 5);
   }
 }
 
@@ -150,7 +173,7 @@
 // ------------------------------------------------------------------------------ */
 
 %theme-default, .theme-default, body {
-  @include theme();
+  @include theme(); //use all defaults
 }
 
 @mixin restore-default-theme() {

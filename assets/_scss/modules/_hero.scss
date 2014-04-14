@@ -1,9 +1,10 @@
-// ==========================================================================
-//  Hero modules
-// ==========================================================================
+/* ==========================================================================
+//  Hero module
+// -> big, full-bleed photo with headline over it
+// ========================================================================== */
 
-// BASE
-// -----------------------------------------------------------------------------
+/* BASE
+// ----------------------------------------------------------------------------- */
 
 .hero {
   @extend %center;
@@ -18,8 +19,8 @@
   z-index: $z--low;
 }
 
-// SUBMODULES
-// -----------------------------------------------------------------------------
+/* SUBMODULES
+// ----------------------------------------------------------------------------- */
 
 .hero-headline {
   @extend %max-width;
@@ -27,14 +28,30 @@
   line-height: 1;
 
   h1 {
-    // @include rem(font-size, 60px);
+    @include rem(font-size, 40px);
+    
+    @include breakpoint($xsmall) {
+      // @include rem(font-size, 40px);
+    } 
+
+    @include breakpoint($small) {
+      @include rem(font-size, 54px);
+    }
   }
 
   h2 {
+    @include rem(font-size, 36px);
     margin-top: -0.4em;
     line-height: 1;
-    padding-left: 60%;
-    // text-align: right;
+    color: white;
+
+    @include breakpoint($xsmall) {
+      @include rem(font-size, 40px);
+    } 
+
+    @include breakpoint($small) {
+      @include rem(font-size, 50px);
+    }
   }
 
   .subhead {
