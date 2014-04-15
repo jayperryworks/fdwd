@@ -5,6 +5,13 @@
 // Base
 // ------------------------------------------------------------------------------
 
+$theme-default-text: $color-text--primary;
+$theme-default-fg: $color-text--primary;
+$theme-default-bg: white;
+$theme-default-highlight: $color--highlight;
+$theme-default-accent: $color--accent;
+$theme-default-border: darken($theme-default-bg, 20);
+
 // theme generator mixin w/ defaults in the parameters
 @mixin theme(
   $text: $color-text--secondary,
@@ -17,7 +24,7 @@
   $border-color: darken($bg, 20);
 
   color: $fg;
-  background: $bg;
+  background-color: $bg;
   border-color: $border-color;
   border-style: solid;
   border-width: 0;
@@ -53,11 +60,11 @@
     color: darken($text, 10);
   }
 
-  .secondary, aside, figcaption, small {
+  .secondary, aside, figcaption, small, .label, .post-date {
     @if $reverse == true {
       color: lighten($bg, 20);
     } @else {
-      color: darken($text, 10);
+      color: darken($bg, 20);
     }
   }
 
@@ -89,11 +96,11 @@
 
     @if $reverse == true {
       @include form-placeholder-color(lighten($bg, 20));
-      background: lighten($bg, 5);
+      background-color: lighten($bg, 5);
       border-color: darken($bg, 15);
     } @else {
-      @include form-placeholder-color(darken($bg, 15));
-      background: darken($bg, 5);
+      @include form-placeholder-color(darken($bg, 25));
+      background-color: darken($bg, 5);
       border-color: darken($bg, 10);
     }
 
@@ -104,7 +111,7 @@
 
   button, .button {
     color: white;
-    background: $highlight;
+    background-color: $highlight;
   }
 
   .icon {
@@ -155,7 +162,7 @@
   $well: darken($bg, 5);
 
   %well, .well {
-    background: $well;
+    background-color: $well;
   }
   
   // for 'hidden' border (same color as bg)
@@ -165,7 +172,7 @@
   
   // slightly 'raised' from surrounding bg
   %island, .island {
-    background: lighten($bg, 5);
+    background-color: lighten($bg, 5);
   }
 }
 
@@ -178,13 +185,21 @@
 
 @mixin restore-default-theme() {
   @include theme();
-  background: transparent;
+  background-color: transparent;
 }
 
 /* Variations
 // ------------------------------------------------------------------------------ */
 
-/* bright colored background, meant to stand out or add accent */
+/* --- Flood theme ----------------------------------------------------------
+// -> bright colored background, meant to stand out or add accent */
+
+$theme-flood-text: white;
+$theme-flood-fg: white;
+$theme-flood-bg: $color--highlight;
+$theme-flood-highlight: $color-text--primary;
+$theme-flood-accent: $color-text--primary;
+
 %theme-flood, .theme-flood {
   @include theme(
     $text: white,
@@ -196,7 +211,15 @@
   );
 }
 
-/* light FG over dark BG, contrasts sharply with default (dark FG over light BG) */
+/* --- Reverse theme ----------------------------------------------------------
+// -> light FG over dark BG, contrasts sharply with default (dark FG over light BG) */
+
+$theme-reverse-text: white;
+$theme-reverse-fg: white;
+$theme-reverse-bg: $color--reverse;
+$theme-reverse-highlight: $color--highlight;
+$theme-reverse-accent: lighten($color-text--primary, 10);
+
 %theme-reverse, .theme-reverse {
   @include theme(
     $text: white,

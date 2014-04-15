@@ -3,49 +3,57 @@ layout: interior
 title: "Contact Us"
 ---
 
-<section class="strip">
+<!-- <section class="strip pointer"> -->
   <div class="wrapper">
-    <section class="sub">
-      <h3>{{ site.name | xml_escape }}</h3>
-      <h6>129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</h6>
+    <div class="grid large">
+      <section class="grid-tile">
+        <hgroup>
+          <h3>{{ site.name | xml_escape }}</h3>
+          <h5 class="accent">129 N. Wayne Avenue, PO Drawer 1140, Waynesboro, Virginia</h5>
+        </hgroup>
 
-      <dl class="info contact">
-        <dt>Office</dt>
-        <dd>540.946.4400</dd>
-        <dt>Facsimile</dt>
-        <dd>540.946.4417</dd>
-        <dt>Email</dt>
-        <dd>info@fdwdlaw.com</dd>
-      </dl>
-    </section>
+        <dl class="info contact">
+          <dt>Office:</dt>
+          <dd>540.946.4400</dd>
+          <dt>Facsimile:</dt>
+          <dd>540.946.4417</dd>
+          <dt>Email:</dt>
+          <dd><a href="mailto:info@fdwdlaw.com">info@fdwdlaw.com</a></dd>
+        </dl>
+      </section>
 
-    <section class="sub">
-      <h3>Payments, Bookkeeping &amp; Billing</h3>
-      <h6>billing@fdwdlaw.com</h6>
-      
-      <small class="sub-info">
-        <h5>Anita R. Davis</h5>
-        Real Estate Paralegal<br />
-        (540) 946-4412<br />
-        info4412@fdwdlaw.com
-      </small>
-      <small class="sub-info">
-        <h5>Kathleen B. Smith</h5>
-        Bankruptcy Paralegal<br />
-        (540) 946-4401<br />
-        info4401@fdwdlaw.com
-      </small>
-    </section>
+      <section class="grid-tile nested">
+        <hgroup>
+          <h3>Payments, Bookkeeping &amp; Billing</h3>
+          <h5><a href="mailto:billing@fdwdlaw.com" class="highlight">billing@fdwdlaw.com</a></h5>
+        </hgroup>
+        
+        <dl class="tile-nested">
+          <dt><h4 class="accent">Anita R. Davis</h4></dt>
+          <dd>Real Estate Paralegal</dd>
+          <dd>(540) 946-4412</dd>
+          <dd>info4412@fdwdlaw.com</dd>
+        </dl>
+        <dl class="tile-nested">
+          <dt><h4 class="accent">Kathleen B. Smith</h4></dt>
+          <dd>Bankruptcy Paralegal</dd>
+          <dd>(540) 946-4401</dd>
+          <dd>info4401@fdwdlaw.com</dd>
+        </dl>
+      </section>
+    </div>
+  </div>
+
+<!-- </section> -->
+
+<section class="strip pointer">
+  <div class="wrapper">
 
     <div class="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3141.0440599008607!2d-78.889479!3d38.069355!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b363a4210ad24d%3A0x15509b6120e9980b!2s129+N+Wayne+Ave%2C+Waynesboro%2C+VA+22980!5e0!3m2!1sen!2sus!4v1391476282576" width="100%" height="400" frameborder="0" style="border:0"></iframe>
     </div>
-  </div>
-</section>
 
-<section class="strip">
-  <div class="wrapper">
-    <h2>Directions</h2>
+    <h2 class="accent strip-title">Directions</h2>
 
     <section class="strip-int accordion">
       <a href="#harrisonburg" class="accordion-button large">
@@ -75,6 +83,6 @@ title: "Contact Us"
 
 <section class="strip">
   <div class="wrapper">
-    {% include form-contact.html %}
+    {% include form-contact.html header="h2" class="accent strip-title" %}
   </div>
 </section>

@@ -29,6 +29,7 @@
 
   h1 {
     @include rem(font-size, 40px);
+    line-height: 1;
     
     @include breakpoint($xsmall) {
       // @include rem(font-size, 40px);

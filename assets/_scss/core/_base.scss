@@ -147,6 +147,11 @@ input[type="search"] {
   }
 }
 
+button, [type="submit"] {
+  outline: 0;
+  border: none;
+}
+
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -180,6 +185,14 @@ textarea {
 
 ol, ul, dl {
   margin-bottom: 0;
+}
+
+dl {
+  margin: 0;
+  dd {
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 
 /*

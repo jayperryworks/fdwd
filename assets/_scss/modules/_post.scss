@@ -1,33 +1,140 @@
-// ==========================================================================
+/* ==========================================================================
 //  Blog post modules
-// ==========================================================================
+// ========================================================================== */
 
 
 // BASE
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------- */
 
 .post {
-	
+	hgroup {
+    line-height: 1.2;
+    margin-bottom: 1em;
+  }
 }
 
-// SUBMODULES
-// -----------------------------------------------------------------------------
+/* SUBMODULES
+// ----------------------------------------------------------------------------- */
 
-// ------- Full-length post -------------------------------------------
+.post-title {
+  a:hover {
+    color: $color--highlight;
+  }
+}
+
+.post-subhead {
+  // color: $color-;
+}
+
+.post-date {
+  @extend %h6;
+  @extend %museo-medium;
+  margin-top: 0.5em;
+  text-transform: uppercase;
+  // color: lighten($gray, 5);
+}
+
+.post-image {
+  @include inline-block;
+  @include rem(margin, 0 0 12px $grid-gutter);
+  width: 50%;
+  // padding-right: grid-gutter();
+  float: right;
+}
+
+.post-content {
+  // @include grid-span(3, 1);
+}
+
+/* ------- Meta/info ------------------------------------------- */
+
+.post-meta {
+  @include grid-span(1, 4);
+  @include unstyled-list;
+
+  .post-date {
+    margin-top: 0;
+  }
+}
+
+  .post-author {
+    a {
+      color: $color--highlight;
+    }
+  }
+
+  .post-meta-categories {
+    .label {
+      @extend %h6;
+      @extend %museo-medium;
+      margin-bottom: 0.5em;
+    }
+
+    dd {
+      margin-left: 0;
+    }
+  }
+
+/* ------- Meta/info ------------------------------------------- */
+
+.post-footer {
+  @include border(top, thin);
+  @include rem(margin-top, 24px);
+  @include rem(padding-top, 24px);
+}
+
+  .post-footer-categories {
+    @include inline-list("dt, dd");
+    margin-top: 0;
+
+    dt {
+      @extend %museo-medium;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      color: darken($theme-default-bg, 20);
+    }
+
+    dd {
+      margin-left: 0;
+
+      &:after {
+        content: "\2022";
+        margin: 0 0.25em;
+      }
+
+      &:last-child:after {
+        content: none;
+      }
+    }
+  }
+
+/* MODIFIERS
+// ----------------------------------------------------------------------------- */
+
+// ------- Full-length post ------------------------------------------- */
 
 .post.full {
-	
+	@extend %wrapper;
+  @include rem(margin-top, 36px);
+  @include rem(margin-bottom, 24px);
+  @include clearfix;
+  clear: both;
+  overflow: hidden;
 }
 
 
-// ------- Excerpt -------------------------------------------
+/* ------- Excerpt ------------------------------------------- */
 
 .post.excerpt {
-  @include rem(padding, 24px 0);
+  @include rem(margin, 0 0 24px 0);
+  @include rem(padding, 24px 0 0 0);
+  @include border(top, thin);
   // border-bottom: $hairline;
 
-  &:last-child {
-    border-bottom: none;
+  &:first-child {
+    @include kill-border(top);
+    padding-top: 0;
   }
 }
 
@@ -38,9 +145,3 @@
   overflow: hidden;
 }
 
-// ------- Meta/info -------------------------------------------
-
-.meta {
-  @include grid-span(1, 4);
-  @include unstyled-list;
-}

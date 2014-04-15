@@ -335,17 +335,20 @@
   list-style-type: none;
   // margin-left: 0;
   padding-left: 0;
+  margin-left: 0;
 
   li {
     list-style: none;
     list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
   }
 }
 
-@mixin inline-list {
+@mixin inline-list($children: "li") {
   @include unstyled-list;
 
-  li {
+  #{$children} {
     @include inline-block;
   }
 }

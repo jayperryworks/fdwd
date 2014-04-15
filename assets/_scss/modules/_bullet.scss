@@ -10,6 +10,7 @@ $size-bullet: 3em;
 // ----------------------------------------------------------------------------- */
 .bullet {
   @extend %h4;
+  // @include rem(margin-bottom, 16px);
   display: block;
   position: relative;
   width: 100%;
