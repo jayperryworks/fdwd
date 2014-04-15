@@ -23,7 +23,7 @@ $breakpoint-tagline: 401px;
   vertical-align: middle;
 
   @include breakpoint($breakpoint-header) {
-    @include rem(padding-top, 36px);
+    @include rem(padding-top, 30px);
     @include border(right);
     @include kill-border(top);
     @include kill-border(bottom);
@@ -35,7 +35,7 @@ $breakpoint-tagline: 401px;
     left: 0;
   }
 
-  @include breakpoint($large) {
+  @include breakpoint($xlarge) {
     width: nth($header-w, 2);
   }
 }

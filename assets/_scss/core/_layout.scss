@@ -93,6 +93,12 @@
   overflow: visible;
 }
 
+%break, .break {
+  @include border(bottom, thin);
+  @include rem(margin-bottom, 8px);
+  @include rem(padding-bottom, 8px);
+}
+
 // BASE LAYOUTS
 // -----------------------------------------------------------------------------
 
@@ -130,7 +136,7 @@ body {
     width: calc(100% - first($header-w));
   }
 
-  @include breakpoint($large) {
+  @include breakpoint($xlarge) {
     margin-left: nth-last($header-w, 2);
     width: calc(100% - nth-last($header-w, 2));
   }
@@ -166,6 +172,7 @@ body {
   @extend %max-width;
   @include clearfix;
   @include layout-margins;
+  display: block;
   overflow: hidden;
   clear: both;
 
@@ -184,15 +191,31 @@ body {
 }
   .feature-copy {
     @extend %add-gutters;
-    @include grid-span(3, 1);
+    margin-bottom: 2em;
+    
     @include layout-margins;
     padding-top: $grid-gutter;
+
+    @include breakpoint($small) {
+      @include grid-span(3, 1);
+    }
   }
 
   .feature-sidebar {
+    @extend %well;
+    @include rem(margin-bottom, -36px);
     // @extend %full-bleed;
     // @extend %add-gutters;
-    @include grid-span(1, 4);
+    text-align: center;
+
+    @include breakpoint($small) {
+      // @extend %theme-reverse;
+      @include grid-span(1, 4);
+      margin-bottom: 0;
+      text-align: left;
+      background-color: $color--reverse !important;
+    }
+    
     padding: $grid-gutter;
     // @include layout-margins;
     padding-top: $grid-gutter;

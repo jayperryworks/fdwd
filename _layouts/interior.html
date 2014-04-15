@@ -2,13 +2,17 @@
 layout: default
 ---
 
+{% if page.show_title != "no" %}
 <h1 class="title accent">{{ page.title }}</h1>
+{% endif %}
 
 {{ content }}
 
 {% if page.next %}
 <footer class="local">
-  <h5>Next</h5>
-  <h3><a href="{{ relativepath }}{{ site.baseurl }}/{{ page.next_url }}">{{ page.next }} <span class="icon">&rsaquo;</span></a></h3>
+  <h4 class="footer-local-subhead">Next</h4>
+  <h2 class="footer-local-title">
+    <a href="{{ relativepath }}{{ site.baseurl }}/{{ page.next_url }}">{{ page.next }}<span class="icon-arrow-right-dark footer-local-icon" aria-hidden="true"></span></a>
+  </h2>
 </footer>
 {% endif %}

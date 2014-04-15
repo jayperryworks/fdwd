@@ -1,41 +1,83 @@
-// ==========================================================================
+/* ==========================================================================
 //  Footer modules
-// ==========================================================================
+// ========================================================================== */
 
-// BASE
-// -----------------------------------------------------------------------------
+/* BASE
+// ----------------------------------------------------------------------------- */
 
 footer, .footer {
 	
 }
 
 
-// SUBMODULES
-// -----------------------------------------------------------------------------
+/* MODIFIERS
+// ----------------------------------------------------------------------------- */
 
-// ------- global footer -------------------------------------------------------
+/* ------- global footer ------------------------------------------------------- */
 
 footer.global, .footer.global {
   @extend %theme-reverse;
 	@extend .main;
   @include rem(padding-top, 24px);
-  @include rem(padding-bottom, 24px);
+  // @include rem(padding-bottom, 24px);
 
   .copyright {
-    @extend %add-gutters;
-    @extend .accent;
-    @include grid-span(4, 1, $options: both);
+    // @extend %add-gutters;
+    // @extend .accent;
+    // @include grid-span(4, 1, $options: both);
     @include rem(margin-top, 24px);
-    @include rem(padding-top, 24px);
+    @include rem(padding-top, 18px);
+    @include rem(padding-bottom, 18px);
+    @include border(top, thin);
+    display: block;
+    color: lighten($blue, 30);
+    background: $blue;
+
+    .wrapper {
+      color: lighten($blue, 30);
+    }
   }
 }
 
 #home footer.global, #home .footer.global {
-  .contact-form {
-    @include grid-span(2, 1);
+  .form-contact {
+    @include breakpoint($medium) {
+      @include grid-span(2, 1);
+    }
   }
   .info {
-    @include grid-span(2, 3, $options: right);
+    @include unstyled-list;
+    @include rem(margin-top, 18px);
+    @include rem(padding-top, 18px);
+    @include border(top, thin);
+
+    @include breakpoint($medium) {
+      @include grid-span(2, 3, $options: right);
+      @include kill-border(top);
+      margin-top: 0;
+    }
+
+    ul {
+      @include unstyled-list;
+    }
+    
+
+    li {
+      @extend %text-small;
+    }
+
+    strong {
+      @extend %h4;
+      // @extend %museo;
+      // @include rem(font-size, 21px);
+    }
+
+    .icon-google {
+      height: 1.6em !important;
+      width: 1.6em;
+      margin-right: 0.3em;
+      margin-left: -0.25em;
+    }
   }
 
   .inline {
@@ -48,7 +90,7 @@ footer.global, .footer.global {
   }
 }
 
-// ------- local footer -------------------------------------------------------
+/* ------- local footer ------------------------------------------------------- */
 
 footer.local, .footer.local {
   // @extend %full-bleed;
@@ -58,4 +100,27 @@ footer.local, .footer.local {
   @include rem(padding, 24px 0);
   text-align: center;
   clear: both;
+}
+
+/* SUBMODULES
+// ----------------------------------------------------------------------------- */
+
+$local-arrow-w: 0.7em;
+$local-space-w: 0.25em;
+
+.footer-local-title > a {
+  @include inline-block;
+  margin-right: -($local-arrow-w + $local-space-w);
+}
+
+.footer-local-subhead {
+  @extend %museo-medium;
+  color: $black !important;
+  text-transform: uppercase;
+}
+
+.footer-local-icon {
+  // height: 0.5em;
+  width: $local-arrow-w;
+  margin-left: $local-space-w;
 }

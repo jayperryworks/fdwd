@@ -7,10 +7,37 @@
 
 // use foundation base styles for forms
 
-form {
+form, .form {
 	
 }
 
 // SUBMODULES
 // -----------------------------------------------------------------------------
 
+.form-contact {
+
+  label {
+    display: block;
+  }
+  
+  .input {
+    @include inline-block;
+    width: 50%;
+    padding: ($grid-gutter/4);
+
+    &.left {
+      margin-left: -($grid-gutter/4);
+      margin-right: -3px;
+    }
+    &.right {
+      margin-right: -($grid-gutter/4);
+    }
+  }
+  input {
+    width: 100%;
+  }
+
+  [type="submit"].button {
+    margin-top: 0.5em;
+  }
+}

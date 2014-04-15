@@ -6,6 +6,11 @@ $path-images: "../images/";
 $path-fonts: "../fonts/";
 
 $base-duration: 0.5s; // in seconds
+$base-radius: 3px;
+
+%base-radius {
+  border-radius: $base-radius;
+}
 
 %base-transition {
   /* base transition used globally */
@@ -84,12 +89,13 @@ $hairline-style: solid;
 }
 
 // --- breakpoints ----------------------------------------------------------
-$breakpoints: 480px 768px 1240px 1440px;
+$breakpoints: 480px 768px 1024px 1220px 1440px;
 
 $xsmall: nth($breakpoints, 1);
 $small: nth($breakpoints, 2);
 $medium: nth($breakpoints, 3);
 $large: nth($breakpoints, 4);
+$xlarge: nth($breakpoints, 5);
 
 $breakpoint-to-ems: true;
 

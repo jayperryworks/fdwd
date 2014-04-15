@@ -34,6 +34,7 @@
 @import "modules/button";
 @import "modules/media_panel";
 @import "modules/bullet";
+@import "modules/form";
 
 // modules
 @import "modules/header";
@@ -49,33 +50,11 @@
 // -> put quick and dirty hacks here, then clean up & organize later
 // =============================================================================== */
 
-.contact-form {
-  label {
-    display: block;
-  }
-  
-  .input {
-    @include inline-block;
-    width: 50%;
-    padding: ($grid-gutter/4);
-
-    &.left {
-      margin-left: -($grid-gutter/4);
-      margin-right: -3px;
-    }
-    &.right {
-      margin-right: -($grid-gutter/4);
-    }
-  }
-  input {
-    width: 100%;
-  }
-}
 
 .map {
   // @extend %full-bleed;
   @include grid-span(4, 1);
-  @include rem(margin-top, 24px);
+  @include rem(margin, 24px 0);
   clear: both;
 }
 

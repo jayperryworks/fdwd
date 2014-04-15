@@ -1,0 +1,33 @@
+---
+layout: interior
+---
+
+<div class="wrapper">
+  <div class="posts">
+    {% for i in (1...10) %}
+    <article class="post excerpt">
+      <hgroup>
+        <h2 class="post-title"><a href="{{ relativepath }}{{ site.baseurl }}/post.html">Lorem ipsum dolor sit amet</a></h2>
+        <h3 class="post-subhead accent"><a href="{{ relativepath }}{{ site.baseurl }}/post.html">Adipiscig elit summa</a></h3>
+        <h6 class="post-date"><time datetime="2001-02-12 19:00">February 12, 2014</time></h6>
+      </hgroup>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, mollitia itaque dignissimos dolor at cupiditate reprehenderit quod quo cumque sint inventore voluptas dolore quas ullam facilis sapiente adipisci ipsa placeat dicta magni et nisi laudantium non neque magnam perspiciatis temporibus. Blanditiis, doloremque, saepe, tenetur, dicta facilis tempora placeat ratione quidem fugiat nisi exercitationem praesentium nostrum soluta. <a href="{{ relativepath }}{{ site.baseurl }}/post.html" class="read_more">Read&nbsp;more&nbsp;&rsaquo;</a></p>
+    </article>
+    {% endfor %}
+    <a href="#" class="button secondary large full-width"><span class="icon-add" aria-hidden="true"></span> Load <span class="load_more-number">10</span> more posts</a>
+  </div>
+
+  <aside class="post-meta">
+    <dl class="post-meta-categories">
+      <dt class="label">Categories</dt>
+      <dd><a href="#">Consectetur</a></dd>
+      <dd><a href="#">Adipisicing Elit</a></dd>
+      <dd><a href="#">Perspiciatis</a></dd>
+      <dd><a href="#">Praesentium</a></dd>
+      <dd><a href="#">Pariatur</a></dd>
+      <dd><a href="#">Totam Natus</a></dd>
+      <dd><a href="#">Exercitationem</a></dd>
+      <dd><a href="#">Possimus Doloremque</a></dd>
+    </dd>
+  </aside>
+</div>

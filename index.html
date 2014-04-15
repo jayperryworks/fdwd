@@ -12,6 +12,7 @@ title: home
 
 <section class="strip">
   <div class="feature theme-default">
+
     <div class="feature-copy">
       <p class="intro">
         Starting as a local general practice, {{ site.name | xml_escape }} now serves the Cities of Waynesboro, Staunton, Lexington, Harrisonburg and Charlottesville and the Counties of Augusta, Rockbridge, Rockingham, Nelson and Albermarle.</p>
@@ -19,7 +20,7 @@ title: home
       <p>The Firm remains a vital and constant fixture in the City of Waynesboro. The integrity and work performance of the attorneys and staff is reflected by the large client base that continues to expand. We are committed to providing thorough, concise legal services to our clients at a fair cost.</p>
     </div>
 
-    <aside class="feature-sidebar theme-reverse">
+    <aside class="feature-sidebar">
       <figure>
         <a href="about.html" class="feature-sidebar-thumb"><img src="http://placehold.it/250x250" alt="FDWD office in Waynesboro"></a>
         <figcaption>
@@ -31,10 +32,10 @@ title: home
 
 <section class="strip">
   <div class="wrapper">
-    <h1 class="accent">Attorneys</h1>
+    <h1 class="accent strip-title">Attorneys</h1>
     <ul class="grid large">
       {% for post in site.categories.attorneys %}
-      <li class="media_panel">
+      <li class="media_panel highlight-border">
         <a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}" class="media_panel-thumb highlight-border">
           <img src="{{ post.portrait }}" alt="{{ post.title | xml_escape }}">
         </a>
@@ -50,7 +51,7 @@ title: home
 
 <section class="strip">
   <div class="wrapper">
-    <h1 class="accent">Practice Areas</h1>
+    <h1 class="accent strip-title">Practice Areas</h1>
     <ul class="grid large">
       {% for post in site.categories.practice-areas %}
       {% capture colnum %}{{ forloop.index }}{% endcapture %}

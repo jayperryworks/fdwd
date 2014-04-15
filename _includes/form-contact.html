@@ -1,5 +1,5 @@
-<form class="contact-form">
-  <h4 class="highlight">Request an Appointment</h4>
+<form class="form-contact">
+  <{{ include.header }} {% if include.class %}class="{{ include.class }}"{% endif %}>Request an Appointment</{{ include.header }}>
   <fieldset>
     <legend>Your name</legend>
     <div class="input left">
@@ -17,5 +17,5 @@
     <label for="phone">Phone number</label>
     <input type="text" id="phone" placeholder="(---)--- ----" />
   </div>
-  <button>Send</button>
+  <button class="button" type="submit">Send</button>
 </form>

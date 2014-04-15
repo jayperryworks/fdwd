@@ -1,5 +1,7 @@
 /* ==========================================================================
-//  Hero modules
+//  Strip modules
+// -> vertically-stacking, full-bleed sections with borders
+// -> for organizing content in ordered/scrolling sections within a page
 // ========================================================================== */
 
 /* BASE
@@ -7,10 +9,11 @@
 
 .strip {
   // @extend .wrapper;
-  @include rem(padding-top, 24px);
-  @include rem(padding-bottom, 24px);
+  @include rem(padding-top, 36px);
+  @include rem(padding-bottom, 36px);
   @include clearfix;
   @include border(top);
+  position: relative;
   clear: both;
   overflow: visible;
 
@@ -27,43 +30,59 @@
     
   }
 
-  .contact-form {
+  .form-contact {
     @include grid-span(2, 1);
   }
 }
 
-.sub-info {
-  @include inline-block;
-  width: 50%;
-  margin-right: -4px;
-  padding: 0 ($grid-gutter/2);
+// .sub-info {
+//   @include inline-block;
+//   width: 50%;
+//   margin-right: -4px;
+//   padding: 0 ($grid-gutter/2);
 
-  &:first-child {
-    padding-left: 0;
-  }
-  &:last-child {
-    @include clearfix;
-    padding-right: 0;
-    clear: right;
-  }
-  // @include layout(2) {
-  //   @include float-span(1);
+//   &:first-child {
+//     padding-left: 0;
+//   }
+//   &:last-child {
+//     @include clearfix;
+//     padding-right: 0;
+//     clear: right;
+//   }
+//   // @include layout(2) {
+//   //   @include float-span(1);
 
-  //   &:last-child {
-  //     @include float-span(1, 'last');
-  //   }
-  // }  
+//   //   &:last-child {
+//   //     @include float-span(1, 'last');
+//   //   }
+//   // }  
+// }
+
+/* SUBMODULES
+// ----------------------------------------------------------------------------- */
+
+/* an "interior" strip within a strip
+// -> if you need to break it down more, or show a list of things */
+.strip-int {
+  @include rem(margin-bottom, 24px);
+
+  &.accordion {
+    @include rem(margin-bottom, 24px);
+  }
+}
+
+.strip-title {
+  @include rem(margin-bottom, 16px);
 }
 
 /* MODIFIERS
 // ----------------------------------------------------------------------------- */
 
-.strip.int {
-  
-}
-
 .strip.pointer {
+  $triangle-size: 27px;
   @include rem(padding-top, 36px);
+  @include triangle--centered($dir: down, $width: ($triangle-size), $color: $theme-default-border, $selector: before);
+  @include triangle--centered($dir: down, $loc: -($hairline-w--thin * 2), $width: $triangle-size, $color: $theme-default-bg, $selector: after);
 }
 
 // ---- Attorney profile -------------------------------------------------------

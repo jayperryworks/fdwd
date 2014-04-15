@@ -1,8 +1,12 @@
+.icon-add { background-image: url('../images/icons/add.png'); background-repeat: no-repeat; }
+
 .icon-arrow-down-highlight { background-image: url('../images/icons/arrow-down-highlight.png'); background-repeat: no-repeat; }
 
 .icon-arrow-down-rev { background-image: url('../images/icons/arrow-down-rev.png'); background-repeat: no-repeat; }
 
 .icon-arrow-down { background-image: url('../images/icons/arrow-down.png'); background-repeat: no-repeat; }
+
+.icon-arrow-right-dark { background-image: url('../images/icons/arrow-right-dark.png'); background-repeat: no-repeat; }
 
 .icon-arrow-right-highlight { background-image: url('../images/icons/arrow-right-highlight.png'); background-repeat: no-repeat; }
 
