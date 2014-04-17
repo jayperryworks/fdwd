@@ -37,7 +37,7 @@ title: home
       {% for post in site.categories.attorneys %}
       <li class="media_panel highlight-border">
         <a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}" class="media_panel-thumb highlight-border">
-          <img src="{{ post.portrait }}" alt="{{ post.title | xml_escape }}">
+          <img src="{{ site.assets.img }}{{ post.portrait }}" alt="{{ post.title | xml_escape }}">
         </a>
         <div class="media_panel-body highlight-border">
           <h3><a href="{{ relativepath }}{{ site.baseurl }}/attorneys.html#{{ post.title | remove: '.' | replace: ' ','-' | downcase }}">{{ post.title | xml_escape }}</a></h3>
