@@ -4,7 +4,7 @@ title:  "Jeffrey A. Ward"
 date:   2014-01-02 19:22:05
 categories: attorneys
 
-portrait: http://placehold.it/250x200
+portrait: portraits/portrait-ward.jpg
 
 phone: (540) 946-4417
 fax: (540) 946-4417

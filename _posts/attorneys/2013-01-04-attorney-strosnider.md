@@ -4,7 +4,7 @@ title:  "Stephen K. Strosnider"
 date:   2014-01-01 19:22:05
 categories: attorneys
 
-portrait: http://placehold.it/250x200
+portrait: portraits/portrait-strosnider.jpg
 
 phone: (540) 946-4414
 fax: (540) 946-4417

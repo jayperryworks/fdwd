@@ -11,7 +11,7 @@ next_url: practice-areas.html"
 {% capture anchor %}{{ post.title | replace: " ", "-" | remove: "." | downcase }}{% endcapture %}
 
   <div class="media_panel full-width">
-    <img src="{{ post.portrait }}" alt="{{ post.title }}" class="media_panel-thumb" />
+    <img src="{{ site.assets.img }}{{ post.portrait }}" alt="{{ post.title }}" class="media_panel-thumb" />
     <div class="media_panel-body accordion excerpt">
       <a id="{{ anchor }}"></a>
       <h2>{{ post.title }}</h2>

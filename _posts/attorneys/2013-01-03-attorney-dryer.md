@@ -4,7 +4,7 @@ title:  "Paul A. Dryer"
 date:   2014-01-03 19:22:05
 categories: attorneys
 
-portrait: http://placehold.it/250x200
+portrait: portraits/portrait-dryer.jpg
 
 phone: "(540) 946-4400"
 fax: "(540) 946-4417"
