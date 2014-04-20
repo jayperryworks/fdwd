@@ -44,12 +44,17 @@
   // @extend %max-width;
   @include layout-margins;
   @include rem(bottom, bottom-overlap(96px));
+  // @include transition(opacity, $base-duration);
   position: absolute;
   width: 100%;
   left: 50%;
   margin-left: -50%;
   line-height: 1;
   text-align: center;
+
+  &.fade {
+    @include opacity(0.6);
+  }
 
   h1 {
     @include rem(font-size, 40px);

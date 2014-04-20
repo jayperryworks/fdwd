@@ -626,14 +626,14 @@ body {
   /* line 123, ../_scss/core/_layout.scss */
   [role="main"], .main, footer.global, .footer.global {
     margin-left: 180px;
-    width: calc(100% - first($header-w));
+    width: calc(100% - 180px);
   }
 }
 @media (min-width: 90em) {
   /* line 123, ../_scss/core/_layout.scss */
   [role="main"], .main, footer.global, .footer.global {
     margin-left: 220px;
-    width: calc(100% - nth-last($header-w, 2));
+    width: calc(100% - 220px);
   }
 }
 
@@ -2125,7 +2125,12 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   line-height: 1;
   text-align: center;
 }
-/* line 54, ../_scss/modules/_hero.scss */
+/* line 55, ../_scss/modules/_hero.scss */
+.hero-headline.fade {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+/* line 59, ../_scss/modules/_hero.scss */
 .hero-headline h1 {
   font-size: 40px;
   font-size: 2.5rem;
@@ -2135,17 +2140,17 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   /* spcial css for kerning.js */
 }
 @media (min-width: 48em) {
-  /* line 54, ../_scss/modules/_hero.scss */
+  /* line 59, ../_scss/modules/_hero.scss */
   .hero-headline h1 {
     font-size: 54px;
     font-size: 3.375rem;
   }
 }
-/* line 75, ../_scss/modules/_hero.scss */
+/* line 80, ../_scss/modules/_hero.scss */
 .hero-headline h1 .char10, .hero-headline h1 .char27 {
   margin-left: -0.05em;
 }
-/* line 80, ../_scss/modules/_hero.scss */
+/* line 85, ../_scss/modules/_hero.scss */
 .hero-headline h2 {
   font-size: 36px;
   font-size: 2.25rem;
@@ -2154,20 +2159,20 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   color: #3da288;
 }
 @media (min-width: 30em) {
-  /* line 80, ../_scss/modules/_hero.scss */
+  /* line 85, ../_scss/modules/_hero.scss */
   .hero-headline h2 {
     font-size: 40px;
     font-size: 2.5rem;
   }
 }
 @media (min-width: 48em) {
-  /* line 80, ../_scss/modules/_hero.scss */
+  /* line 85, ../_scss/modules/_hero.scss */
   .hero-headline h2 {
     font-size: 50px;
     font-size: 3.125rem;
   }
 }
-/* line 95, ../_scss/modules/_hero.scss */
+/* line 100, ../_scss/modules/_hero.scss */
 .hero-headline .subhead {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2179,7 +2184,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   font-size: 0.4em;
   letter-spacing: 0;
 }
-/* line 102, ../_scss/modules/_hero.scss */
+/* line 107, ../_scss/modules/_hero.scss */
 .hero-headline .numbers {
   display: -moz-inline-stack;
   display: inline-block;

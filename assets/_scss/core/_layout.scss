@@ -134,13 +134,13 @@ body {
   @include breakpoint($breakpoint-header) {
     // @include calc(width, '100% - #{first($header-w)}');
     margin-left: first($header-w);
-    width: calc(100% - first($header-w));
+    width: calc(100% - #{first($header-w)});
   }
 
   @include breakpoint($xlarge) {
     // @include calc(width, '100% - #{nth-last($header-w, 2)}');
     margin-left: nth-last($header-w, 2);
-    width: calc(100% - nth-last($header-w, 2));
+    width: calc(100% - #{nth-last($header-w, 2)});
   }
   
 
