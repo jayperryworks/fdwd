@@ -65,11 +65,25 @@
       // set up widon't & ampersand replacement
       fdwd.typography('h1, h2, h3, h4, h5, h6, p, li, a, td, figcaption, small, span');
 
+      // set up parallax scrolling (used in hero unit on landing page)
       $(window).stellar({
-          responsive: true,
-          horizontalScrolling: false
-          // verticalOffset: 300
-        });
+        responsive: true,
+        horizontalScrolling: false
+      });
+
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+          $('#js-scroll-hero-headline').addClass("fade");
+        } else {
+          $('#js-scroll-hero-headline').removeClass("fade");
+        }
+
+        if ($(this).scrollTop() > 30) {
+          $('#js-scroll-arrow').fadeOut();
+        } else {
+          $('#js-scroll-arrow').fadeIn();
+        }
+      });
 
 
       fdwd.registerBreakpoints();
