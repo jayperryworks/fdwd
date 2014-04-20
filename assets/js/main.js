@@ -60,8 +60,17 @@
       // set up accordion
       fdwd.accordion.init(fdwd.config.accordion);
 
+      $('.hero-headline h1').lettering();
+
       // set up widon't & ampersand replacement
       fdwd.typography('h1, h2, h3, h4, h5, h6, p, li, a, td, figcaption, small, span');
+
+      $(window).stellar({
+          responsive: true,
+          horizontalScrolling: false
+          // verticalOffset: 300
+        });
+
 
       fdwd.registerBreakpoints();
     },

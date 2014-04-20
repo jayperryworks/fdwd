@@ -552,7 +552,7 @@ figure {
 }
 
 /* line 75, ../_scss/core/_layout.scss */
-.title, .intro.lead_in, .post.full, .wrapper, .feature, .hero-headline {
+.title, .intro.lead_in, .post.full, .wrapper, .feature {
   margin: 0 auto;
   max-width: 1120px;
 }
@@ -638,11 +638,11 @@ body {
 }
 
 /* set up the "open menu" state for mobile screens */
-/* line 152, ../_scss/core/_layout.scss */
+/* line 154, ../_scss/core/_layout.scss */
 .menu-open [role="main"], .menu-open [role="banner"].global, .menu-open footer.global {
   left: 180px;
 }
-/* line 158, ../_scss/core/_layout.scss */
+/* line 160, ../_scss/core/_layout.scss */
 .menu-open [role="navigation"].global {
   left: 0;
   -webkit-transition: left 0.3s ease;
@@ -651,13 +651,13 @@ body {
   transition: left 0.3s ease;
 }
 @media (min-width: 48em) {
-  /* line 165, ../_scss/core/_layout.scss */
+  /* line 167, ../_scss/core/_layout.scss */
   .menu-open [role="main"], .menu-open [role="banner"] {
     left: 0;
   }
 }
 
-/* line 171, ../_scss/core/_layout.scss */
+/* line 173, ../_scss/core/_layout.scss */
 .title, .intro.lead_in, .post.full, .wrapper {
   padding-left: 48px;
   padding-right: 48px;
@@ -671,13 +671,14 @@ body {
   display: table;
   clear: both;
 }
-/* line 179, ../_scss/core/_layout.scss */
+/* line 181, ../_scss/core/_layout.scss */
 .overflow.title, .overflow.intro.lead_in, .overflow.post.full, .wrapper.overflow {
   overflow: visible;
 }
 
 /* "feature" blurb on landing page */
-/* line 185, ../_scss/core/_layout.scss */
+/* see hero module for 'overlap' css */
+/* line 188, ../_scss/core/_layout.scss */
 .feature {
   margin-top: -96px;
   margin-top: -6rem;
@@ -691,7 +692,7 @@ body {
   clear: both;
 }
 
-/* line 192, ../_scss/core/_layout.scss */
+/* line 195, ../_scss/core/_layout.scss */
 .feature-copy {
   margin-bottom: 2em;
   padding-left: 48px;
@@ -699,7 +700,7 @@ body {
   padding-top: 24px;
 }
 @media (min-width: 48em) {
-  /* line 192, ../_scss/core/_layout.scss */
+  /* line 195, ../_scss/core/_layout.scss */
   .feature-copy {
     width: 75%;
     float: left;
@@ -710,7 +711,7 @@ body {
   }
 }
 
-/* line 204, ../_scss/core/_layout.scss */
+/* line 207, ../_scss/core/_layout.scss */
 .feature-sidebar {
   margin-bottom: -36px;
   margin-bottom: -2.25rem;
@@ -719,7 +720,7 @@ body {
   padding-top: 24px;
 }
 @media (min-width: 48em) {
-  /* line 204, ../_scss/core/_layout.scss */
+  /* line 207, ../_scss/core/_layout.scss */
   .feature-sidebar {
     width: 25%;
     float: right;
@@ -732,12 +733,12 @@ body {
     background-color: #283030 !important;
   }
 }
-/* line 224, ../_scss/core/_layout.scss */
+/* line 227, ../_scss/core/_layout.scss */
 .feature-sidebar > figure {
   margin: 0;
 }
 
-/* line 229, ../_scss/core/_layout.scss */
+/* line 232, ../_scss/core/_layout.scss */
 .feature-sidebar-thumb {
   display: block;
 }
@@ -2075,62 +2076,98 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   visibility: hidden;
 }
 
-/* line 9, ../_scss/modules/_hero.scss */
+/* line 13, ../_scss/modules/_hero.scss */
 .hero {
-  height: 320px;
-  height: 20rem;
+  height: 450px;
+  height: 28.125rem;
   padding-top: 54px;
   padding-top: 3.375rem;
   border-bottom-width: 4px;
   border-bottom-style: solid;
+  position: relative;
   margin: 0;
-  background: url("../images/hero.jpg") center center no-repeat;
+  background: url("../images/hero.jpg") top center no-repeat;
   background-size: cover;
   z-index: 0;
 }
+/* line 26, ../_scss/modules/_hero.scss */
+.hero [class*="icon-arrow-down"] {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 30px;
+  width: 1.875rem;
+  height: 30px;
+  height: 1.875rem;
+  margin-left: -15px;
+  margin-left: -0.9375rem;
+  bottom: 76px;
+  bottom: 4.75rem;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  position: absolute;
+  left: 50%;
+}
 
-/* line 25, ../_scss/modules/_hero.scss */
+/* line 42, ../_scss/modules/_hero.scss */
 .hero-headline {
   padding-left: 48px;
   padding-right: 48px;
+  bottom: 156px;
+  bottom: 9.75rem;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%;
   line-height: 1;
+  text-align: center;
 }
-/* line 30, ../_scss/modules/_hero.scss */
+/* line 54, ../_scss/modules/_hero.scss */
 .hero-headline h1 {
   font-size: 40px;
   font-size: 2.5rem;
   line-height: 1;
+  color: white;
+  text-align: center;
+  /* spcial css for kerning.js */
 }
 @media (min-width: 48em) {
-  /* line 30, ../_scss/modules/_hero.scss */
+  /* line 54, ../_scss/modules/_hero.scss */
   .hero-headline h1 {
     font-size: 54px;
     font-size: 3.375rem;
   }
 }
-/* line 43, ../_scss/modules/_hero.scss */
+/* line 75, ../_scss/modules/_hero.scss */
+.hero-headline h1 .char10, .hero-headline h1 .char27 {
+  margin-left: -0.05em;
+}
+/* line 80, ../_scss/modules/_hero.scss */
 .hero-headline h2 {
   font-size: 36px;
   font-size: 2.25rem;
-  margin-top: -0.4em;
+  margin-top: -0.3em;
   line-height: 1;
-  color: white;
+  color: #3da288;
 }
 @media (min-width: 30em) {
-  /* line 43, ../_scss/modules/_hero.scss */
+  /* line 80, ../_scss/modules/_hero.scss */
   .hero-headline h2 {
     font-size: 40px;
     font-size: 2.5rem;
   }
 }
 @media (min-width: 48em) {
-  /* line 43, ../_scss/modules/_hero.scss */
+  /* line 80, ../_scss/modules/_hero.scss */
   .hero-headline h2 {
     font-size: 50px;
     font-size: 3.125rem;
   }
 }
-/* line 58, ../_scss/modules/_hero.scss */
+/* line 95, ../_scss/modules/_hero.scss */
 .hero-headline .subhead {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2142,7 +2179,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   font-size: 0.4em;
   letter-spacing: 0;
 }
-/* line 65, ../_scss/modules/_hero.scss */
+/* line 102, ../_scss/modules/_hero.scss */
 .hero-headline .numbers {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2151,6 +2188,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
   vertical-align: middle;
+  font-size: 0.8em;
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   letter-spacing: -0.03;
 }

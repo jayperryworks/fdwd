@@ -3,33 +3,66 @@
 // -> big, full-bleed photo with headline over it
 // ========================================================================== */
 
+@function bottom-overlap($y) {
+  @return ($hero-overlap - $strip-padding + $y);
+}
+
 /* BASE
 // ----------------------------------------------------------------------------- */
 
 .hero {
   @extend %center;
   @extend %highlight-border;
-  @include rem(height, 320px);
+  @include rem(height, 450px);
   @include rem(padding-top, 54px);
   @include border(bottom, thick);
-  // position: relative;
+  position: relative;
   margin: 0;
-  background: url("#{$path-images}hero.jpg") center center no-repeat;
+  background: url("#{$path-images}hero.jpg") top center no-repeat;
+  // background-attachment: scroll;
   background-size: cover;
   z-index: $z--low;
+
+  [class*="icon-arrow-down"] {
+    $size: 30px;
+    @include inline-block;
+    @include rem(width, $size);
+    @include rem(height, $size);
+    @include rem(margin-left, -($size/2));
+    @include rem(bottom, bottom-overlap(16px));
+    @include opacity(0.75);
+    position: absolute;
+    left: 50%;
+  }
 }
 
 /* SUBMODULES
 // ----------------------------------------------------------------------------- */
 
 .hero-headline {
-  @extend %max-width;
+  $w: 50%;
+  // @extend %max-width;
   @include layout-margins;
+  @include rem(bottom, bottom-overlap(96px));
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%;
   line-height: 1;
+  text-align: center;
 
   h1 {
     @include rem(font-size, 40px);
+    // width: 100%;
     line-height: 1;
+    color: white;
+    text-align: center;
+
+    /* spcial css for kerning.js */
+    // -letter-kern: -letter-pairs(
+    //     'Wa': 1em,
+    //     'Va': 1em
+    // );
     
     @include breakpoint($xsmall) {
       // @include rem(font-size, 40px);
@@ -38,13 +71,17 @@
     @include breakpoint($small) {
       @include rem(font-size, 54px);
     }
+
+    .char10, .char27 {
+      margin-left: -0.05em;
+    }
   }
 
   h2 {
     @include rem(font-size, 36px);
-    margin-top: -0.4em;
+    margin-top: -0.3em;
     line-height: 1;
-    color: white;
+    color: $color--highlight;
 
     @include breakpoint($xsmall) {
       @include rem(font-size, 40px);
@@ -65,6 +102,7 @@
   .numbers {
     @include inline-block;
     vertical-align: middle;
+    font-size: 0.8em;
     font-family: $georgia;
     letter-spacing: -0.03;
   }
