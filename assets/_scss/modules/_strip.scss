@@ -9,8 +9,8 @@
 
 .strip {
   // @extend .wrapper;
-  @include rem(padding-top, 36px);
-  @include rem(padding-bottom, 36px);
+  @include rem(padding-top, $strip-padding);
+  @include rem(padding-bottom, $strip-padding);
   @include clearfix;
   @include border(top);
   position: relative;

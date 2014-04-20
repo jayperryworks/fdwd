@@ -60,6 +60,9 @@ $type-size-amp: 1em; // how big the ampersand is (relative to surrounding type)
 $layout-width: 1024px;
 $layout-margins: 48px;
 
+$strip-padding: 36px; // top and bottom padding in 'strip' containers
+$hero-overlap: 96px; // how much the feature element overlaps the hero unit
+
 $header-w: 180px 220px;
 
 $hairline-w--thin: 1px;
