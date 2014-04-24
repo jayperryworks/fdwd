@@ -175,6 +175,7 @@ body {
   @include clearfix;
   @include layout-margins;
   display: block;
+  position: relative;
   overflow: hidden;
   clear: both;
 

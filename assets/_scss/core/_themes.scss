@@ -154,6 +154,14 @@ $theme-default-border: darken($theme-default-bg, 20);
     color: $accent;
   }
 
+  .dark {
+    color: $fg;
+  }
+
+  .light {
+    color: white;
+  }
+
   %accent-border, .accent-border {
     border-color: $accent !important;
   }

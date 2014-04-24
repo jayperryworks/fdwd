@@ -65,6 +65,16 @@
   @include rem(margin-bottom, 8px);
   @include kill-border(top);
 
+  &:first-child {
+    .media_panel-thumb {
+      @include kill-border(top);
+    }
+
+    .media_panel-body {
+      @include kill-border(top);
+    }
+  }
+
   .media_panel-thumb {
     @include border(top, thin);
   }
