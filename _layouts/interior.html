@@ -2,9 +2,9 @@
 layout: default
 ---
 
-{% if page.show_title != "no" %}
+{% unless page.show_title == "no" %}
 <h1 class="title accent">{{ page.title }}</h1>
-{% endif %}
+{% endunless %}
 
 {{ content }}
 

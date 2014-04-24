@@ -191,6 +191,10 @@ body {
   @include rem(margin-top, -($hero-overlap));
   position: relative;
   z-index: $z--med;
+
+  h1 {
+    margin-top: 1em;
+  }
 }
   .feature-copy {
     @extend %add-gutters;

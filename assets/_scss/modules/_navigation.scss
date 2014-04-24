@@ -175,6 +175,14 @@
 
     &.is-open {
       @include restore-visible;
+      @include rem(margin-bottom, 16px);
+
+      img {
+        display: block;
+        width: 40%;
+        margin: 0 0 1em 1em;
+        float: right;
+      }
     }
   }
   
