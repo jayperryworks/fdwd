@@ -154,11 +154,11 @@ $theme-default-border: darken($theme-default-bg, 20);
     color: $accent;
   }
 
-  .dark {
+  %dark, .dark {
     color: $fg;
   }
 
-  .light {
+  %light, .light {
     color: white;
   }
 
@@ -189,6 +189,10 @@ $theme-default-border: darken($theme-default-bg, 20);
 
 %theme-default, .theme-default, body {
   @include theme(); //use all defaults
+
+  .intro {
+    color: lighten($blue, 10);
+  }
 }
 
 @mixin restore-default-theme() {

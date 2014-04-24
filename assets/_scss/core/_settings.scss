@@ -100,6 +100,11 @@ $medium: nth($breakpoints, 3);
 $large: nth($breakpoints, 4);
 $xlarge: nth($breakpoints, 5);
 
+// vertical breakpoints
+$small-h: (min-height 700px);
+$medium-h: (min-height 850px);
+$large-h: (min-height 1000px);
+
 $breakpoint-to-ems: true;
 
 // breakpoints for major layout elements
