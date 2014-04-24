@@ -44,16 +44,20 @@
   // @include kill-border(bottom);
   // background-position: bottom center;
 
+  .wrapper {
+    height: 100%;
+  }
+
   .hero-headline {
-    @extend %max-width;
-    @extend %layout-margins;
+    // @extend %max-width;
+    // @extend %layout-margins;
     @include rem(bottom, 48px);
     // top: 60%;
-    left: 50%;
+    // left: 50%;
     // margin: 0 auto;
     position: absolute;
     // bottom: auto;
-    // text-align: left;
+    text-align: left;
     // color: $green;
   }
 }
@@ -73,21 +77,26 @@
   margin-left: -50%;
   line-height: 1;
   text-align: center;
-  color: white;
+  // color: white;
 
   &.fade {
     @include opacity(0.6);
   }
 
-  &.dark {
-    color: $blue;
+  &.dark, .dark {
+    // color: $blue;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  &.light, .light {
+    text-shadow: 0 2px 0 rgba(41, 63, 71, 0.4);
   }
 
   h1 {
     @include rem(font-size, 40px);
     // width: 100%;
     line-height: 1;
-    color: white;
+    // color: white;
     text-align: center;
     // color: $blue;
 
@@ -97,16 +106,16 @@
     //     'Va': 1em
     // );
 
-    &.dark {
-      color: $blue;
-    }
+    // &.dark {
+    //   color: $blue;
+    // }
     
     @include breakpoint($xsmall) {
       // @include rem(font-size, 40px);
     } 
 
     @include breakpoint($small) {
-      @include rem(font-size, 54px);
+      @include rem(font-size, 60px);
     }
 
     .char10, .char27 {
