@@ -1,12 +1,21 @@
 ---
 layout: interior
 title: "Attorney Profiles"
+show_title: "no"
 
 next: "Practice Areas"
 next_url: practice-areas.html"
 ---
 
+<section class="hero interior" data-stellar-background-ratio="0.4" style="background-image: url({{ site.assets.img }}attorneys2.jpg)">
+  
+</section>
+<div class="feature theme-default">
+<h1 class="title accent">{{ page.title }}</h1>
+</div>
+
 <div class="wrapper">
+
 {% for post in site.categories.attorneys %}
 {% capture anchor %}{{ post.title | replace: " ", "-" | remove: "." | downcase }}{% endcapture %}
 

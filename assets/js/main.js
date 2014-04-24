@@ -35,7 +35,8 @@
       // -> global vars go here
       // --------------------------------------------------------------- 
       menuBtn : ".header-button-menu",
-      accordion: ".accordion-button"
+      accordion: ".accordion-button",
+      scaleHeight: ".js-scale-height"
     },
 
     // Setup
@@ -85,6 +86,7 @@
         }
       });
 
+      fdwd.scaleToWindow.update(fdwd.config.scaleHeight, "height");
 
       fdwd.registerBreakpoints();
     },
@@ -249,6 +251,46 @@
       }
     },
 
+    // --- Scale an element to the size of the browser window --------------------------
+    scaleToWindow : {
+
+      defaultHeight : 70, // percentage of window height
+      defaultWidth : 70, // percentage of window width
+
+      update: function(el, axis, percentage, max) {
+        
+        // default values for optional params
+        var axis = axis || "height";
+        var max = max || true;
+
+        // set the size on the right axis
+        switch(axis) {
+          case "height":
+            var size = $(window).height() * (percentage/100);
+            var percentage = percentage || fdwd.scaleToWindow.defaultHeight;
+
+            if (max == true) {
+              $(el).css("max-height", size);
+            } else {
+              $(el).css("height", size);
+            }
+            
+            break;
+          case "width":
+            var size = $(window).width() * (percentage/100);
+            var percentage = percentage || fdwd.scaleToWindow.defaultWidth;
+
+            if (max == true) {
+              $(el).css("max-width", size);
+            } else {
+              $(el).css("width", size);
+            }
+            
+            break;
+        }
+      }
+    },
+
     // --- Widon't & Best Ampersand ----------------------------------------------
     // -> http://justinhileman.info/article/a-jquery-widont-snippet/
     // -> http://justinhileman.info/article/more-jquery-typography/
@@ -273,5 +315,9 @@
 
   $(window).load(function() {
     fdwd.init();
+  });
+
+  $(window).resize(function() {
+    fdwd.scaleToWindow.update(fdwd.config.scaleHeight, "height");
   });
 })(jQuery);

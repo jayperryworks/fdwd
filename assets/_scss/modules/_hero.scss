@@ -18,7 +18,9 @@
   @include border(bottom, thick);
   position: relative;
   margin: 0;
-  background: url("#{$path-images}hero.jpg") top center no-repeat;
+  // background-image: url(attr(data-img)); //"#{$path-images}hero.jpg"
+  background-position: top center;
+  background-repeat: no-repeat;
   // background-attachment: scroll;
   background-size: cover;
   z-index: $z--low;
@@ -36,6 +38,26 @@
   }
 }
 
+.hero.interior {
+  @include rem(height, 300px);
+  @include rem(margin-bottom, 24px);
+  // @include kill-border(bottom);
+  // background-position: bottom center;
+
+  .hero-headline {
+    @extend %max-width;
+    @extend %layout-margins;
+    @include rem(bottom, 48px);
+    // top: 60%;
+    left: 50%;
+    // margin: 0 auto;
+    position: absolute;
+    // bottom: auto;
+    // text-align: left;
+    // color: $green;
+  }
+}
+
 /* SUBMODULES
 // ----------------------------------------------------------------------------- */
 
@@ -43,7 +65,7 @@
   $w: 50%;
   // @extend %max-width;
   @include layout-margins;
-  @include rem(bottom, bottom-overlap(96px));
+  @include rem(bottom, bottom-overlap(60px));
   // @include transition(opacity, $base-duration);
   position: absolute;
   width: 100%;
@@ -51,9 +73,14 @@
   margin-left: -50%;
   line-height: 1;
   text-align: center;
+  color: white;
 
   &.fade {
     @include opacity(0.6);
+  }
+
+  &.dark {
+    color: $blue;
   }
 
   h1 {
@@ -62,12 +89,17 @@
     line-height: 1;
     color: white;
     text-align: center;
+    // color: $blue;
 
     /* spcial css for kerning.js */
     // -letter-kern: -letter-pairs(
     //     'Wa': 1em,
     //     'Va': 1em
     // );
+
+    &.dark {
+      color: $blue;
+    }
     
     @include breakpoint($xsmall) {
       // @include rem(font-size, 40px);
