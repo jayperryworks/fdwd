@@ -1,9 +1,10 @@
-/* line 11, ../_scss/core/_settings.scss */
+/* ===============================================================================
+ * Settings & resets
+ * =============================================================================== */
 .button {
   border-radius: 3px;
 }
 
-/* line 15, ../_scss/core/_settings.scss */
 input, textarea, select, a, .bullet-icon, .js .accordion {
   /* base transition used globally */
   -webkit-transition: all 0.5s false;
@@ -12,6 +13,9 @@ input, textarea, select, a, .bullet-icon, .js .accordion {
   transition: all 0.5s;
 }
 
+/* ==========================================================================
+ *  @Font-face styles
+ * ========================================================================== */
 /* ----- Calluna (display font) --------------------------------------------- */
 /*!
  * Web Fonts from fontspring.com
@@ -44,14 +48,12 @@ input, textarea, select, a, .bullet-icon, .js .accordion {
   font-style: normal;
 }
 
-/* line 44, ../_scss/core/_fonts.scss */
 h1, h2, [role="navigation"].global a {
   font-family: "CallunaRegular", Georgia, Cambria, "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: normal;
 }
 
-/* line 56, ../_scss/core/_fonts.scss */
 .header-tagline {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-style: italic;
@@ -92,24 +94,20 @@ h1, h2, [role="navigation"].global a {
   font-style: normal;
 }
 
-/* line 110, ../_scss/core/_fonts.scss */
 p em, table em, li em, .label, .read_more, .js .accordion-button .hide, .js .accordion-button .expand, .post-date, .post-meta-categories .label, .post-footer-categories dt, .footer-local-subhead, p strong, table strong, li strong, body, h3, h4, .bullet, #home footer.global .info strong, #home .footer.global .info strong, h5, h6, p, table, li, dl, figcaption, .button {
   font-family: "MuseoSans300", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 
-/* line 116, ../_scss/core/_fonts.scss */
 p em, table em, li em {
   font-family: "MuseoSans300Italic", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
 }
 
-/* line 121, ../_scss/core/_fonts.scss */
 .label, .read_more, .js .accordion-button .hide, .js .accordion-button .expand, .post-date, .post-meta-categories .label, .post-footer-categories dt, .footer-local-subhead {
   font-family: "MuseoSans700", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
 }
 
-/* line 126, ../_scss/core/_fonts.scss */
 p strong, table strong, li strong {
   font-family: "MuseoSans900", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
 }
@@ -132,126 +130,33 @@ p strong, table strong, li strong {
   font-style: normal;
 }
 
-/* line 161, ../_scss/core/_fonts.scss */
 .fontface .amp {
   font-family: "playfair_displayregular", "MuseoSans300", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 167, ../_scss/core/_fonts.scss */
 .fontface em .amp {
   font-family: "playfair_displayitalic", "MuseoSans300Italic", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
 }
 
-@-moz-keyframes spin {
-  /* line 235, ../_scss/core/_helpers.scss */
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  /* line 242, ../_scss/core/_helpers.scss */
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-@-webkit-keyframes spin {
-  /* line 250, ../_scss/core/_helpers.scss */
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  /* line 257, ../_scss/core/_helpers.scss */
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-@-o-keyframes spin {
-  /* line 265, ../_scss/core/_helpers.scss */
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  /* line 272, ../_scss/core/_helpers.scss */
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-@-ms-keyframes spin {
-  /* line 280, ../_scss/core/_helpers.scss */
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  /* line 287, ../_scss/core/_helpers.scss */
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes spin {
-  /* line 295, ../_scss/core/_helpers.scss */
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  /* line 302, ../_scss/core/_helpers.scss */
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
+/* ===============================================================================
+ * Core style imports
+ * =============================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-/* line 17, ../_scss/core/_base.scss */
+/* ========================================================================== */
+/* Base styles: opinionated defaults
+/* ========================================================================== */
 html,
 button,
 input,
@@ -260,17 +165,20 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 21, ../_scss/core/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 25, ../_scss/core/_base.scss */
 html {
+  /* set up the base font size at each breakpoint */
+  /* this will scale the whole layout proportionately as the screen size changes */
+  /* and we only have to change one thing */
   font-size: 100%;
   line-height: 1.5;
+  /* set everything to roll with border-box sizing */
+  /* -> much easier than reg box model */
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;
@@ -278,25 +186,21 @@ html {
   box-sizing: border-box;
 }
 @media (min-width: 48em) {
-  /* line 25, ../_scss/core/_base.scss */
   html {
     font-size: 100%;
   }
 }
 @media (min-width: 64em) {
-  /* line 25, ../_scss/core/_base.scss */
   html {
     font-size: 112.5%;
   }
 }
 @media (min-width: 76.25em) {
-  /* line 25, ../_scss/core/_base.scss */
   html {
     font-size: 131.25%;
   }
 }
 
-/* line 52, ../_scss/core/_base.scss */
 main {
   display: block;
 }
@@ -306,14 +210,12 @@ main {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-/* line 62, ../_scss/core/_base.scss */
 ::-moz-selection {
   color: white;
   background: #54bea3;
   text-shadow: none;
 }
 
-/* line 68, ../_scss/core/_base.scss */
 ::selection {
   color: white;
   background: #54bea3;
@@ -323,7 +225,6 @@ main {
 /*
  * A better looking default horizontal rule
  */
-/* line 78, ../_scss/core/_base.scss */
 hr {
   display: block;
   height: 1px;
@@ -337,7 +238,6 @@ hr {
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
-/* line 95, ../_scss/core/_base.scss */
 audio,
 canvas,
 img,
@@ -349,14 +249,12 @@ video {
 /*
  * Remove default fieldset styles.
  */
-/* line 104, ../_scss/core/_base.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 110, ../_scss/core/_base.scss */
 input, textarea, select {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -368,14 +266,12 @@ input, textarea, select {
   border-style: solid;
   text-shadow: none;
 }
-/* line 120, ../_scss/core/_base.scss */
 input:focus, textarea:focus, select:focus {
   outline: 0;
   outline: thin dotted \9;
   /* IE6-9 */
 }
 
-/* line 126, ../_scss/core/_base.scss */
 [type="submit"] {
   -webkit-appearance: none;
   box-shadow: none;
@@ -384,7 +280,6 @@ input:focus, textarea:focus, select:focus {
   border: none;
 }
 
-/* line 134, ../_scss/core/_base.scss */
 input[type="search"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -393,14 +288,12 @@ input[type="search"] {
   border-radius: 100px;
   box-shadow: none;
 }
-/* line 144, ../_scss/core/_base.scss */
 input[type="search"]:focus {
   outline: 0;
   outline: thin dotted \9;
   /* IE6-9 */
 }
 
-/* line 150, ../_scss/core/_base.scss */
 button, [type="submit"] {
   outline: 0;
   border: none;
@@ -409,18 +302,15 @@ button, [type="submit"] {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 159, ../_scss/core/_base.scss */
 textarea {
   resize: vertical;
 }
-/* line 162, ../_scss/core/_base.scss */
 textarea:focus {
   outline: 0;
   outline: thin dotted \9;
   /* IE6-9 */
 }
 
-/* line 168, ../_scss/core/_base.scss */
 select {
   padding-right: 2em;
   -webkit-appearance: none !important;
@@ -432,21 +322,17 @@ select {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 181, ../_scss/core/_base.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 186, ../_scss/core/_base.scss */
 ol, ul, dl {
   margin-bottom: 0;
 }
 
-/* line 190, ../_scss/core/_base.scss */
 dl {
   margin: 0;
 }
-/* line 192, ../_scss/core/_base.scss */
 dl dd {
   margin-left: 0;
   padding-left: 0;
@@ -455,25 +341,25 @@ dl dd {
 /*
  * Reset lists that appear in nav elements
  */
-/* line 201, ../_scss/core/_base.scss */
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 207, ../_scss/core/_base.scss */
 p {
   text-align: left;
 }
 
-/* line 211, ../_scss/core/_base.scss */
 figure {
   margin: 1em 0;
 }
 
+/* ==========================================================================
+ *  HTML5 BP Print Styles
+ * -> modify as needed
+ * ========================================================================== */
 @media print {
-  /* line 7, ../_scss/core/_print.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -482,48 +368,40 @@ figure {
     text-shadow: none !important;
   }
 
-  /* line 15, ../_scss/core/_print.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 19, ../_scss/core/_print.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 23, ../_scss/core/_print.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 32, ../_scss/core/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 37, ../_scss/core/_print.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 42, ../_scss/core/_print.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 47, ../_scss/core/_print.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 51, ../_scss/core/_print.scss */
   img {
     max-width: 100% !important;
   }
@@ -532,7 +410,6 @@ figure {
     margin: 0.5cm;
 }
 
-  /* line 61, ../_scss/core/_print.scss */
   p,
   h2,
   h3 {
@@ -540,40 +417,38 @@ figure {
     widows: 3;
   }
 
-  /* line 67, ../_scss/core/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 }
-/* line 71, ../_scss/core/_layout.scss */
+/* ============================================================================== */
+/* Global layout styles */
+/* ============================================================================== */
+/* GLOBAL MODIFIERS */
+/* ----------------------------------------------------------------------------- */
 .feature-copy {
   padding: 0 12px;
 }
 
-/* line 75, ../_scss/core/_layout.scss */
 .title, .intro.lead_in, .post.full, .wrapper, .feature {
   margin: 0 auto;
   max-width: 1120px;
 }
 
-/* line 84, ../_scss/core/_layout.scss */
 .margins {
   margin-left: 48px;
   margin-right: 48px;
 }
 
-/* line 88, ../_scss/core/_layout.scss */
 .hero, .center {
   text-align: center;
 }
 
-/* line 92, ../_scss/core/_layout.scss */
 .overflow {
   overflow: visible;
 }
 
-/* line 96, ../_scss/core/_layout.scss */
 .break {
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -583,13 +458,13 @@ figure {
   padding-bottom: 0.5rem;
 }
 
-/* line 105, ../_scss/core/_layout.scss */
+/* BASE LAYOUTS */
+/* ----------------------------------------------------------------------------- */
 html {
   width: 100%;
   height: 100%;
 }
 
-/* line 110, ../_scss/core/_layout.scss */
 body {
   min-height: 100%;
   width: 100%;
@@ -598,14 +473,12 @@ body {
   overflow-x: hidden;
 }
 @media (min-width: 48em) {
-  /* line 110, ../_scss/core/_layout.scss */
   body {
     width: auto;
     overflow: auto;
   }
 }
 
-/* line 123, ../_scss/core/_layout.scss */
 [role="main"], .main, footer.global, .footer.global {
   -webkit-transition: left 0.3s ease;
   -moz-transition: left 0.3s ease false;
@@ -616,33 +489,30 @@ body {
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 [role="main"]:after, .main:after, footer.global:after, .footer.global:after {
   content: "";
   display: table;
   clear: both;
 }
 @media (min-width: 48em) {
-  /* line 123, ../_scss/core/_layout.scss */
   [role="main"], .main, footer.global, .footer.global {
     margin-left: 180px;
     width: calc(100% - 180px);
   }
 }
 @media (min-width: 90em) {
-  /* line 123, ../_scss/core/_layout.scss */
   [role="main"], .main, footer.global, .footer.global {
     margin-left: 220px;
     width: calc(100% - 220px);
   }
 }
 
+/* COMPONENT LAYOUTS */
+/* ----------------------------------------------------------------------------- */
 /* set up the "open menu" state for mobile screens */
-/* line 154, ../_scss/core/_layout.scss */
 .menu-open [role="main"], .menu-open [role="banner"].global, .menu-open footer.global {
   left: 180px;
 }
-/* line 160, ../_scss/core/_layout.scss */
 .menu-open [role="navigation"].global {
   left: 0;
   -webkit-transition: left 0.3s ease;
@@ -651,13 +521,11 @@ body {
   transition: left 0.3s ease;
 }
 @media (min-width: 48em) {
-  /* line 167, ../_scss/core/_layout.scss */
   .menu-open [role="main"], .menu-open [role="banner"] {
     left: 0;
   }
 }
 
-/* line 173, ../_scss/core/_layout.scss */
 .title, .intro.lead_in, .post.full, .wrapper {
   padding-left: 48px;
   padding-right: 48px;
@@ -666,38 +534,32 @@ body {
   overflow: hidden;
   clear: both;
 }
-/* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .title:after, .intro.lead_in:after, .post.full:after, .wrapper:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 182, ../_scss/core/_layout.scss */
 .overflow.title, .overflow.intro.lead_in, .overflow.post.full, .wrapper.overflow {
   overflow: visible;
 }
 
 /* "feature" blurb on landing page */
 /* see hero module for 'overlap' css */
-/* line 189, ../_scss/core/_layout.scss */
 .feature {
   margin-top: -96px;
   margin-top: -6rem;
   position: relative;
   z-index: 1;
 }
-/* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .feature:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 196, ../_scss/core/_layout.scss */
 .feature h1 {
   margin-top: 1em;
 }
 
-/* line 200, ../_scss/core/_layout.scss */
 .feature-copy {
   margin-bottom: 2em;
   padding-left: 48px;
@@ -705,7 +567,6 @@ body {
   padding-top: 24px;
 }
 @media (min-width: 48em) {
-  /* line 200, ../_scss/core/_layout.scss */
   .feature-copy {
     width: 75%;
     float: left;
@@ -716,7 +577,6 @@ body {
   }
 }
 
-/* line 212, ../_scss/core/_layout.scss */
 .feature-sidebar {
   margin-bottom: -36px;
   margin-bottom: -2.25rem;
@@ -725,7 +585,6 @@ body {
   padding-top: 24px;
 }
 @media (min-width: 48em) {
-  /* line 212, ../_scss/core/_layout.scss */
   .feature-sidebar {
     width: 25%;
     float: right;
@@ -738,51 +597,106 @@ body {
     background-color: #283030 !important;
   }
 }
-/* line 232, ../_scss/core/_layout.scss */
 .feature-sidebar > figure {
   margin: 0;
 }
 
-/* line 237, ../_scss/core/_layout.scss */
 .feature-sidebar-thumb {
   display: block;
 }
 
-/* line 5, ../_scss/core/_content.scss */
+.map {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-right: 24px;
+  margin: 24px 0;
+  margin: 1.5rem 0;
+  clear: both;
+}
+
+.info {
+  list-style: none;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.info li {
+  list-style: none;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.info.contact > dt, .info.contact > dd {
+  display: inline;
+}
+.info.contact > dt {
+  margin-right: 0.1875em;
+}
+.info.contact > dd {
+  margin-left: 0;
+}
+.info.contact > dd:after {
+  content: '\A';
+  white-space: pre;
+}
+.info.contact dt {
+  font-weight: bold;
+}
+.info .inline {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-left: 0.6em;
+}
+.info .inline:first-child {
+  margin-left: 0;
+}
+.info .inline:first-child:before {
+  content: none;
+}
+.info .inline:before {
+  content: '\2022';
+  position: relative;
+  left: -0.4em;
+}
+
+/* ==============================================================================
+ * 	Global type
+ * ============================================================================== */
 p, table, li {
   font-size: 16px;
   font-size: 1rem;
 }
 
-/* line 9, ../_scss/core/_content.scss */
 dl, small, figcaption, .media_panel-body > p, #home footer.global .info li, #home .footer.global .info li {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
-/* line 17, ../_scss/core/_content.scss */
 hgroup {
   margin-bottom: 8px;
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
 
-/* line 22, ../_scss/core/_content.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
-/* line 25, ../_scss/core/_content.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: inherit;
   text-decoration: none;
 }
-/* line 29, ../_scss/core/_content.scss */
 h1 a:hover, h1 a:active, h2 a:hover, h2 a:active, h3 a:hover, h3 a:active, h4 a:hover, h4 a:active, h5 a:hover, h5 a:active, h6 a:hover, h6 a:active {
   color: inherit;
   border-bottom: none;
 }
 
-/* line 36, ../_scss/core/_content.scss */
 h1 {
   font-size: 54px;
   font-size: 3.375rem;
@@ -790,7 +704,6 @@ h1 {
   line-height: 1.2;
 }
 
-/* line 43, ../_scss/core/_content.scss */
 h2 {
   font-size: 42px;
   font-size: 2.625rem;
@@ -798,37 +711,31 @@ h2 {
   line-height: 1.2;
 }
 
-/* line 51, ../_scss/core/_content.scss */
 h3 {
   font-size: 24px;
   font-size: 1.5rem;
   letter-spacing: -0.01em;
 }
 
-/* line 57, ../_scss/core/_content.scss */
 h4, .bullet, #home footer.global .info strong, #home .footer.global .info strong {
   font-size: 18px;
   font-size: 1.125rem;
 }
 
-/* line 62, ../_scss/core/_content.scss */
 h5 {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
-/* line 67, ../_scss/core/_content.scss */
 h6, .post-date, .post-meta-categories .label {
   font-size: 12px;
   font-size: 0.75rem;
 }
 
-/* line 73, ../_scss/core/_content.scss */
 .accordion-content h1, .accordion-content h2, .accordion-content h3, .accordion-content h4, .accordion-content h5, .accordion-content h6 {
   margin-top: 1em;
 }
 
-/* line 78, ../_scss/core/_content.scss */
 .title {
   margin-top: 36px;
   margin-top: 2.25rem;
@@ -836,7 +743,6 @@ h6, .post-date, .post-meta-categories .label {
   margin-bottom: 1.5rem;
 }
 
-/* line 84, ../_scss/core/_content.scss */
 .label {
   border-top-width: 1px;
   border-top-style: solid;
@@ -846,63 +752,52 @@ h6, .post-date, .post-meta-categories .label {
 }
 
 /* bigger first paragraph */
-/* line 93, ../_scss/core/_content.scss */
 .intro {
   font-size: 19px;
   font-size: 1.1875rem;
   letter-spacing: -0.01em;
 }
-/* line 97, ../_scss/core/_content.scss */
 .intro.lead_in {
   margin-bottom: 36px;
   margin-bottom: 2.25rem;
 }
 
-/* line 116, ../_scss/core/_content.scss */
 p, ol, ul {
   margin: 0 0 0.5em 0;
 }
 
-/* line 120, ../_scss/core/_content.scss */
 ol, ul {
   padding-left: 1em;
   /* bump to the right a little @ mobile sizes so the numbers/bullets don't run off */
 }
 @media (min-width: 48em) {
-  /* line 120, ../_scss/core/_content.scss */
   ol, ul {
     padding-left: 0;
   }
 }
 
-/* line 129, ../_scss/core/_content.scss */
 dl {
   margin-bottom: 1em;
   letter-spacing: -0.02em;
 }
 
-/* line 140, ../_scss/core/_content.scss */
 a {
   text-decoration: none;
 }
 
-/* line 149, ../_scss/core/_content.scss */
 figcaption {
   margin-top: 0.5em;
 }
 
 /* if @font-face is supported, use Playfair ampersands... */
-/* line 156, ../_scss/core/_content.scss */
 .fontface .amp {
   font-size: 1em;
 }
-/* line 161, ../_scss/core/_content.scss */
 .fontface em .amp {
   font-size: 1em;
 }
 
 /* otherwise, use the best ampersands from common system fonts */
-/* line 168, ../_scss/core/_content.scss */
 .amp {
   font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
   font-style: italic;
@@ -911,10 +806,11 @@ figcaption {
   /* relative to whatever type surrounds it -- it renders slightly bigger */
 }
 
+/* Icons
+ * -------------------------------------------------------------------------- */
 /* usage: 
   <span aria-hidden="true" data-icon="&#xf008;"></span>
   <span class="screen-reader-text">Menu</span> */
-/* line 181, ../_scss/core/_content.scss */
 .icon, [class*="icon-"], .icon-alone {
   display: -moz-inline-stack;
   display: inline-block;
@@ -927,7 +823,6 @@ figcaption {
   line-height: 0;
 }
 
-/* line 188, ../_scss/core/_content.scss */
 [class*="icon-"] {
   margin: -0.15em 0 0 0;
   padding: 0;
@@ -939,7 +834,6 @@ figcaption {
   speak: none;
 }
 
-/* line 204, ../_scss/core/_content.scss */
 .icon-alone {
   color: transparent;
   font: 0/0 a;
@@ -950,7 +844,13 @@ figcaption {
   height: 1rem;
 }
 
-/* line 190, ../_scss/core/_themes.scss */
+/* ==============================================================================
+ *  Color themes
+ * ============================================================================== */
+/* Base
+ * ------------------------------------------------------------------------------ */
+/* Default
+ * ------------------------------------------------------------------------------ */
 .theme-default, body {
   color: #293f47;
   background-color: white;
@@ -961,126 +861,101 @@ figcaption {
   /* --- forms, buttons, icons ---------------------------------------------------------- */
   /* --- global modifiers ---------------------------------------------------------- */
 }
-/* line 32, ../_scss/core/_themes.scss */
 .theme-default *, body * {
   border-color: #cccccc;
 }
-/* line 38, ../_scss/core/_themes.scss */
 .theme-default h1, .theme-default h2, .theme-default h3, .theme-default h4, .theme-default h5, .theme-default h6, body h1, body h2, body h3, body h4, body h5, body h6 {
   color: #293f47;
 }
-/* line 41, ../_scss/core/_themes.scss */
 .theme-default h1 > a, .theme-default h2 > a, .theme-default h3 > a, .theme-default h4 > a, .theme-default h5 > a, .theme-default h6 > a, body h1 > a, body h2 > a, body h3 > a, body h4 > a, body h5 > a, body h6 > a {
   color: inherit;
   text-decoration: none;
 }
-/* line 45, ../_scss/core/_themes.scss */
 .theme-default h1 > a:hover, .theme-default h1 > a:active, .theme-default h2 > a:hover, .theme-default h2 > a:active, .theme-default h3 > a:hover, .theme-default h3 > a:active, .theme-default h4 > a:hover, .theme-default h4 > a:active, .theme-default h5 > a:hover, .theme-default h5 > a:active, .theme-default h6 > a:hover, .theme-default h6 > a:active, body h1 > a:hover, body h1 > a:active, body h2 > a:hover, body h2 > a:active, body h3 > a:hover, body h3 > a:active, body h4 > a:hover, body h4 > a:active, body h5 > a:hover, body h5 > a:active, body h6 > a:hover, body h6 > a:active {
   color: inherit;
 }
-/* line 51, ../_scss/core/_themes.scss */
 .theme-default p, .theme-default li, .theme-default td, .theme-default dd, body p, body li, body td, body dd {
   color: #6a797d;
 }
-/* line 55, ../_scss/core/_themes.scss */
 .theme-default dt, body dt {
   color: #3da288;
 }
-/* line 59, ../_scss/core/_themes.scss */
 .theme-default .intro, body .intro {
   color: #535e61;
 }
-/* line 63, ../_scss/core/_themes.scss */
 .theme-default .secondary, .theme-default aside, .theme-default figcaption, .theme-default small, .theme-default .label, .theme-default .post-date, body .secondary, body aside, body figcaption, body small, body .label, body .post-date {
   color: #cccccc;
 }
-/* line 72, ../_scss/core/_themes.scss */
 .theme-default a, body a {
   color: #3da288;
 }
-/* line 75, ../_scss/core/_themes.scss */
 .theme-default a:hover, .theme-default a:active, body a:hover, body a:active {
   color: #2f7d69;
 }
-/* line 83, ../_scss/core/_themes.scss */
 .theme-default a.active:hover, .theme-default a.acive:active, body a.active:hover, body a.acive:active {
   color: #2f7d69;
 }
-/* line 94, ../_scss/core/_themes.scss */
 .theme-default input, .theme-default textarea, body input, body textarea {
   color: #6a797d;
   background-color: #f2f2f2;
   border-color: #e6e6e6;
 }
-/* line 149, ../_scss/core/_helpers.scss */
 .theme-default input::-webkit-input-placeholder, .theme-default textarea::-webkit-input-placeholder, body input::-webkit-input-placeholder, body textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
-/* line 153, ../_scss/core/_helpers.scss */
 .theme-default input:-moz-placeholder, .theme-default textarea:-moz-placeholder, body input:-moz-placeholder, body textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #bfbfbf;
 }
-/* line 157, ../_scss/core/_helpers.scss */
 .theme-default input::-moz-placeholder, .theme-default textarea::-moz-placeholder, body input::-moz-placeholder, body textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #bfbfbf;
 }
-/* line 161, ../_scss/core/_helpers.scss */
 .theme-default input:-ms-input-placeholder, .theme-default textarea:-ms-input-placeholder, body input:-ms-input-placeholder, body textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
-/* line 107, ../_scss/core/_themes.scss */
 .theme-default input:focus, .theme-default textarea:focus, body input:focus, body textarea:focus {
   border-color: #3da288;
 }
-/* line 112, ../_scss/core/_themes.scss */
 .theme-default button, .theme-default .button, body button, body .button {
   color: white;
   background-color: #3da288;
 }
-/* line 117, ../_scss/core/_themes.scss */
 .theme-default .icon, body .icon {
   color: #3da288;
 }
-/* line 140, ../_scss/core/_themes.scss */
 .theme-default [role="navigation"].global a.active, [role="navigation"].global .theme-default a.active, .theme-default .highlight, body [role="navigation"].global a.active, [role="navigation"].global body a.active, body .highlight {
   color: #3da288;
 }
-/* line 144, ../_scss/core/_themes.scss */
 .theme-default .hero, .theme-default .highlight-border, body .hero, body .highlight-border {
   border-color: #3da288 !important;
 }
-/* line 153, ../_scss/core/_themes.scss */
 .theme-default .accent, body .accent {
   color: #927c7a;
 }
-/* line 157, ../_scss/core/_themes.scss */
 .theme-default .dark, body .dark {
   color: #293f47;
 }
-/* line 161, ../_scss/core/_themes.scss */
 .theme-default .light, body .light {
   color: white;
 }
-/* line 165, ../_scss/core/_themes.scss */
 .theme-default .accent-border, body .accent-border {
   border-color: #927c7a !important;
 }
-/* line 172, ../_scss/core/_themes.scss */
 .theme-default .feature-sidebar, .theme-default [role="banner"].global, .theme-default .well, body .feature-sidebar, body [role="banner"].global, body .well {
   background-color: #f2f2f2;
 }
-/* line 182, ../_scss/core/_themes.scss */
 .theme-default .island, body .island {
   background-color: white;
 }
-/* line 193, ../_scss/core/_themes.scss */
 .theme-default .intro, body .intro {
   color: #3c5c67;
 }
 
-/* line 215, ../_scss/core/_themes.scss */
+/* Variations
+ * ------------------------------------------------------------------------------ */
+/* --- Flood theme ----------------------------------------------------------
+ * -> bright colored background, meant to stand out or add accent */
 footer.local, .footer.local, .theme-flood {
   color: white;
   background-color: #3da288;
@@ -1091,122 +966,96 @@ footer.local, .footer.local, .theme-flood {
   /* --- forms, buttons, icons ---------------------------------------------------------- */
   /* --- global modifiers ---------------------------------------------------------- */
 }
-/* line 32, ../_scss/core/_themes.scss */
 footer.local *, .footer.local *, .theme-flood * {
   border-color: #21584a;
 }
-/* line 38, ../_scss/core/_themes.scss */
 footer.local h1, .footer.local h1, footer.local h2, .footer.local h2, footer.local h3, .footer.local h3, footer.local h4, .footer.local h4, footer.local h5, .footer.local h5, footer.local h6, .footer.local h6, .theme-flood h1, .theme-flood h2, .theme-flood h3, .theme-flood h4, .theme-flood h5, .theme-flood h6 {
   color: white;
 }
-/* line 41, ../_scss/core/_themes.scss */
 footer.local h1 > a, .footer.local h1 > a, footer.local h2 > a, .footer.local h2 > a, footer.local h3 > a, .footer.local h3 > a, footer.local h4 > a, .footer.local h4 > a, footer.local h5 > a, .footer.local h5 > a, footer.local h6 > a, .footer.local h6 > a, .theme-flood h1 > a, .theme-flood h2 > a, .theme-flood h3 > a, .theme-flood h4 > a, .theme-flood h5 > a, .theme-flood h6 > a {
   color: inherit;
   text-decoration: none;
 }
-/* line 45, ../_scss/core/_themes.scss */
 footer.local h1 > a:hover, .footer.local h1 > a:hover, footer.local h1 > a:active, .footer.local h1 > a:active, footer.local h2 > a:hover, .footer.local h2 > a:hover, footer.local h2 > a:active, .footer.local h2 > a:active, footer.local h3 > a:hover, .footer.local h3 > a:hover, footer.local h3 > a:active, .footer.local h3 > a:active, footer.local h4 > a:hover, .footer.local h4 > a:hover, footer.local h4 > a:active, .footer.local h4 > a:active, footer.local h5 > a:hover, .footer.local h5 > a:hover, footer.local h5 > a:active, .footer.local h5 > a:active, footer.local h6 > a:hover, .footer.local h6 > a:hover, footer.local h6 > a:active, .footer.local h6 > a:active, .theme-flood h1 > a:hover, .theme-flood h1 > a:active, .theme-flood h2 > a:hover, .theme-flood h2 > a:active, .theme-flood h3 > a:hover, .theme-flood h3 > a:active, .theme-flood h4 > a:hover, .theme-flood h4 > a:active, .theme-flood h5 > a:hover, .theme-flood h5 > a:active, .theme-flood h6 > a:hover, .theme-flood h6 > a:active {
   color: inherit;
 }
-/* line 51, ../_scss/core/_themes.scss */
 footer.local p, .footer.local p, footer.local li, .footer.local li, footer.local td, .footer.local td, footer.local dd, .footer.local dd, .theme-flood p, .theme-flood li, .theme-flood td, .theme-flood dd {
   color: white;
 }
-/* line 55, ../_scss/core/_themes.scss */
 footer.local dt, .footer.local dt, .theme-flood dt {
   color: #293f47;
 }
-/* line 59, ../_scss/core/_themes.scss */
 footer.local .intro, .footer.local .intro, .theme-flood .intro {
   color: #e6e6e6;
 }
-/* line 63, ../_scss/core/_themes.scss */
 footer.local .secondary, .footer.local .secondary, footer.local aside, .footer.local aside, footer.local figcaption, .footer.local figcaption, footer.local small, .footer.local small, footer.local .label, .footer.local .label, footer.local .post-date, .footer.local .post-date, .theme-flood .secondary, .theme-flood aside, .theme-flood figcaption, .theme-flood small, .theme-flood .label, .theme-flood .post-date {
   color: #79ccb7;
 }
-/* line 72, ../_scss/core/_themes.scss */
 footer.local a, .footer.local a, .theme-flood a {
   color: #293f47;
 }
-/* line 75, ../_scss/core/_themes.scss */
 footer.local a:hover, .footer.local a:hover, footer.local a:active, .footer.local a:active, .theme-flood a:hover, .theme-flood a:active {
   color: #3c5c67;
 }
-/* line 83, ../_scss/core/_themes.scss */
 footer.local a.active:hover, .footer.local a.active:hover, footer.local a.acive:active, .footer.local a.acive:active, .theme-flood a.active:hover, .theme-flood a.acive:active {
   color: #3c5c67;
 }
-/* line 94, ../_scss/core/_themes.scss */
 footer.local input, .footer.local input, footer.local textarea, .footer.local textarea, .theme-flood input, .theme-flood textarea {
   color: white;
   background-color: #44b598;
   border-color: #286a59;
 }
-/* line 149, ../_scss/core/_helpers.scss */
 footer.local input::-webkit-input-placeholder, .footer.local input::-webkit-input-placeholder, footer.local textarea::-webkit-input-placeholder, .footer.local textarea::-webkit-input-placeholder, .theme-flood input::-webkit-input-placeholder, .theme-flood textarea::-webkit-input-placeholder {
   color: #79ccb7;
 }
-/* line 153, ../_scss/core/_helpers.scss */
 footer.local input:-moz-placeholder, .footer.local input:-moz-placeholder, footer.local textarea:-moz-placeholder, .footer.local textarea:-moz-placeholder, .theme-flood input:-moz-placeholder, .theme-flood textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #79ccb7;
 }
-/* line 157, ../_scss/core/_helpers.scss */
 footer.local input::-moz-placeholder, .footer.local input::-moz-placeholder, footer.local textarea::-moz-placeholder, .footer.local textarea::-moz-placeholder, .theme-flood input::-moz-placeholder, .theme-flood textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #79ccb7;
 }
-/* line 161, ../_scss/core/_helpers.scss */
 footer.local input:-ms-input-placeholder, .footer.local input:-ms-input-placeholder, footer.local textarea:-ms-input-placeholder, .footer.local textarea:-ms-input-placeholder, .theme-flood input:-ms-input-placeholder, .theme-flood textarea:-ms-input-placeholder {
   color: #79ccb7;
 }
-/* line 107, ../_scss/core/_themes.scss */
 footer.local input:focus, .footer.local input:focus, footer.local textarea:focus, .footer.local textarea:focus, .theme-flood input:focus, .theme-flood textarea:focus {
   border-color: #293f47;
 }
-/* line 112, ../_scss/core/_themes.scss */
 footer.local button, .footer.local button, footer.local .button, .footer.local .button, .theme-flood button, .theme-flood .button {
   color: white;
   background-color: #293f47;
 }
-/* line 117, ../_scss/core/_themes.scss */
 footer.local .icon, .footer.local .icon, .theme-flood .icon {
   color: #293f47;
 }
-/* line 140, ../_scss/core/_themes.scss */
 footer.local [role="navigation"].global a.active, [role="navigation"].global footer.local a.active, .footer.local [role="navigation"].global a.active, [role="navigation"].global .footer.local a.active, footer.local .highlight, .footer.local .highlight, .theme-flood [role="navigation"].global a.active, [role="navigation"].global .theme-flood a.active, .theme-flood .highlight {
   color: #293f47;
 }
-/* line 144, ../_scss/core/_themes.scss */
 footer.local .hero, .footer.local .hero, footer.local .highlight-border, .footer.local .highlight-border, .theme-flood .hero, .theme-flood .highlight-border {
   border-color: #293f47 !important;
 }
-/* line 153, ../_scss/core/_themes.scss */
 footer.local .accent, .footer.local .accent, .theme-flood .accent {
   color: #293f47;
 }
-/* line 157, ../_scss/core/_themes.scss */
 footer.local .dark, .footer.local .dark, .theme-flood .dark {
   color: white;
 }
-/* line 161, ../_scss/core/_themes.scss */
 footer.local .light, .footer.local .light, .theme-flood .light {
   color: white;
 }
-/* line 165, ../_scss/core/_themes.scss */
 footer.local .accent-border, .footer.local .accent-border, .theme-flood .accent-border {
   border-color: #293f47 !important;
 }
-/* line 172, ../_scss/core/_themes.scss */
 footer.local .feature-sidebar, .footer.local .feature-sidebar, footer.local [role="banner"].global, .footer.local [role="banner"].global, footer.local .well, .footer.local .well, .theme-flood .feature-sidebar, .theme-flood [role="banner"].global, .theme-flood .well {
   background-color: #368f78;
 }
-/* line 182, ../_scss/core/_themes.scss */
 footer.local .island, .footer.local .island, .theme-flood .island {
   background-color: #44b598;
 }
 
-/* line 235, ../_scss/core/_themes.scss */
+/* --- Reverse theme ----------------------------------------------------------
+ * -> light FG over dark BG, contrasts sharply with default (dark FG over light BG) */
 [role="navigation"].global, footer.global, .footer.global, .theme-reverse {
   color: white;
   background-color: #283030;
@@ -1217,122 +1066,100 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   /* --- forms, buttons, icons ---------------------------------------------------------- */
   /* --- global modifiers ---------------------------------------------------------- */
 }
-/* line 32, ../_scss/core/_themes.scss */
 [role="navigation"].global *, footer.global *, .footer.global *, .theme-reverse * {
   border-color: black;
 }
-/* line 38, ../_scss/core/_themes.scss */
 [role="navigation"].global h1, footer.global h1, .footer.global h1, [role="navigation"].global h2, footer.global h2, .footer.global h2, [role="navigation"].global h3, footer.global h3, .footer.global h3, [role="navigation"].global h4, footer.global h4, .footer.global h4, [role="navigation"].global h5, footer.global h5, .footer.global h5, [role="navigation"].global h6, footer.global h6, .footer.global h6, .theme-reverse h1, .theme-reverse h2, .theme-reverse h3, .theme-reverse h4, .theme-reverse h5, .theme-reverse h6 {
   color: white;
 }
-/* line 41, ../_scss/core/_themes.scss */
 [role="navigation"].global h1 > a, footer.global h1 > a, .footer.global h1 > a, [role="navigation"].global h2 > a, footer.global h2 > a, .footer.global h2 > a, [role="navigation"].global h3 > a, footer.global h3 > a, .footer.global h3 > a, [role="navigation"].global h4 > a, footer.global h4 > a, .footer.global h4 > a, [role="navigation"].global h5 > a, footer.global h5 > a, .footer.global h5 > a, [role="navigation"].global h6 > a, footer.global h6 > a, .footer.global h6 > a, .theme-reverse h1 > a, .theme-reverse h2 > a, .theme-reverse h3 > a, .theme-reverse h4 > a, .theme-reverse h5 > a, .theme-reverse h6 > a {
   color: inherit;
   text-decoration: none;
 }
-/* line 45, ../_scss/core/_themes.scss */
 [role="navigation"].global h1 > a:hover, footer.global h1 > a:hover, .footer.global h1 > a:hover, [role="navigation"].global h1 > a:active, footer.global h1 > a:active, .footer.global h1 > a:active, [role="navigation"].global h2 > a:hover, footer.global h2 > a:hover, .footer.global h2 > a:hover, [role="navigation"].global h2 > a:active, footer.global h2 > a:active, .footer.global h2 > a:active, [role="navigation"].global h3 > a:hover, footer.global h3 > a:hover, .footer.global h3 > a:hover, [role="navigation"].global h3 > a:active, footer.global h3 > a:active, .footer.global h3 > a:active, [role="navigation"].global h4 > a:hover, footer.global h4 > a:hover, .footer.global h4 > a:hover, [role="navigation"].global h4 > a:active, footer.global h4 > a:active, .footer.global h4 > a:active, [role="navigation"].global h5 > a:hover, footer.global h5 > a:hover, .footer.global h5 > a:hover, [role="navigation"].global h5 > a:active, footer.global h5 > a:active, .footer.global h5 > a:active, [role="navigation"].global h6 > a:hover, footer.global h6 > a:hover, .footer.global h6 > a:hover, [role="navigation"].global h6 > a:active, footer.global h6 > a:active, .footer.global h6 > a:active, .theme-reverse h1 > a:hover, .theme-reverse h1 > a:active, .theme-reverse h2 > a:hover, .theme-reverse h2 > a:active, .theme-reverse h3 > a:hover, .theme-reverse h3 > a:active, .theme-reverse h4 > a:hover, .theme-reverse h4 > a:active, .theme-reverse h5 > a:hover, .theme-reverse h5 > a:active, .theme-reverse h6 > a:hover, .theme-reverse h6 > a:active {
   color: inherit;
 }
-/* line 51, ../_scss/core/_themes.scss */
 [role="navigation"].global p, footer.global p, .footer.global p, [role="navigation"].global li, footer.global li, .footer.global li, [role="navigation"].global td, footer.global td, .footer.global td, [role="navigation"].global dd, footer.global dd, .footer.global dd, .theme-reverse p, .theme-reverse li, .theme-reverse td, .theme-reverse dd {
   color: white;
 }
-/* line 55, ../_scss/core/_themes.scss */
 [role="navigation"].global dt, footer.global dt, .footer.global dt, .theme-reverse dt {
   color: #3da288;
 }
-/* line 59, ../_scss/core/_themes.scss */
 [role="navigation"].global .intro, footer.global .intro, .footer.global .intro, .theme-reverse .intro {
   color: #e6e6e6;
 }
-/* line 63, ../_scss/core/_themes.scss */
 [role="navigation"].global .secondary, footer.global .secondary, .footer.global .secondary, [role="navigation"].global aside, footer.global aside, .footer.global aside, [role="navigation"].global figcaption, footer.global figcaption, .footer.global figcaption, [role="navigation"].global small, footer.global small, .footer.global small, [role="navigation"].global .label, footer.global .label, .footer.global .label, [role="navigation"].global .post-date, footer.global .post-date, .footer.global .post-date, .theme-reverse .secondary, .theme-reverse aside, .theme-reverse figcaption, .theme-reverse small, .theme-reverse .label, .theme-reverse .post-date {
   color: #566868;
 }
-/* line 72, ../_scss/core/_themes.scss */
 [role="navigation"].global a, footer.global a, .footer.global a, .theme-reverse a {
   color: #3da288;
 }
-/* line 75, ../_scss/core/_themes.scss */
 [role="navigation"].global a:hover, footer.global a:hover, .footer.global a:hover, [role="navigation"].global a:active, footer.global a:active, .footer.global a:active, .theme-reverse a:hover, .theme-reverse a:active {
   color: #54bea3;
 }
-/* line 83, ../_scss/core/_themes.scss */
 [role="navigation"].global a.active:hover, footer.global a.active:hover, .footer.global a.active:hover, [role="navigation"].global a.acive:active, footer.global a.acive:active, .footer.global a.acive:active, .theme-reverse a.active:hover, .theme-reverse a.acive:active {
   color: #54bea3;
 }
-/* line 94, ../_scss/core/_themes.scss */
 [role="navigation"].global input, footer.global input, .footer.global input, [role="navigation"].global textarea, footer.global textarea, .footer.global textarea, .theme-reverse input, .theme-reverse textarea {
   color: white;
   background-color: #343e3e;
   border-color: #050606;
 }
-/* line 149, ../_scss/core/_helpers.scss */
 [role="navigation"].global input::-webkit-input-placeholder, footer.global input::-webkit-input-placeholder, .footer.global input::-webkit-input-placeholder, [role="navigation"].global textarea::-webkit-input-placeholder, footer.global textarea::-webkit-input-placeholder, .footer.global textarea::-webkit-input-placeholder, .theme-reverse input::-webkit-input-placeholder, .theme-reverse textarea::-webkit-input-placeholder {
   color: #566868;
 }
-/* line 153, ../_scss/core/_helpers.scss */
 [role="navigation"].global input:-moz-placeholder, footer.global input:-moz-placeholder, .footer.global input:-moz-placeholder, [role="navigation"].global textarea:-moz-placeholder, footer.global textarea:-moz-placeholder, .footer.global textarea:-moz-placeholder, .theme-reverse input:-moz-placeholder, .theme-reverse textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #566868;
 }
-/* line 157, ../_scss/core/_helpers.scss */
 [role="navigation"].global input::-moz-placeholder, footer.global input::-moz-placeholder, .footer.global input::-moz-placeholder, [role="navigation"].global textarea::-moz-placeholder, footer.global textarea::-moz-placeholder, .footer.global textarea::-moz-placeholder, .theme-reverse input::-moz-placeholder, .theme-reverse textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #566868;
 }
-/* line 161, ../_scss/core/_helpers.scss */
 [role="navigation"].global input:-ms-input-placeholder, footer.global input:-ms-input-placeholder, .footer.global input:-ms-input-placeholder, [role="navigation"].global textarea:-ms-input-placeholder, footer.global textarea:-ms-input-placeholder, .footer.global textarea:-ms-input-placeholder, .theme-reverse input:-ms-input-placeholder, .theme-reverse textarea:-ms-input-placeholder {
   color: #566868;
 }
-/* line 107, ../_scss/core/_themes.scss */
 [role="navigation"].global input:focus, footer.global input:focus, .footer.global input:focus, [role="navigation"].global textarea:focus, footer.global textarea:focus, .footer.global textarea:focus, .theme-reverse input:focus, .theme-reverse textarea:focus {
   border-color: #3da288;
 }
-/* line 112, ../_scss/core/_themes.scss */
 [role="navigation"].global button, footer.global button, .footer.global button, [role="navigation"].global .button, footer.global .button, .footer.global .button, .theme-reverse button, .theme-reverse .button {
   color: white;
   background-color: #3da288;
 }
-/* line 117, ../_scss/core/_themes.scss */
 [role="navigation"].global .icon, footer.global .icon, .footer.global .icon, .theme-reverse .icon {
   color: #3da288;
 }
-/* line 140, ../_scss/core/_themes.scss */
 [role="navigation"].global a.active, [role="navigation"].global .highlight, footer.global .highlight, .footer.global .highlight, .theme-reverse [role="navigation"].global a.active, [role="navigation"].global .theme-reverse a.active, .theme-reverse .highlight {
   color: #3da288;
 }
-/* line 144, ../_scss/core/_themes.scss */
 [role="navigation"].global .hero, footer.global .hero, .footer.global .hero, [role="navigation"].global .highlight-border, footer.global .highlight-border, .footer.global .highlight-border, .theme-reverse .hero, .theme-reverse .highlight-border {
   border-color: #3da288 !important;
 }
-/* line 153, ../_scss/core/_themes.scss */
 [role="navigation"].global .accent, footer.global .accent, .footer.global .accent, .theme-reverse .accent {
   color: #3c5c67;
 }
-/* line 157, ../_scss/core/_themes.scss */
 [role="navigation"].global .dark, footer.global .dark, .footer.global .dark, .theme-reverse .dark {
   color: white;
 }
-/* line 161, ../_scss/core/_themes.scss */
 [role="navigation"].global .light, footer.global .light, .footer.global .light, .theme-reverse .light {
   color: white;
 }
-/* line 165, ../_scss/core/_themes.scss */
 [role="navigation"].global .accent-border, footer.global .accent-border, .footer.global .accent-border, .theme-reverse .accent-border {
   border-color: #3c5c67 !important;
 }
-/* line 172, ../_scss/core/_themes.scss */
 [role="navigation"].global .feature-sidebar, footer.global .feature-sidebar, .footer.global .feature-sidebar, [role="navigation"].global [role="banner"].global, footer.global [role="banner"].global, .footer.global [role="banner"].global, [role="navigation"].global .well, footer.global .well, .footer.global .well, .theme-reverse .feature-sidebar, .theme-reverse [role="banner"].global, .theme-reverse .well {
   background-color: #1c2222;
 }
-/* line 182, ../_scss/core/_themes.scss */
 [role="navigation"].global .island, footer.global .island, .footer.global .island, .theme-reverse .island {
   background-color: #343e3e;
 }
 
-/* line 9, ../_scss/modules/_button.scss */
+/* ===============================================================================
+ * Modules & components
+ * =============================================================================== */
+/* components */
+/* Buttons
+ * ---------------------------------------------------------------------------- */
 .button {
   padding: 6px 21px;
   padding: 0.375rem 1.3125rem;
@@ -1342,17 +1169,14 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   color: white;
   background: #3da288;
 }
-/* line 18, ../_scss/modules/_button.scss */
 .button:hover {
   background: #44b598;
 }
-/* line 22, ../_scss/modules/_button.scss */
 .button:active {
   box-shadow: none;
   top: 0;
 }
 
-/* line 28, ../_scss/modules/_button.scss */
 .button.secondary {
   box-shadow: 0px 4px 0px 0px #c6cacc;
   top: -4px;
@@ -1360,17 +1184,14 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   color: #849296;
   background: #e1e3e4;
 }
-/* line 33, ../_scss/modules/_button.scss */
 .button.secondary:hover {
   background: #eef0f0;
 }
-/* line 37, ../_scss/modules/_button.scss */
 .button.secondary:active {
   box-shadow: none;
   top: 0;
 }
 
-/* line 43, ../_scss/modules/_button.scss */
 .button.full-width {
   margin: 24px 0;
   margin: 1.5rem 0;
@@ -1378,39 +1199,39 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   text-align: center;
 }
 
-/* line 49, ../_scss/modules/_button.scss */
 .button.large {
   padding: 12px 36px;
   padding: 0.75rem 2.25rem;
 }
 
 /* "read more" links at the end of excerpts */
-/* line 55, ../_scss/modules/_button.scss */
 .read_more, .js .accordion-button .hide, .js .accordion-button .expand {
   font-size: 0.8em;
   text-transform: uppercase;
 }
 
-/* line 10, ../_scss/modules/_media_panel.scss */
+/* ==========================================================================
+ *  Media Box component
+ * -> a pic and a blurb, useful for attorney profiles
+ * ========================================================================== */
+/* BASE
+ * ----------------------------------------------------------------------------- */
 .media_panel {
   border-top-width: 4px;
   border-top-style: solid;
   overflow: hidden;
 }
-/* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .media_panel:after {
   content: "";
   display: table;
   clear: both;
 }
 @media (min-width: 30em) {
-  /* line 10, ../_scss/modules/_media_panel.scss */
   .media_panel {
     border-top: none;
   }
 }
 @media (min-width: 30em) {
-  /* line 23, ../_scss/modules/_media_panel.scss */
   .media_panel .media_panel-thumb {
     width: 25%;
     float: left;
@@ -1420,7 +1241,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
     padding-right: 24px;
     padding-left: 0;
   }
-  /* line 28, ../_scss/modules/_media_panel.scss */
   .media_panel .media_panel-body {
     width: 75%;
     float: right;
@@ -1432,60 +1252,61 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   }
 }
 
-/* line 39, ../_scss/modules/_media_panel.scss */
+/* SUBMODULES
+ * ----------------------------------------------------------------------------- */
 .media_panel-thumb {
   padding-top: 16px;
   padding-top: 1rem;
   display: block;
 }
 @media (min-width: 30em) {
-  /* line 39, ../_scss/modules/_media_panel.scss */
   .media_panel-thumb {
     border-top-width: 4px;
     border-top-style: solid;
   }
 }
 
-/* line 48, ../_scss/modules/_media_panel.scss */
 .media_panel-body {
   padding-top: 16px;
   padding-top: 1rem;
 }
 @media (min-width: 30em) {
-  /* line 48, ../_scss/modules/_media_panel.scss */
   .media_panel-body {
     border-top-width: 4px;
     border-top-style: solid;
   }
 }
 
+/* MODIFIERS
+ * ----------------------------------------------------------------------------- */
 /* big media panel, stretches across layout */
-/* line 64, ../_scss/modules/_media_panel.scss */
 .media_panel.full-width {
   margin-bottom: 8px;
   margin-bottom: 0.5rem;
   border-top: none;
 }
-/* line 69, ../_scss/modules/_media_panel.scss */
 .media_panel.full-width:first-child .media_panel-thumb {
   border-top: none;
 }
-/* line 73, ../_scss/modules/_media_panel.scss */
 .media_panel.full-width:first-child .media_panel-body {
   border-top: none;
 }
-/* line 78, ../_scss/modules/_media_panel.scss */
 .media_panel.full-width .media_panel-thumb {
   border-top-width: 1px;
   border-top-style: solid;
 }
-/* line 82, ../_scss/modules/_media_panel.scss */
 .media_panel.full-width .media_panel-body {
   border-top-width: 1px;
   border-top-style: solid;
 }
 
-/* line 11, ../_scss/modules/_bullet.scss */
+/* ==========================================================================
+ *  Bullet component
+ * -> a list of things with big icons for each item
+ * -> use with a UL parent or with .grid
+ * ========================================================================== */
+/* BASE
+ * ----------------------------------------------------------------------------- */
 .bullet {
   display: block;
   position: relative;
@@ -1495,21 +1316,19 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   z-index: 0;
   color: #293f47;
 }
-/* line 23, ../_scss/modules/_bullet.scss */
 .bullet:hover, .bullet:active {
   color: #3da288;
   background-color: #f7f7f7;
 }
-/* line 27, ../_scss/modules/_bullet.scss */
 .bullet:hover .bullet-icon, .bullet:active .bullet-icon {
   background-color: #3da288;
 }
-/* line 32, ../_scss/modules/_bullet.scss */
 .bullet.alone {
   margin-bottom: 1em;
 }
 
-/* line 40, ../_scss/modules/_bullet.scss */
+/* SUBMODULES
+ * ----------------------------------------------------------------------------- */
 .bullet-icon {
   position: absolute;
   top: 50%;
@@ -1527,7 +1346,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   background-position: center center;
   /* tweaks for bulky icons -- need more breathing room */
 }
-/* line 52, ../_scss/modules/_bullet.scss */
 .bullet-icon:after {
   content: ' ';
   position: absolute;
@@ -1540,16 +1358,13 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   border: 1px solid #d4d6d8;
   border-radius: 3.5em;
 }
-/* line 67, ../_scss/modules/_bullet.scss */
 .bullet-icon:hover, .bullet-icon:active {
   background-color: #3da288;
 }
-/* line 72, ../_scss/modules/_bullet.scss */
 .bullet-icon.icon-business_org, .bullet-icon.icon-personal_injury, .bullet-icon.icon-estate_planning {
   background-size: 50%;
 }
 
-/* line 83, ../_scss/modules/_bullet.scss */
 .bullet-label {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1561,18 +1376,19 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   margin-left: 4rem;
 }
 
-/* line 92, ../_scss/modules/_bullet.scss */
 .bullet-content {
   margin: 0 16px 0 64px;
   margin: 0 1rem 0 4rem;
   padding: 0.25em;
 }
 
-/* line 19, ../_scss/modules/_form.scss */
+/* BASE
+ * ----------------------------------------------------------------------------- */
+/* SUBMODULES
+ * ----------------------------------------------------------------------------- */
 .form-contact label {
   display: block;
 }
-/* line 23, ../_scss/modules/_form.scss */
 .form-contact .input {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1583,25 +1399,26 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   width: 50%;
   padding: 6px;
 }
-/* line 28, ../_scss/modules/_form.scss */
 .form-contact .input.left {
   margin-left: -6px;
   margin-right: -3px;
 }
-/* line 32, ../_scss/modules/_form.scss */
 .form-contact .input.right {
   margin-right: -6px;
 }
-/* line 36, ../_scss/modules/_form.scss */
 .form-contact input {
   width: 100%;
 }
-/* line 40, ../_scss/modules/_form.scss */
 .form-contact [type="submit"].button {
   margin-top: 0.5em;
 }
 
-/* line 13, ../_scss/modules/_header.scss */
+/* modules */
+/* ==========================================================================
+ *  Header modules
+ * ========================================================================== */
+/* GLOBAL
+ * ----------------------------------------------------------------------------- */
 [role="banner"].global {
   height: 100px;
   height: 6.25rem;
@@ -1617,7 +1434,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   vertical-align: middle;
 }
 @media (min-width: 48em) {
-  /* line 13, ../_scss/modules/_header.scss */
   [role="banner"].global {
     padding-top: 30px;
     padding-top: 1.875rem;
@@ -1636,13 +1452,11 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   }
 }
 @media (min-width: 90em) {
-  /* line 13, ../_scss/modules/_header.scss */
   [role="banner"].global {
     width: 220px;
   }
 }
 
-/* line 43, ../_scss/modules/_header.scss */
 .header-button-menu {
   height: 20px;
   height: 1.25rem;
@@ -1653,40 +1467,33 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   top: 50%;
 }
 @media (min-width: 48em) {
-  /* line 43, ../_scss/modules/_header.scss */
   .header-button-menu {
     display: none;
     visibility: hidden;
   }
 }
-/* line 55, ../_scss/modules/_header.scss */
 .header-button-menu [class*="icon-"] {
   width: 20px;
   width: 1.25rem;
 }
-/* line 58, ../_scss/modules/_header.scss */
 .header-button-menu .icon-menu {
   display: block;
   visibility: visible;
 }
-/* line 61, ../_scss/modules/_header.scss */
 .header-button-menu .icon-close {
   display: none;
   visibility: hidden;
 }
 
-/* line 66, ../_scss/modules/_header.scss */
 .menu-open .icon-menu {
   display: none;
   visibility: hidden;
 }
-/* line 69, ../_scss/modules/_header.scss */
 .menu-open .icon-close {
   display: block;
   visibility: visible;
 }
 
-/* line 74, ../_scss/modules/_header.scss */
 .header-logo {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1702,27 +1509,23 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   transition: none;
   position: relative;
 }
-/* line 413, ../_scss/core/_helpers.scss */
 .header-logo::before, .header-logo:before {
   content: '';
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-/* line 79, ../_scss/modules/_header.scss */
 .header-logo > img {
   height: 70%;
   height: 4.375rem;
 }
 @media (min-width: 25.0625em) {
-  /* line 74, ../_scss/modules/_header.scss */
   .header-logo {
     right: -67.5px;
     right: -4.21875rem;
   }
 }
 @media (min-width: 48em) {
-  /* line 74, ../_scss/modules/_header.scss */
   .header-logo {
     padding: 0 30px;
     padding: 0 1.875rem;
@@ -1731,17 +1534,14 @@ footer.local .island, .footer.local .island, .theme-flood .island {
     margin: 0 auto;
     height: auto;
   }
-  /* line 94, ../_scss/modules/_header.scss */
   .header-logo:after, .header-logo:before {
     content: none;
   }
-  /* line 98, ../_scss/modules/_header.scss */
   .header-logo > img {
     height: auto;
   }
 }
 
-/* line 104, ../_scss/modules/_header.scss */
 .header-tagline {
   font-size: 10px;
   font-size: 0.625rem;
@@ -1751,7 +1551,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   color: #849296;
 }
 @media (min-width: 25.0625em) {
-  /* line 104, ../_scss/modules/_header.scss */
   .header-tagline {
     display: block;
     visibility: visible;
@@ -1770,7 +1569,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   }
 }
 @media (min-width: 48em) {
-  /* line 104, ../_scss/modules/_header.scss */
   .header-tagline {
     margin-top: 16px;
     margin-top: 1rem;
@@ -1781,8 +1579,14 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   }
 }
 
+/* ==========================================================================
+ *  Navigation modules
+ * ========================================================================== */
+/* BASE
+ * ----------------------------------------------------------------------------- */
+/* SUBMODULES
+ * ----------------------------------------------------------------------------- */
 /* ------- Global/main nav ------------------------------------------- */
-/* line 18, ../_scss/modules/_navigation.scss */
 [role="navigation"].global {
   -webkit-transition: left 0.3s ease;
   -moz-transition: left 0.3s ease false;
@@ -1803,15 +1607,12 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   width: 180px;
   -webkit-overflow-scrolling: touch;
 }
-/* line 35, ../_scss/modules/_navigation.scss */
 [role="navigation"].global.is-open {
   left: 0;
 }
-/* line 39, ../_scss/modules/_navigation.scss */
 [role="navigation"].global li {
   display: block;
 }
-/* line 43, ../_scss/modules/_navigation.scss */
 [role="navigation"].global a {
   padding: 8px 0;
   padding: 0.5rem 0;
@@ -1820,17 +1621,14 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   display: block;
   color: #6e8383;
 }
-/* line 52, ../_scss/modules/_navigation.scss */
 [role="navigation"].global a:hover {
   color: #a4b3b3;
 }
-/* line 56, ../_scss/modules/_navigation.scss */
 [role="navigation"].global a.active {
   background: #212828;
   position: relative;
 }
 @media (min-width: 48em) {
-  /* line 18, ../_scss/modules/_navigation.scss */
   [role="navigation"].global {
     margin: 32px 0;
     margin: 2rem 0;
@@ -1850,136 +1648,105 @@ footer.local .island, .footer.local .island, .theme-flood .island {
     width: auto;
     padding: 0 24px;
   }
-  /* line 32, ../_scss/core/_themes.scss */
   [role="navigation"].global * {
     border-color: #cccccc;
   }
-  /* line 38, ../_scss/core/_themes.scss */
   [role="navigation"].global h1, [role="navigation"].global h2, [role="navigation"].global h3, [role="navigation"].global h4, [role="navigation"].global h5, [role="navigation"].global h6 {
     color: #293f47;
   }
-  /* line 41, ../_scss/core/_themes.scss */
   [role="navigation"].global h1 > a, [role="navigation"].global h2 > a, [role="navigation"].global h3 > a, [role="navigation"].global h4 > a, [role="navigation"].global h5 > a, [role="navigation"].global h6 > a {
     color: inherit;
     text-decoration: none;
   }
-  /* line 45, ../_scss/core/_themes.scss */
   [role="navigation"].global h1 > a:hover, [role="navigation"].global h1 > a:active, [role="navigation"].global h2 > a:hover, [role="navigation"].global h2 > a:active, [role="navigation"].global h3 > a:hover, [role="navigation"].global h3 > a:active, [role="navigation"].global h4 > a:hover, [role="navigation"].global h4 > a:active, [role="navigation"].global h5 > a:hover, [role="navigation"].global h5 > a:active, [role="navigation"].global h6 > a:hover, [role="navigation"].global h6 > a:active {
     color: inherit;
   }
-  /* line 51, ../_scss/core/_themes.scss */
   [role="navigation"].global p, [role="navigation"].global li, [role="navigation"].global td, [role="navigation"].global dd {
     color: #6a797d;
   }
-  /* line 55, ../_scss/core/_themes.scss */
   [role="navigation"].global dt {
     color: #3da288;
   }
-  /* line 59, ../_scss/core/_themes.scss */
   [role="navigation"].global .intro {
     color: #535e61;
   }
-  /* line 63, ../_scss/core/_themes.scss */
   [role="navigation"].global .secondary, [role="navigation"].global aside, [role="navigation"].global figcaption, [role="navigation"].global small, [role="navigation"].global .label, [role="navigation"].global .post-date {
     color: #cccccc;
   }
-  /* line 72, ../_scss/core/_themes.scss */
   [role="navigation"].global a {
     color: #3da288;
   }
-  /* line 75, ../_scss/core/_themes.scss */
   [role="navigation"].global a:hover, [role="navigation"].global a:active {
     color: #2f7d69;
   }
-  /* line 83, ../_scss/core/_themes.scss */
   [role="navigation"].global a.active:hover, [role="navigation"].global a.acive:active {
     color: #2f7d69;
   }
-  /* line 94, ../_scss/core/_themes.scss */
   [role="navigation"].global input, [role="navigation"].global textarea {
     color: #6a797d;
     background-color: #f2f2f2;
     border-color: #e6e6e6;
   }
-  /* line 149, ../_scss/core/_helpers.scss */
   [role="navigation"].global input::-webkit-input-placeholder, [role="navigation"].global textarea::-webkit-input-placeholder {
     color: #bfbfbf;
   }
-  /* line 153, ../_scss/core/_helpers.scss */
   [role="navigation"].global input:-moz-placeholder, [role="navigation"].global textarea:-moz-placeholder {
     /* Firefox 18- */
     color: #bfbfbf;
   }
-  /* line 157, ../_scss/core/_helpers.scss */
   [role="navigation"].global input::-moz-placeholder, [role="navigation"].global textarea::-moz-placeholder {
     /* Firefox 19+ */
     color: #bfbfbf;
   }
-  /* line 161, ../_scss/core/_helpers.scss */
   [role="navigation"].global input:-ms-input-placeholder, [role="navigation"].global textarea:-ms-input-placeholder {
     color: #bfbfbf;
   }
-  /* line 107, ../_scss/core/_themes.scss */
   [role="navigation"].global input:focus, [role="navigation"].global textarea:focus {
     border-color: #3da288;
   }
-  /* line 112, ../_scss/core/_themes.scss */
   [role="navigation"].global button, [role="navigation"].global .button {
     color: white;
     background-color: #3da288;
   }
-  /* line 117, ../_scss/core/_themes.scss */
   [role="navigation"].global .icon {
     color: #3da288;
   }
-  /* line 140, ../_scss/core/_themes.scss */
   [role="navigation"].global a.active, [role="navigation"].global .highlight {
     color: #3da288;
   }
-  /* line 144, ../_scss/core/_themes.scss */
   [role="navigation"].global .hero, [role="navigation"].global .highlight-border {
     border-color: #3da288 !important;
   }
-  /* line 153, ../_scss/core/_themes.scss */
   [role="navigation"].global .accent {
     color: #927c7a;
   }
-  /* line 157, ../_scss/core/_themes.scss */
   [role="navigation"].global .dark {
     color: #293f47;
   }
-  /* line 161, ../_scss/core/_themes.scss */
   [role="navigation"].global .light {
     color: white;
   }
-  /* line 165, ../_scss/core/_themes.scss */
   [role="navigation"].global .accent-border {
     border-color: #927c7a !important;
   }
-  /* line 172, ../_scss/core/_themes.scss */
   [role="navigation"].global .feature-sidebar, [role="navigation"].global [role="banner"].global, [role="navigation"].global .well {
     background-color: #f2f2f2;
   }
-  /* line 182, ../_scss/core/_themes.scss */
   [role="navigation"].global .island {
     background-color: white;
   }
-  /* line 76, ../_scss/modules/_navigation.scss */
   [role="navigation"].global a {
     font-size: 16px;
     font-size: 1rem;
     color: #849296;
   }
-  /* line 80, ../_scss/modules/_navigation.scss */
   [role="navigation"].global a:hover, [role="navigation"].global a:active {
     color: #6a797d;
   }
-  /* line 84, ../_scss/modules/_navigation.scss */
   [role="navigation"].global a.active {
     background: transparent;
     border-color: #3da288;
   }
-  /* line 89, ../_scss/modules/_navigation.scss */
   [role="navigation"].global a.active:before {
     height: 2px;
     width: 2px;
@@ -2000,21 +1767,20 @@ footer.local .island, .footer.local .island, .theme-flood .island {
 }
 
 /* ------- Accordion (local) nav ------------------------------------------- */
-/* line 112, ../_scss/modules/_navigation.scss */
+.js {
+  /* init -- show the "more" button */
+}
 .js .accordion {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   margin-bottom: 1em;
 }
-/* line 118, ../_scss/modules/_navigation.scss */
 .js .accordion:last-child {
   margin-bottom: 0;
 }
-/* line 124, ../_scss/modules/_navigation.scss */
 .js .media_panel-body.accordion {
   border-bottom: none;
 }
-/* line 129, ../_scss/modules/_navigation.scss */
 .js .accordion-button {
   display: block;
   visibility: visible;
@@ -2027,7 +1793,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   padding: 6px 0;
   padding: 0.375rem 0;
 }
-/* line 136, ../_scss/modules/_navigation.scss */
 .js .accordion-button > h1, .js .accordion-button h2, .js .accordion-button h3, .js .accordion-button h4, .js .accordion-button h5, .js .accordion-button h6 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2036,12 +1801,10 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
 }
-/* line 140, ../_scss/modules/_navigation.scss */
 .js .accordion-button .hide {
   display: none;
   visibility: hidden;
 }
-/* line 144, ../_scss/modules/_navigation.scss */
 .js .accordion-button .expand {
   display: block;
   visibility: visible;
@@ -2052,11 +1815,9 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
 }
-/* line 150, ../_scss/modules/_navigation.scss */
 .js .accordion-button [class*="icon-arrow-"] {
   margin-left: 0.5em;
 }
-/* line 156, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .hide {
   display: block;
   visibility: visible;
@@ -2067,75 +1828,71 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
 }
-/* line 160, ../_scss/modules/_navigation.scss */
 .js .accordion-button.active .expand {
   display: none;
   visibility: hidden;
 }
-/* line 166, ../_scss/modules/_navigation.scss */
 .js .accordion-button.large [class*="icon-arrow-"] {
   width: 18px;
   width: 1.125rem;
   height: 18px;
   height: 1.125rem;
 }
-/* line 173, ../_scss/modules/_navigation.scss */
 .js .accordion-content {
   display: none;
   visibility: hidden;
 }
-/* line 176, ../_scss/modules/_navigation.scss */
 .js .accordion-content.is-open {
   display: block;
   visibility: visible;
   margin-bottom: 16px;
   margin-bottom: 1rem;
 }
-/* line 180, ../_scss/modules/_navigation.scss */
 .js .accordion-content.is-open img {
   display: block;
   width: 40%;
   margin: 0 0 1em 1em;
   float: right;
 }
-/* line 191, ../_scss/modules/_navigation.scss */
 .js .accordion.excerpt .accordion-content {
   display: block;
   visibility: visible;
+  /* hide everything but the first paragraph */
+  /* make all content visible when the "open" class is added */
+  /* -> triggered by a click on the "more" button (JS) */
 }
-/* line 195, ../_scss/modules/_navigation.scss */
 .js .accordion.excerpt .accordion-content > * {
   display: none;
   visibility: hidden;
 }
-/* line 199, ../_scss/modules/_navigation.scss */
 .js .accordion.excerpt .accordion-content p:first-child {
   display: block;
   visibility: visible;
 }
-/* line 205, ../_scss/modules/_navigation.scss */
 .js .accordion.excerpt .accordion-content.is-open > * {
   display: block;
   visibility: visible;
 }
-/* line 210, ../_scss/modules/_navigation.scss */
 .js .accordion.excerpt .accordion-button {
   padding: 0 0 12px 0;
   padding: 0 0 0.75rem 0;
 }
 
-/* line 219, ../_scss/modules/_navigation.scss */
 .no-js .accordion-content.excerpt > * {
   display: block;
   visibility: visible;
 }
-/* line 224, ../_scss/modules/_navigation.scss */
 .no-js .accordion-button {
   display: none;
   visibility: hidden;
 }
 
-/* line 13, ../_scss/modules/_hero.scss */
+/* ==========================================================================
+ *  Hero module
+ * -> big, full-bleed photo with headline over it
+ * ========================================================================== */
+/* BASE
+ * ----------------------------------------------------------------------------- */
 .hero {
   height: 400px;
   height: 25rem;
@@ -2150,7 +1907,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   background-size: cover;
   z-index: 0;
 }
-/* line 28, ../_scss/modules/_hero.scss */
 .hero [class*="icon-arrow-down"] {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2172,39 +1928,33 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   left: 50%;
 }
 @media (min-height: 43.75em) {
-  /* line 13, ../_scss/modules/_hero.scss */
   .hero {
     height: 450px;
     height: 28.125rem;
   }
 }
 @media (min-height: 53.125em) {
-  /* line 13, ../_scss/modules/_hero.scss */
   .hero {
     height: 500px;
     height: 31.25rem;
   }
 }
 @media (min-height: 62.5em) {
-  /* line 13, ../_scss/modules/_hero.scss */
   .hero {
     height: 550px;
     height: 34.375rem;
   }
 }
 
-/* line 53, ../_scss/modules/_hero.scss */
 .hero.interior {
   height: 250px;
   height: 15.625rem;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-/* line 59, ../_scss/modules/_hero.scss */
 .hero.interior .wrapper {
   height: 100%;
 }
-/* line 63, ../_scss/modules/_hero.scss */
 .hero.interior .hero-headline {
   bottom: 48px;
   bottom: 3rem;
@@ -2212,35 +1962,32 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   text-align: left;
 }
 @media (min-width: 48em) {
-  /* line 63, ../_scss/modules/_hero.scss */
   .hero.interior .hero-headline {
     font-size: 60px;
     font-size: 3.75rem;
   }
 }
 @media (min-height: 43.75em) {
-  /* line 53, ../_scss/modules/_hero.scss */
   .hero.interior {
     height: 300px;
     height: 18.75rem;
   }
 }
 @media (min-height: 53.125em) {
-  /* line 53, ../_scss/modules/_hero.scss */
   .hero.interior {
     height: 350px;
     height: 21.875rem;
   }
 }
 @media (min-height: 62.5em) {
-  /* line 53, ../_scss/modules/_hero.scss */
   .hero.interior {
     height: 400px;
     height: 25rem;
   }
 }
 
-/* line 96, ../_scss/modules/_hero.scss */
+/* SUBMODULES
+ * ----------------------------------------------------------------------------- */
 .hero-headline {
   padding-left: 48px;
   padding-right: 48px;
@@ -2253,39 +2000,31 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   line-height: 1;
   text-align: center;
 }
-/* line 110, ../_scss/modules/_hero.scss */
 .hero-headline.fade {
   opacity: 0.6;
   filter: alpha(opacity=60);
 }
-/* line 114, ../_scss/modules/_hero.scss */
 .hero-headline.dark, .hero-headline .dark {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
-/* line 119, ../_scss/modules/_hero.scss */
 .hero-headline.light, .hero-headline .light {
   text-shadow: 0 2px 0 rgba(41, 63, 71, 0.4);
 }
-/* line 123, ../_scss/modules/_hero.scss */
 .hero-headline h1 {
   font-size: 40px;
   font-size: 2.5rem;
   line-height: 1;
   text-align: center;
-  /* spcial css for kerning.js */
 }
 @media (min-width: 48em) {
-  /* line 123, ../_scss/modules/_hero.scss */
   .hero-headline h1 {
     font-size: 54px;
     font-size: 3.375rem;
   }
 }
-/* line 149, ../_scss/modules/_hero.scss */
 .hero-headline h1 .char10, .hero-headline h1 .char27 {
   margin-left: -0.05em;
 }
-/* line 154, ../_scss/modules/_hero.scss */
 .hero-headline h2 {
   font-size: 36px;
   font-size: 2.25rem;
@@ -2294,20 +2033,17 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   color: #3da288;
 }
 @media (min-width: 30em) {
-  /* line 154, ../_scss/modules/_hero.scss */
   .hero-headline h2 {
     font-size: 40px;
     font-size: 2.5rem;
   }
 }
 @media (min-width: 48em) {
-  /* line 154, ../_scss/modules/_hero.scss */
   .hero-headline h2 {
     font-size: 50px;
     font-size: 3.125rem;
   }
 }
-/* line 169, ../_scss/modules/_hero.scss */
 .hero-headline .subhead {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2319,7 +2055,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   font-size: 0.4em;
   letter-spacing: 0;
 }
-/* line 176, ../_scss/modules/_hero.scss */
 .hero-headline .numbers {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2333,7 +2068,13 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   letter-spacing: -0.03;
 }
 
-/* line 10, ../_scss/modules/_strip.scss */
+/* ==========================================================================
+ *  Strip modules
+ * -> vertically-stacking, full-bleed sections with borders
+ * -> for organizing content in ordered/scrolling sections within a page
+ * ========================================================================== */
+/* BASE
+ * ----------------------------------------------------------------------------- */
 .strip {
   padding-top: 36px;
   padding-top: 2.25rem;
@@ -2345,31 +2086,26 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   clear: both;
   overflow: visible;
 }
-/* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .strip:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 20, ../_scss/modules/_strip.scss */
 .strip:first-child, .strip.first {
   border-top: none;
 }
-/* line 24, ../_scss/modules/_strip.scss */
 .strip .sub {
   width: 50%;
   clear: right;
   float: left;
   padding-right: 24px;
 }
-/* line 27, ../_scss/modules/_strip.scss */
 .strip .sub:last-child {
   width: 50%;
   clear: right;
   float: right;
   padding-right: 24px;
 }
-/* line 33, ../_scss/modules/_strip.scss */
 .strip .form-contact {
   width: 50%;
   float: left;
@@ -2379,29 +2115,30 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   padding-right: 24px;
 }
 
-/* line 66, ../_scss/modules/_strip.scss */
+/* SUBMODULES
+ * ----------------------------------------------------------------------------- */
+/* an "interior" strip within a strip
+ * -> if you need to break it down more, or show a list of things */
 .strip-int {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-/* line 69, ../_scss/modules/_strip.scss */
 .strip-int.accordion {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
-/* line 74, ../_scss/modules/_strip.scss */
 .strip-title {
   margin-bottom: 16px;
   margin-bottom: 1rem;
 }
 
-/* line 81, ../_scss/modules/_strip.scss */
+/* MODIFIERS
+ * ----------------------------------------------------------------------------- */
 .strip.pointer {
   padding-top: 36px;
   padding-top: 2.25rem;
 }
-/* line 120, ../_scss/core/_helpers.scss */
 .strip.pointer:before {
   height: 0;
   width: 0;
@@ -2416,7 +2153,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   left: 50%;
   margin-left: -13.5px;
 }
-/* line 120, ../_scss/core/_helpers.scss */
 .strip.pointer:after {
   height: 0;
   width: 0;
@@ -2432,24 +2168,27 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   margin-left: -13.5px;
 }
 
-/* line 10, ../_scss/modules/_post.scss */
+/* ==========================================================================
+ *  Blog post modules
+ * ========================================================================== */
+/* BASE
+ * ----------------------------------------------------------------------------- */
 .post hgroup {
   line-height: 1.2;
   margin-bottom: 1em;
 }
 
-/* line 20, ../_scss/modules/_post.scss */
+/* SUBMODULES
+ * ----------------------------------------------------------------------------- */
 .post-title a:hover {
   color: #3da288;
 }
 
-/* line 29, ../_scss/modules/_post.scss */
 .post-date {
   margin-top: 0.5em;
   text-transform: uppercase;
 }
 
-/* line 37, ../_scss/modules/_post.scss */
 .post-image {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2462,7 +2201,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   width: 50%;
   float: right;
 }
-/* line 44, ../_scss/modules/_post.scss */
 .post-image.full {
   display: block;
   width: 100%;
@@ -2472,7 +2210,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
 }
 
 /* ------- Meta/info ------------------------------------------- */
-/* line 59, ../_scss/modules/_post.scss */
 .post-meta {
   width: 25%;
   float: right;
@@ -2485,34 +2222,28 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   padding-left: 0;
   margin-left: 0;
 }
-/* line 340, ../_scss/core/_helpers.scss */
 .post-meta li {
   list-style: none;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
 }
-/* line 63, ../_scss/modules/_post.scss */
 .post-meta .post-date {
   margin-top: 0;
 }
 
-/* line 69, ../_scss/modules/_post.scss */
 .post-author a {
   color: #3da288;
 }
 
-/* line 75, ../_scss/modules/_post.scss */
 .post-meta-categories .label {
   margin-bottom: 0.5em;
 }
-/* line 81, ../_scss/modules/_post.scss */
 .post-meta-categories dd {
   margin-left: 0;
 }
 
 /* ------- Meta/info ------------------------------------------- */
-/* line 88, ../_scss/modules/_post.scss */
 .post-footer {
   border-top-width: 1px;
   border-top-style: solid;
@@ -2522,7 +2253,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   padding-top: 1.5rem;
 }
 
-/* line 94, ../_scss/modules/_post.scss */
 .post-footer-categories {
   list-style: none;
   list-style-type: none;
@@ -2530,14 +2260,12 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 340, ../_scss/core/_helpers.scss */
 .post-footer-categories li {
   list-style: none;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
 }
-/* line 351, ../_scss/core/_helpers.scss */
 .post-footer-categories dt, .post-footer-categories dd {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2546,28 +2274,26 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
 }
-/* line 98, ../_scss/modules/_post.scss */
 .post-footer-categories dt {
   padding: 0;
   margin: 0;
   text-transform: uppercase;
   color: #cccccc;
 }
-/* line 106, ../_scss/modules/_post.scss */
 .post-footer-categories dd {
   margin-left: 0;
 }
-/* line 109, ../_scss/modules/_post.scss */
 .post-footer-categories dd:after {
   content: "\2022";
   margin: 0 0.25em;
 }
-/* line 114, ../_scss/modules/_post.scss */
 .post-footer-categories dd:last-child:after {
   content: none;
 }
 
-/* line 125, ../_scss/modules/_post.scss */
+/* MODIFIERS
+ * ----------------------------------------------------------------------------- */
+/* ------- Full-length post ------------------------------------------- */
 .post.full {
   margin-top: 36px;
   margin-top: 2.25rem;
@@ -2576,20 +2302,17 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   clear: both;
   overflow: hidden;
 }
-/* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .post.full:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 134, ../_scss/modules/_post.scss */
 .post.no_margin {
   margin-top: 0;
 }
 
 /* ------- Excerpt ------------------------------------------- */
-/* line 141, ../_scss/modules/_post.scss */
 .post.excerpt {
   margin: 0 0 24px 0;
   margin: 0 0 1.5rem 0;
@@ -2598,13 +2321,11 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   border-top-width: 1px;
   border-top-style: solid;
 }
-/* line 147, ../_scss/modules/_post.scss */
 .post.excerpt:first-child {
   border-top: none;
   padding-top: 0;
 }
 
-/* line 153, ../_scss/modules/_post.scss */
 .posts {
   width: 75%;
   float: left;
@@ -2615,14 +2336,20 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   clear: both;
   overflow: hidden;
 }
-/* line 65, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .posts:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 39, ../_scss/modules/_grid-inline.scss */
+/* ==========================================================================
+ *  Inline grid modules
+ * -> Horizontally-stacked boxes
+ * ========================================================================== */
+/* CONFIG
+ * -----------------------------------------------------------------------------  */
+/* BASE
+ * -----------------------------------------------------------------------------  */
 .grid {
   list-style: none;
   list-style-type: none;
@@ -2630,14 +2357,12 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   margin-left: 0;
   font-size: 0;
 }
-/* line 340, ../_scss/core/_helpers.scss */
 .grid li {
   list-style: none;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
 }
-/* line 45, ../_scss/modules/_grid-inline.scss */
 .grid li, .grid .grid-tile {
   margin-bottom: 16px;
   margin-bottom: 1rem;
@@ -2647,7 +2372,8 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   vertical-align: top;
 }
 
-/* line 67, ../_scss/modules/_grid-inline.scss */
+/* MODIFIERS
+ * -----------------------------------------------------------------------------  */
 .grid.margins {
   padding-top: 18px;
   padding-top: 1.125rem;
@@ -2657,19 +2383,16 @@ footer.local .island, .footer.local .island, .theme-flood .island {
 
 /* ------- medium grid (4 cols) ------------------------------------------- */
 @media (min-width: 30em) {
-  /* line 73, ../_scss/modules/_grid-inline.scss */
   .grid.small {
     margin-right: -24px;
   }
 }
 @media (min-width: 48em) {
-  /* line 73, ../_scss/modules/_grid-inline.scss */
   .grid.small {
     margin-right: -24px;
   }
 }
 @media (min-width: 30em) {
-  /* line 19, ../_scss/modules/_grid-inline.scss */
   .grid.small > li, .grid.small .grid-tile {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2683,7 +2406,6 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   }
 }
 @media (min-width: 48em) {
-  /* line 19, ../_scss/modules/_grid-inline.scss */
   .grid.small > li, .grid.small .grid-tile {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2699,19 +2421,16 @@ footer.local .island, .footer.local .island, .theme-flood .island {
 
 /* ------- large grid (3 cols) ------------------------------------------- */
 @media (min-width: 48em) {
-  /* line 78, ../_scss/modules/_grid-inline.scss */
   .grid.large {
     margin-right: -24px;
   }
 }
 @media (min-width: 30em) {
-  /* line 19, ../_scss/modules/_grid-inline.scss */
   .grid.large > li, .grid.large .grid-tile {
     display: block;
   }
 }
 @media (min-width: 48em) {
-  /* line 19, ../_scss/modules/_grid-inline.scss */
   .grid.large > li, .grid.large .grid-tile {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2725,30 +2444,25 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   }
 }
 
-/* line 85, ../_scss/modules/_grid-inline.scss */
 .grid-tile.nested {
   margin-right: 0;
 }
 @media (min-width: 64em) {
-  /* line 85, ../_scss/modules/_grid-inline.scss */
   .grid-tile.nested {
     margin-right: -24px;
   }
 }
 @media (min-width: 30em) {
-  /* line 19, ../_scss/modules/_grid-inline.scss */
   .grid-tile.nested > li, .grid-tile.nested .tile-nested {
     display: block;
   }
 }
 @media (min-width: 48em) {
-  /* line 19, ../_scss/modules/_grid-inline.scss */
   .grid-tile.nested > li, .grid-tile.nested .tile-nested {
     display: block;
   }
 }
 @media (min-width: 64em) {
-  /* line 19, ../_scss/modules/_grid-inline.scss */
   .grid-tile.nested > li, .grid-tile.nested .tile-nested {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2762,13 +2476,18 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   }
 }
 
+/* ==========================================================================
+ *  Footer modules
+ * ========================================================================== */
+/* BASE
+ * ----------------------------------------------------------------------------- */
+/* MODIFIERS
+ * ----------------------------------------------------------------------------- */
 /* ------- global footer ------------------------------------------------------- */
-/* line 18, ../_scss/modules/_footer.scss */
 footer.global, .footer.global {
   padding-top: 24px;
   padding-top: 1.5rem;
 }
-/* line 24, ../_scss/modules/_footer.scss */
 footer.global .copyright, .footer.global .copyright {
   margin-top: 24px;
   margin-top: 1.5rem;
@@ -2782,13 +2501,11 @@ footer.global .copyright, .footer.global .copyright {
   color: #6494a5;
   background: #293f47;
 }
-/* line 36, ../_scss/modules/_footer.scss */
 footer.global .copyright .wrapper, .footer.global .copyright .wrapper {
   color: #6494a5;
 }
 
 @media (min-width: 64em) {
-  /* line 43, ../_scss/modules/_footer.scss */
   #home footer.global .form-contact, #home .footer.global .form-contact {
     width: 50%;
     float: left;
@@ -2798,7 +2515,6 @@ footer.global .copyright .wrapper, .footer.global .copyright .wrapper {
     padding-right: 24px;
   }
 }
-/* line 48, ../_scss/modules/_footer.scss */
 #home footer.global .info, #home .footer.global .info {
   list-style: none;
   list-style-type: none;
@@ -2811,7 +2527,6 @@ footer.global .copyright .wrapper, .footer.global .copyright .wrapper {
   border-top-width: 1px;
   border-top-style: solid;
 }
-/* line 340, ../_scss/core/_helpers.scss */
 #home footer.global .info li, #home .footer.global .info li {
   list-style: none;
   list-style-type: none;
@@ -2819,7 +2534,6 @@ footer.global .copyright .wrapper, .footer.global .copyright .wrapper {
   padding-left: 0;
 }
 @media (min-width: 64em) {
-  /* line 48, ../_scss/modules/_footer.scss */
   #home footer.global .info, #home .footer.global .info {
     width: 50%;
     float: right;
@@ -2831,39 +2545,33 @@ footer.global .copyright .wrapper, .footer.global .copyright .wrapper {
     margin-top: 0;
   }
 }
-/* line 60, ../_scss/modules/_footer.scss */
 #home footer.global .info ul, #home .footer.global .info ul {
   list-style: none;
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
 }
-/* line 340, ../_scss/core/_helpers.scss */
 #home footer.global .info ul li, #home .footer.global .info ul li {
   list-style: none;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
 }
-/* line 75, ../_scss/modules/_footer.scss */
 #home footer.global .info .icon-google, #home .footer.global .info .icon-google {
   height: 1.6em !important;
   width: 1.6em;
   margin-right: 0.3em;
   margin-left: -0.25em;
 }
-/* line 83, ../_scss/modules/_footer.scss */
 #home footer.global .inline, #home .footer.global .inline {
   display: list-item;
   margin-left: 0;
 }
-/* line 87, ../_scss/modules/_footer.scss */
 #home footer.global .inline:before, #home .footer.global .inline:before {
   content: none;
 }
 
 /* ------- local footer ------------------------------------------------------- */
-/* line 95, ../_scss/modules/_footer.scss */
 footer.local, .footer.local {
   padding-left: 48px;
   padding-right: 48px;
@@ -2875,7 +2583,8 @@ footer.local, .footer.local {
   clear: both;
 }
 
-/* line 111, ../_scss/modules/_footer.scss */
+/* SUBMODULES
+ * ----------------------------------------------------------------------------- */
 .footer-local-title > a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2886,87 +2595,17 @@ footer.local, .footer.local {
   margin-right: -0.95em;
 }
 
-/* line 116, ../_scss/modules/_footer.scss */
 .footer-local-subhead {
   color: #283030 !important;
   text-transform: uppercase;
 }
 
-/* line 122, ../_scss/modules/_footer.scss */
 .footer-local-icon {
   width: 0.7em;
   margin-left: 0.25em;
 }
 
-/* line 54, ../_scss/main.scss */
-.map {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding-right: 24px;
-  margin: 24px 0;
-  margin: 1.5rem 0;
-  clear: both;
-}
-
-/* line 61, ../_scss/main.scss */
-.info {
-  list-style: none;
-  list-style-type: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-/* line 340, ../_scss/core/_helpers.scss */
-.info li {
-  list-style: none;
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-/* line 384, ../_scss/core/_helpers.scss */
-.info.contact > dt, .info.contact > dd {
-  display: inline;
-}
-/* line 387, ../_scss/core/_helpers.scss */
-.info.contact > dt {
-  margin-right: 0.1875em;
-}
-/* line 390, ../_scss/core/_helpers.scss */
-.info.contact > dd {
-  margin-left: 0;
-}
-/* line 396, ../_scss/core/_helpers.scss */
-.info.contact > dd:after {
-  content: '\A';
-  white-space: pre;
-}
-/* line 67, ../_scss/main.scss */
-.info.contact dt {
-  font-weight: bold;
-}
-/* line 72, ../_scss/main.scss */
-.info .inline {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  margin-left: 0.6em;
-}
-/* line 76, ../_scss/main.scss */
-.info .inline:first-child {
-  margin-left: 0;
-}
-/* line 79, ../_scss/main.scss */
-.info .inline:first-child:before {
-  content: none;
-}
-/* line 84, ../_scss/main.scss */
-.info .inline:before {
-  content: '\2022';
-  position: relative;
-  left: -0.4em;
-}
+/* ===============================================================================
+ * Styles of Shame
+ * -> put quick and dirty hacks here, then clean up & organize later
+ * =============================================================================== */

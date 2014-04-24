@@ -5,6 +5,8 @@ baseurl:
 markdown: redcarpet
 pygments: true
 
+permalink: none
+
 exclude: ["README.md", "config.rb", ".sublime-project", ".sublime-workspace", "Guardfile", "Gemfile", "Gemfile.lock", ".sass-cache", "node_modules", "package.json", "Gruntfile.js", "bower.json", ".bowerrc"]
 
 # asset paths

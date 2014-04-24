@@ -1,6 +1,6 @@
-// ==========================================================================
-// Helpers for converting units (rems, percent, etc.)
-// ==========================================================================
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
 
 // Eric Meyer's awesome strip unit helper
 // http://stackoverflow.com/questions/12328259/how-do-you-strip-the-unit-from-any-number-in-sass/12335841#12335841
@@ -140,9 +140,9 @@
   }
 }
 
-// ==================================================================================
+/* ==================================================================================
 // Special effects & graphical stuff
-// ==================================================================================
+// ================================================================================== */
 
 // style the color of a form placeholder
 @mixin form-placeholder-color($color: $color-text--secondary) {
@@ -223,95 +223,9 @@
   filter: none;
 }
 
-// Animation for spinning icons
-@mixin spin-icon {
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-  display: inline-block;
-}
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@-o-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@-ms-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-
-
-// ==================================================================================
+/* ==================================================================================
 // General layout helpers
-// ==================================================================================
+// ================================================================================== */
 
 // align an inline block element vertically
 // using an :after pseudo element
@@ -327,8 +241,8 @@
   }
 }
 
-// Lists
-// ------------------------------------------------------------------------------
+/* Lists
+// ------------------------------------------------------------------------------ */
 
 @mixin unstyled-list {
   list-style: none;
@@ -401,8 +315,8 @@
   }
 }
 
-// Display & positioning
-// ------------------------------------------------------------------------------
+/* Display & positioning
+// ------------------------------------------------------------------------------ */
 
 // vertically center the children of an inline block element
 @mixin inline-block--centered($height: auto) {
@@ -420,14 +334,12 @@
 
 
 
-// ==========================================================================
+/* ==========================================================================
 // HTML5 BP Helper classes
-// ==========================================================================
+// ========================================================================== */
 
 
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
+// Hide from both screenreaders and browsers: h5bp.com/u
 
 @mixin hidden {
   display: none;
@@ -440,9 +352,8 @@
   visibility: visible;
 }
 
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+
 
 @mixin visuallyhidden($focusable: "false") {
   border: 0;
@@ -470,9 +381,8 @@
   }
 }
 
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
+// Hide visually and from screenreaders, but maintain layout
+
 
 @mixin invisible {
   visibility: hidden;

@@ -1,42 +1,40 @@
-/* ===============================================================================
+// ===============================================================================
 // Frameworks
-// =============================================================================== */
+// ===============================================================================
 
 @import "vendor/bourbon/bourbon";
 @import "singularitygs";
 
 /* ===============================================================================
-// Settings & resets
-// =============================================================================== */
+ * Settings & resets
+ * =============================================================================== */
 
 @import "core/settings";
-// @import "core/normalize";
 @import "core/fonts";
 
 
 /* ===============================================================================
-// Core style imports
-// =============================================================================== */
+ * Core style imports
+ * =============================================================================== */
 
 @import "core/helpers";
 @import "core/base";
 @import "core/print";
-// @import "core/syntax";
 @import "core/layout";
 @import "core/content";
 @import "core/themes";
 
 /* ===============================================================================
-// Modules & components
-// =============================================================================== */
+ * Modules & components
+ * =============================================================================== */
 
-// components
+/* components */
 @import "modules/button";
 @import "modules/media_panel";
 @import "modules/bullet";
 @import "modules/form";
 
-// modules
+/* modules */
 @import "modules/header";
 @import "modules/navigation";
 @import "modules/hero";
@@ -46,46 +44,7 @@
 @import "modules/footer";
 
 /* ===============================================================================
-// Styles of Shame
-// -> put quick and dirty hacks here, then clean up & organize later
-// =============================================================================== */
-
-
-.map {
-  // @extend %full-bleed;
-  @include grid-span(4, 1);
-  @include rem(margin, 24px 0);
-  clear: both;
-}
-
-.info {
-  @include unstyled-list;
-  
-  &.contact {
-    @include inline-dl(true);
-
-    dt {
-      font-weight: bold;
-    }
-  }
-
-  .inline {
-    @include inline-block;
-    margin-left: 0.6em;
-
-    &:first-child {
-      margin-left: 0;
-
-      &:before {
-        content: none;
-      }
-    }
-
-    &:before {
-      content: '\2022';
-      position: relative;
-      left: -0.4em;
-    }
-  }
-}
+ * Styles of Shame
+ * -> put quick and dirty hacks here, then clean up & organize later
+ * =============================================================================== */
 

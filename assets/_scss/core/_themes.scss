@@ -1,9 +1,9 @@
 /* ==============================================================================
-//  Color themes
-// ============================================================================== */
+ *  Color themes
+ * ============================================================================== */
 
-// Base
-// ------------------------------------------------------------------------------
+/* Base
+ * ------------------------------------------------------------------------------ */
 
 $theme-default-text: $color-text--primary;
 $theme-default-fg: $color-text--primary;
@@ -185,7 +185,7 @@ $theme-default-border: darken($theme-default-bg, 20);
 }
 
 /* Default
-// ------------------------------------------------------------------------------ */
+ * ------------------------------------------------------------------------------ */
 
 %theme-default, .theme-default, body {
   @include theme(); //use all defaults
@@ -201,10 +201,10 @@ $theme-default-border: darken($theme-default-bg, 20);
 }
 
 /* Variations
-// ------------------------------------------------------------------------------ */
+ * ------------------------------------------------------------------------------ */
 
 /* --- Flood theme ----------------------------------------------------------
-// -> bright colored background, meant to stand out or add accent */
+ * -> bright colored background, meant to stand out or add accent */
 
 $theme-flood-text: white;
 $theme-flood-fg: white;
@@ -224,7 +224,7 @@ $theme-flood-accent: $color-text--primary;
 }
 
 /* --- Reverse theme ----------------------------------------------------------
-// -> light FG over dark BG, contrasts sharply with default (dark FG over light BG) */
+ * -> light FG over dark BG, contrasts sharply with default (dark FG over light BG) */
 
 $theme-reverse-text: white;
 $theme-reverse-fg: white;

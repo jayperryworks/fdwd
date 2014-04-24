@@ -128,7 +128,8 @@ module.exports = function(grunt) {
       dev: {
         options: {
           debugInfo: false,
-          outputStyle: 'expanded'
+          outputStyle: 'expanded',
+          noLineComments: true
         }
       },
       deploy: {

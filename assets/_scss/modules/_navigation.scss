@@ -1,17 +1,17 @@
 /* ==========================================================================
-//  Navigation modules
-// ========================================================================== */
+ *  Navigation modules
+ * ========================================================================== */
 
 
-// BASE
-// -----------------------------------------------------------------------------
+/* BASE
+ * ----------------------------------------------------------------------------- */
 
 [role="navigation"], .nav, nav {
 	
 }
 
-// SUBMODULES
-// -----------------------------------------------------------------------------
+/* SUBMODULES
+ * ----------------------------------------------------------------------------- */
 
 /* ------- Global/main nav ------------------------------------------- */
 
@@ -125,7 +125,7 @@
     @include kill-border(bottom);
   }
 
-  // init -- show the "more" button
+  /* init -- show the "more" button */
   .accordion-button {
     $icon-size: 18px;
     @include restore-visible;
@@ -191,7 +191,7 @@
     .accordion-content {
       @include restore-visible;
 
-      // hide everything but the first paragraph
+      /* hide everything but the first paragraph */
       & > * {
         @include hidden;
       }
@@ -200,8 +200,8 @@
         @include restore-visible;
       }
       
-      // make all content visible when the "open" class is added
-      // -> triggered by a click on the "more" button (JS)
+      /* make all content visible when the "open" class is added */
+      /* -> triggered by a click on the "more" button (JS) */
       &.is-open > * {
         @include restore-visible;
       }
