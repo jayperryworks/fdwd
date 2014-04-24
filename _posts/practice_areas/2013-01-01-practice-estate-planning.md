@@ -9,7 +9,7 @@ icon: estate_planning
 
 ---
 
-
+![Estate Planning]({{ site.assets.img }}paul-dryer.jpg)
 Franklin, Denney, Ward & Dryer, P.L.C. provides clients with a full array of estate planning services from the simplest estate to estates that are large enough to require estate tax planning and trust practice. Our Firm is able to assist clients with competent advice and drafting of documents for effective transfer of assets from one generation to the next.
 
 Documents often drafted by our Firm include wills, simple and complex trusts (including inter vivos and testamentary), advance medical directives, powers of attorney, deeds and any other documents related to estate planning matters.

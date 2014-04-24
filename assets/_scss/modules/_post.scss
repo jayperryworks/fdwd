@@ -40,6 +40,14 @@
   width: 50%;
   // padding-right: grid-gutter();
   float: right;
+
+  &.full {
+    display: block;
+    width: 100%;
+    margin: 2em 0;
+    float: none;
+    clear: both;
+  }
 }
 
 .post-content {
@@ -121,6 +129,10 @@
   @include clearfix;
   clear: both;
   overflow: hidden;
+}
+
+.post.no_margin {
+  margin-top: 0;
 }
 
 

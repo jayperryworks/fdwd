@@ -850,58 +850,59 @@ h6, .post-date, .post-meta-categories .label {
 .intro {
   font-size: 19px;
   font-size: 1.1875rem;
+  letter-spacing: -0.01em;
 }
-/* line 96, ../_scss/core/_content.scss */
+/* line 97, ../_scss/core/_content.scss */
 .intro.lead_in {
   margin-bottom: 36px;
   margin-bottom: 2.25rem;
 }
 
-/* line 115, ../_scss/core/_content.scss */
+/* line 116, ../_scss/core/_content.scss */
 p, ol, ul {
   margin: 0 0 0.5em 0;
 }
 
-/* line 119, ../_scss/core/_content.scss */
+/* line 120, ../_scss/core/_content.scss */
 ol, ul {
   padding-left: 1em;
   /* bump to the right a little @ mobile sizes so the numbers/bullets don't run off */
 }
 @media (min-width: 48em) {
-  /* line 119, ../_scss/core/_content.scss */
+  /* line 120, ../_scss/core/_content.scss */
   ol, ul {
     padding-left: 0;
   }
 }
 
-/* line 128, ../_scss/core/_content.scss */
+/* line 129, ../_scss/core/_content.scss */
 dl {
   margin-bottom: 1em;
   letter-spacing: -0.02em;
 }
 
-/* line 139, ../_scss/core/_content.scss */
+/* line 140, ../_scss/core/_content.scss */
 a {
   text-decoration: none;
 }
 
-/* line 148, ../_scss/core/_content.scss */
+/* line 149, ../_scss/core/_content.scss */
 figcaption {
   margin-top: 0.5em;
 }
 
 /* if @font-face is supported, use Playfair ampersands... */
-/* line 155, ../_scss/core/_content.scss */
+/* line 156, ../_scss/core/_content.scss */
 .fontface .amp {
   font-size: 1em;
 }
-/* line 160, ../_scss/core/_content.scss */
+/* line 161, ../_scss/core/_content.scss */
 .fontface em .amp {
   font-size: 1em;
 }
 
 /* otherwise, use the best ampersands from common system fonts */
-/* line 167, ../_scss/core/_content.scss */
+/* line 168, ../_scss/core/_content.scss */
 .amp {
   font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
   font-style: italic;
@@ -913,7 +914,7 @@ figcaption {
 /* usage: 
   <span aria-hidden="true" data-icon="&#xf008;"></span>
   <span class="screen-reader-text">Menu</span> */
-/* line 180, ../_scss/core/_content.scss */
+/* line 181, ../_scss/core/_content.scss */
 .icon, [class*="icon-"], .icon-alone {
   display: -moz-inline-stack;
   display: inline-block;
@@ -926,7 +927,7 @@ figcaption {
   line-height: 0;
 }
 
-/* line 187, ../_scss/core/_content.scss */
+/* line 188, ../_scss/core/_content.scss */
 [class*="icon-"] {
   margin: -0.15em 0 0 0;
   padding: 0;
@@ -938,7 +939,7 @@ figcaption {
   speak: none;
 }
 
-/* line 203, ../_scss/core/_content.scss */
+/* line 204, ../_scss/core/_content.scss */
 .icon-alone {
   color: transparent;
   font: 0/0 a;
@@ -1074,8 +1075,12 @@ figcaption {
 .theme-default .island, body .island {
   background-color: white;
 }
+/* line 193, ../_scss/core/_themes.scss */
+.theme-default .intro, body .intro {
+  color: #3c5c67;
+}
 
-/* line 211, ../_scss/core/_themes.scss */
+/* line 215, ../_scss/core/_themes.scss */
 footer.local, .footer.local, .theme-flood {
   color: white;
   background-color: #3da288;
@@ -1201,7 +1206,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   background-color: #44b598;
 }
 
-/* line 231, ../_scss/core/_themes.scss */
+/* line 235, ../_scss/core/_themes.scss */
 [role="navigation"].global, footer.global, .footer.global, .theme-reverse {
   color: white;
   background-color: #283030;
@@ -2132,8 +2137,8 @@ footer.local .island, .footer.local .island, .theme-flood .island {
 
 /* line 13, ../_scss/modules/_hero.scss */
 .hero {
-  height: 450px;
-  height: 28.125rem;
+  height: 400px;
+  height: 25rem;
   padding-top: 54px;
   padding-top: 3.375rem;
   border-bottom-width: 4px;
@@ -2166,27 +2171,76 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   position: absolute;
   left: 50%;
 }
+@media (min-height: 43.75em) {
+  /* line 13, ../_scss/modules/_hero.scss */
+  .hero {
+    height: 450px;
+    height: 28.125rem;
+  }
+}
+@media (min-height: 53.125em) {
+  /* line 13, ../_scss/modules/_hero.scss */
+  .hero {
+    height: 500px;
+    height: 31.25rem;
+  }
+}
+@media (min-height: 62.5em) {
+  /* line 13, ../_scss/modules/_hero.scss */
+  .hero {
+    height: 550px;
+    height: 34.375rem;
+  }
+}
 
-/* line 41, ../_scss/modules/_hero.scss */
+/* line 53, ../_scss/modules/_hero.scss */
 .hero.interior {
-  height: 300px;
-  height: 18.75rem;
+  height: 250px;
+  height: 15.625rem;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-/* line 47, ../_scss/modules/_hero.scss */
+/* line 59, ../_scss/modules/_hero.scss */
 .hero.interior .wrapper {
   height: 100%;
 }
-/* line 51, ../_scss/modules/_hero.scss */
+/* line 63, ../_scss/modules/_hero.scss */
 .hero.interior .hero-headline {
   bottom: 48px;
   bottom: 3rem;
   position: absolute;
   text-align: left;
 }
+@media (min-width: 48em) {
+  /* line 63, ../_scss/modules/_hero.scss */
+  .hero.interior .hero-headline {
+    font-size: 60px;
+    font-size: 3.75rem;
+  }
+}
+@media (min-height: 43.75em) {
+  /* line 53, ../_scss/modules/_hero.scss */
+  .hero.interior {
+    height: 300px;
+    height: 18.75rem;
+  }
+}
+@media (min-height: 53.125em) {
+  /* line 53, ../_scss/modules/_hero.scss */
+  .hero.interior {
+    height: 350px;
+    height: 21.875rem;
+  }
+}
+@media (min-height: 62.5em) {
+  /* line 53, ../_scss/modules/_hero.scss */
+  .hero.interior {
+    height: 400px;
+    height: 25rem;
+  }
+}
 
-/* line 68, ../_scss/modules/_hero.scss */
+/* line 96, ../_scss/modules/_hero.scss */
 .hero-headline {
   padding-left: 48px;
   padding-right: 48px;
@@ -2199,20 +2253,20 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   line-height: 1;
   text-align: center;
 }
-/* line 82, ../_scss/modules/_hero.scss */
+/* line 110, ../_scss/modules/_hero.scss */
 .hero-headline.fade {
   opacity: 0.6;
   filter: alpha(opacity=60);
 }
-/* line 86, ../_scss/modules/_hero.scss */
+/* line 114, ../_scss/modules/_hero.scss */
 .hero-headline.dark, .hero-headline .dark {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
-/* line 91, ../_scss/modules/_hero.scss */
+/* line 119, ../_scss/modules/_hero.scss */
 .hero-headline.light, .hero-headline .light {
   text-shadow: 0 2px 0 rgba(41, 63, 71, 0.4);
 }
-/* line 95, ../_scss/modules/_hero.scss */
+/* line 123, ../_scss/modules/_hero.scss */
 .hero-headline h1 {
   font-size: 40px;
   font-size: 2.5rem;
@@ -2221,17 +2275,17 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   /* spcial css for kerning.js */
 }
 @media (min-width: 48em) {
-  /* line 95, ../_scss/modules/_hero.scss */
+  /* line 123, ../_scss/modules/_hero.scss */
   .hero-headline h1 {
-    font-size: 60px;
-    font-size: 3.75rem;
+    font-size: 54px;
+    font-size: 3.375rem;
   }
 }
-/* line 121, ../_scss/modules/_hero.scss */
+/* line 149, ../_scss/modules/_hero.scss */
 .hero-headline h1 .char10, .hero-headline h1 .char27 {
   margin-left: -0.05em;
 }
-/* line 126, ../_scss/modules/_hero.scss */
+/* line 154, ../_scss/modules/_hero.scss */
 .hero-headline h2 {
   font-size: 36px;
   font-size: 2.25rem;
@@ -2240,20 +2294,20 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   color: #3da288;
 }
 @media (min-width: 30em) {
-  /* line 126, ../_scss/modules/_hero.scss */
+  /* line 154, ../_scss/modules/_hero.scss */
   .hero-headline h2 {
     font-size: 40px;
     font-size: 2.5rem;
   }
 }
 @media (min-width: 48em) {
-  /* line 126, ../_scss/modules/_hero.scss */
+  /* line 154, ../_scss/modules/_hero.scss */
   .hero-headline h2 {
     font-size: 50px;
     font-size: 3.125rem;
   }
 }
-/* line 141, ../_scss/modules/_hero.scss */
+/* line 169, ../_scss/modules/_hero.scss */
 .hero-headline .subhead {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2265,7 +2319,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   font-size: 0.4em;
   letter-spacing: 0;
 }
-/* line 148, ../_scss/modules/_hero.scss */
+/* line 176, ../_scss/modules/_hero.scss */
 .hero-headline .numbers {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2408,9 +2462,17 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   width: 50%;
   float: right;
 }
+/* line 44, ../_scss/modules/_post.scss */
+.post-image.full {
+  display: block;
+  width: 100%;
+  margin: 2em 0;
+  float: none;
+  clear: both;
+}
 
 /* ------- Meta/info ------------------------------------------- */
-/* line 51, ../_scss/modules/_post.scss */
+/* line 59, ../_scss/modules/_post.scss */
 .post-meta {
   width: 25%;
   float: right;
@@ -2430,27 +2492,27 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 55, ../_scss/modules/_post.scss */
+/* line 63, ../_scss/modules/_post.scss */
 .post-meta .post-date {
   margin-top: 0;
 }
 
-/* line 61, ../_scss/modules/_post.scss */
+/* line 69, ../_scss/modules/_post.scss */
 .post-author a {
   color: #3da288;
 }
 
-/* line 67, ../_scss/modules/_post.scss */
+/* line 75, ../_scss/modules/_post.scss */
 .post-meta-categories .label {
   margin-bottom: 0.5em;
 }
-/* line 73, ../_scss/modules/_post.scss */
+/* line 81, ../_scss/modules/_post.scss */
 .post-meta-categories dd {
   margin-left: 0;
 }
 
 /* ------- Meta/info ------------------------------------------- */
-/* line 80, ../_scss/modules/_post.scss */
+/* line 88, ../_scss/modules/_post.scss */
 .post-footer {
   border-top-width: 1px;
   border-top-style: solid;
@@ -2460,7 +2522,7 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   padding-top: 1.5rem;
 }
 
-/* line 86, ../_scss/modules/_post.scss */
+/* line 94, ../_scss/modules/_post.scss */
 .post-footer-categories {
   list-style: none;
   list-style-type: none;
@@ -2484,28 +2546,28 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   zoom: 1;
   *display: inline;
 }
-/* line 90, ../_scss/modules/_post.scss */
+/* line 98, ../_scss/modules/_post.scss */
 .post-footer-categories dt {
   padding: 0;
   margin: 0;
   text-transform: uppercase;
   color: #cccccc;
 }
-/* line 98, ../_scss/modules/_post.scss */
+/* line 106, ../_scss/modules/_post.scss */
 .post-footer-categories dd {
   margin-left: 0;
 }
-/* line 101, ../_scss/modules/_post.scss */
+/* line 109, ../_scss/modules/_post.scss */
 .post-footer-categories dd:after {
   content: "\2022";
   margin: 0 0.25em;
 }
-/* line 106, ../_scss/modules/_post.scss */
+/* line 114, ../_scss/modules/_post.scss */
 .post-footer-categories dd:last-child:after {
   content: none;
 }
 
-/* line 117, ../_scss/modules/_post.scss */
+/* line 125, ../_scss/modules/_post.scss */
 .post.full {
   margin-top: 36px;
   margin-top: 2.25rem;
@@ -2521,8 +2583,13 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   clear: both;
 }
 
+/* line 134, ../_scss/modules/_post.scss */
+.post.no_margin {
+  margin-top: 0;
+}
+
 /* ------- Excerpt ------------------------------------------- */
-/* line 129, ../_scss/modules/_post.scss */
+/* line 141, ../_scss/modules/_post.scss */
 .post.excerpt {
   margin: 0 0 24px 0;
   margin: 0 0 1.5rem 0;
@@ -2531,13 +2598,13 @@ footer.local .island, .footer.local .island, .theme-flood .island {
   border-top-width: 1px;
   border-top-style: solid;
 }
-/* line 135, ../_scss/modules/_post.scss */
+/* line 147, ../_scss/modules/_post.scss */
 .post.excerpt:first-child {
   border-top: none;
   padding-top: 0;
 }
 
-/* line 141, ../_scss/modules/_post.scss */
+/* line 153, ../_scss/modules/_post.scss */
 .posts {
   width: 75%;
   float: left;

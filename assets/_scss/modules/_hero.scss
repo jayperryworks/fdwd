@@ -13,7 +13,7 @@
 .hero {
   @extend %center;
   @extend %highlight-border;
-  @include rem(height, 450px);
+  @include rem(height, 400px);
   @include rem(padding-top, 54px);
   @include border(bottom, thick);
   position: relative;
@@ -36,10 +36,22 @@
     position: absolute;
     left: 50%;
   }
+
+  @include breakpoint($small-h) {
+    @include rem(height, 450px);
+  }
+
+  @include breakpoint($medium-h) {
+    @include rem(height, 500px);
+  }
+
+  @include breakpoint($large-h) {
+    @include rem(height, 550px);
+  }
 }
 
 .hero.interior {
-  @include rem(height, 300px);
+  @include rem(height, 250px);
   @include rem(margin-bottom, 24px);
   // @include kill-border(bottom);
   // background-position: bottom center;
@@ -59,6 +71,22 @@
     // bottom: auto;
     text-align: left;
     // color: $green;
+
+    @include breakpoint($small) {
+      @include rem(font-size, 60px);
+    }
+  }
+
+  @include breakpoint($small-h) {
+    @include rem(height, 300px);
+  }
+
+  @include breakpoint($medium-h) {
+    @include rem(height, 350px);
+  }
+
+  @include breakpoint($large-h) {
+    @include rem(height, 400px);
   }
 }
 
@@ -115,7 +143,7 @@
     } 
 
     @include breakpoint($small) {
-      @include rem(font-size, 60px);
+      @include rem(font-size, 54px);
     }
 
     .char10, .char27 {
