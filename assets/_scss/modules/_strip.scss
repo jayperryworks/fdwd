@@ -1,11 +1,11 @@
 /* ==========================================================================
-//  Strip modules
-// -> vertically-stacking, full-bleed sections with borders
-// -> for organizing content in ordered/scrolling sections within a page
-// ========================================================================== */
+ *  Strip modules
+ * -> vertically-stacking, full-bleed sections with borders
+ * -> for organizing content in ordered/scrolling sections within a page
+ * ========================================================================== */
 
 /* BASE
-// ----------------------------------------------------------------------------- */
+ * ----------------------------------------------------------------------------- */
 
 .strip {
   // @extend .wrapper;
@@ -59,10 +59,10 @@
 // }
 
 /* SUBMODULES
-// ----------------------------------------------------------------------------- */
+ * ----------------------------------------------------------------------------- */
 
 /* an "interior" strip within a strip
-// -> if you need to break it down more, or show a list of things */
+ * -> if you need to break it down more, or show a list of things */
 .strip-int {
   @include rem(margin-bottom, 24px);
 
@@ -76,7 +76,7 @@
 }
 
 /* MODIFIERS
-// ----------------------------------------------------------------------------- */
+ * ----------------------------------------------------------------------------- */
 
 .strip.pointer {
   $triangle-size: 27px;

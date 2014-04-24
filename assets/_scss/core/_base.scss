@@ -6,9 +6,9 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
-// ==========================================================================
-// Base styles: opinionated defaults
-// ==========================================================================
+/* ========================================================================== */
+/* Base styles: opinionated defaults
+/* ========================================================================== */
 
 html,
 button,
@@ -23,9 +23,9 @@ textarea {
 }
 
 html {
-  // set up the base font size at each breakpoint
-  // this will scale the whole layout proportionately as the screen size changes
-  // and we only have to change one thing
+  /* set up the base font size at each breakpoint */
+  /* this will scale the whole layout proportionately as the screen size changes */
+  /* and we only have to change one thing */
   font-size: percent($type-size--default);
 
   @include breakpoint($small) {
@@ -42,8 +42,8 @@ html {
 
   line-height: $type-line_height;
 
-  // set everything to roll with border-box sizing
-  // -> much easier than reg box model
+  /* set everything to roll with border-box sizing */
+  /* -> much easier than reg box model */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;  
